@@ -1,0 +1,14 @@
+// JavaScript Document
+
+var content_cache = {};
+var email_name = {'qipeng':'qipeng.thu'}, email_domain = {'qipeng':'gmail.com'};
+
+function addbanner(id,name){$("#banner-spot").append("<div id='"+id+"' class='banner ui-corner-all' onDblClick='bannerclick(this.id)'><h3 class='ui-corner-all'><img class='bannericon' src='images/toggle_expand.png'>"+name+"</h3><div class='content'></div></div>");}
+function addbanners(){addbanner('bio','Bio');addbanner('news','News');addbanner('research','Research');addbanner('projects','Selected Undergrad Projects');addbanner('misc','Misc.');}
+function bannerclick(id){if ($("#"+id).hasClass('expanded')){$("#"+id+" .content").slideUp('fast');$("#"+id+" .bannericon").attr('src','images/toggle_expand.png');}else{loadcontent("pages/"+id+".html",id);$("#"+id+" .content").hide();$("#"+id+" .content").slideDown();$("#"+id+" .bannericon").attr('src','images/toggle.png');};$("#"+id).toggleClass('expanded');}
+function loadcontent(name,block){$("#"+block + " .content").empty();if(content_cache!=null && content_cache[name]!=null){$("#"+block + " .content").append(content_cache[name]);}else{$("#"+block + " .content").append("<img src=\"images/loader.gif\"/>&nbsp;Content is loading, please wait...");$.ajax({type: "GET",url: name,dataType:"html",success: function(data){$("#"+block + " .content").empty();$("#"+block + " .content").html(data);content_cache[name]=data;}});}}
+function loadimg(){$(".fancyimg").click(function(){if (!$("#hint-pic").is(":hidden")){$("#hint-pic").slideUp();};});$("a.fancyimg").fancybox({'width': '75%','height': '75%','overlayShow': false,'transitionIn': 'elastic','transitionOut': 'fade','titlePosition': 'inside','overlayColor': '#000','overlayOpacity': 0.9});}
+function loadgoogletranslate() {$("#googletranslate").empty();$("#googletranslate").append("<img src=\"images/loader.gif\" />&nbsp;Loading Google Translate Gadget...");$.ajax({type: "GET",url: "pages/googletranslate.html",dataType:"html",success: function(data){$("#googletranslate").empty();$("#googletranslate").append(data);}});}
+function loadgoogleanalytics() {$.ajax({type: "GET",url: "pages/googleanalytics.html",dataType:"html",success: function(data){$("body").append(data);}});}
+function sendEmail(name) {window.location.href="mailto:" + email_name[name] + "@" + email_domain[name];}
+function index_load() {$("#hint-js").remove();loadcontent("pages/home.html","intro");$("#hint-spot").append("<div id=\"hint-hint\" class=\"hint ui-corner-all\">Hint: Double click a topic to expand, double click a hint to close it. :)</div><div id=\"hint-pic\" class=\"hint ui-corner-all\">Try clicking on the pictures on this page and see what happens!</div><div id=\"hint-lastupdate\" class=\"hint ui-corner-all\">Last updated: Mar. 11, 2012</div>");$(".hint").show();addbanners();$(".hint").dblclick(function() {$(this).slideUp();});loadgoogletranslate();loadgoogleanalytics();}
