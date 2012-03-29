@@ -380,52 +380,52 @@ nav.after{
 
 /* nav theming */
 .banner nav li a.active.home{
-    background: #5ab3ff url('../images/home-nav.png') no-repeat bottom center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/home-nav.png') no-repeat bottom center;
-    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/home-nav.png') no-repeat bottom center;
+    background: #5ab3ff url('../images/home-nav.png') no-repeat bottom left;
+    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/home-nav.png') no-repeat bottom left;
+    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/home-nav.png') no-repeat bottom left;
 }
 .banner nav li a.home:hover{
-    background: #3891dd url('../images/home-nav.png') no-repeat bottom center;
+    background: #3891dd url('../images/home-nav.png') no-repeat bottom left;
     text-decoration:none;
     color:#444;
 }
 .banner nav li a.active.research{
-    background: #5ab3ff url('../images/research-nav.png') no-repeat bottom center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/research-nav.png') no-repeat bottom center;
-    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/research-nav.png') no-repeat bottom center;
+    background: #5ab3ff url('../images/research-nav.png') no-repeat bottom left;
+    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/research-nav.png') no-repeat bottom left;
+    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/research-nav.png') no-repeat bottom left;
 }
 .banner nav li a.research:hover{
-    background: #3891dd url('../images/research-nav.png') no-repeat bottom center;
+    background: #3891dd url('../images/research-nav.png') no-repeat bottom left;
     text-decoration:none;
     color:#444;
 }
 .banner nav li a.active.blog{
-    background: #5ab3ff url('../images/blog-nav.png') no-repeat bottom center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/blog-nav.png') no-repeat bottom center;
-    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/blog-nav.png') no-repeat bottom center;
+    background: #5ab3ff url('../images/blog-nav.png') no-repeat bottom left;
+    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/blog-nav.png') no-repeat bottom left;
+    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/blog-nav.png') no-repeat bottom left;
 }
 .banner nav li a.blog:hover{
-    background: #3891dd url('../images/blog-nav.png') no-repeat bottom center;
+    background: #3891dd url('../images/blog-nav.png') no-repeat bottom left;
     text-decoration:none;
     color:#444;
 }
 .banner nav li a.active.software{
-    background: #5ab3ff url('../images/software-nav.png') no-repeat bottom center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/software-nav.png') no-repeat bottom center;
-    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/software-nav.png') no-repeat bottom center;
+    background: #5ab3ff url('../images/software-nav.png') no-repeat bottom left;
+    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/software-nav.png') no-repeat bottom left;
+    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/software-nav.png') no-repeat bottom left;
 }
 .banner nav li a.software:hover{
-    background: #3891dd url('../images/software-nav.png') no-repeat bottom center;
+    background: #3891dd url('../images/software-nav.png') no-repeat bottom left;
     text-decoration:none;
     color:#444;
 }
 .banner nav li a.active.misc{
-    background: #5ab3ff url('../images/misc-nav.png') no-repeat bottom center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/misc-nav.png') no-repeat bottom center;
-    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/misc-nav.png') no-repeat bottom center;
+    background: #5ab3ff url('../images/misc-nav.png') no-repeat bottom left;
+    background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff)) url('../images/misc-nav.png') no-repeat bottom left;
+    background: -moz-linear-gradient(top,  #068bfe,  #5ab3ff) url('../images/misc-nav.png') no-repeat bottom left;
 }
 .banner nav li a.misc:hover{
-    background: #3891dd url('../images/misc-nav.png') no-repeat bottom center;
+    background: #3891dd url('../images/misc-nav.png') no-repeat bottom left;
     text-decoration:none;
     color:#444;
 }
