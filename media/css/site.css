@@ -434,6 +434,9 @@ nav.after{
     display:block;
     position:relative;
     margin:0px 10px;
+    width:auto;
+    overflow:hidden;
+    float:left;
 }
 
 /* design logo */
@@ -457,7 +460,5 @@ padding-bottom:30px;
 
 td {
 vertical-align:top;
-}
-tr{
-margin:5px 0px;
+padding:5px;
 }
