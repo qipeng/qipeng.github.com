@@ -173,9 +173,14 @@ h1.title{
 }
 
 section.content{
-    padding: 12px 512px 12px 112px;
+    overflow:hidden;
     min-height:450px;
+}
+
+.contentwrapper{
+    width:100%;
     background:url('../images/bg.png') repeat-y;
+    padding: 12px 512px 12px 112px;
 }
 
 /* listing */
