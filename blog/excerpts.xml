@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-03-30T09:09:43Z</updated>
+    <updated>2012-04-01T16:10:23Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
@@ -28,5 +28,51 @@
 &amp;#8212; I&amp;#8217;m just following the fashion here. Thanks to &lt;a href=&#39;//www.github.com&#39;&gt;
 GitHub&lt;/a&gt; and &lt;a href=&#39;//hyde.github.com&#39;&gt;hyde&lt;/a&gt;, I now have this awesome
 multi-page static homepage with a personal blog in&amp;nbsp;it.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Tutorial 1&#58; The Fancy Corner</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/tutorial-1.html"/>
+            <updated>2012-03-31T18:00:00Z</updated>
+            <published>2012-03-31T18:00:00Z</published>
+            <id>/blog/tutorial-1.html</id>
+                        <category   scheme="/blog/tags"
+                        term="tutorial"
+                        label="Tutorial" />
+                        <category   scheme="/blog/tags"
+                        term="fancy_corner"
+                        label="Fancy_Corner" />
+                        <category   scheme="/blog/tags"
+                        term="html_css"
+                        label="Html_Css" />
+            
+            <content type="html">
+                
+                &lt;p&gt;The &amp;#8220;&lt;img src=&#34;/media/images/fancycorner.png&#34;&gt;&amp;#8220;, or as I call it &amp;#8212; the &amp;#8220;fancy corner&amp;#8221;,
+is a special mark used on this site to mark out images that can be viewed in a larger
+version with a pop-up window. This blog will explain how this functionality is made possible
+with &lt;a href=&#34;http://fancybox.net/&#34; target=&#34;_blank&#34;&gt;FancyBox&lt;/a&gt; and 
+&lt;a href=&#34;http://jquery.com/&#34; target=&#34;_blank&#34;&gt;jQuery&lt;/a&gt;.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Tutorial 2&#58; The hyde Template Files</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/tutorial-2.html"/>
+            <updated>2012-03-31T18:00:00Z</updated>
+            <published>2012-03-31T18:00:00Z</published>
+            <id>/blog/tutorial-2.html</id>
+                        <category   scheme="/blog/tags"
+                        term="tutorial"
+                        label="Tutorial" />
+                        <category   scheme="/blog/tags"
+                        term="hyde"
+                        label="Hyde" />
+                        <category   scheme="/blog/tags"
+                        term="html_css"
+                        label="Html_Css" />
+            
+            <content type="html">
+                
+                            </content>
         </entry>
     </feed>

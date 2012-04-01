@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-03-30T09:09:43Z</updated>
+    <updated>2012-04-01T16:10:21Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -23,12 +23,183 @@
                         label="Hello_World" />
             
             <content type="html">
-                                &lt;p&gt;Seems that the first post of every programmer&amp;#8217;s blog is &amp;#8220;hello, world&amp;#8221; 
+                                &lt;p&gt;
+Seems that the first post of every programmer&amp;#8217;s blog is &amp;#8220;hello, world&amp;#8221; 
 &amp;#8212; I&amp;#8217;m just following the fashion here. Thanks to &lt;a href=&#39;//www.github.com&#39;&gt;
 GitHub&lt;/a&gt; and &lt;a href=&#39;//hyde.github.com&#39;&gt;hyde&lt;/a&gt;, I now have this awesome
-multi-page static homepage with a personal blog in it.
+multi-page static homepage with a personal blog in&amp;nbsp;it.&lt;/p&gt;
+
+&lt;p&gt;
 What will be in this blog are some tech notes from my project experiences,
 and some experience/summary of my research. Maybe sometimes something personal,
-too. Thanks to GitHub, now even uploading source code and stuff is possible,&amp;nbsp;too!&lt;/p&gt;            </content>
+too. Thanks to GitHub, now even uploading source code and stuff is possible,&amp;nbsp;too!
+&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Tutorial 1&#58; The Fancy Corner</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/tutorial-1.html"/>
+            <updated>2012-03-31T18:00:00Z</updated>
+            <published>2012-03-31T18:00:00Z</published>
+            <id>/blog/tutorial-1.html</id>
+                        <category   scheme="/blog/tags"
+                        term="tutorial"
+                        label="Tutorial" />
+                        <category   scheme="/blog/tags"
+                        term="fancy_corner"
+                        label="Fancy_Corner" />
+                        <category   scheme="/blog/tags"
+                        term="html_css"
+                        label="Html_Css" />
+            
+            <content type="html">
+                                &lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shCoreEclipse.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shThemeEclipse.css&#34;&gt;
+
+&lt;script src=&#34;/media/js/syntaxhighlighter/shCore.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/media/js/syntaxhighlighter/shBrushJScript.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/media/js/syntaxhighlighter/shBrushCss.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;SyntaxHighlighter.all()&lt;/script&gt;
+
+&lt;p&gt;
+The &amp;#8220;&lt;img src=&#34;/media/images/fancycorner.png&#34;&gt;&amp;#8220;, or as I call it &amp;#8212; the &amp;#8220;fancy corner&amp;#8221;,
+is a special mark used on this site to mark out images that can be viewed in a larger
+version with a pop-up window. This blog will explain how this functionality is made possible
+with &lt;a href=&#34;http://fancybox.net/&#34; target=&#34;_blank&#34;&gt;FancyBox&lt;/a&gt; and 
+&lt;a href=&#34;http://jquery.com/&#34; target=&#34;_blank&#34;&gt;jQuery&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;
+Before starting the &amp;#8220;tutorial&amp;#8221;, I&amp;#8217;d like to thank &lt;a href=&#34;http://qiankanglai.github.com&#34; target=&#34;_blank&#34;&gt;
+Kanglai Qian&lt;/a&gt; who is a brilliant programmer and as well my good friend, for sharing thoughts
+and awesome plugins when I was developing this template. Many hyde problems will be much more 
+painstaking without his help and his hyde source code. We&amp;#8217;ve also collaborated in a number of 
+projects, which can be found at&amp;nbsp;GitHub.
+&lt;/p&gt;
+
+&lt;p&gt;
+Besides, I&amp;#8217;d like to take time to explain the word &amp;#8220;tutorial&amp;#8221;. In fact, what I mean by tutorial is 
+more of some summary, where I summarize the problems I encountered and tricks I used to solve them. 
+I&amp;#8217;d like to share with you all the tricks that I used, and all possible modifications of this template 
+to &lt;a href=&#34;/misc/homepage.html&#34;&gt;make it yours&lt;/a&gt;, especially for people who are not that familiar 
+with &lt;span class=&#34;caps&#34;&gt;HTML&lt;/span&gt;/&lt;span class=&#34;caps&#34;&gt;CSS&lt;/span&gt; and hyde/&lt;a href=&#34;https://www.djangoproject.com/&#34; target=&#34;_blank&#34;&gt;Django&lt;/a&gt;/Python like&amp;nbsp;myself.
+&lt;/p&gt;
+
+&lt;p&gt;
+Let&amp;#8217;s get to business. The problem of fancy corner is actually threefold: (a) how to get FancyBox to work,
+(b) how to attach the fancy corner (or any other indicators you like) on an image equipped with FancyBox, 
+and (c) how to do this easily for all images without changing the &lt;span class=&#34;caps&#34;&gt;HTML&lt;/span&gt; source code. For the first problem,
+the best suggestion I can offer is visiting &lt;a href=&#34;http://fancybox.net/&#34; target=&#34;_blank&#34;&gt;FancyBox&amp;#8217;s 
+official site&lt;/a&gt; and find out yourself. Hence, let&amp;#8217;s skip this problem and focus on the remaining&amp;nbsp;two.
+&lt;/p&gt;
+
+&lt;p&gt;
+Formally speaking, attaching the fancy corner to the image is a problem where we seek to locate the fancy corner
+image at exactly the top right corner of the given image. After a wild search on the Internet, I found out a 
+solution for similar problems: locate the close button image for a pop-up window layer. The solution is 
+astonishingly simple, in fact:
+&lt;pre class=&#34;brush: css&#34;&gt;
+#outer {
+    position:relative;
+}
+#inner {
+    position:absolute;
+    right:10px;
+    top:10px;
+}
+&amp;lt;div id=&#34;outer&#34;&amp;gt;
+    say something about your pop-up window.
+    &amp;lt;div id=&#34;inner&#34;&amp;gt;
+        put your closing button here
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/pre&gt;
+As long as the parent position is relative and the child position is absolute, the &amp;#8220;left right top bottom&amp;#8221;
+attributes of the child element is relative to the borders of the parent&amp;nbsp;element. 
+&lt;/p&gt;
+
+&lt;p&gt;
+So is that it? We add an inner &amp;lt;div&amp;gt; inside the &amp;lt;a&amp;gt; tag of FancyBox after the &amp;lt;img&amp;gt;, set &amp;lt;a&amp;gt;&amp;#8217;s
+position to relative and our &amp;lt;div&amp;gt;&amp;#8217;s position to absolute, arrange top and right to 0, and now we have
+a beautiful fancy corner? Yes, and no. Yes, now you have the appearance where the image has a fancy corner on 
+the top right corner&amp;#8230; But it&amp;#8217;s probably not the top right corner of the image exactly. You&amp;#8217;ll have to remove the 
+&amp;lt;a&amp;gt; tag from the document flow to automatically adjust its width for the fancy corner to locate properly.
+Adding &amp;#8220;float:left&amp;#8221; will do that. However, this will cause damage to the overall format.
+ Thus, an encompassing &amp;lt;div&amp;gt; would be needed to put it back into the document flow, with the style&amp;nbsp;&amp;#8220;overflow:hidden&amp;#8221;.
+&lt;/p&gt;
+
+&lt;p&gt;
+What&amp;#8217;s left is: we need to automatically add this &amp;#8220;style&amp;#8221; to all FancyBox images. Thanks to jQuery, which has
+powerful &lt;span class=&#34;caps&#34;&gt;DOM&lt;/span&gt; selector and &lt;span class=&#34;caps&#34;&gt;DOM&lt;/span&gt; manipulation functions, this task is just a piece of cake. I&amp;#8217;ll not be able to 
+explain all about jQuery, so it&amp;#8217;s better if you just &lt;a href=&#34;http://jquery.com/&#34; target=&#34;_blank&#34;&gt;visit its site&lt;/a&gt;.
+Here&amp;#8217;s my implementation in &amp;#8220;site.css&amp;#8221; and &amp;#8220;main.js&amp;#8221;:
+&lt;pre class=&#34;brush:css&#34;&gt;
+.fancyimg {
+    position:relative;
+    margin:0px 10px;
+    width:auto;
+    overflow:hidden;
+    float:left;
+}
+&lt;/pre&gt;
+&lt;pre class=&#34;brush: js&#34;&gt;
+function loadimg(){
+    // FancyBox set-up
+    $(&#34;a.fancyimg&#34;).fancybox({
+        &#39;width&#39;: &#39;75%&#39;,
+        &#39;height&#39;: &#39;75%&#39;,
+        &#39;overlayShow&#39;: false,
+        &#39;transitionIn&#39;: &#39;fade&#39;,
+        &#39;transitionOut&#39;: &#39;fade&#39;,
+        &#39;titlePosition&#39;: &#39;inside&#39;,
+        &#39;overlayColor&#39;: &#39;#000&#39;,
+        &#39;overlayOpacity&#39;: 0.9});
+
+    // Attach fancy corner
+    // I attached my fancy corner as a &amp;lt;div&amp;gt; tag.
+    $(&#34;a.fancyimg img&#34;).after(&#39;&amp;lt;div style=&#34;display:block;width:16px;height:16px;
+    position:absolute;  
+    top:0px;            
+    right:0px;
+    background:url(\&#39;/media/images/fancycorner.png\&#39;) no-repeat;
+    _background:none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src=\&#39;/media/images/fancycorner.png\&#39;);&#34;&amp;gt; &amp;lt;/div&amp;gt;&#39;);
+
+    // Wrap the outter &amp;lt;div&amp;gt;
+    $(&#34;a.fancyimg&#34;).wrap(&#34;&amp;lt;div style=&#39;overflow:hidden;&#39; /&amp;gt;&#34;);
+}
+&lt;/pre&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Enjoy!
+&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Tutorial 2&#58; The hyde Template Files</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/tutorial-2.html"/>
+            <updated>2012-03-31T18:00:00Z</updated>
+            <published>2012-03-31T18:00:00Z</published>
+            <id>/blog/tutorial-2.html</id>
+                        <category   scheme="/blog/tags"
+                        term="tutorial"
+                        label="Tutorial" />
+                        <category   scheme="/blog/tags"
+                        term="hyde"
+                        label="Hyde" />
+                        <category   scheme="/blog/tags"
+                        term="html_css"
+                        label="Html_Css" />
+            
+            <content type="html">
+                                &lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shCoreEclipse.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shThemeEclipse.css&#34;&gt;
+
+&lt;script src=&#34;/media/js/syntaxhighlighter/shCore.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/media/js/syntaxhighlighter/shBrushJScript.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/media/js/syntaxhighlighter/shBrushCss.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;SyntaxHighlighter.all()&lt;/script&gt;
+
+&lt;p&gt;
+&lt;/p&gt;            </content>
         </entry>
     </feed>

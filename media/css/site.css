@@ -227,6 +227,10 @@ ul.tags li{
     padding-left:10px;
 }
 
+a.small {
+    padding-right:5px;
+}
+
 h1 a, h2 a, h3 a{
     text-decoration: none;
     color:#08081f;
@@ -243,7 +247,7 @@ h1 a, h2 a, h3 a{
 .archives li.post{
     list-style-type: none;
     border-bottom: 1px dotted #ccc;
-    padding: 12px 0;
+    padding: 5px 0;
 
 }
 
@@ -265,7 +269,7 @@ h1 a, h2 a, h3 a{
 }
 
 .content article p {
-    padding-bottom:5px;
+    padding-bottom:10px;
 }
 
 .codebox {
@@ -274,11 +278,7 @@ h1 a, h2 a, h3 a{
 }
 .code {
   position: relative;
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  background-color: #F0F3F3;
+  background-color: #F0F0F3;
 }
 .code figcaption {
   font-size: 10px;
@@ -436,7 +436,6 @@ nav.after{
 }
 
 .fancyimg {
-    display:block;
     position:relative;
     margin:0px 10px;
     width:auto;
