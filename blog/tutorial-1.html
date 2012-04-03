@@ -214,13 +214,13 @@ attributes of the child element is relative to the borders of the parent&nbsp;el
 </p>
 
 <p>
-So is that it? We add an inner &lt;div&gt; inside the &lt;a&gt; tag of FancyBox after the &lt;img&gt;, set &lt;a&gt;&#8217;s
-position to relative and our &lt;div&gt;&#8217;s position to absolute, arrange top and right to 0, and now we have
+So is that it? We add an inner <code>&lt;div&gt;</code> inside the <code>&lt;a&gt;</code> tag of FancyBox after the <code>&lt;img&gt;</code>, set <code>&lt;a&gt;</code>&#8216;s
+position to relative and our <code>&lt;div&gt;</code>&#8216;s position to absolute, arrange top and right to 0, and now we have
 a beautiful fancy corner? Yes, and no. Yes, now you have the appearance where the image has a fancy corner on 
 the top right corner&#8230; But it&#8217;s probably not the top right corner of the image exactly. You&#8217;ll have to remove the 
-&lt;a&gt; tag from the document flow to automatically adjust its width for the fancy corner to locate properly.
+<code>&lt;a&gt;</code> tag from the document flow to automatically adjust its width for the fancy corner to locate properly.
 Adding &#8220;float:left&#8221; will do that. However, this will cause damage to the overall format.
- Thus, an encompassing &lt;div&gt; would be needed to put it back into the document flow, with the style&nbsp;&#8220;overflow:hidden&#8221;.
+ Thus, an encompassing <code>&lt;div&gt;</code> would be needed to put it back into the document flow, with the style&nbsp;&#8220;overflow:hidden&#8221;.
 </p>
 
 <p>

@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-04-01T16:10:21Z</updated>
+    <updated>2012-04-03T17:05:31Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -59,6 +59,7 @@ too. Thanks to GitHub, now even uploading source code and stuff is possible,&amp
 &lt;script src=&#34;/media/js/syntaxhighlighter/shCore.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/media/js/syntaxhighlighter/shBrushJScript.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/media/js/syntaxhighlighter/shBrushCss.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/media/js/syntaxhighlighter/shBrushXml.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;SyntaxHighlighter.all()&lt;/script&gt;
 
 &lt;p&gt;
@@ -105,6 +106,8 @@ astonishingly simple, in fact:
     right:10px;
     top:10px;
 }
+&lt;/pre&gt;
+&lt;pre class=&#34;brush: html&#34;&gt;
 &amp;lt;div id=&#34;outer&#34;&amp;gt;
     say something about your pop-up window.
     &amp;lt;div id=&#34;inner&#34;&amp;gt;
@@ -117,13 +120,13 @@ attributes of the child element is relative to the borders of the parent&amp;nbs
 &lt;/p&gt;
 
 &lt;p&gt;
-So is that it? We add an inner &amp;lt;div&amp;gt; inside the &amp;lt;a&amp;gt; tag of FancyBox after the &amp;lt;img&amp;gt;, set &amp;lt;a&amp;gt;&amp;#8217;s
-position to relative and our &amp;lt;div&amp;gt;&amp;#8217;s position to absolute, arrange top and right to 0, and now we have
+So is that it? We add an inner &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; inside the &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tag of FancyBox after the &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;, set &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;&amp;#8216;s
+position to relative and our &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&amp;#8216;s position to absolute, arrange top and right to 0, and now we have
 a beautiful fancy corner? Yes, and no. Yes, now you have the appearance where the image has a fancy corner on 
 the top right corner&amp;#8230; But it&amp;#8217;s probably not the top right corner of the image exactly. You&amp;#8217;ll have to remove the 
-&amp;lt;a&amp;gt; tag from the document flow to automatically adjust its width for the fancy corner to locate properly.
+&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tag from the document flow to automatically adjust its width for the fancy corner to locate properly.
 Adding &amp;#8220;float:left&amp;#8221; will do that. However, this will cause damage to the overall format.
- Thus, an encompassing &amp;lt;div&amp;gt; would be needed to put it back into the document flow, with the style&amp;nbsp;&amp;#8220;overflow:hidden&amp;#8221;.
+ Thus, an encompassing &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; would be needed to put it back into the document flow, with the style&amp;nbsp;&amp;#8220;overflow:hidden&amp;#8221;.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -177,8 +180,8 @@ Enjoy!
             <title type="html">Tutorial 2&#58; The hyde Template Files</title>
             <author><name>Peng Qi</name></author>
             <link href="/blog/tutorial-2.html"/>
-            <updated>2012-03-31T18:00:00Z</updated>
-            <published>2012-03-31T18:00:00Z</published>
+            <updated>2012-04-01T17:00:00Z</updated>
+            <published>2012-04-01T17:00:00Z</published>
             <id>/blog/tutorial-2.html</id>
                         <category   scheme="/blog/tags"
                         term="tutorial"
@@ -197,9 +200,455 @@ Enjoy!
 &lt;script src=&#34;/media/js/syntaxhighlighter/shCore.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/media/js/syntaxhighlighter/shBrushJScript.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/media/js/syntaxhighlighter/shBrushCss.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/media/js/syntaxhighlighter/shBrushXml.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/media/js/syntaxhighlighter/shBrushBash.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;SyntaxHighlighter.all()&lt;/script&gt;
 
 &lt;p&gt;
+This post, I think, is important for those who want to re-develop this template on their 
+own site, and especially who has little background of hyde/Django/Python as myself. 
+In this post, I&amp;#8217;ll summarize all hacks that I did to the basic hyde template that 
+made this homepage what it looks like&amp;nbsp;now.&lt;/p&gt;
+
+&lt;p&gt;
+Before starting this tutorial, I&amp;#8217;d like to thank again &lt;a href=&#34;http://qiankanglai.github.com/&#34; target=&#34;_blank&#34;&gt;
+Kanglai Qian&lt;/a&gt; for his help regarding &lt;span class=&#34;caps&#34;&gt;YAML&lt;/span&gt;, Python, and the hyde site structure. This 
+template will be nothing like it is without his&amp;nbsp;help.
+&lt;/p&gt;
+
+&lt;p&gt;
+This tutorial will be roughly separated into 7 parts. Except the first part which gives a brief 
+but necessary introduction to the directory structure of the default hyde site, each part will introduce a 
+.j2 (the new hyde template file format of my working version 0.8.4) file that I hacked, 
+and how I adjusted the &lt;span class=&#34;caps&#34;&gt;CSS&lt;/span&gt; for appearance. I plan to cover in the next tutorial 
+ a shortcut on how to make the contents yours and use this template right&amp;nbsp;away.
+&lt;/p&gt;
+
+&lt;p&gt;
+Let&amp;#8217;s start from the basic hyde template by &lt;a href=&#34;https://github.com/lakshmivyas&#34; target=&#34;_blank&#34;&gt;
+Lakshmi Vyasarajan&lt;/a&gt;, the original developer of hyde. To get the basic hyde template,
+simply type into your Linux console (I used the powerful &lt;a href=&#34;http://www.cygwin.com/&#34;
+target=&#34;_blank&#34;&gt;Cygwin&lt;/a&gt; under&amp;nbsp;Windows):
+&lt;/p&gt;
+&lt;pre class=&#34;brush: bash&#34;&gt;
+mkdir the-directory-name-you-want-to-store-your-hyde-files
+cd the-directory-name-you-want-to-store-your-hyde-files
+hyde create
+&lt;/pre&gt;
+
+&lt;p&gt;
+The &amp;#8220;hyde create&amp;#8221; command creates hyde source files of a website with basic hyde. 
+To see what this basic template looks like,&amp;nbsp;type:
+&lt;/p&gt;
+&lt;pre class=&#34;brush: bash&#34;&gt;
+hyde gen
+hyde serve
+&lt;/pre&gt;
+&lt;p&gt;
+&lt;span class=&#34;dquo&#34;&gt;&amp;#8220;&lt;/span&gt;hyde gen&amp;#8221; will compile all hyde sources into the &amp;#8220;deploy&amp;#8221; structure, and &amp;#8220;hyde
+serve&amp;#8221; will run a light-weight python web server that enables you to view
+your site properly at your local machine. The default binding is &amp;#8220;http://localhost:8080&amp;#8221;.
+(Hint: it is more practical to run two bash/command-line programs, and always use
+one as the hyde server.) Note that this hyde server is nothing compared to 
+a real-world one, and should not be used under any circumstance other than
+local&amp;nbsp;debugging.
+&lt;/p&gt;
+
+&lt;p style=&#34;color:red&#34;&gt;
+Apr. 1, 2012: I will come back to finish this post later, as I recently have some more urgent stuff to&amp;nbsp;do.
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;The Basic hyde Source Directory&amp;nbsp;Structure&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;base.j2&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;listing.j2&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;blog.j2&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;macros.j2&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;tagged_posts.j2&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;analytics.j2&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;
+&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Compiling QSlim 2.1 under Windows / Visual Studio</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/compiling-qslim-21.html"/>
+            <updated>2012-04-03T12:30:00Z</updated>
+            <published>2012-04-03T12:30:00Z</published>
+            <id>/blog/compiling-qslim-21.html</id>
+                        <category   scheme="/blog/tags"
+                        term="qslim"
+                        label="Qslim" />
+                        <category   scheme="/blog/tags"
+                        term="compile"
+                        label="Compile" />
+                        <category   scheme="/blog/tags"
+                        term="windows"
+                        label="Windows" />
+                        <category   scheme="/blog/tags"
+                        term="visual_studio"
+                        label="Visual_Studio" />
+            
+            <content type="html">
+                                &lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shCoreEclipse.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shThemeEclipse.css&#34;&gt;
+
+&lt;script src=&#34;/media/js/syntaxhighlighter/shCore.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/media/js/syntaxhighlighter/shBrushCpp.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;SyntaxHighlighter.all()&lt;/script&gt;
+
+&lt;p&gt;
+&lt;a href=&#34;http://mgarland.org/software/qslim21.html&#34; target=&#34;_blank&#34;&gt;QSlim&lt;/a&gt; is a 
+light-weight software developed by &lt;a href=&#34;http://mgarland.org&#34; target=&#34;_blank&#34;&gt;M. Garland&lt;/a&gt;, 
+which can simplify mesh models swiftly, maximally preserving their geodesic properties. 
+It is very important for model retrieval and other applications that require small data scale 
+as well as relatively accurate geodesic properties to overcome the difficulties of 
+non-rigid&amp;nbsp;transform.&lt;/p&gt;
+
+&lt;p&gt;
+Lately I&amp;#8217;ve been working on my undergraduate thesis, which, must use the QSlim software. However, 
+I found a problem (which I may probably write a blog about later)
+ with the &lt;span class=&#34;caps&#34;&gt;DLL&lt;/span&gt; version as well as the author&amp;#8217;s compilation of 
+&lt;a href=&#34;http://mgarland.org/software/qslim20.html&#34; target=&#34;_blank&#34;&gt;QSlim 2.0&lt;/a&gt;, so I 
+decided to download the source for QSlim 2.1 and compile it on my own computer. After failed by 
+Cygwin, I turned to the native Visual Studio on my Windows&amp;nbsp;Machine.
+&lt;/p&gt;
+
+&lt;p&gt;
+For related resources (compiled &lt;span class=&#34;caps&#34;&gt;EXE&lt;/span&gt; file, &lt;span class=&#34;caps&#34;&gt;VS2010&lt;/span&gt; solution and configured libraries), 
+please skip to &lt;a href=&#34;#resources&#34;&gt;Related Resources&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;Environment&lt;/h2&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td class=&#34;lighter&#34;&gt;&lt;span class=&#34;caps&#34;&gt;CPU&lt;/span&gt; Architecture&lt;/td&gt;&lt;td&gt;x86&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=&#34;lighter&#34;&gt;Operating System&lt;/td&gt;&lt;td&gt;Windows 7 Ultimate &lt;span class=&#34;caps&#34;&gt;SP1&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=&#34;lighter&#34;&gt;Visual Studio&lt;/td&gt;&lt;td&gt;2010 Pro&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;
+Source code is directly downloaded from Garland&amp;#8217;s page. If you are using other systems
+or &lt;span class=&#34;caps&#34;&gt;IDE&lt;/span&gt;&amp;#8217;s, you may also find the libs required by QSlim in this article&amp;nbsp;useful.&lt;/p&gt;
+
+&lt;p&gt;Luckily enough, the author maintained a 
+&lt;span class=&#34;caps&#34;&gt;VC&lt;/span&gt; 6 workspace file(.dsw): &amp;#8220;qslim-2.1/win32/SlimKit.dsw&amp;#8221;. Open it and Visual Studio will
+automatically convert the version for you if you are using &lt;span class=&#34;caps&#34;&gt;VS&lt;/span&gt; 2005 or above. The author
+has already included plentiful resource in each project&amp;#8217;s &amp;#8220;External&amp;nbsp;Dependencies&amp;#8221;.
+&lt;/p&gt;
+
+&lt;p&gt;So is that enough? Can we proceed and build the project QSlim easily and happily? 
+Sadly, no. It envolves many referred libraries and cross-platform issues, which I will 
+analyze below. Due to the solution&amp;#8217;s build order: MixKit libgfx QSlim QVis SMFView, I&amp;#8217;ll 
+introduce in order how I compiled MixKit, libgfx, and QSlim in order below. As for the 
+two projects that&amp;#8217;s left, I&amp;#8217;m sure you&amp;#8217;ll be able to compile them with the tricks in 
+this&amp;nbsp;article.
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;1.&amp;nbsp;MixKit&lt;/h2&gt;&lt;/div&gt;
+&lt;div class=&#34;title&#34;&gt;&lt;a name=&#34;1.1&#34;&gt;&lt;/a&gt;&lt;h3&gt;1.1&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;
+Try building the project directly and you will receive this compiler error. 
+(In all error info below I&amp;#8217;ll hide my local path of QSlim as&amp;nbsp;&amp;#8220;qslim-2.1&amp;#34;)
+&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;  MxStdGUI.cxx &lt;br&gt;
+1&amp;gt;qslim-2.1\libgfx\include\gfx/gui.h(22): fatal error C1083: Cannot open include file: &amp;#8216;&lt;span class=&#34;caps&#34;&gt;FL&lt;/span&gt;/Fl.H&amp;#8217;: No such file or directory
+&lt;/div&gt;
+&lt;p&gt;
+This problem is relatively easy. Download the required library &lt;a href=&#34;http://www.fltk.org/&#34; target=&#34;_blank&#34;&gt;fltk&lt;/a&gt;
+and unzip it somewhere (I used fltk 1.3.0 and unzipped it to &amp;#8220;qslim-2.1\tools&amp;#34;).
+Then right click on the MixKit project, select &amp;#8220;Properties&amp;#8221;, choose from the left list 
+&amp;#8220;Configuration Properties &amp;gt; &lt;span class=&#34;caps&#34;&gt;VC&lt;/span&gt;++ Directories&amp;#8221;. Add to &amp;#8220;Include Directories&amp;#8221;: &amp;#8220;..&amp;#92;tools\fltk-1.3.0;&amp;#8221; (without the 
+quotation marks but &lt;span class=&#34;caps&#34;&gt;WITH&lt;/span&gt; the semicolon. If you are adding this path to the end of the original string, make sure
+you put a semicolon before this&amp;nbsp;path).
+&lt;/p&gt;
+&lt;p&gt;
+What you just did tells the compiler where to find the missing header files. If you would like to add this library
+for all programs, then you&amp;#8217;ll have to unzip it into your Visual Studio include path. Google for it as I won&amp;#8217;t 
+elaborate that&amp;nbsp;here.
+&lt;/p&gt;
+
+&lt;p class=&#34;news&#34;&gt;&lt;span class=&#34;lighter&#34;&gt;&lt;span class=&#34;caps&#34;&gt;NOTE&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+ &lt;ol class=&#34;news&#34;&gt;
+ &lt;li&gt;You should remember this &amp;#8220;adding to include path&amp;#8221; operation as it&amp;#8217;s very
+ useful in the rest part of this article as well as your future work with Visual Studio&amp;nbsp;C++&lt;/li&gt;
+ &lt;li&gt;This relative path is relative to the directory where your project (.vcxproj) file is stored, *&lt;span class=&#34;caps&#34;&gt;NOT&lt;/span&gt;* the source file, *&lt;span class=&#34;caps&#34;&gt;NOR&lt;/span&gt;* the header&amp;nbsp;file.&lt;/li&gt;
+ &lt;li&gt;In all configurations I use relative paths so that the solution is compilable 
+ even the directory&amp;#8217;s been changed. You may use absolute ones if you&amp;nbsp;want.&lt;/li&gt;
+ &lt;/ol&gt;
+ &lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h3&gt;1.2&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;However, new problems&amp;nbsp;comes.&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;  getopt.c&lt;br&gt;
+1&amp;gt;c1 : fatal error C1083: Cannot open source file: &amp;#8216;src\getopt.c&amp;#8217;: No such file or directory&lt;br&gt;
+1&amp;gt;  getopt1.c&lt;br&gt;
+1&amp;gt;c1 : fatal error C1083: Cannot open source file: &amp;#8216;src\getopt1.c&amp;#8217;: No such file or directory
+&lt;/div&gt;
+&lt;p&gt;
+This is caused by a directory in the project &amp;#8212; &amp;#8220;&lt;span class=&#34;caps&#34;&gt;GNU&lt;/span&gt; getopt&amp;#8221;. &lt;code&gt;getopt&lt;/code&gt; is a useful
+command-line &lt;span class=&#34;caps&#34;&gt;API&lt;/span&gt; in Unix-like operating systems, however it&amp;#8217;s not supported 
+by Windows/Visual Studio. Luckily, this directory seems not required by this library actually,
+so removing it will do the&amp;nbsp;trick.
+&lt;/p&gt;
+&lt;p&gt;
+Now you have the MixKit library successfully&amp;nbsp;compiled.
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h2&gt;2.&amp;nbsp;libgfx&lt;/h2&gt;&lt;/div&gt;
+&lt;div class=&#34;title&#34;&gt;&lt;h3&gt;2.1&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;The libgfx project compiles with a lot of warning messages and the following errors (I selected 
+only the compiler information that&amp;#8217;s related to&amp;nbsp;errors):&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;  arcball.cxx&lt;br&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;src\arcball.cxx(182): error C2678: binary &amp;#8216;&amp;gt;&amp;gt;&amp;#8217; : no operator found which takes a left-hand operand of type &amp;#8216;std::istream&amp;#8217; (or there is no acceptable conversion)&lt;br&gt;
+1&amp;gt;  baseball.cxx&lt;br&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;src\baseball.cxx(53): error C2678: binary &amp;#8216;&amp;gt;&amp;gt;&amp;#8217; : no operator found which takes a left-hand operand of type &amp;#8216;std::istream&amp;#8217; (or there is no acceptable conversion)
+&lt;/div&gt;
+
+&lt;p&gt;
+This is due to a std library problem. Simply add to qslim-2.1/libgfx/include/gfx/gl.h: 
+&lt;code&gt;#include &amp;lt;string&amp;gt;&lt;/code&gt; will save a lot of .cxx files that are including this&amp;nbsp;header.
+&lt;/p&gt;
+&lt;p&gt;
+Visual Studio also provides an easier approach to finding this file: double click the 
+error message and you&amp;#8217;ll open &amp;#8220;arcball.cxx&amp;#8221;; then right click on &lt;code&gt;#include &amp;lt;gfx/gl.h&amp;gt;&lt;/code&gt;
+, select &amp;#8220;Open Document &amp;lt;gfx/gl.h&amp;gt;&amp;nbsp;Ctrl+Shift+G&amp;#8221;.
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h3&gt;2.2&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;The next error is&amp;nbsp;familiar:&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;  gui.cxx&lt;br&gt;
+1&amp;gt;qslim-2.1\libgfx\include\gfx/gui.h(22): fatal error C1083: Cannot open include file: &amp;#8216;&lt;span class=&#34;caps&#34;&gt;FL&lt;/span&gt;/Fl.H&amp;#8217;: No such file or directory
+&lt;/div&gt;
+&lt;p&gt;
+Remember &lt;a href=&#34;#1.1&#34;&gt;1.1&lt;/a&gt;? Now you&amp;#8217;ll have to add to the include paths of &amp;#8220;libgfx&amp;#8221;: &amp;#8220;..&amp;#92;..&amp;#92;..&amp;#92;tools\fltk-1.3.0;&amp;#8221;.
+Note again that this path is relative to your project&amp;nbsp;file.
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h3&gt;2.3&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;Here comes an annoying&amp;nbsp;part:&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;  raster-jpeg.cxx&lt;br&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;src\raster-jpeg.cxx(22): fatal error C1083: Cannot open include file: &amp;#8216;jpeglib.h&amp;#8217;: No such file or directory&lt;br&gt;
+1&amp;gt;  raster-png.cxx&lt;br&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;src\raster-png.cxx(18): fatal error C1083: Cannot open include file: &amp;#8216;png.h&amp;#8217;: No such file or directory&lt;br&gt;
+1&amp;gt;  raster-tiff.cxx&lt;br&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;src\raster-tiff.cxx(14): fatal error C1083: Cannot open include file: &amp;#8216;tiffio.h&amp;#8217;: No such file or directory
+&lt;/div&gt;
+&lt;p&gt;
+These are due to that libgfx used some open source libraries to fulfill image-related tasks (&lt;span class=&#34;caps&#34;&gt;JPEG&lt;/span&gt;, &lt;span class=&#34;caps&#34;&gt;PNG&lt;/span&gt;, and &lt;span class=&#34;caps&#34;&gt;TIFF&lt;/span&gt;). If you do not want to use these functions, comment out the code in the &lt;code&gt;#ifdef&lt;/code&gt;, the precompiling directives, leaving only the part
+between &lt;code&gt;#else&lt;/code&gt; and &lt;code&gt;#endif&lt;/code&gt;. This won&amp;#8217;t have negative effect on the following steps. Take raster-jpeg.cxx
+as an example, after commenting out unnecessary code, it should look&amp;nbsp;like&lt;/p&gt;
+&lt;pre class=&#34;brush: cpp&#34;&gt;
+/************************************************************************
+
+  JPEG image file format support.
+...
+ ************************************************************************/
+
+#include &amp;lt;gfx/gfx.h&amp;gt;
+#include &amp;lt;gfx/raster.h&amp;gt;
+
+// Quality factors are expressed on a 0--100 scale
+int jpeg_output_quality = 100;
+
+/* #ifdef HAVE_LIBJPEG
+
+#include &amp;lt;stdio.h&amp;gt;
+...
+    return img;
+}
+
+#else */
+
+bool write_jpeg_image(const char *, const ByteRaster&amp;amp;) { return false; }
+ByteRaster *read_jpeg_image(const char *) { return NULL; }
+
+//#endif
+&lt;/pre&gt;
+&lt;p&gt;
+And you won&amp;#8217;t encounter the following problems in this section. Please &lt;a href=&#34;#qslim&#34;&gt;skip to QSlim&lt;/a&gt;. 
+Or else, you&amp;#8217;ll have to get the library files&amp;nbsp;from
+&lt;/p&gt;
+&lt;table&gt;
+&lt;tr class=&#34;lighter&#34;&gt;&lt;td&gt;Header file&lt;/td&gt;&lt;td&gt;Where you can get it&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;jpeglib.h&lt;/td&gt;&lt;td&gt;&lt;a href=&#34;http://www.ijg.org/&#34; target=&#34;_blank&#34;&gt;http://www.ijg.org/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;png.h&lt;/td&gt;&lt;td&gt;&lt;a href=&#34;http://www.libpng.org/&#34; target=&#34;_blank&#34;&gt;http://www.libpng.org/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;tiffio.h&lt;/td&gt;&lt;td&gt;&lt;a href=&#34;http://www.libtiff.org/&#34; target=&#34;_blank&#34;&gt;http://www.libtiff.org/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;
+When these libraries are ready in your directory, set the include paths accordingly.
+&lt;strong&gt;If you are in a hurry, use the 1.4.x version of libpng, and skip to 2.4 when indicated.  &lt;/strong&gt;
+However, adding to include won&amp;#8217;t solve the problem for good. You should get the following
+errors in the next&amp;nbsp;compilation:
+&lt;/p&gt;
+
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;  raster-jpeg.cxx&lt;br&gt;
+1&amp;gt;qslim-2.1\tools\jpeg-8d\jpeglib.h(25): fatal error C1083: Cannot open include file: &amp;#8216;jconfig.h&amp;#8217;: No such file or directory&lt;br&gt;
+1&amp;gt;  raster-png.cxx&lt;br&gt;
+1&amp;gt;qslim-2.1\tools\lpng1510\png.h(434): fatal error C1083: Cannot open include file: &amp;#8216;pnglibconf.h&amp;#8217;: No such file or directory&lt;br&gt;
+1&amp;gt;  raster-tiff.cxx&lt;br&gt;
+1&amp;gt;qslim-2.1\tools\tiff-4.0.1\libtiff\tiff.h(30): fatal error C1083: Cannot open include file: &amp;#8216;tiffconf.h&amp;#8217;: No such file or directory&lt;br&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Succinctly speaking, you&amp;#8217;ll need to rename some configuration header files.
+Please find in the root directory of each library and do the&amp;nbsp;following
+&lt;/p&gt;
+&lt;table&gt;
+&lt;tr class=&#34;lighter&#34;&gt;&lt;td&gt;Rename from&amp;#8230;&lt;/td&gt;&lt;td&gt;To&amp;#8230;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;jconfig.vc&lt;/td&gt;&lt;td&gt;jconfig.h&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;tiffconf.vc.h&lt;/td&gt;&lt;td&gt;tiffconf.h&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;scripts\pnglibconf.h.prebuilt&lt;/td&gt;&lt;td&gt;pnglibconf.h&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;
+If you have questions regarding the third renaming, refer to 
+&lt;a href=&#34;http://www.libpng.org/pub/png/libpng-manual.txt&#34; target=&#34;_blank&#34;&gt;
+http://www.libpng.org/pub/png/libpng-manual.txt&lt;/a&gt; and the file
+&amp;#8220;scripts\makefile.vcwin32&amp;#8221; under the library&amp;nbsp;directory.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;If you used libpng 1.4.x, you should not have found the pnglibconf file, which is ok, 
+and should be able to &lt;a href=&#34;#2.4&#34;&gt;skip 
+to 2.4&lt;/a&gt; now.&lt;/strong&gt; Or else, if unfortunately you are using the 1.5.x
+of that library, you should get these&amp;nbsp;errors
+&lt;/p&gt;
+
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;src\raster-png.cxx(42): error C2027: use of undefined type &amp;#8216;png_struct_def&amp;#8217;&lt;br&gt;
+1&amp;gt;          qslim-2.1\tools\lpng1510\png.h(849) : see declaration of &amp;#8216;png_struct_def&amp;#8217;&lt;br&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;src\raster-png.cxx(42): error C2227: left of &amp;#8216;-&amp;gt;jmpbuf&amp;#8217; must point to class/struct/union/generic type&lt;br&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;src\raster-png.cxx(132): error C2027: use of undefined type &amp;#8216;png_struct_def&amp;#8217;&lt;br&gt;
+1&amp;gt;          qslim-2.1\tools\lpng1510\png.h(849) : see declaration of &amp;#8216;png_struct_def&amp;#8217;&lt;br&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;src\raster-png.cxx(132): error C2227: left of &amp;#8216;-&amp;gt;jmpbuf&amp;#8217; must point to class/struct/union/generic type
+&lt;/div&gt;
+
+&lt;p&gt;
+According to &lt;a href=&#34;http://www.cegui.org.uk/phpBB2/viewtopic.php?f=2&amp;t=5848&#34; target=&#34;_blank&#34;&gt;
+http://www.cegui.org.uk/phpBB2/viewtopic.php?f=2&amp;amp;t=5848&lt;/a&gt; this is due to the upgrade
+of the library. I downloaded libpng 1.4.11 and it worked immediately &amp;#8212; at least for&amp;nbsp;now.
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;a name=&#34;2.4&#34;&gt;&lt;/a&gt;&lt;h3&gt;2.4&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;
+Now welcome to the last error in this&amp;nbsp;project.
+&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;  raster-png.cxx&lt;br&gt;
+1&amp;gt;qslim-2.1\tools\lpng1411\png.h(421): fatal error C1083: Cannot open include file: &amp;#8216;zlib.h&amp;#8217;: No such file or directory
+&lt;/div&gt;
+&lt;p&gt;
+This is due to the missing &lt;a href=&#34;http://zlib.net&#34; target=&#34;_blank&#34;&gt;zlib&lt;/a&gt;
+ in your include directory. Download one and add it to your include path. Mine
+ is:&amp;nbsp;..&amp;#92;..&amp;#92;..&amp;#92;tools\zlib-1.2.6;
+&lt;/p&gt;
+&lt;p&gt;
+Now libgfx is also&amp;nbsp;ready.
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;a name=&#34;qslim&#34;&gt;&lt;/a&gt;&lt;h2&gt;3.&amp;nbsp;QSlim&lt;/h2&gt;&lt;/div&gt;
+&lt;div class=&#34;title&#34;&gt;&lt;h3&gt;3.1&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;
+Try building QSlim, and you&amp;#8217;ll get&amp;nbsp;this:
+&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;  cmdline.cxx&lt;br&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;tools\qslim\cmdline.cxx(17): fatal error C1083: Cannot open include file: &amp;#8216;getopt.h&amp;#8217;: No such file or directory
+&lt;/div&gt;
+&lt;p&gt;
+Remember when we were compiling MixKit we omitted a directory? This 
+is it. This time there&amp;#8217;s no escape, you&amp;#8217;ll have to use a windows counterpart.
+Fortunately, there is one. &lt;a href=&#34;http://www.codeproject.com/Articles/1940/XGetopt-A-Unix-compatible-getopt-for-MFC-and-Win32&#34;
+target=&#34;_blank&#34;&gt; XGetOpt&lt;/a&gt; is the solution you&amp;#8217;ll need. Download it
+and add it to the include&amp;nbsp;directory.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Also remember to add the &amp;#8220;XGetopt.cpp&amp;#8221; file in your project
+to avoid link&amp;nbsp;problems.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p class=&#34;news&#34;&gt;&lt;span class=&#34;lighter&#34;&gt;&lt;span class=&#34;caps&#34;&gt;NOTE&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+In fact, we should have built the getopt function inside MixKit, so that
+when linking, it can be linked as binary. I did not find out until I finished
+compiling QSlim. What a&amp;nbsp;shame.
+&lt;/p&gt;
+&lt;div class=&#34;title&#34;&gt;&lt;h3&gt;3.2&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;
+The next problem is&amp;nbsp;weird.
+&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;  cmdline.cxx&lt;br&gt;
+1&amp;gt;qslim-2.1\tools\XGetopt_demo\XGetopt.h(19): error C2143: syntax error : missing &amp;#8216;;&amp;#8217; before &amp;#8216;*&amp;#8217;&lt;br&gt;
+1&amp;gt;qslim-2.1\tools\XGetopt_demo\XGetopt.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int&lt;br&gt;
+1&amp;gt;qslim-2.1\tools\XGetopt_demo\XGetopt.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int&lt;br&gt;
+1&amp;gt;qslim-2.1\tools\XGetopt_demo\XGetopt.h(21): error C2061: syntax error : identifier &amp;#8216;&lt;span class=&#34;caps&#34;&gt;TCHAR&lt;/span&gt;&amp;#8217;
+&lt;/div&gt;
+&lt;p&gt;
+What I recommend is that you &lt;code&gt;#include &amp;lt;tchar.h&amp;gt;&lt;/code&gt; in XGetopt.h, 
+and switch in XGetopt.cpp from &lt;code&gt;&#34;stdafx.h&#34;&lt;/code&gt; to &lt;code&gt;&amp;lt;windows.h&amp;gt;&lt;/code&gt;, 
+&lt;code&gt;&amp;lt;stdio.h&amp;gt;&lt;/code&gt;, and &lt;code&gt;&amp;lt;tchar.h&amp;gt;&lt;/code&gt;, as we are not using
+pre-compiled headers&amp;nbsp;here.
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;h3&gt;3.3&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;
+The next problem is&amp;nbsp;weirder.
+&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;..&amp;#92;..&amp;#92;tools\qslim\qslim.cxx(36): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+&lt;/div&gt;
+&lt;p&gt;
+function &lt;code&gt;main&lt;/code&gt; has no returning data type! Whatever, &lt;code&gt;int&lt;/code&gt; will do the&amp;nbsp;trick.
+&lt;/p&gt;
+&lt;div class=&#34;title&#34;&gt;&lt;h3&gt;3.4&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;
+Now welcome to the final nasty part. In the following 
+error message I omitted 20 lines of link&amp;nbsp;errors&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;
+1&amp;gt;.\Release\QSlim.exe : fatal error &lt;span class=&#34;caps&#34;&gt;LNK1120&lt;/span&gt;: 20 unresolved externals
+&lt;/div&gt;
+&lt;p&gt;
+Remember the include directory window? This time choose from the left
+&amp;#8220;Configuration Properties &amp;gt; Linker &amp;gt; Input&amp;#8221;, and add these two
+paths into your &amp;#8220;Additional Dependencies&amp;#8221;:&amp;nbsp;&amp;#8221;../../libgfx/vc6/libgfx/Release/libgfx.lib;../../mixkit/Release/MixKit.lib;&amp;#8221;
+&lt;/p&gt;
+&lt;p&gt;
+This is to tell your linker where the external binary resources are located,
+so that external libraries can be linked in to complete your&amp;nbsp;QSlim.exe.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;br&gt;
+Now you should be able to successfully compile your QSlim 2.1 with 
+Visual Studio.&amp;nbsp;Enjoy!!
+&lt;/p&gt;
+
+&lt;div class=&#34;title&#34;&gt;&lt;a name=&#34;resources&#34;&gt;&lt;/a&gt;&lt;h2&gt;Related&amp;nbsp;Resources&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;
+The compiled QSlim.exe (Configuration:&amp;#8221;Release&amp;#8221;, Platform:&amp;#8221;Win32&amp;#8221;): 
+&lt;a href=&#34;/files/blog/compiling-qslim-21/QSlim.zip&#34; target=&#34;_blank&#34;&gt;QSlim.zip&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+The full configured &lt;span class=&#34;caps&#34;&gt;VS2010&lt;/span&gt; solution with all required libraries packed:
+&lt;a href=&#34;/files/blog/compiling-qslim-21/qslim-2.1.zip&#34; target=&#34;_blank&#34;&gt;qslim-2.1.zip&lt;/a&gt;
 &lt;/p&gt;            </content>
         </entry>
     </feed>

@@ -273,8 +273,12 @@ h1 a, h2 a, h3 a{
 }
 
 .codebox {
+font-family:"Courier New",Courier,serif;
   margin-top: 8px;
   margin-bottom: 12px;
+  border:1px #000 dashed;
+  background:#f0f0f3;
+  padding:5px;
 }
 .code {
   position: relative;
@@ -294,6 +298,12 @@ h1 a, h2 a, h3 a{
   margin-bottom: 8px;
 }
 
+code{
+    font-family:"Courier New",Courier,serif;
+}
+strong{
+    color:red;
+}
 .postnav{
   width:100%
 }
