@@ -45,12 +45,12 @@
 
 <li>
 <!-- Google+ -->
-<!-- Place this tag where you want the badge to render -->
-<a href="https://plus.google.com/105543155969392619910?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" alt="" style="border:0;width:16px;height:16px;"/></a>
-</li>
+<script async type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone></g:plusone></li>
 
 <li>
 <!-- Facebook -->
+<div id="fb-root"></div>
 <script async>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -58,7 +58,7 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-like" data-send="false" data-layout="button_count" data-width="32" data-show-faces="true" data-font="segoe ui"></div>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="150" data-show-faces="true" data-font="arial"></div>
 </li>
 
 <li>
