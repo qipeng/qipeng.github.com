@@ -2,9 +2,9 @@
  <ul>
  <li>
           <!-- Renren -->
-<script type="text/javascript" src="http://widget.renren.com/js/rrshare.js"></script>
+<script async type="text/javascript" src="http://widget.renren.com/js/rrshare.js"></script>
 <a name="xn_share" onclick="shareClick()" type="icon_medium" href="javascript:;"></a>
-<script type="text/javascript">
+<script async type="text/javascript">
 	function shareClick() {
 		var rrShareParam = {
 			resourceUrl : '',
@@ -20,7 +20,7 @@
 <li>
 <!-- Weibo.com -->
 <div id="weibo-share"></div>
-<script type="text/javascript" charset="utf-8">
+<script async type="text/javascript" charset="utf-8">
 (function(){
   var _w = 90 , _h = 24;
   var param = {
@@ -51,7 +51,7 @@
 
 <li>
 <!-- Facebook -->
-<script>(function(d, s, id) {
+<script async>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
@@ -64,6 +64,6 @@
 <li>
 <!-- Twitter -->
 <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </li>
 </ul>
