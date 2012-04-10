@@ -352,6 +352,9 @@ nav.after{
 .lighter{
     font-weight:300;
 }
+.content {
+padding:5px;
+}
 .content .title{
     background: #5ab3ff;
     background: -webkit-gradient(linear, left top, left bottom, from(#068bfe), to(#5ab3ff));
@@ -475,4 +478,10 @@ padding-bottom:30px;
 td {
 vertical-align:top;
 padding:5px;
+}
+
+#sociallinks li{
+padding-left:10px;
+padding-bottom:10px;
+list-style-type: none;
 }
