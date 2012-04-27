@@ -17,7 +17,7 @@ footer,header,hgroup,menu,nav,section {
 
 table {
     font-family: "open sans", Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     border-collapse: collapse;
 }
 
@@ -64,7 +64,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, nav a:hover {
 
 body{
     font-family: "open sans", Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     background-color: #ddd;
     padding: 0;
     margin: 0;
@@ -79,16 +79,16 @@ body{
 
 footer{
     color:#ddd;
-    font-size: 14px;
+    font-size: 12px;
     text-align: left;
-    min-height: 60px;
-    _height: 60px;
+    min-height: 45px;
+    _height: 45px;
     _height: auto !important;
-    padding:20px 60px 40px;
+    padding:10px 30px 10px;
     background: #1f619b;
-    background: -webkit-gradient(linear, left top, left bottom, from(#1f619b), to(#043f72));
-    background: -moz-linear-gradient(top,  #1f619b,  #043f72);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#1f619b', endColorstr='#043f72');
+    background: -webkit-gradient(linear, left top, left bottom, from(#1f619b), to(#072c4c));
+    background: -moz-linear-gradient(top,  #1f619b,  #072c4c);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#1f619b', endColorstr='#072c4c');
     /*text-shadow: 0px 2px 0px #fff;*/
 }
 
@@ -97,44 +97,48 @@ footer a{
 }
 
 .banner{
-    height: 125px;
+    height: 60px;
     position: relative;
-    background: #1f619b;
+    /*background: #1f619b;
     background: -webkit-gradient(linear, left top, left bottom, from(#043f72), to(#1f619b));
     background: -moz-linear-gradient(top,  #043f72,  #1f619b);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#043f72', endColorstr='#1f619b');
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#043f72', endColorstr='#1f619b');*/
+    background: #104471;
+    background: -webkit-gradient(linear, left top, left bottom, from(#072c4c), to(#104471));
+    background: -moz-linear-gradient(top,  #072c4c,  #104471);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#072c4c', endColorstr='#104471');*/
 }
 
 .banner h1{
     font-weight: normal;
-    font-size: 48px;
-    padding-top: 20px;
-    padding-left:60px;
-    padding-bottom:20px;
+    font-size: 36px;
+    padding-top: 5px;
+    padding-left:40px;
+    padding-bottom:19px;
     /*line-height: 48px;*/
     color: #fff;
 }
 
 .banner nav{
     position:absolute;
-    right:50px;
+    right:30px;
     bottom:0px;
 }
 
 .banner nav li{
     list-style-type: none;
     float: left;
-    height:125px;
-    _width:125px;
+    height:60px;
+    _width:80px;
 }
 
 .banner nav li a {
    display:block;
-   padding:40px 25px 55px;
-   height:30px;
+   padding:25px 15px 10px;
+   height:25px;
    color: #fff;
-   font-size:24px;
-   line-height:65px;
+   font-size:18px;
+   line-height:25px;
 }
 
 .banner nav li a:hover{
@@ -165,17 +169,6 @@ footer a{
 
 .blog_excerpt .button{
     float: right;
-}
-
-.blog_excerpt h3,
-h1.title{
-    font-size: 24px;
-    line-height: 36px;
-    border-bottom: 1px solid #ccc;
-}
-
-.blog_excerpt h3{
-    margin-bottom: 24px;
 }
 
 section.content{
@@ -347,14 +340,18 @@ nav.after{
 }
 .right-float{
     color:#fff;
-    font-size:18px;
+    font-size:12px;
     padding:20px;
     width:260px;
     margin-bottom:20px;
+    margin-left:20px;
     background: #5ab3ff;
     background: -webkit-gradient(linear, left top, right top, from(#068bfe), to(#5ab3ff));
     background: -moz-linear-gradient(left,  #068bfe,  #5ab3ff);
     filter:  progid:DXImageTransform.Microsoft.gradient(gradientType=1,startColorstr='#068bfe', endColorstr='#5ab3ff');
+}
+.right-float lighter{
+    font-size: 14px;
 }
 .right-float a{
     color: #ddd;
