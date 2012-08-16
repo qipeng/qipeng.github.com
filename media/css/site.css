@@ -110,7 +110,8 @@ footer{
 
 .banner nav{
     padding-left: 90px;
-    width:720px;
+    width:720px !important;
+    width:860px;
     height:50px;
     background:#49d845;
     border-right:50px solid #11bb22;
@@ -127,7 +128,8 @@ footer{
    border: none;
    display:block;
    padding:15px 10px 5px;
-   width:100px;
+   width:100px !important;
+   width:120px;
    height:30px;
    color: #fff;
    font-size:18px;
