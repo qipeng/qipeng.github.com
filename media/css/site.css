@@ -94,6 +94,9 @@ footer{
     background: -webkit-gradient(linear, left top, right top, from(#11bb5c), to(#11bb98));
     background: -moz-linear-gradient(left,  #11bb5c,  #11bb98);
     filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#11bb5c', endColorstr='#11bb98');*/
+    -webkit-box-shadow: 0px 0px 15px #009976;
+    -moz-box-shadow: 0px 0px 15px #009976;
+    box-shadow: 0px 0px 15px #009976;
 }
 
 .banner h1{
