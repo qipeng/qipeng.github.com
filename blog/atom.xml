@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-08-21T14:58:43Z</updated>
+    <updated>2012-08-23T11:42:51Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -84,6 +84,26 @@
                         <category   scheme="/blog/tags"
                         term="html_css"
                         label="Html_Css" />
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Notes on Matlab Parallel Programming</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/matlab-parallel.html"/>
+            <updated>2012-08-22T17:24:00Z</updated>
+            <published>2012-08-22T17:24:00Z</published>
+            <id>/blog/matlab-parallel.html</id>
+                        <category   scheme="/blog/tags"
+                        term="Matlab"
+                        label="Matlab" />
+                        <category   scheme="/blog/tags"
+                        term="parallel"
+                        label="Parallel" />
+                        <category   scheme="/blog/tags"
+                        term="programming"
+                        label="Programming" />
             
             <content type="html">
                                             </content>

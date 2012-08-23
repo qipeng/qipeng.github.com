@@ -288,15 +288,9 @@ font-family:"Courier New",Courier,serif;
   padding:5px;
 }
 .code {
+  font-family:"Courier New",Courier,serif;
   position: relative;
   background-color: #fff;
-}
-.code figcaption {
-  font-size: 10px;
-  position: absolute;
-  bottom: 3px;
-  right: 12px;
-  color: rgba(0, 0, 0, 0.5);
 }
 .highlight pre {
   font-size: 12px;
@@ -347,6 +341,10 @@ nav.after{
 }
 .right-float .lighter{
     font-size: 14px;
+    font-family:"Poly", "Times New Roman";
+    color:#11bb22;
+}
+.lighter {
     font-family:"Poly", "Times New Roman";
     color:#11bb22;
 }
