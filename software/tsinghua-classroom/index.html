@@ -1,0 +1,121 @@
+﻿<html>
+<head>
+<meta charset="UTF-8">
+<title>Tsinghua Classroom</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/media/css/site.css" type="text/css">
+<link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
+<link rel="stylesheet" href="/media/css/cupertino/jquery-ui-1.8.19.custom.css" type="text/css">
+<script type="text/javascript" src="/media/js/libs/modernizr-1.7.min.js"></script>
+</head>
+<body class="content" style="background:#fff;padding:20px;">
+<div class="title"><h1>Tsinghua Classroom (清华大学自习教室查询)</h1></div>
+<p>This page uses a <a href="http://www.python.org" target="_blank">Python</a>
+ backend deployed on <a href="http://appengine.google.com/" target="_blank">
+Google App Engine</a> to fetch and analyze the classroom availability table page
+on <a href="http://myhome.tsinghua.edu.cn/" target="_blank">Myhome.tsinghua</a>.
+James Padolsey's <a href="https://github.com/padolsey/jQuery-Plugins/blob/master/cross-domain-ajax/jquery.xdomainajax.js"
+target="_blank">Cross-Domain jQuery Ajax</a> also helped a lot.
+<br>
+本页面通过一个部署在<a href="http://appengine.google.com/" target="_blank">
+Google App Engine</a>上的<a href="http://www.python.org" target="_blank">Python</a>
+脚本后台，对<a href="http://myhome.tsinghua.edu.cn/" target="_blank">我们的家园</a>
+网站上的教室查询页面进行读取和分析，得到空闲教室信息。James Padolsey编写的<a href="https://github.com/padolsey/jQuery-Plugins/blob/master/cross-domain-ajax/jquery.xdomainajax.js"
+target="_blank">跨域jQuery Ajax</a>为简化此网页的代码做出了巨大的贡献。
+<span style="color:green;">由于使用了GAE，此页面的功能需要翻墙才能完成。</span>
+</p>
+<p>
+<span class="lighter">NOTE:  注意：</span> 
+<br>
+The latest of a week result won't be available 
+until that Monday, so it is recommended that you query for the current week (Mon. to Sun.) only.
+<br>
+每周的教室安排可能要到周一才会最终确定，所以推荐只查询本周的自习教室，否则可能未来信息会发生改变。
+</p>
+<style>
+#querytable{
+align:center;
+}
+#querytable .input{
+min-width:100px;
+_width:100px;
+border: 1px solid #ccc;
+}
+.disabled{
+
+}
+</style>
+<table id="querytable">
+<tr><td>
+Date 日期
+</td><td><input id="datepicker" type="text" class="input" readonly></td>
+</tr>
+<tr><td>
+Building 教室楼
+</td><td><select name="building_id" id="bldg" class="input">
+<option value="1" selected="selected">一教</option><option value="2">二教</option><option value="3">三教一、二段</option><option value="4">三教三段</option><option value="5">四教</option><option value="6">五教</option><option value="7">六教A段</option><option value="8">西阶</option><option value="9">旧水</option><option value="10">新水</option><option value="11">旧经报告厅</option><option value="12">文科楼</option><option value="13">技科楼</option><option value="14">建馆报告厅</option><option value="15">明理楼</option><option value="16">理科楼</option><option value="17">六教B、C段</option><option value="18">东阶</option>
+	</select></td>
+</tr>
+<tr><td>
+Time 自习时段
+</td><td>
+<div id="time"><INPUT NAME="options" TYPE="CHECKBOX" VALUE="1">
+  Lesson 1 第一节课(08:00 -- 09:35)<BR>
+<INPUT NAME="options" TYPE="CHECKBOX" VALUE="2">
+  Lesson 2 第二节课(09:50 -- 12:15)<BR>
+<INPUT NAME="options" TYPE="CHECKBOX" VALUE="3">
+  Lesson 3 第三节课(13:30 -- 15:05)<BR>
+<INPUT NAME="options" TYPE="CHECKBOX" VALUE="4">
+  Lesson 4 第四节课(15:20 -- 16:55)<BR>
+<INPUT NAME="options" TYPE="CHECKBOX" VALUE="5">
+  Lesson 5 第五节课(17:05 -- 18:40)<BR>
+<INPUT NAME="options" TYPE="CHECKBOX" VALUE="6">
+  Lesson 6 第六节课(19:20 -- 21:45)<BR></div></td>
+</tr>
+<tr><td></td><td><input id="submit" type="submit" value="Start Query 开始查询"></td></tr>
+<tr><td>查询结果</td><td id="result"></td></tr>
+</table>
+<div class="title"><h2>See Also...</h2></div>
+<a href="/software/tsinghua-classroom.html"> Why I wrote this page</a>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="/media/js/libs/jquery-1.7.2.min.js">\x3C/script>')</script>
+<script src="/media/js/libs/jquery-ui-1.8.19.custom.min.js"></script>
+<script src="/media/js/libs/xsite-ajax.js"></script>
+<script type="text/javascript">
+$(function(){
+$("#datepicker").datepicker();
+$('#submit').button();
+$('#submit').click(function(){
+    if ($('#datepicker').val() == '') {
+        alert("Please choose date! 请选择需要查询的日期！");
+        return false;
+    }
+    var date = $('#datepicker').val().split("/");
+    var time = $('#time').children('input:checked');
+    if (time.length <= 0) {
+        alert("Please specify time! 请至少选择一个需要查询的时间段！");
+        return false;
+    }
+    var target="";
+    for(var i = 0; i < time.length; i++)
+        target += time[i].value + ",";
+    
+    
+    $('#submit').attr('disabled');
+    $('#result').html('<img src="/media/images/loader.gif"> Please wait as this may take tens of seconds... 查询过程可能需要数十秒，请稍候...');
+    $.ajax({
+    type: "GET",
+    url: "http://qipenghomepg.appspot.com/thuclsrm?id=" + $('#bldg').val()
+        + "&year=" + date[2]
+        + "&month=" + date[0]
+        + "&day=" + date[1]
+        + "&target=" + target,
+    crossDomain: true,
+    dataType: 'html',
+    success: function(data){res=data.responseText;if (res != null)$('#result').html(res);else$('#result').html("No classroom matches your criteria. 没有找到符合条件的教室。");$('#submit').removeAttr('disabled');}
+    });
+});})
+</script>
+</body>
+</html>
