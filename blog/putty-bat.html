@@ -16,8 +16,8 @@
         compatibility mode is within the first 1K bytes
         code.google.com/p/chromium/issues/detail?id=23003 -->
 
-  <title>Notes on Matlab Parallel Programming</title>
-  <meta name="description" content="Some notes that I accumulated while using Matlab parallel programming
+  <title>Shortcut batch files that works with Putty</title>
+  <meta name="description" content="Two batch files that I use to work with putty
 ">
   <meta name="author" content="Peng Qi">
 
@@ -34,7 +34,7 @@
         enables HTML5 elements & feature detects -->
     <script type="text/javascript" src="/media/js/libs/modernizr-1.7.min.js"></script>
     </head>
-<body id="matlab-parallel">
+<body id="putty-bat">
     <div id="container">
             <div id="main" role="main">
           <header class="banner clearfix">
@@ -81,18 +81,13 @@
 <span class="lighter" style="font-size:14px;">Tags:</span><br/>
 <ul class="tags clear">
 <li>
-    <a class="small" href="/blog/tags/Matlab.html">
-        Matlab
+    <a class="small" href="/blog/tags/putty.html">
+        putty
     </a>
 </li>
 <li>
-    <a class="small" href="/blog/tags/parallel.html">
-        parallel
-    </a>
-</li>
-<li>
-    <a class="small" href="/blog/tags/programming.html">
-        programming
+    <a class="small" href="/blog/tags/remote.html">
+        remote
     </a>
 </li>
 </ul>
@@ -104,117 +99,108 @@
           <section class="content">
           <article class="post">
 
-<a href="/blog">Blog</a> &nbsp;&gt;&nbsp; Notes on Matlab Parallel Programming<br/>
+<a href="/blog">Blog</a> &nbsp;&gt;&nbsp; Shortcut batch files that works with Putty<br/>
 <nav class="postnav before">
 Previous:
-<a href="/blog/putty-bat.html">Shortcut batch files that works with Putty</a>
+None
 <br/>
 
 Next:
-<a href="/blog/tutorial-2.html">Tutorial 2&#58; The hyde Template Files</a>
+<a href="/blog/matlab-parallel.html">Notes on Matlab Parallel Programming</a>
 </nav>
 
 <div class="title"><h1 >
-    Notes on Matlab Parallel Programming
+    Shortcut batch files that works with Putty
 </h1></div>
-<time datetime="2012-08-22">
-    Posted: Wed, 22 Aug 2012
+<time datetime="2012-08-28">
+    Posted: Tue, 28 Aug 2012
 </time>
 
 <div class="postcontent">
 <p>
-Recently, I am doing research which involve extensive computation with Matlab. 
-Luckily, most of this computation can be done in a parallel fashion, and this can
-be instantly accomplished with the Matlab parallel toolbox. During using this
-toolbox, I summarized some notes that need to be remembered, to accelerate future&nbsp;work.</p>
-
-<p class='lighter'>
-This post will be constantly updated during my use of Matlab parallel programming.
-Update log:
-<ul class='news'>
-<li>
-Aug. 22, 2012 - matlabpool,&nbsp;parfor
-</li>
-</ul>
-</p>
-
-<div class='title'><h2>matlabpool</h2></div>
+<a href="http://portableapps.com/apps/internet/putty_portable" target="_blank">Putty</a>
+ is one of the most common software with which people work on remote
+machines, which typically has a <span class="caps">UNIX</span>/Linux system for stability or efficiency&nbsp;reasons.</p>
 
 <p>
-<span class="code">matlabpool</span> command is essential if you want to use the Matlab parallel programming
-features. It opens several workers (several Matlab processes), and uses the current
-Matlab process as the coordinator to run parallel jobs. The structure is a star-shape,
-where the current process is the &#8220;supervisor&#8221; of the workers it manages. 
-<a href="#ref1">[1]</a>
+To operate on the remote machine, I think the reader should be familiar with the
+pageant program. Type in your remote host <span class="caps">IP</span> (e.g. &#8220;192.168.x.x&#8221;) 
+or host name (e.g. &#8220;super-computer-1&#8221;) at the proper blank, and clicking
+the &#8220;Open&#8221; button will get you there. Next just enter your user-name and password
+on that computer and you&#8217;ll get a bash interface to work&nbsp;on.
 </p>
 
 <p>
-To use the command, simply typing <span class='code'>matlabpool</span> or 
-<span class='code'>matlabpool open</span> will do the job. This uses the default
-configuration named &#8220;local&#8221;, which deploys <i>n</i> workers on the local
-computer, where <i>n</i> is the number of cores of your&nbsp;<span class="caps">CPU</span>.
+But transferring files between the remote computer and your local <span class="caps">PC</span> is a bit 
+complicated. You&#8217;ll need to use the command-line program <span class='code'>pscp</span>
+to communicate with the remote computer, which probably is short for &#8220;Putty Secure Copy&#8221;.
+This post is mainly about using this&nbsp;program.
 </p>
 
 <p>
-Always remember to close your workers before exiting Matlab. In my experience, if
-you do not close them, the processes will be killed, but the task remains. To close
-the Matlab pool, type <span class='code'>matlabpool close</span> or <span class='code'>
-matlabpool close force</span>. The latter is *strongly recommended* in case of
-accidentally unfinished or user-breaked tasks. If you do not free previous tasks in the 
-Matlab pool, the performance of the current task will be affected, even if you&#8217;ve 
-already exited Matlab once without closing the&nbsp;pool.
+I have two batch files in my putty directory, called &#8220;get.bat&#8221; and &#8220;send.bat&#8221;, respectively.
+They look something&nbsp;like:
 </p>
 
 <p>
-So, in my experience, it is recommended to always use:
-<pre class='codebox brush: matlab'>
-matlabpool close force;
-matlabpool open;
+get.bat
+</p>
+
+<pre class='codebox'>
+pscp -v USERNAME@REMOTE_SERVER:/home/USERNAME/%1 LOCAL_FOLDER\%2 &lt; PASSWORD
 </pre>
-if you want to work with Matlab paralell programming efficiently (and&nbsp;locally).
+
+<p>
+send.bat
+</p>
+
+<pre class='codebox'>
+pscp -v LOCAL_FOLDER\%1 USERNAME@REMOTE_SERVER:/home/USERNAME/%2 &lt; PASSWORD
+</pre>
+
+<p>
+These are nothing difficult to understand. LOCAL_FOLDER is the local folder you
+often work with (my personal habit is to put all my programs in sub-directories
+of such a folder). <span class="caps">USERNAME</span> is your user-name on the remote computer REMOTE_SERVER.
+As with pageant, REMOTE_SERVER can both be remote <span class="caps">IP</span> or remote machine name.
+<span class="caps">PASSWORD</span>, acturally, is a file containing the first line your remote server password
+and the second line nothing (in fact what matters is the return at the end of the 
+first line). using <span class='code'>&lt; <span class="caps">PASSWORD</span></span> allows you to use the file
+<span class="caps">PASSWORD</span> as the input to the console whenever your password (followed by a return)
+is needed by <span class='code'>pscp</span>.
 </p>
 
 <p>
-The implementation of <span class='node'>matlabpool</span> involves network communication, serialization and
-deserialization, offering the possibility of using configurations other than &#8220;local&#8221;
-to work on remote or even multiple remote computers. I&#8217;ll cover that when it&#8217;s time for 
-me to use one,&nbsp;perhaps.
-</p>
-
-<div class='title'><h2>parfor</h2></div>
-
-<p>
-
-The Matlab paralell <span class="caps">FOR</span>-loop is perhaps its most common and easy-to-use paralell feature.
-To write a <span class='code'>parfor</span> loop, simply rewrite a <span class='code'>for</span>
-loop which has a loop variable that is a *integral and consecutive row vector*. More hint
-can be found in Matlab&#8217;s help documents <a href="#ref2">[2]</a> and <a href="#ref3">[3]</a>.
-
+By the way, the switch <span class='code'>-v</span> stands for verbose, which allows
+pscp to print the detailed progress of connection, file transfer, etc. I prefer it&#8217;s on.
+Another switch that may come handy is the <span class='code'>-r</span> switch, which
+allows pscp to recursively copy all sub-directories and all files in them of the 
+given directory, from one computer to&nbsp;another.
 </p>
 
 <p>
-One hint that I think important is: always keep your I/O variables <span class="caps">SLICED</span> where possible,
-or the communication overhead may be efficiency&nbsp;killer.
+Now with these preparations done, all you need to do is <span class='code'>cd</span> 
+to your Putty directory, and&nbsp;type
 </p>
 
-<div class='title'><h2>References</h2></div>
+<pre class='codebox'>
+send my_local_program/* my_remote_folder
+rem Remark: Do something (like run your program) on your remote computer here
+get my_remote_folder/result/* my_local_program/result/
+rem Remark: Make sure the folders exist on both side, or pscp might fail
+</pre>
 
-<ul class='news'>
-<li>[1] <a href='http://www.mathworks.cn/help/toolbox/distcomp/matlabpool.html'  
-target='_blank' name='ref1'>http://www.mathworks.cn/help/toolbox/distcomp/matlabpool.html</a></li>
-<li>[2] <a href='http://www.mathworks.cn/help/toolbox/distcomp/parfor.html'  
-target='_blank' name='ref2'>http://www.mathworks.cn/help/toolbox/distcomp/parfor.html</a></li>
-<li>[3] <a href='http://www.mathworks.cn/help/toolbox/distcomp/brdqtjj-1.html'  
-target='_blank' name='ref3'>http://www.mathworks.cn/help/toolbox/distcomp/brdqtjj-1.html</a></li>
-</ul></div>
+<p>
+Enjoy!
+</p></div>
 
 <nav class="postnav after">
 Previous:
-<a href="/blog/putty-bat.html">Shortcut batch files that works with Putty</a>
+None
 <br/>
 
 Next:
-<a href="/blog/tutorial-2.html">Tutorial 2&#58; The hyde Template Files</a>
+<a href="/blog/matlab-parallel.html">Notes on Matlab Parallel Programming</a>
 </nav>
 
 <div id="disqus_thread"></div>

@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-08-23T11:42:51Z</updated>
+    <updated>2012-08-28T10:06:09Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -104,6 +104,23 @@
                         <category   scheme="/blog/tags"
                         term="programming"
                         label="Programming" />
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Shortcut batch files that works with Putty</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/putty-bat.html"/>
+            <updated>2012-08-28T10:05:00Z</updated>
+            <published>2012-08-28T10:05:00Z</published>
+            <id>/blog/putty-bat.html</id>
+                        <category   scheme="/blog/tags"
+                        term="putty"
+                        label="Putty" />
+                        <category   scheme="/blog/tags"
+                        term="remote"
+                        label="Remote" />
             
             <content type="html">
                                             </content>

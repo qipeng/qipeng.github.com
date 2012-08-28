@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-08-23T11:42:52Z</updated>
+    <updated>2012-08-28T10:06:09Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
@@ -130,5 +130,25 @@ made this homepage what it looks like&amp;nbsp;now.&lt;/p&gt;            </conte
 Luckily, most of this computation can be done in a parallel fashion, and this can
 be instantly accomplished with the Matlab parallel toolbox. During using this
 toolbox, I summarized some notes that need to be remembered, to accelerate future&amp;nbsp;work.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Shortcut batch files that works with Putty</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/putty-bat.html"/>
+            <updated>2012-08-28T10:05:00Z</updated>
+            <published>2012-08-28T10:05:00Z</published>
+            <id>/blog/putty-bat.html</id>
+                        <category   scheme="/blog/tags"
+                        term="putty"
+                        label="Putty" />
+                        <category   scheme="/blog/tags"
+                        term="remote"
+                        label="Remote" />
+            
+            <content type="html">
+                
+                &lt;p&gt;&lt;a href=&#34;http://portableapps.com/apps/internet/putty_portable&#34; target=&#34;_blank&#34;&gt;Putty&lt;/a&gt;
+ is one of the most common software with which people work on remote
+machines, which typically has a &lt;span class=&#34;caps&#34;&gt;UNIX&lt;/span&gt;/Linux system for stability or efficiency&amp;nbsp;reasons.&lt;/p&gt;            </content>
         </entry>
     </feed>
