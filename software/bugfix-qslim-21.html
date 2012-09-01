@@ -102,11 +102,12 @@ Next:
 </h1></div>
 
 <div class="postcontent">
-<link rel="stylesheet" href="/media/css/syntaxhighlighter/shCoreEclipse.css" type="text/css">
-<link rel="stylesheet" href="/media/css/syntaxhighlighter/shThemeEclipse.css" type="text/css">
-
+<p><link rel="stylesheet" href="/media/css/syntaxhighlighter/shCoreEclipse.css" type="text/css">
+<link rel="stylesheet" href="/media/css/syntaxhighlighter/shThemeEclipse.css" type="text/css"></p>
 <script src="/media/js/syntaxhighlighter/shCore.js"></script>
+
 <script src="/media/js/syntaxhighlighter/shBrushCpp.js"></script>
+
 <script type="text/javascript">SyntaxHighlighter.all()</script>
 
 <p>
@@ -143,21 +144,25 @@ of face&nbsp;direction.
 </p>
 
 <div class="title"><a name="resources"></a><h2>Resources</h2></div>
+
 <p>
 For windows users, please feel free to download the compiled &#8220;bugfixed&#8221; QSlim 2.1 
 <a href="bugfix-qslim-21/qslim.zip">qslim.zip</a>
 </p>
+
 <p>
 For people using other platforms or people wanting to compile on their own, I added 
 these code to the MxQSlim.cxx file, at about Line 374, in function <code class="brush: cpp">void 
 MxEdgeQSlim::compute_target_placement(MxQSlimEdge *info)</code>, just after the big&nbsp;if-else:
 </p>
+
 <pre class="brush: cpp">
 if (e_min &lt; 0) e_min += 1e200; // The punishment of negative error, make it a great positive error
 e_min += 1e-10 * Q.area();  // Make sure that area works even the error is zero
 </pre>
 
 <div class="title"><h2>See&nbsp;Also&#8230;</h2></div>
+
 <p>
 Read my blog and find out how I compiled QSlim 2.1 with Garland&#8217;s outdated .dsw file under 
 <a href="/blog/compiling-qslim-21.html">Windows + Visual Studio</a>.

@@ -125,14 +125,18 @@ Next:
 </time>
 
 <div class="postcontent">
-<link rel="stylesheet" href="/media/css/syntaxhighlighter/shCoreEclipse.css" type="text/css">
-<link rel="stylesheet" href="/media/css/syntaxhighlighter/shThemeEclipse.css" type="text/css">
-
+<p><link rel="stylesheet" href="/media/css/syntaxhighlighter/shCoreEclipse.css" type="text/css">
+<link rel="stylesheet" href="/media/css/syntaxhighlighter/shThemeEclipse.css" type="text/css"></p>
 <script type="text/javascript" src="/media/js/syntaxhighlighter/shCore.js"></script>
+
 <script type="text/javascript" src="/media/js/syntaxhighlighter/shBrushJScript.js"></script>
+
 <script type="text/javascript" src="/media/js/syntaxhighlighter/shBrushCss.js"></script>
+
 <script type="text/javascript" src="/media/js/syntaxhighlighter/shBrushXml.js"></script>
+
 <script type="text/javascript" src="/media/js/syntaxhighlighter/shBrushBash.js"></script>
+
 <script type="text/javascript">SyntaxHighlighter.all()</script>
 
 <p>
@@ -161,6 +165,7 @@ Lakshmi Vyasarajan</a>, the original developer of hyde. To get the basic hyde te
 simply type into your Linux console (I used the powerful <a href="http://www.cygwin.com/"
 target="_blank">Cygwin</a> under&nbsp;Windows):
 </p>
+
 <pre class="brush: bash">
 mkdir the-directory-name-you-want-to-store-your-hyde-files
 cd the-directory-name-you-want-to-store-your-hyde-files
@@ -171,10 +176,12 @@ hyde create
 The &#8220;hyde create&#8221; command creates hyde source files of a website with basic hyde. 
 To see what this basic template looks like,&nbsp;type:
 </p>
+
 <pre class="brush: bash">
 hyde gen
 hyde serve
 </pre>
+
 <p>
 <span class="dquo">&#8220;</span>hyde gen&#8221; will compile all hyde sources into the &#8220;deploy&#8221; directory, and &#8220;hyde
 serve&#8221; will run a light-weight python web server that enables you to view
@@ -186,6 +193,7 @@ local&nbsp;debugging.
 </p>
 
 <div class="title"><h2>The Basic hyde Source Directory&nbsp;Structure</h2></div>
+
 <p>
 After running &#8220;hyde gen&#8221;, you should get a directory struture similar to this:<br>
 <pre class="codebox">
@@ -218,6 +226,7 @@ In the layout directory, you&#8217;ll find all .j2 files that will be mentioned&
 </p>
 
 <div class="title"><h2>base.j2</h2></div>
+
 <p>
 This file determines the basic layout of each generated <span class="caps">HTML</span> file on your
 site. As you open other .j2 files, for example, &#8220;blog.j2&#8221;, &#8220;listing.j2&#8221;, 
@@ -288,6 +297,7 @@ That&#8217;s how the floater with tags of this blog placed on the right of the&n
 </p>
 
 <div class="title"><h2>listing.j2</h2></div>
+
 <p>
 <span class="dquo">&#8220;</span>listing.j2&#8221; determines the look of the blog (or other items you like) list (
 it&#8217;s what you see when you click the &#8220;Blog&#8221; navi button above). 
@@ -298,10 +308,12 @@ it is strongly recommended that you take some time to hack
 the <span class="caps">CSS</span> (site.css) on your own. Google Chrome or Firefox will also be of 
 great help if you want to see the actual outcome of <code>hyde gen</code>.
 </p>
+
 <p>
 Also, for the non-chronological items such as &#8220;Software&#8221;, &#8220;Research&#8221;, and &#8220;Misc&#8221;, 
 I made a modified copy of listing.j2:&nbsp;listing-no-time.j2.
 </p>
+
 <p>
 What? You are saying that you cannot change the appearance of blog excerpts after 
 reading this section? No doubt that would happen. This will be covered in macros.j2. 
@@ -309,17 +321,20 @@ reading this section? No doubt that would happen. This will be covered in macros
 </p>
 
 <div class="title"><h2>blog.j2</h2></div>
+
 <p>
 This file determines how your blog contents are rendered. The greatest change I made 
 to this file are (a) I changed the look of the blog navigation, and (b) I changed the 
 look and position of blog tags. These are essentially basic <span class="caps">HTML</span> operations, so I won&#8217;t 
 cover them&nbsp;here. 
 </p>
+
 <p>
 However, the nagivation did involve some hyde tricks. It&#8217;s related to plugins called 
 &#8220;sorter&#8221; and &#8220;grouper&#8221;, and you must define groups in the &#8220;site.yaml&#8221; file. The related 
 code pieces in my &#8220;site.yaml&#8221;&nbsp;are:
 </p>
+
 <pre class="codebox">
 ...
 plugins:
@@ -361,11 +376,13 @@ grouper:
                     -
                         name: Misc
 </pre>
+
 <p>
 And in each content directory, for example, &#8220;blog&#8221;, you should include a corresponding line 
 in the &#8220;meta.yaml&#8221; file: <code>toc: Blog</code>. After all these are done, you should be 
 able to use the following code to generate a navigation in your&nbsp;&#8220;blog.j2&#8221;:
 </p>
+
 <pre class="brush: html">
 &lt;nav class="postnav before"&gt;
 Previous:
@@ -384,6 +401,7 @@ None
 &#123;% endif %&#125;
 &lt;/nav&gt;
 </pre>
+
 <p>
 <code>resource.meta.toc</code> will refer to the <code>toc</code> you defined in the 
 directory&#8217;s &#8220;meta.yaml&#8221; file, this is determined in &#8220;site.yaml&#8221;. The 
@@ -395,11 +413,13 @@ does not exist, it will give you a node in the neighboring group. That is why th
 </p>
 
 <div class="title"><a name="macros"></a><h2>macros.j2</h2></div>
+
 <p>
 Here comes the interesting part. &#8220;macros.j2&#8221; defines how your blog excerpts are rendered, 
 and how your tagged posts are rendered in the tag page. In fact, there&#8217;s nothing special. 
 Here&#8217;s my version of the macro <code>render_excerpt</code>:
 </p>
+
 <pre class="codebox">
 &#123;% macro render_excerpt(res, class=None) %&#125;
 &#123;% refer to res.url as post %&#125;
@@ -413,6 +433,7 @@ Here&#8217;s my version of the macro <code>render_excerpt</code>:
 &lt;/article&gt;
 &#123;% endmacro %&#125;
 </pre>
+
 <p>
 I simply changed the appearance of the excerpt to make it more harmonious 
 with my template. The <code>&#123;&#123; post.image|markdown|typogrify &#125;&#125;</code> 
@@ -422,6 +443,7 @@ respectively, in the actual content file. Here you can use markdown for simplici
  <code>res.meta.title</code> and <code>res.meta.created</code> 
 are also defined in the content file. These parts of this very blog post are&nbsp;like:
 </p>
+
 <pre class="codebox">
 ---
 title: Tutorial 2&amp;#58; The hyde Template Files
@@ -453,17 +475,21 @@ made this homepage what it looks like now.
 
 &#123;%- endmark %&#125;
 </pre>
+
 <p>
 <code>&amp;#58;</code> is the <span class="caps">HTML</span> code for &#8220;&#58;&#8221;. This is used as &#8220;:&#8221; is forbidden in
 titles. So it&#8217;s recommended that you use <span class="caps">ASCII</span> code for all special marks.
 A complete list of special <span class="caps">HTML</span> <span class="caps">ASCII</span> symbols can be found 
 <a href="http://www.w3schools.com/tags/ref_ascii.asp" target="_blank">here</a>.
 </p>
+
 <p>
 I also wrote a macro named <code>render_news</code> to render the News section 
 on my homepage, and it might be useful to show you how a macro is&nbsp;used.
 </p>
+
 <p>In&nbsp;layout/macros.j2:</p>
+
 <pre class="codebox">
 &#123;% macro render_news(res, class=None) %&#125;
 &#123;% refer to res as post %&#125;
@@ -472,13 +498,17 @@ on my homepage, and it might be useful to show you how a macro is&nbsp;used.
 &lt;/ul&gt;
 &#123;% endmacro %&#125;
 </pre>
+
 <p>In&nbsp;content/index.html:</p>
+
 <pre class="brush: html">
 &#123;% from "macros.j2" import render_news with context  %&#125;
 &lt;div class="title"&gt;&lt;h2&gt;&lt;a href="news.html"&gt;News&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 &#123;&#123; render_news("news.html","news") &#125;&#125;
 </pre>
+
 <p>In&nbsp;content/news.html:</p>
+
 <pre class="brush: html">
 ...
 &#123;% block main %&#125;
@@ -497,6 +527,7 @@ on my homepage, and it might be useful to show you how a macro is&nbsp;used.
 </pre>
 
 <div class="title"><h2>tagged_posts.j2</h2></div>
+
 <p>
 This file determines how the assemble of tagged blogs are rendered. See the 
 <a href="/blog/tags/tutorial.html" target="_blank">&#8220;tutorial&#8221;</a> page 
@@ -504,12 +535,14 @@ for a quick example. There&#8217;s really nothing much to say about&nbsp;this.
 </p>
 
 <div class="title"><h2>analytics.j2</h2></div>
+
 <p>
 This file is the <a href="http://www.google.com/analytics" target="_blank">Google Analytics</a>
 snippet attached to your site. It&#8217;s attached to the &#8220;base.j2&#8221; file. It&#8217;s only 
 enabled in the generated site if the mode of your site is &#8220;production&#8221;. To 
 enable Google Analytics, configure your&nbsp;&#8220;site.yaml&#8221;:
 </p>
+
 <pre class="codebox">
 mode: production
 ...
@@ -518,6 +551,7 @@ meta:
         id: UA-XXX
 ...
 </pre>
+
 <p>
 Remember to replace &#8220;<span class="caps">UA</span>-<span class="caps">XXX</span>&#8221; with your property&nbsp;<span class="caps">ID</span>.
 </p></div>

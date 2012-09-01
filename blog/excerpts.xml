@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-08-29T09:19:49Z</updated>
+    <updated>2012-09-01T22:15:43Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
@@ -150,5 +150,33 @@ toolbox, I summarized some notes that need to be remembered, to accelerate futur
                 &lt;p&gt;&lt;a href=&#34;http://portableapps.com/apps/internet/putty_portable&#34; target=&#34;_blank&#34;&gt;Putty&lt;/a&gt;
  is one of the most common software with which people work on remote
 machines, which typically has a &lt;span class=&#34;caps&#34;&gt;UNIX&lt;/span&gt;/Linux system for stability or efficiency&amp;nbsp;reasons.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">[Coursera] Machine Learning Notes - Week 1-3</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/coursera-ml-note-1.html"/>
+            <updated>2012-09-01T20:05:00Z</updated>
+            <published>2012-09-01T20:05:00Z</published>
+            <id>/blog/coursera-ml-note-1.html</id>
+                        <category   scheme="/blog/tags"
+                        term="coursera"
+                        label="Coursera" />
+                        <category   scheme="/blog/tags"
+                        term="machine_learning"
+                        label="Machine_Learning" />
+                        <category   scheme="/blog/tags"
+                        term="note"
+                        label="Note" />
+            
+            <content type="html">
+                
+                &lt;p&gt;I recently enrolled in Stanford University&amp;#8217;s Machine Learning open course on
+&lt;a href=&#34;http://coursera.org/&#34; target=&#34;_blank&#34;&gt;coursera.org&lt;/a&gt;, which is taught
+by esteemed &lt;a href=&#34;http://ai.stanford.edu/~ang/&#34; target=&#34;_blank&#34;&gt;Prof Andrew Ng&lt;/a&gt;.
+I&amp;#8217;ll take some notes that are important to me (and probably many machine learning
+rookies), and hope this would help in later studies. (Disclosure of homework, 
+homework solutions, and other materials are somehow a bad thing to do, 
+for copyright problems or unfairness of prospective students of that course,
+but I guess notes would be&amp;nbsp;fine.)&lt;/p&gt;            </content>
         </entry>
     </feed>
