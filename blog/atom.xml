@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-09-21T22:09:48Z</updated>
+    <updated>2012-09-24T16:13:48Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -46,11 +46,8 @@ too. Thanks to GitHub, now even uploading source code and stuff is possible,&amp
                         term="tutorial"
                         label="Tutorial" />
                         <category   scheme="/blog/tags"
-                        term="fancy_corner"
-                        label="Fancy_Corner" />
-                        <category   scheme="/blog/tags"
-                        term="html_css"
-                        label="Html_Css" />
+                        term="html&css"
+                        label="Html&Css" />
             
             <content type="html">
                                 &lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shCoreEclipse.css&#34; type=&#34;text/css&#34;&gt;
@@ -197,8 +194,8 @@ Enjoy!
                         term="windows"
                         label="Windows" />
                         <category   scheme="/blog/tags"
-                        term="visual_studio"
-                        label="Visual_Studio" />
+                        term="visual studio"
+                        label="Visual Studio" />
             
             <content type="html">
                                 &lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shCoreEclipse.css&#34; type=&#34;text/css&#34;&gt;
@@ -624,8 +621,8 @@ The full configured &lt;span class=&#34;caps&#34;&gt;VS2010&lt;/span&gt; solutio
                         term="hyde"
                         label="Hyde" />
                         <category   scheme="/blog/tags"
-                        term="html_css"
-                        label="Html_Css" />
+                        term="html&css"
+                        label="Html&Css" />
             
             <content type="html">
                                 &lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shCoreEclipse.css&#34; type=&#34;text/css&#34;&gt;
@@ -1266,8 +1263,8 @@ Enjoy!
                         term="coursera"
                         label="Coursera" />
                         <category   scheme="/blog/tags"
-                        term="machine_learning"
-                        label="Machine_Learning" />
+                        term="machine learning"
+                        label="Machine Learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
@@ -1375,6 +1372,67 @@ necessary features could get suppressed, too, causing the model to &lt;span clas
 under-fit&lt;/span&gt; the data, in other words, introducing high bias towards
 how the data should be&amp;nbsp;interpreted.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;div class=&#39;title&#39;&gt;&lt;h2&gt;See&amp;nbsp;Also&amp;#8230;&lt;/h2&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;corsera-ml-note-2.html&#34;&gt;[Coursera] Machine Learning Notes - Week&amp;nbsp;4-6&lt;/a&gt;
+&lt;/p&gt;&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">[Coursera] Machine Learning Notes - Week 4-6</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/coursera-ml-note-2.html"/>
+            <updated>2012-09-24T14:00:00Z</updated>
+            <published>2012-09-24T14:00:00Z</published>
+            <id>/blog/coursera-ml-note-2.html</id>
+                        <category   scheme="/blog/tags"
+                        term="coursera"
+                        label="Coursera" />
+                        <category   scheme="/blog/tags"
+                        term="machine learning"
+                        label="Machine Learning" />
+                        <category   scheme="/blog/tags"
+                        term="note"
+                        label="Note" />
+            
+            <content type="html">
+                                &lt;p&gt;
+This post are the fresh notes of the current offering of Machine Learning course
+on &lt;a href=&#34;https://coursera.org&#34; target=&#34;_blank&#34;&gt;coursera.org&lt;/a&gt;, which covers the
+courses offered in Week 4 (Neural Networks: Representation) 
+through Week 6 (Machine Learning System&amp;nbsp;Design).&lt;/p&gt;
+
+&lt;p&gt;
+&lt;div class=&#39;title&#39;&gt;&lt;h2&gt;Week&amp;nbsp;4&lt;/h2&gt;&lt;/div&gt;
+&lt;ul class=&#39;news&#39;&gt;
+&lt;li&gt;&lt;span class=&#39;lighter&#39;&gt;Neural networks&lt;/span&gt; are multi-layer models in which each layer can be envisioned as, I think, a &lt;span class=&#39;lighter&#39;&gt;multivariate logistic regression&lt;/span&gt; model. The &lt;span class=&#39;lighter&#39;&gt;raw activation&lt;/span&gt; is the input of the previous layer (including a bias unit) times the &lt;span class=&#39;lighter&#39;&gt;network parameters&lt;/span&gt; (or &amp;#8220;weights&amp;#8221;) inbetween; and the final output, the &lt;span class=&#39;lighter&#39;&gt;activation&lt;/span&gt; is the result of taking element-wise sigmoid nonlinearity of the raw&amp;nbsp;activations.&lt;/li&gt;
+&lt;li&gt;Neural networks borrow its inspiration from the neuron cells, where input weights mimic the &lt;span class=&#39;lighter&#39;&gt;dendrites&lt;/span&gt;, while the output weights mimic the &lt;span class=&#39;lighter&#39;&gt;Axons&lt;/span&gt;. &lt;span class=&#39;lighter&#39;&gt;Neuron cell bodies&lt;/span&gt; are usually thought as computing a nonlinear function from the inputs to the&amp;nbsp;outputs.&lt;/li&gt;
+&lt;li&gt;Neural networks can fit extremely complex functions, and by extracting more complex features of the input at each layer, the classfication result is often improved. Neural network classfication uses a notation of the &amp;#8220;one-vs-all&amp;#8221; scheme. That is, when we have multiple (&amp;gt;= 3) labels, each label is denoted as an &amp;#8220;all-zero-by-a-one&amp;#8221; vector, e.g. class 1 = [1 0 0], class 2 = [0 1 0], class 3 = [0 0&amp;nbsp;1].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;div class=&#39;title&#39;&gt;&lt;h2&gt;Week&amp;nbsp;5&lt;/h2&gt;&lt;/div&gt;
+&lt;ul class=&#39;news&#39;&gt;
+&lt;li&gt;The &lt;span class=&#39;lighter&#39;&gt;cost function&lt;/span&gt; of neural networks have similar forms to that of linear regression and logistic regression: an &amp;#8220;output error&amp;#8221; term plus the regularization term. Similar to logistic regression, the &amp;#8220;1&amp;#8221; unit or bias unit is not taken into consideration when doing parameter&amp;nbsp;regularization.&lt;/li&gt;
+&lt;li&gt;The &lt;span class=&#39;lighter&#39;&gt;back-propagation algorithm&lt;/span&gt; propagate the error from the output layer all the way back to the first hidden layer (the layer next to the input layer), and use the error as well as the sigmoid gradient of the lower layer to compute the gradient of the weights inbetween. Similar to &lt;span class=&#39;lighter&#39;&gt;forward propagation&lt;/span&gt; that computes the activation of each layer and finally the output of the network, backprop is done layer-by-layer &amp;#8211; only in the reverse&amp;nbsp;order. &lt;/li&gt;
+&lt;li&gt;To make use of Matlab/Octave built-in or third-party vector-based optimization functions to obtain network parameters, the parameters, as well as their corresponding gradients, should be unrolled to form a single vector in pratical&amp;nbsp;implementation.&lt;/li&gt;
+&lt;li&gt;To ensure that the gradient of the network parameters are correctly implemented, &lt;span class=&#39;lighter&#39;&gt;gradient checking&lt;/span&gt; should be performed to check if the gradients computed from analytical formulas are in accordance with those computed from approximation. Approximation can be done by choosing a small inteval length epsilon, and compute the two-sided approximate gradient (function value difference divided by the total interval length). As this gradient approximation is often computationally inefficient, gradient checking codes should be turned off before applying to pratical&amp;nbsp;training.&lt;/li&gt;
+&lt;li&gt;Identical initialization will lead to identical gradients of the weights, thus the parameters will always remain identical between a given input unit and all the identically-initialized output units, resulting in uninformative (redundant) units. Thus, &lt;span class=&#39;lighter&#39;&gt;random initialization&lt;/span&gt; is essential to neural&amp;nbsp;networks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;div class=&#39;title&#39;&gt;&lt;h2&gt;Week&amp;nbsp;6&lt;/h2&gt;&lt;/div&gt;
+&lt;ul class=&#39;news&#39;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;div class=&#39;title&#39;&gt;&lt;h2&gt;See&amp;nbsp;Also&amp;#8230;&lt;/h2&gt;&lt;/div&gt;
+&lt;a href=&#34;corsera-ml-note-1.html&#34;&gt;[Coursera] Machine Learning Notes - Week&amp;nbsp;1-3&lt;/a&gt;
 &lt;/p&gt;            </content>
         </entry>
     </feed>
