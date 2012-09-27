@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-09-24T16:13:48Z</updated>
+    <updated>2012-09-27T12:42:33Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -46,8 +46,8 @@ too. Thanks to GitHub, now even uploading source code and stuff is possible,&amp
                         term="tutorial"
                         label="Tutorial" />
                         <category   scheme="/blog/tags"
-                        term="html&css"
-                        label="Html&Css" />
+                        term="html_css"
+                        label="Html_Css" />
             
             <content type="html">
                                 &lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shCoreEclipse.css&#34; type=&#34;text/css&#34;&gt;
@@ -194,8 +194,8 @@ Enjoy!
                         term="windows"
                         label="Windows" />
                         <category   scheme="/blog/tags"
-                        term="visual studio"
-                        label="Visual Studio" />
+                        term="visual_studio"
+                        label="Visual_Studio" />
             
             <content type="html">
                                 &lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shCoreEclipse.css&#34; type=&#34;text/css&#34;&gt;
@@ -621,8 +621,8 @@ The full configured &lt;span class=&#34;caps&#34;&gt;VS2010&lt;/span&gt; solutio
                         term="hyde"
                         label="Hyde" />
                         <category   scheme="/blog/tags"
-                        term="html&css"
-                        label="Html&Css" />
+                        term="html_css"
+                        label="Html_Css" />
             
             <content type="html">
                                 &lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/media/css/syntaxhighlighter/shCoreEclipse.css&#34; type=&#34;text/css&#34;&gt;
@@ -1263,8 +1263,8 @@ Enjoy!
                         term="coursera"
                         label="Coursera" />
                         <category   scheme="/blog/tags"
-                        term="machine learning"
-                        label="Machine Learning" />
+                        term="machine_learning"
+                        label="Machine_Learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
@@ -1376,7 +1376,7 @@ how the data should be&amp;nbsp;interpreted.&lt;/li&gt;
 
 &lt;div class=&#39;title&#39;&gt;&lt;h2&gt;See&amp;nbsp;Also&amp;#8230;&lt;/h2&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&#34;corsera-ml-note-2.html&#34;&gt;[Coursera] Machine Learning Notes - Week&amp;nbsp;4-6&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;coursera-ml-note-2.html&#34;&gt;[Coursera] Machine Learning Notes - Week&amp;nbsp;4-6&lt;/a&gt;
 &lt;/p&gt;&lt;/p&gt;            </content>
         </entry>
             <entry>
@@ -1390,8 +1390,8 @@ how the data should be&amp;nbsp;interpreted.&lt;/li&gt;
                         term="coursera"
                         label="Coursera" />
                         <category   scheme="/blog/tags"
-                        term="machine learning"
-                        label="Machine Learning" />
+                        term="machine_learning"
+                        label="Machine_Learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
@@ -1426,13 +1426,17 @@ through Week 6 (Machine Learning System&amp;nbsp;Design).&lt;/p&gt;
 &lt;p&gt;
 &lt;div class=&#39;title&#39;&gt;&lt;h2&gt;Week&amp;nbsp;6&lt;/h2&gt;&lt;/div&gt;
 &lt;ul class=&#39;news&#39;&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;When evaluating a hypothesis, the best benchmark should be the error (or value of unregularized cost function) on the &lt;span class=&#39;lighter&#39;&gt;test set&lt;/span&gt;. But when multiple models are to be seleted from, a third &lt;span class=&#39;lighter&#39;&gt;cross-validation set&lt;/span&gt; should be used, thus the result from the test set is fair. Thus a usual pipeline of training, selecting a proper learning algorithm / model, and evaluating the model should be: first train the models on the &lt;span class=&#39;lighter&#39;&gt;training set&lt;/span&gt;, then fit the regularization value / choose a model according to the performance on the cross-validation set (or validation set), and finally evaluate the model on the test set. All three sets must be&amp;nbsp;disjoint.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#39;lighter&#39;&gt;Learning curves&lt;/span&gt; are the errors on the training set and validation set, respectively, plotted against the number of training data used. When the training error as well as validation error converge to a close large value, it&amp;#8217;s likely that the model is of high bias (underfit), and adding features, decreasing regularization value should be considerable solutions. When the training error is small while the validation error remains large, it&amp;#8217;s likely that the model is of high variance (overfit), and proper actions to take include carefully selecting features, reducing model parameters, and increasing regularization punishment. A proper learning curve should have a decreasing validation error and an increasing training error, and the former converging at a value usually slightly higher than that of the&amp;nbsp;latter.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#39;lighter&#39;&gt;Error analysis&lt;/span&gt; is an approach in which we analyse the characteristics of the falsely classfied data, and determine whether devising new features to deal with the misjudgements. It is also recommended to implement a &amp;#8220;quick and dirty&amp;#8221; learning algorithm for error analysis, to determine whether an algorithm is a good starting&amp;nbsp;point.&lt;/li&gt;
+&lt;li&gt;When the data classes are skewed, e.g. have 99% positive examples with only 1% negative examples, &lt;span class=&#39;lighter&#39;&gt;Precision&lt;/span&gt; = #true positive / #predicted positive = #true positive / (#true positive + #false positive), &lt;span class=&#39;lighter&#39;&gt;Recall&lt;/span&gt; = #true positive / #all positive = #true positive / (#true positive + #false negative), and &lt;span class=&#39;lighter&#39;&gt;F1 Score&lt;/span&gt; = 2 * Precision * Recall / (Precision + Recall) are often superior error metrics than &lt;span class=&#39;lighter&#39;&gt;Accuracy&lt;/span&gt; = (#true postive + #true negative) / #all&amp;nbsp;data.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#39;lighter&#39;&gt;Large amount of data&lt;/span&gt; is helpful when (i) our model is of high variance (overfitting), as more data can make it difficult for the model to overfit the data, *&lt;span class=&#34;caps&#34;&gt;AND&lt;/span&gt;* (ii) the features are enough for a human expert to give good predictions, i.e. giving enough information about the desired output, or more data will not&amp;nbsp;help.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
 &lt;div class=&#39;title&#39;&gt;&lt;h2&gt;See&amp;nbsp;Also&amp;#8230;&lt;/h2&gt;&lt;/div&gt;
-&lt;a href=&#34;corsera-ml-note-1.html&#34;&gt;[Coursera] Machine Learning Notes - Week&amp;nbsp;1-3&lt;/a&gt;
+&lt;a href=&#34;coursera-ml-note-1.html&#34;&gt;[Coursera] Machine Learning Notes - Week&amp;nbsp;1-3&lt;/a&gt;
 &lt;/p&gt;            </content>
         </entry>
     </feed>

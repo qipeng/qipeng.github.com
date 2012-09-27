@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-09-24T16:13:50Z</updated>
+    <updated>2012-09-27T12:42:35Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
@@ -40,8 +40,8 @@ multi-page static homepage with a personal blog in&amp;nbsp;it.&lt;/p&gt;       
                         term="tutorial"
                         label="Tutorial" />
                         <category   scheme="/blog/tags"
-                        term="html&css"
-                        label="Html&Css" />
+                        term="html_css"
+                        label="Html_Css" />
             
             <content type="html">
                 
@@ -68,8 +68,8 @@ with &lt;a href=&#34;http://fancybox.net/&#34; target=&#34;_blank&#34;&gt;FancyB
                         term="windows"
                         label="Windows" />
                         <category   scheme="/blog/tags"
-                        term="visual studio"
-                        label="Visual Studio" />
+                        term="visual_studio"
+                        label="Visual_Studio" />
             
             <content type="html">
                 
@@ -94,8 +94,8 @@ non-rigid&amp;nbsp;transform.&lt;/p&gt;            </content>
                         term="hyde"
                         label="Hyde" />
                         <category   scheme="/blog/tags"
-                        term="html&css"
-                        label="Html&Css" />
+                        term="html_css"
+                        label="Html_Css" />
             
             <content type="html">
                 
@@ -159,8 +159,8 @@ machines, which typically has a &lt;span class=&#34;caps&#34;&gt;UNIX&lt;/span&g
                         term="coursera"
                         label="Coursera" />
                         <category   scheme="/blog/tags"
-                        term="machine learning"
-                        label="Machine Learning" />
+                        term="machine_learning"
+                        label="Machine_Learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
@@ -187,8 +187,8 @@ but I guess notes would be&amp;nbsp;fine.)&lt;/p&gt;            </content>
                         term="coursera"
                         label="Coursera" />
                         <category   scheme="/blog/tags"
-                        term="machine learning"
-                        label="Machine Learning" />
+                        term="machine_learning"
+                        label="Machine_Learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
