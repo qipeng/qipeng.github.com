@@ -16,8 +16,8 @@
         compatibility mode is within the first 1K bytes
         code.google.com/p/chromium/issues/detail?id=23003 -->
 
-  <title>Hello, World!</title>
-  <meta name="description" content="My very first post in my blog.
+  <title>ConvolutionalRBM.m</title>
+  <meta name="description" content="A Matlab / MEX / CUDA-MEX implementation of Convolutional Restricted Boltzmann Machine (RBM).
 ">
   <meta name="author" content="Peng Qi">
 
@@ -33,7 +33,7 @@
         enables HTML5 elements & feature detects -->
     <script type="text/javascript" src="/media/js/libs/modernizr-1.7.min.js"></script>
     </head>
-<body id="hello-world">
+<body id="convolutional-rbm">
     <div id="container">
             <div id="main" role="main">
           <header class="banner clearfix">
@@ -53,13 +53,13 @@
             </a>
         </li>        <li>
             <a title="Blog"
-                class="button active blog"
+                class="button blog"
                 href="/blog">
                 Blog
             </a>
         </li>        <li>
             <a title="Software"
-                class="button software"
+                class="button active software"
                 href="/software">
                 Software
             </a>
@@ -76,60 +76,81 @@
           <div class="content-back">
           <div class="green-vline"></div>
           <div class="content-right">
-          <div class="right-float">
-<span class="lighter" style="font-size:14px;">Tags:</span><br/>
-<ul class="tags clear">
-<li>
-    <a class="small" href="/blog/tags/hello_world.html">
-        hello_world
-    </a>
-</li>
-</ul>
-</div>
-          <div class="right-float"><div id="sociallinks" style="font-size:10px;">
+                    <div class="right-float"><div id="sociallinks" style="font-size:10px;">
           </div></div>
           </div>
           <div class="contentwrapper">
           <section class="content">
           <article class="post">
 
-<a href="/blog">Blog</a> &nbsp;&gt;&nbsp; Hello, World!<br/>
+<a href="/software">Software</a> &nbsp;&gt;&nbsp; ConvolutionalRBM.m<br/>
 <nav class="postnav before">
 Previous:
-<a href="/blog/tutorial-1.html">Tutorial 1&#58; The Fancy Corner</a>
+None
 <br/>
 
 Next:
-None
+<a href="/software/tsinghua-classroom.html">Tsinghua Classroom</a>
 </nav>
 
-<div class="title"><h1 >
-    Hello, World!
+<div class="title"><h1>
+    ConvolutionalRBM.m
 </h1></div>
-<time datetime="2012-03-29">
-    Posted: Thu, 29 Mar 2012
-</time>
 
 <div class="postcontent">
 <p>
-Seems that the first post of every programmer&#8217;s blog is &#8220;hello, world&#8221; 
-&#8212; I&#8217;m just following the fashion here. Thanks to <a href='//www.github.com'>
-GitHub</a> and <a href='//hyde.github.com'>hyde</a>, I now have this awesome
-multi-page static homepage with a personal blog in&nbsp;it.</p>
+When I was doing research on deep learning structures, I was amazed by convolutional <span class="caps">RBM</span> when I read about it because it possess the amazing capability of learning object parts and &#8220;recovering&#8221; missing parts (see <a href="#reference">Reference</a>). Although <a href="http://www.cs.utoronto.ca/~kriz/" target="_blank">Alex Krizhevsky</a> has an implementation of such network in pure <span class="caps">CUDA</span>, I think some (like myself) might want to use a more friendly Matlab version to process smaller amount of data with a bit more time-consumption &#8211; so here we&nbsp;are.</p>
+
+<div class="title"><h2>Status</h2></div>
 
 <p>
-What will be in this blog are some tech notes from my project experiences,
-and some experience/summary of my research. Maybe sometimes something personal,
-too. Thanks to GitHub, now even uploading source code and stuff is possible,&nbsp;too!
+<table>
+<tr><td><span class="lighter">Current Version</span></td><td>0.1 alpha</td></tr>
+<tr><td><span class="lighter">Important Note</span></td><td>This code is <span class="lighter">not</span> an official release by the authors and may contain defect resulting in erroneous outcome. Please use with caution and all possible losses is at the user&#8217;s own risk. For research / personal purposes only and should be kept public with this note. Feedbacks welcome below this post, and also in the <a href="https://github.com/qipeng/convolutionalRBM.m" target="_blank">project homepage</a>.</td></tr>
+<tr><td><span class="lighter">Source code</span></td><td>Available at the <a href="https://github.com/qipeng/convolutionalRBM.m" target="_blank">project homepage</a></td></tr>
+<tr><td><span class="lighter">Coding status</span></td><td>Under heavy development</a></td></tr>
+<tr><td><span class="lighter">Update Log</span></td><td>
+<table>
+<tr><td><span class="lighter">Oct 17, 2012: 0.1 alpha</span></td><td>Basic functionalities</td></tr>
+</table>
+</td></tr>
+</table>
+</p>
+
+<div class="title"><h2>Experimental&nbsp;Results</h2></div>
+
+<p>
+Coming&nbsp;soon&#8230;
+</p>
+
+<div class="title"><h2>FAQs <span class="amp">&amp;</span>&nbsp;Remarks</h2></div>
+
+<p>
+<ul class="news">
+<li><span class="lighter">I can&#8217;t run the code. Functions not exist?</span><br>To run this code properly, you should set up your mex first, then compile the <span class="caps">CPU</span> mex files with mex command (which are &#8220;mex/convdmex.cpp&#8221;, &#8220;mex/convumex.cpp&#8221;, and&nbsp;&#8220;mex/mfInfer.cpp&#8221;).</li>
+<li><span class="lighter">How to use your <span class="caps">CUDA</span>-<span class="caps">MEX</span>?</span><br>See <a href="www.cs.ucf.edu/~janaka/gpu/using_nvmex.htm" target="_blank">A Guide to Using <span class="caps">NVMEX</span> Tool</a>. I&#8217;ve modified the nvmexopts.bat file a bit to link the <span class="caps">CUDA</span> libs. Typically &#8220;nvmex -f nvmexopts.bat mex/convd_cuda.cu&#8221; would work to compile the corresponding <span class="caps">CUDA</span>-<span class="caps">MEX</span>&nbsp;file.</li>
+<li><span class="lighter">How fast can this code run?</span><br>I can&#8217;t say it runs fast: after all the current (0.1 alpha) backbone code is still implemented in Matlab. But with mex implementation, it&#8217;s about 5x faster than a pure Matlab implememtation. However since <span class="caps">CUDA</span>-<span class="caps">MEX</span> is not quite taken advantage of, the current version (0.1 alpha) using <span class="caps">CUDA</span>-<span class="caps">MEX</span> runs about 3x slower on my laptop, than the <span class="caps">MEX</span>&nbsp;version.</li>
+<li><span class="lighter">I found a bug. Where do I report to?</span><br>Both commenting below this post and adding an issue at the <a href="https://github.com/qipeng/convolutionalRBM.m" target="_blank">project homepage</a> will&nbsp;do.</li>
+<li><span class="lighter">Future development plans?</span><br>This code is still under heavy development before it&#8217;s usable in real-world applications instead of toy-sized problems. A full <span class="caps">MEX</span> / <span class="caps">CUDA</span>-<span class="caps">MEX</span> implementation is planned. Besides, a gadget script for compiling <span class="caps">MEX</span> / <span class="caps">CUDA</span>-<span class="caps">MEX</span> files, as well as sample data and usage, are&nbsp;considered.</li>
+</ul>
+</p>
+
+<div class="title"><h2>References</h2></div>
+
+<p>
+You may want to cite the following publications when your research uses this code (like I said, this is *not* an official release by the authors so use caution):
+<ul class="news">
+<li><a href="http://ai.stanford.edu/~ang/papers/icml09-ConvolutionalDeepBeliefNetworks.pdf" target="_blank">Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations</a>, Honglak Lee, Roger Grosse, Rajesh Ranganath and Andrew Y. Ng. In Proceedings of the Twenty-Sixth International Conference on Machine Learning,&nbsp;2009. </li>
+</ul>
 </p></div>
 
 <nav class="postnav after">
 Previous:
-<a href="/blog/tutorial-1.html">Tutorial 1&#58; The Fancy Corner</a>
+None
 <br/>
 
 Next:
-None
+<a href="/software/tsinghua-classroom.html">Tsinghua Classroom</a>
 </nav>
 
 <div id="disqus_thread"></div>
