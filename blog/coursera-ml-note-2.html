@@ -17,7 +17,7 @@
         code.google.com/p/chromium/issues/detail?id=23003 -->
 
   <title>[Coursera] Machine Learning Notes - Week 4-6</title>
-  <meta name="description" content="Two batch files that I use to work with putty
+  <meta name="description" content="Course Notes for machine learning course offered by Andrew Ng at coursera.org
 ">
   <meta name="author" content="Peng Qi">
 
@@ -106,7 +106,7 @@
 <a href="/blog">Blog</a> &nbsp;&gt;&nbsp; [Coursera] Machine Learning Notes - Week 4-6<br/>
 <nav class="postnav before">
 Previous:
-None
+<a href="/blog/coursera-ml-note-3.html">[Coursera] Machine Learning Notes - Week 7-10</a>
 <br/>
 
 Next:
@@ -128,7 +128,7 @@ courses offered in Week 4 (Neural Networks: Representation)
 through Week 6 (Machine Learning System&nbsp;Design).</p>
 
 <p>
-<div class='title'><h2>Week&nbsp;4</h2></div>
+<div class='title'><h2>Week 4: Neural Networks&nbsp;Representation</h2></div>
 <ul class='news'>
 <li><span class='lighter'>Neural networks</span> are multi-layer models in which each layer can be envisioned as, I think, a <span class='lighter'>multivariate logistic regression</span> model. The <span class='lighter'>raw activation</span> is the input of the previous layer (including a bias unit) times the <span class='lighter'>network parameters</span> (or &#8220;weights&#8221;) inbetween; and the final output, the <span class='lighter'>activation</span> is the result of taking element-wise sigmoid nonlinearity of the raw&nbsp;activations.</li>
 <li>Neural networks borrow its inspiration from the neuron cells, where input weights mimic the <span class='lighter'>dendrites</span>, while the output weights mimic the <span class='lighter'>Axons</span>. <span class='lighter'>Neuron cell bodies</span> are usually thought as computing a nonlinear function from the inputs to the&nbsp;outputs.</li>
@@ -137,7 +137,7 @@ through Week 6 (Machine Learning System&nbsp;Design).</p>
 </p>
 
 <p>
-<div class='title'><h2>Week&nbsp;5</h2></div>
+<div class='title'><h2>Week 5: Neural Networks&nbsp;Learning</h2></div>
 <ul class='news'>
 <li>The <span class='lighter'>cost function</span> of neural networks have similar forms to that of linear regression and logistic regression: an &#8220;output error&#8221; term plus the regularization term. Similar to logistic regression, the &#8220;1&#8221; unit or bias unit is not taken into consideration when doing parameter&nbsp;regularization.</li>
 <li>The <span class='lighter'>back-propagation algorithm</span> propagate the error from the output layer all the way back to the first hidden layer (the layer next to the input layer), and use the error as well as the sigmoid gradient of the lower layer to compute the gradient of the weights inbetween. Similar to <span class='lighter'>forward propagation</span> that computes the activation of each layer and finally the output of the network, backprop is done layer-by-layer &#8211; only in the reverse&nbsp;order. </li>
@@ -148,7 +148,7 @@ through Week 6 (Machine Learning System&nbsp;Design).</p>
 </p>
 
 <p>
-<div class='title'><h2>Week&nbsp;6</h2></div>
+<div class='title'><h2>Week 6: Advice for Applying Machine Learning and Machine Learning Systems&nbsp;Design</h2></div>
 <ul class='news'>
 <li>When evaluating a hypothesis, the best benchmark should be the error (or value of unregularized cost function) on the <span class='lighter'>test set</span>. But when multiple models are to be seleted from, a third <span class='lighter'>cross-validation set</span> should be used, thus the result from the test set is fair. Thus a usual pipeline of training, selecting a proper learning algorithm / model, and evaluating the model should be: first train the models on the <span class='lighter'>training set</span>, then fit the regularization value / choose a model according to the performance on the cross-validation set (or validation set), and finally evaluate the model on the test set. All three sets must be&nbsp;disjoint.</li>
 <li><span class='lighter'>Learning curves</span> are the errors on the training set and validation set, respectively, plotted against the number of training data used. When the training error as well as validation error converge to a close large value, it&#8217;s likely that the model is of high bias (underfit), and adding features, decreasing regularization value should be considerable solutions. When the training error is small while the validation error remains large, it&#8217;s likely that the model is of high variance (overfit), and proper actions to take include carefully selecting features, reducing model parameters, and increasing regularization punishment. A proper learning curve should have a decreasing validation error and an increasing training error, and the former converging at a value usually slightly higher than that of the&nbsp;latter.</li>
@@ -160,12 +160,13 @@ through Week 6 (Machine Learning System&nbsp;Design).</p>
 
 <p>
 <div class='title'><h2>See&nbsp;Also&#8230;</h2></div>
-<a href="coursera-ml-note-1.html">[Coursera] Machine Learning Notes - Week&nbsp;1-3</a>
+<a href="coursera-ml-note-1.html">[Coursera] Machine Learning Notes - Week 1-3</a><br>
+<a href="coursera-ml-note-3.html">[Coursera] Machine Learning Notes - Week&nbsp;7-10</a>
 </p></div>
 
 <nav class="postnav after">
 Previous:
-None
+<a href="/blog/coursera-ml-note-3.html">[Coursera] Machine Learning Notes - Week 7-10</a>
 <br/>
 
 Next:
