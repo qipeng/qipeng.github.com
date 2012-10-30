@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-10-22T09:19:59Z</updated>
+    <updated>2012-10-30T14:28:48Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -1494,13 +1494,21 @@ So here are the notes from Week&amp;nbsp;7-10.
 &lt;p&gt;
 &lt;div class=&#39;title&#39;&gt;&lt;h2&gt;Week 9: Anomaly Detection and Recommender&amp;nbsp;Systems&lt;/h2&gt;&lt;/div&gt;
 &lt;ul class=&#39;news&#39;&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;lighter&#34;&gt;Anomaly detection&lt;/span&gt; is a kind of unsupervised learning, in which normal data is usually modeled by a Gaussian distribution, and abnormal data points are distinguished by a lower probability under this distribution below some threshold epsilon. This algorithms is especially suitable for problems where the classes are very skewed, i.e. only a few positive examples are available, while a lot of negative ones are present. This algorithm is also useful where the properties of anomalies are not fully captured by training&amp;nbsp;data.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;lighter&#34;&gt;Multivariate Gaussian&lt;/span&gt; is very useful in anomaly dectection when there&amp;#8217;s correlation between input dimensions. However it&amp;#8217;s more computationally costly, and takes more memory space&amp;nbsp;too.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;lighter&#34;&gt;Collaborative filtering&lt;/span&gt; is an important algorithm for &lt;span class=&#34;lighter&#34;&gt;recommender systems&lt;/span&gt;. Collaborative filtering can be implemented via low rank matrix factorization, where the rankings matrix Y is decomposed into a parameter matrix theta (where each row denotes the ranking of a specific feature by a user), and a feature matrix X (where each column denotes the portion of features of some given content). Gradient descent on both matrices is the recommended algorithm to learn such&amp;nbsp;factorization&lt;/li&gt;
+&lt;li&gt;It is worth notice that, when implementing collaborative filtering, it is necessary to do mean normalization&amp;nbsp;first.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
 &lt;div class=&#39;title&#39;&gt;&lt;h2&gt;Week 10: Large Scale Machine&amp;nbsp;Learning&lt;/h2&gt;&lt;/div&gt;
 &lt;ul class=&#39;news&#39;&gt;
+&lt;li&gt;&lt;span class=&#34;lighter&#34;&gt;Larger dataset&lt;/span&gt; is often the key to success for many modern learning&amp;nbsp;systems.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;lighter&#34;&gt;Stochastic gradient descent&lt;/span&gt; runs through the dataset one example by one example, and computes the gradient for each data point to run descent. Random shuffling the dataset is&amp;nbsp;necessary.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;lighter&#34;&gt;Mini-batch gradient descent&lt;/span&gt; lies somewhere between stochastic gradient descent and batch gradient descent (where all the data are taken into consideration for each gradient descent step). It takes a small portion of data (but more than 1), and compute the average gradient for descent. Random shuffling is also necessary, and mini-batch gradient descent is usually much more stable than stochastic gradient descent, thus the recommended algorithm to&amp;nbsp;use.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;lighter&#34;&gt;Online learning&lt;/span&gt; is quite similar to stochastic gradient descent, in that it takes one sample at a time and computes the gradient. The major difference is that online learning does not keep the dataset; on the opposite, online learning discards every datum that it&amp;#8217;s seen and moves on to new data. This allows online learning to enjoy the advantage of self-adaptation to time-changing&amp;nbsp;data.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;lighter&#34;&gt;Map-reduce&lt;/span&gt; is an important method for making use of both computational and storage resources, by first splitting up task to different processing units or even different computers (map), then collect together the results from each processing unit / computer to calculate the final result (reduce).
 &lt;/ul&gt;
 &lt;/p&gt;
 
