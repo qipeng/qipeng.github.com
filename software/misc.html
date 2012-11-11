@@ -16,8 +16,9 @@
         compatibility mode is within the first 1K bytes
         code.google.com/p/chromium/issues/detail?id=23003 -->
 
-  <title>Software</title>
-  <meta name="description" content="">
+  <title>Miscellaneous</title>
+  <meta name="description" content="Some code snippets, applets, and small software I wrote for ease of research or life.
+">
   <meta name="author" content="Peng Qi">
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
@@ -32,7 +33,7 @@
         enables HTML5 elements & feature detects -->
     <script type="text/javascript" src="/media/js/libs/modernizr-1.7.min.js"></script>
     </head>
-<body id="index">
+<body id="misc">
     <div id="container">
             <div id="main" role="main">
           <header class="banner clearfix">
@@ -80,65 +81,67 @@
           </div>
           <div class="contentwrapper">
           <section class="content">
-          <div class="title"><h1>Software</h1></div>
-<ul class="listing clear">
-<li>
-    <article >
-<div class="title"><h2><a href="/software/misc.html">Miscellaneous</a></h2></div>
+          <article class="post">
 
-<p>Here&#8217;s a (incomplete) list of code, applets, and small software I wrote for ease of research or life. I&#8217;ll publish more from time to time when I have time to arrange things to publicize.&nbsp;:)</p>...
-</article>
+<a href="/software">Software</a> &nbsp;&gt;&nbsp; Miscellaneous<br/>
+<nav class="postnav before">
+Previous:
+None
+<br/>
 
-</li>
-<li>
-    <article >
-<div class="title"><h2><a href="/software/convolutional-rbm.html">ConvolutionalRBM.m</a></h2></div>
+Next:
+<a href="/software/convolutional-rbm.html">ConvolutionalRBM.m</a>
+</nav>
 
-<p>When I was doing research on deep learning structures, I was amazed by convolutional <span class="caps">RBM</span> when I read about it because it possess the amazing capability of learning object parts and &#8220;recovering&#8221; missing parts (see <a href="#reference">Reference</a>). Although <a href="http://www.cs.utoronto.ca/~kriz/" target="_blank">Alex Krizhevsky</a> has an implementation of such network in pure <span class="caps">CUDA</span>, I think some (like myself) might want to use a more friendly Matlab version to process smaller amount of data with a bit more time-consumption &#8211; so here we&nbsp;are.</p>...
-</article>
+<div class="title"><h1>
+    Miscellaneous
+</h1></div>
 
-</li>
-<li>
-    <article >
-<div class="title"><h2><a href="/software/tsinghua-classroom.html">Tsinghua Classroom</a></h2></div>
+<div class="postcontent">
+<p>
+Here&#8217;s a (incomplete) list of code, applets, and small software I wrote for ease of research or life. I&#8217;ll publish more from time to time when I have time to arrange things to publicize.&nbsp;:)</p>
 
-<p>The <a href="http://myhome.tsinghua.edu.cn/" target="_blank">Myhome.tsinghua</a> site provides
-a table where one can access the service condition of classroom across the campus. However, 
-this is somehow not&nbsp;practical.</p>...
-</article>
+<p>
+<div class="title"><h2>Semilogx Bar Plot for&nbsp;<span class="caps">MATLAB</span></h2></div>
+I found it extremely inconvenient without this functionality sometimes, so I decided to just write one myself. Help info is contained in the .m file. Given proper input, it produces bar plot on semilogx axis with given center points and values. &#8220;Proper&#8221; means you&#8217;ll have to ensure the input are approximately equal-spaced in the log domain, or the output may look weird. Here&#8217;s what it looks like.
 
-</li>
-<li>
-    <article >
-<div class="title"><h2><a href="/software/bugfix-qslim-21.html">An Unofficial "Bugfix" for QSlim 2.1</a></h2></div>
-<p><img src="/media/images/software/bugfix-qslim-21/qslim.jpg" width="400"></p>
-<p><span style="color:#f00">Note: The method of this post is too naive to be applied in sophisticated
-applications. So please think twice before applying it to yours.</span><br></p>
-<p><a href="http://mgarland.org/software/qslim21.html" target="_blank">QSlim</a> is a 
-light-weight software developed by <a href="http://mgarland.org" target="_blank">M. Garland</a>, 
-which can simplify mesh models swiftly, maximally preserving their geodesic properties. 
-However, in my recent use of it I discovered a &#8220;bug&#8221; regarding redundant&nbsp;faces.</p>...
-</article>
+<pre class="code">
+>> x=[1 2 4 8 16];
+>> y=rand(1,5);
+>> semilogxBar(x,y)
+</pre>
+<br>
+<img src="/media/images/software/misc/semilogxBar.png">
+</p>
+</p>
 
-</li>
-<li>
-    <article >
-<div class="title"><h2><a href="/software/undergrad-proj.html">Undergraduate Projects</a></h2></div>
+<p><a href="misc/semilogxBar.m">Download&nbsp;semilogxBar.m</a>
+</p></p></div>
 
-<p>This post contains a list of selected undergraduate projects of me, some of which are hosted at&nbsp;GitHub.</p>...
-</article>
+<nav class="postnav after">
+Previous:
+None
+<br/>
 
-</li>
-<li>
-    <article >
-<div class="title"><h2><a href="/software/tsinghua-classroom/index.html"></a></h2></div>
+Next:
+<a href="/software/convolutional-rbm.html">ConvolutionalRBM.m</a>
+</nav>
 
-...
-</article>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'pengqishomepage'; // required: replace example with your forum shortname
 
-</li>
-</ul>
-          </section>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</article>          </section>
           </div>
           </div>
       </div>
