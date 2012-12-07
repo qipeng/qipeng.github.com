@@ -16,9 +16,10 @@ footer,header,hgroup,menu,nav,section {
 }
 
 table {
-    font-family: "Source Sans Pro", Arial, sans-serif;
-    font-size: 16px;
+    font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-size: 14px;
     border-collapse: collapse;
+    overflow:hidden; 
 }
 
 :focus {
@@ -64,13 +65,17 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, nav a:hover {
 }
 
 body{
-    font-family: "Source Sans Pro", Arial, sans-serif;
-    font-size: 16px;
+    font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-size: 14px;
     background-color: #eef;
     padding: 0;
     margin: 0;
     color: #08081f;
 }
+
+::selection{background-color:#33dd7e; color:#4d4d5f}
+::-moz-selection{background-color:#33dd7e; color:#4d4d5f}
+::-webkit-selection{background-color:#33dd7e; color:#4d4d5f}
 
 #container{
   width: 100%;
@@ -93,7 +98,7 @@ footer{
     background: #11bb98;
     background: -webkit-gradient(linear, left top, right top, from(#11bb5c), to(#11bb98));
     background: -moz-linear-gradient(left,  #11bb5c,  #11bb98);
-    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#11bb5c', endColorstr='#11bb98');*/
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#11bb5c', endColorstr='#11bb98');*/
     -webkit-box-shadow: 0px 0px 15px #009976;
     -moz-box-shadow: 0px 0px 15px #009976;
     box-shadow: 0px 0px 15px #009976;
@@ -134,7 +139,8 @@ footer{
    width:120px;
    height:30px;
    color: #fff;
-   font-size:20px;
+   font-family: Arial, sans-serif;
+   font-size:18px;
    line-height:30px;
 }
 
@@ -184,6 +190,7 @@ section.content{
 .green-vline{
     position:absolute;
     right:250px;
+    min-height:500px;
     height:100%;
     min-height:100%;
     border-right: 50px solid #ddffd9;
@@ -340,11 +347,14 @@ nav.after{
 }
 .right-float .lighter{
     font-size: 16px;
-    font-family:"Poly", "Times New Roman";
+    font-family:"Georgia", "Times New Roman", serif;
     color:#11bb22;
 }
 .lighter {
-    font-family:"Poly", "Times New Roman";
+    font-family:"Georgia", "Times New Roman", serif;
+    color:#11bb22;
+}
+.lighter-color {
     color:#11bb22;
 }
 .content {
@@ -355,24 +365,24 @@ padding:20px 5px;
 }
 .content h1{
     font-size:24px;
-    font-family:"Poly", "Times New Roman";
+    font-family:"Georgia", "Times New Roman", serif;
     color:#11bb22;
 }
 
 .content h2{
     font-size:20px;
-    font-family:"Poly", "Times New Roman";
+    font-family:"Georgia", "Times New Roman", serif;
     color:#11bb22;
 }
 
 .content h3{
     font-size:18px;
-    font-family:"Poly", "Times New Roman";
+    font-family:"Georgia", "Times New Roman", serif;
     color:#11bb22;
 }
 .content h4{
     font-size:16px;
-    font-family:"Poly", "Times New Roman";
+    font-family:"Georgia", "Times New Roman", serif;
     color:#11bb22;
     color:#11bb22;
 }
