@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-12-08T17:34:19Z</updated>
+    <updated>2012-12-19T10:47:34Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
@@ -223,5 +223,29 @@ through Week 6 (Machine Learning System&amp;nbsp;Design).&lt;/p&gt;            <
 on &lt;a href=&#34;https://coursera.org&#34; target=&#34;_blank&#34;&gt;coursera.org&lt;/a&gt;, which covers the
 courses offered in Week 7 (Support Vector Machines) 
 through Week 10 (Large-scale Machine&amp;nbsp;Learning).&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Lecture Notes from Three Recent Lectures</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/lecture-notes-201212.html"/>
+            <updated>2012-12-18T14:24:00Z</updated>
+            <published>2012-12-18T14:24:00Z</published>
+            <id>/blog/lecture-notes-201212.html</id>
+                        <category   scheme="/blog/tags"
+                        term="lecture"
+                        label="Lecture" />
+                        <category   scheme="/blog/tags"
+                        term="note"
+                        label="Note" />
+                        <category   scheme="/blog/tags"
+                        term="deep-learning"
+                        label="Deep-Learning" />
+                        <category   scheme="/blog/tags"
+                        term="computer-vision"
+                        label="Computer-Vision" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Recently, I was fortunate enough to attend three lectures delivered by &lt;a href=&#34;http://research.microsoft.com/en-us/people/deng/&#34; target=&#34;_blank&#34;&gt;Li Deng&lt;/a&gt;, &lt;a href=&#34;http://www.vision.caltech.edu/Perona.html&#34; target=&#34;_blank&#34;&gt;Pietro Perona&lt;/a&gt;, and &lt;a href=&#34;http://vision.stanford.edu/~feifeili/&#34; target=&#34;_blank&#34;&gt;Fei-Fei Li&lt;/a&gt;, respectively. Here&amp;#8217;s some summary from these lectures for record&amp;nbsp;purpose.&lt;/p&gt;            </content>
         </entry>
     </feed>

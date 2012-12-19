@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-12-08T17:34:18Z</updated>
+    <updated>2012-12-19T10:47:31Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -178,6 +178,29 @@
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Lecture Notes from Three Recent Lectures</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/lecture-notes-201212.html"/>
+            <updated>2012-12-18T14:24:00Z</updated>
+            <published>2012-12-18T14:24:00Z</published>
+            <id>/blog/lecture-notes-201212.html</id>
+                        <category   scheme="/blog/tags"
+                        term="lecture"
+                        label="Lecture" />
+                        <category   scheme="/blog/tags"
+                        term="note"
+                        label="Note" />
+                        <category   scheme="/blog/tags"
+                        term="deep-learning"
+                        label="Deep-Learning" />
+                        <category   scheme="/blog/tags"
+                        term="computer-vision"
+                        label="Computer-Vision" />
             
             <content type="html">
                                             </content>

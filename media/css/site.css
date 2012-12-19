@@ -139,7 +139,7 @@ footer{
    width:120px;
    height:30px;
    color: #fff;
-   font-family: "Segoe UI Semibold", Arial, sans-serif;
+   font-family: "Segoe UI Semibold", Helvetica, Arial, sans-serif;
    font-size:18px;
    line-height:30px;
 }
@@ -422,6 +422,11 @@ padding:20px 5px;
 .news{
 padding-left:20px;
 list-style:square url("../images/list-square.png");
+}
+
+.news2{
+padding-left:30px;
+list-style:square url("../images/list-triangle.png");
 }
 
 td {
