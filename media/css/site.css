@@ -17,8 +17,8 @@ footer,header,hgroup,menu,nav,section {
 
 table {
     font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 17.5px;
     border-collapse: collapse;
     overflow:hidden; 
 }
@@ -67,8 +67,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, nav a:hover {
 
 body{
     font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 17.5px;
     background-color: #eef;
     padding: 0;
     margin: 0;
@@ -341,7 +341,8 @@ nav.after{
 }
 .right-float{
     color:#222;
-    font-size:14px;
+    line-height:15px;
+    font-size:12px;
     padding:10px 20px;
     width:250px;
     margin-bottom:10px;
@@ -353,7 +354,7 @@ nav.after{
     color:#11bb22;
 }
 .lighter {
-    /*font-family:"Georgia", "Times New Roman", serif;*/
+    font-family:"Georgia", "Times New Roman", serif;
     color:#11bb22;
 }
 .lighter-color {
