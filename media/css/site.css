@@ -51,14 +51,17 @@ table {
 }
 
 a {
-    color: #11bb5c;
+    color: #73A533;
     text-decoration: none;
-    border-bottom:1px dashed #11bb5c;
 }
 
 a:hover{
-    color: #11bb22;
-    border-bottom:1px solid #11bb22;
+    color: #73A533;
+    text-decoration:underline;
+}
+
+h1 a, h2 a, h3 a, h4 a {
+    color: #0092C8;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, nav a:hover {
@@ -69,18 +72,18 @@ body{
     font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 17.5px;
-    background-color: #eef;
+    background-color: #fff;
     padding: 0;
     margin: 0;
     color: #08081f;
 }
 
-::selection{background-color:#33dd7e; color:#4d4d5f}
-::-moz-selection{background-color:#33dd7e; color:#4d4d5f}
-::-webkit-selection{background-color:#33dd7e; color:#4d4d5f}
+::selection{background-color:#00c2f8; color:#4d4d5f}
+::-moz-selection{background-color:#00c2f8; color:#4d4d5f}
+::-webkit-selection{background-color:#00c2f8; color:#4d4d5f}
 
 #container{
-  width: 100%;
+  width: 900px;
   margin: 0 auto;
 }
 
@@ -95,35 +98,31 @@ footer{
 }
 
 .banner{
-    height: 130px;
+    padding-top:50px;
+    height:auto;
     position: relative;
-    background: #11bb98;
-    background: -webkit-gradient(linear, left top, right top, from(#11bb5c), to(#11bb98));
-    background: -moz-linear-gradient(left,  #11bb5c,  #11bb98);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#11bb5c', endColorstr='#11bb98');*/
-    -webkit-box-shadow: 0px 0px 15px #009976;
-    -moz-box-shadow: 0px 0px 15px #009976;
-    box-shadow: 0px 0px 15px #009976;
 }
 
 .banner h1{
-    height:50px;
+    color: #73A533;
+    float: right;
+    font-size: 30px;
     font-weight: normal;
-    font-size: 48px;
-    line-height:50px;
-    padding-left:90px;
-    padding-top: 15px;
-    padding-bottom:15px;
-    /*line-height: 48px;*/
-    color: #fff;
+    line-height: 22px;
+    text-align: right;
+    width: 340px;
+    padding-right: 5px;
+}
+
+.headerimg{
+clear: both;
+height: auto;
 }
 
 .banner nav{
-    padding-left: 75px;
-    height:50px;
-    background:#49d845;
-    border-right:50px solid #11bb22;
-    margin-right:250px;
+    height:22px;
+    z-index:5;
+    border-bottom:1px #dde solid;
 }
 
 .banner nav li{
@@ -134,33 +133,30 @@ footer{
 }
 
 .button {
+   margin-right:10px;
    border: none;
+   border-bottom:#73A533 3px solid;
    display:block;
-   padding:15px 10px 5px;
-   width:100px !important;
-   width:120px;
-   height:30px;
-   color: #fff;
+   padding:0px 5px;
+   text-align:center;
+   min-width:30px !important;
+   min-width:20px;
+   height:20px;
+   color: #08081f;
    font-family: Helvetica, Arial, sans-serif;
-   font-size:18px;
-   line-height:30px;
+   font-size:14px;
+   line-height:20px;
 }
 
 .button.active{
     border:none;
-    color:#eef;
-    background:#11bb5c;
-    /*background: -webkit-gradient(linear, left top, left bottom, from(#11bb5c), to(#49d845));
-    background: -moz-linear-gradient(top,  #11bb5c,  #49d845);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#11bb5c', endColorstr='#49d845');*/
+    border-bottom:#0092C8 3px solid;
+    color:#08081f;
 }
 .button:hover{
-    color: #eef;
-    border: none;
-    background: #11bb22;
-    /*background: -webkit-gradient(linear, left top, left bottom, from(#11bb22), to(#49d845));
-    background: -moz-linear-gradient(top,  #11bb22,  #49d845);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#11bb22', endColorstr='#49d845');*/
+    border:none;
+    border-bottom:#0092C8 3px solid;
+    color:#0092C8;
 }
 
 
@@ -182,12 +178,11 @@ section.content{
     min-height:500px;
     _height:500px;
     _height:auto !important;
-    margin-left:75px;
-    margin-right:5px;
 }
 
 .contentwrapper{
     height:auto;
+    margin-right:250px;
 }
 .green-vline{
     position:absolute;
@@ -291,19 +286,12 @@ h1 a, h2 a, h3 a{
 font-family:"Courier New",Courier,serif;
   margin-top: 8px;
   margin-bottom: 12px;
-  border-left:5px #11bb5c solid;
-  background:#fff;
+  border-left:5px #73A533 solid;
   padding:5px;
 }
-.code {
+.code, code {
   font-family:"Courier New",Courier,serif;
   position: relative;
-  background-color: #fff;
-}
-code {
-  font-family:"Courier New",Courier,serif;
-  position: relative;
-  background-color: #fff;
 }
 .highlight pre {
   font-size: 12px;
@@ -355,15 +343,16 @@ nav.after{
 }
 .right-float .lighter{
     font-size: 16px;
-    font-family:"Georgia", "Times New Roman", serif;
-    color:#11bb22;
+    font-family:"Trebuchet MS", "Tahoma", sans-serif;
+    color: #0092C8;
+    line-height:20px;
 }
 .lighter {
-    font-family:"Georgia", "Times New Roman", serif;
-    color:#11bb22;
+    font-family:"Trebuchet MS", "Tahoma", sans-serif;
+    color: #0092C8;
 }
 .lighter-color {
-    color:#11bb22;
+    color: #0092C8;
 }
 .content {
 padding:20px 5px;
@@ -373,26 +362,29 @@ padding:20px 5px;
 }
 .content h1{
     font-size:24px;
-    font-family:"Georgia", "Times New Roman", serif;
-    color:#11bb22;
+    font-family:"Trebuchet MS", "Tahoma", sans-serif;
+    color: #0092C8;
+    line-height: 26px;
 }
 
 .content h2{
     font-size:20px;
-    font-family:"Georgia", "Times New Roman", serif;
-    color:#11bb22;
+    font-family:"Trebuchet MS", "Tahoma", sans-serif;
+    color: #0092C8;
+    line-height:22px;
 }
 
 .content h3{
     font-size:18px;
-    font-family:"Georgia", "Times New Roman", serif;
-    color:#11bb22;
+    font-family:"Trebuchet MS", "Tahoma", sans-serif;
+    color: #0092C8;
+    line-height: 20px;
 }
 .content h4{
     font-size:16px;
-    font-family:"Georgia", "Times New Roman", serif;
-    color:#11bb22;
-    color:#11bb22;
+    font-family:"Trebuchet MS", "Tahoma", sans-serif;
+    color: #0092C8;
+    line-height: 17.5px;
 }
 .content p{
     padding-bottom:30px;
