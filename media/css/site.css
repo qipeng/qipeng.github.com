@@ -217,11 +217,11 @@ section.content{
 }
 
 .listing time{
-    display:block;
-    border-top: 1px solid #ccc;
-    padding-top: 4px;
     font-size: 12px;
-    width: 100%;
+    color: #999;
+    margin-top: 6px;
+    clear:both;
+    width:100%;
 }
 
 /* Content */
@@ -237,21 +237,16 @@ section.content{
 ul.tags li{
     list-style-type: none;
     display: inline;
-    padding-left:10px;
+    float:left;
 }
 
-a.small {
+.small {
     padding-right:5px;
 }
 
 h1 a, h2 a, h3 a{
     text-decoration: none;
 }
-
-#facebook_like{
-    margin-top: 1px;
-}
-
 .archives ul.posts{
     margin-top: 24px;
 }
@@ -260,15 +255,13 @@ h1 a, h2 a, h3 a{
     list-style-type: none;
     border-bottom: 1px dotted #ccc;
     padding: 5px 0;
-
 }
 
 .archives li.post time{
     color: #999;
-    margin-right: 24px;
     display:block;
     float: left;
-    width: 120px;
+    clear: both;
 }
 
 .archives li.post a{
@@ -276,7 +269,6 @@ h1 a, h2 a, h3 a{
 }
 
 .archives ul.tags{
-    float: right;
     margin-bottom:0;
 }
 
@@ -288,7 +280,7 @@ h1 a, h2 a, h3 a{
 font-family:"Courier New",Courier,serif;
   margin-top: 8px;
   margin-bottom: 12px;
-  border-left:5px #73A533 solid;
+  border-left:2px #73A533 solid;
   padding:5px;
 }
 .code, code {
@@ -330,7 +322,7 @@ nav.after{
     height:auto;
 }
 .content-right {
-    width:315px;
+    width:275px;
     padding:12px 0px;
     float:right;
 }
@@ -417,7 +409,7 @@ padding:20px 5px;
     border:none;
 }
 #designlogo a.hyde:hover{
-    color:#444;
+    color:#999;
 }
 
 /* others */
@@ -441,4 +433,14 @@ padding:5px;
 padding-left:10px;
 padding-bottom:10px;
 list-style-type: none;
+}
+
+table.showcase td{
+padding-bottom:30px;
+padding-left:10px;
+background-image:url("../js/fancybox/fancy_shadow_s.png") repeat-x;
+}
+
+table.showcase img{
+border: 1px solid #ddd;
 }

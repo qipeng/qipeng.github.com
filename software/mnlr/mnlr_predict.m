@@ -69,7 +69,17 @@
                               </header><br clear="both">
           <div class="content-back">
           <div class="content-right">
-                      <div class="right-float"><div id="sociallinks" style="font-size:10px;"></div>
+          <div class="right-float">
+<span class="lighter" >Related Posts</span><br/>
+Previous:
+None
+<br/>
+
+Next:
+None
+</div>
+
+            <div class="right-float"><div id="sociallinks" style="font-size:10px;"></div>
             <div id="googletranslate"></div>
             </div>
           </div>
@@ -77,17 +87,7 @@
           <section class="content">
           <article class="post">
 
-<a href="/software/mnlr">Software</a> &nbsp;&gt;&nbsp; <br/>
-<nav class="postnav before">
-Previous:
-None
-<br/>
-
-Next:
-None
-</nav>
-
-<div class="title"><h1>
+<div class="title"><h1 >
     
 </h1></div>
 
@@ -118,15 +118,6 @@ end
 </code></pre>
 <p>end</p></div>
 
-<nav class="postnav after">
-Previous:
-None
-<br/>
-
-Next:
-None
-</nav>
-
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -147,10 +138,10 @@ None
       </div>
       </div> <!--! end of #container -->
   <footer>
-      <div id="designlogo"><a href="http://qipeng.github.com/misc/homepage.html" target="_blank"><span style="color:#11bb22;">Designed</span>by<br>
-    <span style="padding-left:40px">Qi<span style="color:#11bb22;">Peng</span></span></a>
+      <div id="designlogo"><a href="http://qipeng.github.com/misc/homepage.html" target="_blank"><span class="lighter">Designed</span>by<br>
+    <span style="padding-left:40px">Qi<span class="lighter">Peng</span></span></a>
     <br><span style="font-size:10px;text-align:center;">Powered by <a href="http://hyde.github.com/" target="_blank" class="hyde">hyde</a>.</span></div>
-      <p style="text-align:center">&copy; <a href="http://qipeng.github.com/">Peng Qi</a>, 2012. Hosted by <a href="http://www.github.com">GitHub</a>.</p>
+      <p style="text-align:center">&copy; <a href="http://qipeng.github.com/">Peng Qi</a>, 2011 &ndash; 2013. Hosted by <a href="http://www.github.com">GitHub</a>.</p>
   </footer>
     
     <!-- Javascript at the bottom for fast page loading -->
@@ -160,9 +151,10 @@ None
   
   <script type="text/javascript" src="/media/js/main.js"></script>
   <script src="/media/js/nivo-slider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+  <script> $(window).load(function() {$('#slider').nivoSlider({effect: 'sliceDownRight', slices:15, animSpeed: 300, pauseTime: 5000});});</script>
   <script type="text/javascript" src="/media/js/fancybox/jquery.fancybox-1.3.4.js"></script>
   <script type="text/javascript">$(function(){loadimg();loadgoogletranslate();loadsociallinks();});</script>
-  <script> $(window).load(function() {$('#slider').nivoSlider({effect: 'sliceDownRight', slices:15, animSpeed: 300, pauseTime: 5000});});</script>
+  
   
   
   <!--[if lt IE 7 ]>
