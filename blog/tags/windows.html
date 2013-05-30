@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+ <meta charset="utf-8">
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
@@ -18,67 +19,99 @@
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="">
 
-    <link rel="shortcut icon" href="/favicon.ico">
-  
-  <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+	<!--link rel="stylesheet/less" href="/media/less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="/media/less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="/media/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/media/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="/media/css/style.css" rel="stylesheet">
+    
+     <link rel="stylesheet" href="/media/css/site.css" type="text/css">
   <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css">
   <link rel="stylesheet" href="/media/js/nivo-slider/themes/light/light.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="/media/js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
-      <!-- All JavaScript at the bottom, except for Modernizr which
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="media/js/html5shiv.js"></script>
+  <![endif]-->
+
+    <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" a="media/img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="media/img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="media/img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="media/img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="media/img/favicon.png">
+    
+	<script type="text/javascript" src="/media/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/media/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/media/js/main.js"></script>
+    
+    <!-- All JavaScript at the bottom, except for Modernizr which
         enables HTML5 elements & feature detects -->
     <script type="text/javascript" src="/media/js/libs/modernizr-1.7.min.js"></script>
     </head>
-<body id="windows">
-    <div id="container">
-            <div id="main" role="main">
-          <header class="banner clearfix">
-          <h1>Peng Qi</h1>                              <nav class="main_nav">
-    <ul>
-                <li>
+
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container-fluid">
+						 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">Peng Qi</a>
+						<div class="nav-collapse collapse navbar-responsive-collapse">
+                                                        <ul class="nav">
+                <li >
             <a title="Home Page"
-                class="button home"
+                class="home"
                 href="/index.html">
                 Home
             </a>
-        </li>        <li>
+        </li>        <li >
             <a title="Research"
-                class="button research"
+                class="research"
                 href="/research">
                 Research
             </a>
-        </li>        <li>
+        </li>        <li >
             <a title="Blog"
-                class="button blog"
+                class="blog"
                 href="/blog">
                 Blog
             </a>
-        </li>        <li>
+        </li>        <li >
             <a title="Software"
-                class="button software"
+                class="software"
                 href="/software">
                 Software
             </a>
-        </li>        <li>
+        </li>        <li >
             <a title="Misc"
-                class="button misc"
+                class="misc"
                 href="/misc">
                 Me &amp; My ...
             </a>
         </li>    </ul>
-</nav>
-                              <div class="headerimg slider-wrapper theme-light" style="padding:0"><div id="slider" class="nivoSlider">
-                        <img src="/media/images/header.jpg">
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+                      <div class="headerimg slider-wrapper theme-light" style="padding:0"><div id="slider" class="nivoSlider">
+                        <img src="/media/images/header.png">
                       </div></div>
-                    </header><br clear="both">
-          <div class="content-back">
-          <div class="content-right">
-                      <div class="right-float"><div id="sociallinks" style="font-size:10px;"></div>
-            <div id="googletranslate"></div>
-            </div>
-          </div>
-          <div class="contentwrapper">
-          <section class="content">
+          		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span9">
+        <div id="container">
+                <section class="content">
           <section class="archives">
 <div class="title"><h1 class="tag">Tag: windows</h1></div>
 <ul class="posts clear">
@@ -113,18 +146,25 @@
     </li></ul>
 </section>
           </section>
-          </div>
-          </div>
-      </div>
-      </div> <!--! end of #container -->
-  <footer>
+                    </div>
+		</div>
+		<div class="span3">
+                <div class="right-float"><div id="sociallinks" style="font-size:10px;"></div>
+            <div id="googletranslate"></div>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span12">
+        <footer>
       <div id="designlogo"><a href="http://qipeng.github.com/misc/homepage.html" target="_blank"><span class="lighter">Designed</span>by<br>
     <span style="padding-left:40px">Qi<span class="lighter">Peng</span></span></a>
     <br><span style="font-size:10px;text-align:center;">Powered by <a href="http://hyde.github.com/" target="_blank" class="hyde">hyde</a>.</span></div>
       <p style="text-align:center">&copy; <a href="http://qipeng.github.com/">Peng Qi</a>, 2011 &ndash; 2013. Hosted by <a href="http://www.github.com">GitHub</a>.</p>
   </footer>
-    
-    <!-- Javascript at the bottom for fast page loading -->
+		</div>
+	</div>
+</div>
+  <!-- Javascript at the bottom for fast page loading -->
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
   <script>window.jQuery || document.write('<script src="/media/js/libs/jquery-1.7.2.min.js">\x3C/script>')</script>
@@ -150,5 +190,6 @@
     s.parentNode.insertBefore(g, s);
     })(document, 'script');
 </script>
-  </body>
+  
+</body>
 </html>
