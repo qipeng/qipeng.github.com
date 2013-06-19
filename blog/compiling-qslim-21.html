@@ -24,16 +24,16 @@
 	<!--script src="js/less-1.3.3.min.js"></script-->
 	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
 	
-	<link href="/media/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/media/css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link href="/media/css/style.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/cerulean/bootstrap.min.css" rel="stylesheet">    
     
      <link rel="stylesheet" href="/media/css/site.css" type="text/css">
   <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css">
   <link rel="stylesheet" href="/media/js/nivo-slider/themes/light/light.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="/media/js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
+   
   <link rel="stylesheet" href="/media/css/syntaxhighlighter/shCoreEclipse.css" type="text/css">
 <link rel="stylesheet" href="/media/css/syntaxhighlighter/shThemeEclipse.css" type="text/css">
 
@@ -44,26 +44,15 @@
   <![endif]-->
 
     <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" a="media/img/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="media/img/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="media/img/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="media/img/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="media/img/favicon.png">
-    
-	<script type="text/javascript" src="/media/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/media/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/media/js/main.js"></script>
-    
-    <!-- All JavaScript at the bottom, except for Modernizr which
-        enables HTML5 elements & feature detects -->
-    <script type="text/javascript" src="/media/js/libs/modernizr-1.7.min.js"></script>
-    </head>
+  <link rel="shortcut icon" href="favicon.ico">
+      
+      </head>
 
 <body>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
-			<div class="navbar">
+			<div class="navbar navbar-inverse">
 				<div class="navbar-inner">
 					<div class="container-fluid">
 						 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">Peng Qi</a>
@@ -168,7 +157,7 @@ For related resources (compiled <span class="caps">EXE</span> file, <span class=
 please skip to <a href="#resources">Related Resources</a>.
 </p>
 
-<div class="title"><h2>Environment</h2></div>
+<div class="title"><h3>Environment</h3></div>
 
 <table>
 <tr><td class="lighter"><span class="caps">CPU</span> Architecture</td><td>x86</td></tr>
@@ -194,9 +183,9 @@ two projects that&#8217;s left, I&#8217;m sure you&#8217;ll be able to compile t
 this&nbsp;article.
 </p>
 
-<div class="title"><h2>1.&nbsp;MixKit</h2></div>
+<div class="title"><h3>1.&nbsp;MixKit</h3></div>
 
-<div class="title"><a name="1.1"></a><h3>1.1</h3></div>
+<div class="title"><a name="1.1"></a><h4>1.1</h4></div>
 
 <p>
 Try building the project directly and you will receive this compiler error. 
@@ -232,7 +221,7 @@ elaborate that&nbsp;here.
  </ol>
  </p>
 
-<div class="title"><h3>1.2</h3></div>
+<div class="title"><h4>1.2</h4></div>
 
 <p>However, new problems&nbsp;comes.</p>
 
@@ -253,9 +242,9 @@ so removing it will do the&nbsp;trick.
 Now you have the MixKit library successfully&nbsp;compiled.
 </p>
 
-<div class="title"><h2>2.&nbsp;libgfx</h2></div>
+<div class="title"><h3>2.&nbsp;libgfx</h3></div>
 
-<div class="title"><h3>2.1</h3></div>
+<div class="title"><h4>2.1</h4></div>
 
 <p>The libgfx project compiles with a lot of warning messages and the following errors (I selected 
 only the compiler information that&#8217;s related to&nbsp;errors):</p>
@@ -277,7 +266,7 @@ error message and you&#8217;ll open &#8220;arcball.cxx&#8221;; then right click 
 , select &#8220;Open Document &lt;gfx/gl.h&gt;&nbsp;Ctrl+Shift+G&#8221;.
 </p>
 
-<div class="title"><h3>2.2</h3></div>
+<div class="title"><h4>2.2</h4></div>
 
 <p>The next error is&nbsp;familiar:</p>
 
@@ -290,7 +279,7 @@ Remember <a href="#1.1">1.1</a>? Now you&#8217;ll have to add to the include pat
 Note again that this path is relative to your project&nbsp;file.
 </p>
 
-<div class="title"><h3>2.3</h3></div>
+<div class="title"><h4>2.3</h4></div>
 
 <p>Here comes an annoying&nbsp;part:</p>
 
@@ -402,7 +391,7 @@ http://www.cegui.org.uk/phpBB2/viewtopic.php?f=2&amp;t=5848</a> this is due to t
 of the library. I downloaded libpng 1.4.11 and it worked immediately &#8212; at least for&nbsp;now.
 </p>
 
-<div class="title"><a name="2.4"></a><h3>2.4</h3></div>
+<div class="title"><a name="2.4"></a><h4>2.4</h4></div>
 
 <p>
 Now welcome to the last error in this&nbsp;project.
@@ -422,9 +411,9 @@ This is due to the missing <a href="http://zlib.net" target="_blank">zlib</a>
 Now libgfx is also&nbsp;ready.
 </p>
 
-<div class="title"><a name="qslim"></a><h2>3.&nbsp;QSlim</h2></div>
+<div class="title"><a name="qslim"></a><h3>3.&nbsp;QSlim</h3></div>
 
-<div class="title"><h3>3.1</h3></div>
+<div class="title"><h4>3.1</h4></div>
 
 <p>
 Try building QSlim, and you&#8217;ll get&nbsp;this:
@@ -453,7 +442,7 @@ when linking, it can be linked as binary. I did not find out until I finished
 compiling QSlim. What a&nbsp;shame.
 </p>
 
-<div class="title"><h3>3.2</h3></div>
+<div class="title"><h4>3.2</h4></div>
 
 <p>
 The next problem is&nbsp;weird.
@@ -473,7 +462,7 @@ and switch in XGetopt.cpp from <code>"stdafx.h"</code> to <code>&lt;windows.h&gt
 pre-compiled headers&nbsp;here.
 </p>
 
-<div class="title"><h3>3.3</h3></div>
+<div class="title"><h4>3.3</h4></div>
 
 <p>
 The next problem is&nbsp;weirder.
@@ -486,7 +475,7 @@ The next problem is&nbsp;weirder.
 function <code>main</code> has no returning data type! Whatever, <code>int</code> will do the&nbsp;trick.
 </p>
 
-<div class="title"><h3>3.4</h3></div>
+<div class="title"><h4>3.4</h4></div>
 
 <p>
 Now welcome to the final nasty part. In the following 
@@ -511,7 +500,7 @@ Now you should be able to successfully compile your QSlim 2.1 with
 Visual Studio.&nbsp;Enjoy!!
 </p>
 
-<div class="title"><a name="resources"></a><h2>Related&nbsp;Resources</h2></div>
+<div class="title"><a name="resources"></a><h3>Related&nbsp;Resources</h3></div>
 
 <p>
 The compiled QSlim.exe (Configuration:&#8221;Release&#8221;, Platform:&#8221;Win32&#8221;): 
@@ -523,7 +512,7 @@ The full configured <span class="caps">VS2010</span> solution with all required 
 <a href="compiling-qslim-21/qslim-2.1.zip" target="_blank">qslim-2.1.zip</a>
 </p>
 
-<div class="title"><h2>See&nbsp;Also&#8230;</h2></div>
+<div class="title"><h3>See&nbsp;Also&#8230;</h3></div>
 
 <p>
 <a href="/software/bugfix-qslim-21.html"> An Unofficial &#8220;Bugfix&#8221; for QSlim&nbsp;2.1</a>
@@ -597,10 +586,10 @@ Newer Post:
 	</div>
 </div>
   <!-- Javascript at the bottom for fast page loading -->
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-  <script>window.jQuery || document.write('<script src="/media/js/libs/jquery-1.7.2.min.js">\x3C/script>')</script>
-  
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/media/js/main.js"></script>
   <script src="/media/js/nivo-slider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
   <script> $(window).load(function() {$('#slider').nivoSlider({effect: 'sliceDownRight', slices:15, animSpeed: 300, pauseTime: 5000});});</script>

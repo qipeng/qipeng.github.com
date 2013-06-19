@@ -16,7 +16,7 @@ footer,header,hgroup,menu,nav,section {
 }
 
 table {
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 17.5px;
     border-collapse: collapse;
@@ -61,7 +61,7 @@ a:hover{
 }
 
 h1 a, h2 a, h3 a, h4 a {
-    color: #8F0C12;
+    color: #317EAC;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, nav a:hover {
@@ -78,9 +78,9 @@ body{
     color: #08081f;
 }
 
-::selection{background-color:#c80000; color:#ddd}
-::-moz-selection{background-color:#c80000; color:#ddd}
-::-webkit-selection{background-color:#c80000; color:#ddd}
+::selection{background-color:#85D2F0; color:#444}
+::-moz-selection{background-color:#85D2F0; color:#444}
+::-webkit-selection{background-color:#85D2F0; color:#444}
 
 footer{
     color:#222;
@@ -92,68 +92,9 @@ footer{
     padding:10px 30px 10px;
 }
 
-.banner{
-    padding-top:50px;
-    height:auto;
-    position: relative;
-}
-
-.banner h1{
-    color: #0385CB;
-    float: right;
-    font-size: 30px;
-    font-weight: normal;
-    line-height: 22px;
-    text-align: right;
-    width: 340px;
-    position:absolute;
-    right:5px;
-    z-index:10;
-}
-
 .headerimg{
 clear: both;
 height: auto;
-}
-
-.banner nav{
-    height:22px;
-    z-index:5;
-    border-bottom:1px #dde solid;
-}
-
-.banner nav li{
-    list-style-type: none;
-    float: left;
-    height:22px;
-    _width:80px;
-}
-
-.button {
-   margin-right:10px;
-   border: none;
-   border-bottom:#0385CB 3px solid;
-   display:block;
-   padding:0px 5px;
-   text-align:center;
-   min-width:30px !important;
-   min-width:20px;
-   height:20px;
-   color: #08081f;
-   font-family: Helvetica, Arial, sans-serif;
-   font-size:14px;
-   line-height:20px;
-}
-
-.button.active{
-    border:none;
-    border-bottom:#8F0C12 3px solid;
-    color:#08081f;
-}
-.button:hover{
-    border:none;
-    border-bottom:#8F0C12 3px solid;
-    color:#8F0C12;
 }
 
 
@@ -312,49 +253,23 @@ nav.after{
 }
 .right-float .lighter{
     font-size: 16px;
-    font-family:"Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #8F0C12;
+    font-family:"Telex", Helvetica, Arial, sans-serif;
+    color: #317EAC;
     line-height:20px;
     letter-spacing:1px;
 }
 .lighter {
-    font-family:"Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #8F0C12;
+    font-family:"Telex", Helvetica, Arial, sans-serif;
+    color: #317EAC;
 }
 .lighter-color {
-    color: #8F0C12;
+    color: #317EAC;
 }
 .content {
 padding:20px 5px;
 }
 .content .title{
     margin: 0px 10px 10px 0px;
-}
-.content h1{
-    font-size:24px;
-    font-family:"Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #8F0C12;
-    line-height: 26px;
-}
-
-.content h2{
-    font-size:20px;
-    font-family:"Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #8F0C12;
-    line-height:22px;
-}
-
-.content h3{
-    font-size:18px;
-    font-family:"Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #8F0C12;
-    line-height: 20px;
-}
-.content h4{
-    font-size:16px;
-    font-family:"Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #8F0C12;
-    line-height: 17.5px;
 }
 .content p{
     padding-bottom:30px;
