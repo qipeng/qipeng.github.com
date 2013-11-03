@@ -334,3 +334,105 @@ background-image:url("../js/fancybox/fancy_shadow_s.png") repeat-x;
 table.showcase img{
 border: 1px solid #ddd;
 }
+
+.navbar-inner {
+    background:none;
+    box-shadow:none;
+    border:none;
+    padding:15px 0 0;
+}
+
+.navbar .nav {
+    min-width:400px;
+}
+
+.navbar .nav>li>a {
+    text-shadow:none;
+    color:#444;
+    padding:16px 10px 0;
+    font-size:16px;
+    line-height: 18px;
+    margin-right:8px;
+}
+
+.navbar .nav>li>a:hover {
+    text-shadow:none;
+    color:#428FBD;
+    border-bottom:3px solid #428FBD;
+    background:none;
+    text-shadow:none;
+}
+
+.navbar .nav>.active>a {
+    text-shadow:none;
+    color:#317EAC;
+    background:none;
+    border-bottom:3px solid #317EAC;
+    box-shadow: none;
+    font-size:16px;
+    line-height: 18px;
+}
+
+.navbar .nav>.active>a:hover {
+    text-shadow:none;
+    color:#428FBD;
+    border-bottom:3px solid #428FBD;
+    background:none;
+    box-shadow:none;
+}
+
+.surname {
+    color:#444;
+}
+.navbar .brand {
+    color: #317EAC;
+    text-shadow:none;
+    font-size:24px;
+    padding: 14px 20px 0;
+    margin-left:20px;
+}
+
+@media(max-width:979px) {
+    .navbar .brand {
+    color: #317EAC;
+    text-shadow:none;
+    font-size:20px;
+    padding: 14px 20px 0 0;
+    margin-left:0px;
+    }
+
+    .navbar .nav-collapse .nav>li>a {
+        text-shadow:none;
+        color:#444;
+        padding:16px 6px 0;
+        font-size:14px;
+        line-height: 16px;
+        margin-right: 5px;
+    }
+
+    .navbar .nav-collapse .nav>li>a:hover {
+        text-shadow:none;
+        color:#428FBD;
+        border-bottom:3px solid #428FBD;
+        background:none;
+        text-shadow:none;
+    }
+
+    .navbar .nav-collapse .nav>.active>a {
+        text-shadow:none;
+        color:#317EAC;
+        background:none;
+        border-bottom:3px solid #317EAC;
+        box-shadow: none;
+        font-size:14px;
+        line-height: 16px;
+    }
+
+    .navbar .nav-collapse .nav>.active>a:hover {
+        text-shadow:none;
+        color:#428FBD;
+        border-bottom:3px solid #428FBD;
+        background:none;
+        box-shadow:none;
+    }
+}

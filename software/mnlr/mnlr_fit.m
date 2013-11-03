@@ -18,20 +18,15 @@
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="">
 
-	<!--link rel="stylesheet/less" href="/media/less/bootstrap.less" type="text/css" /-->
-	<!--link rel="stylesheet/less" href="/media/less/responsive.less" type="text/css" /-->
-	<!--script src="js/less-1.3.3.min.js"></script-->
-	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
-	
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/cerulean/bootstrap.min.css" rel="stylesheet">    
+	<link href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/cerulean/bootstrap.min.css" rel="stylesheet"> 
     
-     <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+     
   <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css">
   <link rel="stylesheet" href="/media/js/nivo-slider/themes/light/light.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="/media/js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
   <link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/media/css/site.css" type="text/css">
    
   
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -48,12 +43,12 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
-			<div class="navbar navbar-inverse">
+			<div class="navbar">
 				<div class="navbar-inner">
-					<div class="container-fluid">
-						 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">Peng Qi</a>
+					<div class="container-fluid" style="padding:0;border-bottom:1px solid #ccc">
+						 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">Peng <span class="surname">Qi</span></a>
 						<div class="nav-collapse collapse navbar-responsive-collapse">
-                                                        <ul class="nav">
+                                    <ul class="nav">
                 <li >
             <a title="Home Page"
                 class="home"
@@ -86,7 +81,6 @@
             </a>
         </li>    </ul>
 						</div>
-						
 					</div>
 				</div>
 				
@@ -212,10 +206,10 @@ None
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/media/js/main.js"></script>
   <script src="/media/js/nivo-slider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
   <script> $(window).load(function() {$('#slider').nivoSlider({effect: 'sliceDownRight', slices:15, animSpeed: 300, pauseTime: 5000});});</script>
   <script type="text/javascript" src="/media/js/fancybox/jquery.fancybox-1.3.4.js"></script>
+  <script type="text/javascript" src="/media/js/main.js"></script>
   <script type="text/javascript">$(function(){loadimg();loadgoogletranslate();loadsociallinks();});</script>
   
   

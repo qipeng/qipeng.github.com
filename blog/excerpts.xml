@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2013-06-19T19:14:41Z</updated>
+    <updated>2013-11-02T20:25:22Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
@@ -20,7 +20,7 @@
             <id>/blog/hello-world.html</id>
                         <category   scheme="/blog/tags"
                         term="hello_world"
-                        label="Hello_World" />
+                        label="Hello_world" />
             
             <content type="html">
                 
@@ -41,7 +41,7 @@ multi-page static homepage with a personal blog in&amp;nbsp;it.&lt;/p&gt;       
                         label="Tutorial" />
                         <category   scheme="/blog/tags"
                         term="html_css"
-                        label="Html_Css" />
+                        label="Html_css" />
             
             <content type="html">
                 
@@ -69,7 +69,7 @@ with &lt;a href=&#34;http://fancybox.net/&#34; target=&#34;_blank&#34;&gt;FancyB
                         label="Windows" />
                         <category   scheme="/blog/tags"
                         term="visual_studio"
-                        label="Visual_Studio" />
+                        label="Visual_studio" />
             
             <content type="html">
                 
@@ -95,7 +95,7 @@ non-rigid&amp;nbsp;transform.&lt;/p&gt;            </content>
                         label="Hyde" />
                         <category   scheme="/blog/tags"
                         term="html_css"
-                        label="Html_Css" />
+                        label="Html_css" />
             
             <content type="html">
                 
@@ -160,7 +160,7 @@ machines, which typically has a &lt;span class=&#34;caps&#34;&gt;UNIX&lt;/span&g
                         label="Coursera" />
                         <category   scheme="/blog/tags"
                         term="machine_learning"
-                        label="Machine_Learning" />
+                        label="Machine_learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
@@ -188,7 +188,7 @@ but I guess notes would be&amp;nbsp;fine.)&lt;/p&gt;            </content>
                         label="Coursera" />
                         <category   scheme="/blog/tags"
                         term="machine_learning"
-                        label="Machine_Learning" />
+                        label="Machine_learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
@@ -212,7 +212,7 @@ through Week 6 (Machine Learning System&amp;nbsp;Design).&lt;/p&gt;            <
                         label="Coursera" />
                         <category   scheme="/blog/tags"
                         term="machine_learning"
-                        label="Machine_Learning" />
+                        label="Machine_learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />

@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2013-06-19T19:14:39Z</updated>
+    <updated>2013-11-02T20:25:22Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -20,7 +20,7 @@
             <id>/blog/hello-world.html</id>
                         <category   scheme="/blog/tags"
                         term="hello_world"
-                        label="Hello_World" />
+                        label="Hello_world" />
             
             <content type="html">
                                             </content>
@@ -37,7 +37,7 @@
                         label="Tutorial" />
                         <category   scheme="/blog/tags"
                         term="html_css"
-                        label="Html_Css" />
+                        label="Html_css" />
             
             <content type="html">
                                             </content>
@@ -60,7 +60,7 @@
                         label="Windows" />
                         <category   scheme="/blog/tags"
                         term="visual_studio"
-                        label="Visual_Studio" />
+                        label="Visual_studio" />
             
             <content type="html">
                                             </content>
@@ -80,7 +80,7 @@
                         label="Hyde" />
                         <category   scheme="/blog/tags"
                         term="html_css"
-                        label="Html_Css" />
+                        label="Html_css" />
             
             <content type="html">
                                             </content>
@@ -134,7 +134,7 @@
                         label="Coursera" />
                         <category   scheme="/blog/tags"
                         term="machine_learning"
-                        label="Machine_Learning" />
+                        label="Machine_learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
@@ -154,7 +154,7 @@
                         label="Coursera" />
                         <category   scheme="/blog/tags"
                         term="machine_learning"
-                        label="Machine_Learning" />
+                        label="Machine_learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
@@ -174,7 +174,7 @@
                         label="Coursera" />
                         <category   scheme="/blog/tags"
                         term="machine_learning"
-                        label="Machine_Learning" />
+                        label="Machine_learning" />
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
