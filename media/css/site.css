@@ -4,10 +4,10 @@
     font-family: inherit;
     font-style: inherit;
     text-decoration:inherit;
-    font-size: 100%;
     padding: 0;
     border: 0;
     margin: 0;
+    font-size: 14px;
 }
 
 article,aside,details,figcaption,figure,
@@ -17,10 +17,14 @@ footer,header,hgroup,menu,nav,section {
 
 table {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 17.5px;
+    font-size: 100%;
+    line-height: 1.1em;
     border-collapse: collapse;
     overflow:hidden; 
+}
+
+section {
+    overflow: hidden;
 }
 
 :focus {
@@ -51,17 +55,13 @@ table {
 }
 
 a {
-    color: #0385CB;
+    color: rgb(111, 129, 183);
     text-decoration: none;
 }
 
 a:hover{
-    color: #0385CB;
+    color: rgb(111, 129, 183);
     text-decoration:underline;
-}
-
-h1 a, h2 a, h3 a, h4 a {
-    color: #317EAC;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, nav a:hover {
@@ -70,12 +70,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, nav a:hover {
 
 body{
     font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 17.5px;
-    background-color: #fff;
     padding: 0;
     margin: 0;
-    color: #08081f;
+    color: #777;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(91, 109, 143);
+    font-weight: 200;
 }
 
 ::selection{background-color:#85D2F0; color:#444}
@@ -84,7 +86,6 @@ body{
 
 footer{
     color:#222;
-    font-size: 12px;
     text-align: left;
     min-height: 45px;
     _height: 45px;
@@ -118,16 +119,12 @@ section.content{
     _height:auto !important;
 }
 
-.contentwrapper{
-    height:auto;
-    margin-right:250px;
-}
 
 /* listing */
 
-.listing{
-    margin-top: 24px;
-    margin-left: 10px;
+.listing {
+    padding: 0;
+    margin: 0;
 }
 
 .listing img{
@@ -160,14 +157,25 @@ section.content{
     width:100%;
 }
 
+ul.tags {
+    padding: 0
+}
+
 ul.tags li{
     list-style-type: none;
     display: inline;
     float:left;
 }
 
-.small {
-    padding-right:5px;
+.tag {
+    margin-left: 5px;
+    padding:2px;
+    background: rgb(211, 229, 255);
+}
+
+.tag:hover {
+    text-decoration: none;
+    background: rgb(217, 235, 255);
 }
 
 h1 a, h2 a, h3 a{
@@ -198,9 +206,6 @@ h1 a, h2 a, h3 a{
     margin-bottom:0;
 }
 
-.content article p {
-    padding-bottom:10px;
-}
 
 .code, code, pre {
   font-family:"Courier New",Courier,serif;
@@ -219,60 +224,9 @@ strong{
 .postnav{
   width:100%
 }
-nav.before{
-    border-bottom:#ddd 1px solid;
-    margin-bottom:10px;
-}
-nav.after{
-    border-top:#ddd 1px solid;
-    margin-top:10px;
-}
 
 #disqus_thread {
     margin-top:20px;
-}
-
-/* content bg & right */
-.content-back {
-    /*width:100%;*/
-    height:auto;
-}
-.content-right {
-    width:275px;
-    padding:12px 0px;
-    float:right;
-}
-.right-float{
-    color:#222;
-    line-height:15px;
-    font-size:12px;
-    padding:10px 20px;
-}
-.right-float .news {
-    padding-left:0;
-}
-.right-float .lighter{
-    font-size: 16px;
-    font-family:"Telex", Helvetica, Arial, sans-serif;
-    color: #317EAC;
-    line-height:20px;
-    letter-spacing:1px;
-}
-.lighter {
-    font-family:"Telex", Helvetica, Arial, sans-serif;
-    color: #317EAC;
-}
-.lighter-color {
-    color: #317EAC;
-}
-.content {
-padding:20px 5px;
-}
-.content .title{
-    margin: 0px 10px 10px 0px;
-}
-.content p{
-    padding-bottom:30px;
 }
 
 /* nav theming */
@@ -289,24 +243,50 @@ padding:20px 5px;
     border:none;
 }
 
-/* design logo */
-#designlogo {
-    float:right;color:#222;font-size:12px;
+/* Nav */
+
+.nav-item a {
+    border: none;
 }
-#designlogo a{
-    color:#222;
-    text-decoration:none;
-    border:none;
+
+.nav-item a:hover {
+    border: none;
+    background: rgb(176, 202, 219);
 }
-#designlogo a.hyde:hover{
-    color:#999;
+
+.nav-item a.active {
+    border: none;
+    background: rgb(76, 102, 119);
+}
+
+.nav-item a.active:hover {
+    border: none;
+    background: rgb(176, 202, 219);
 }
 
 /* others */
 
+.lighter {
+    color:rgb(111, 129, 163);
+    font-weight: 600;
+}
+
+.lighter-color {
+    color:rgb(111, 129, 163);
+}
+
+.brand-title {
+    color: #fff;
+    font-weight: 500;
+}
+
 .news{
 padding-left:10px;
 list-style:square url("../images/list-square.png");
+}
+
+.news li {
+    padding-bottom: 5px;
 }
 
 .news2{
@@ -320,9 +300,14 @@ padding:5px;
 }
 
 #sociallinks li{
-padding-left:10px;
-padding-bottom:10px;
+padding-left:5px;
 list-style-type: none;
+float:left;
+}
+
+#sociallinks {
+    padding: 0;
+    margin:auto;
 }
 
 table.showcase td{
@@ -335,104 +320,11 @@ table.showcase img{
 border: 1px solid #ddd;
 }
 
-.navbar-inner {
-    background:none;
-    box-shadow:none;
-    border:none;
-    padding:15px 0 0;
+@media (min-width: 48em) {
+.header {
+    margin-top: 7em;
 }
-
-.navbar .nav {
-    min-width:400px;
+#sociallinks{
+    margin-top: 5em;
 }
-
-.navbar .nav>li>a {
-    text-shadow:none;
-    color:#444;
-    padding:16px 10px 0;
-    font-size:16px;
-    line-height: 18px;
-    margin-right:8px;
-}
-
-.navbar .nav>li>a:hover {
-    text-shadow:none;
-    color:#428FBD;
-    border-bottom:3px solid #428FBD;
-    background:none;
-    text-shadow:none;
-}
-
-.navbar .nav>.active>a {
-    text-shadow:none;
-    color:#317EAC;
-    background:none;
-    border-bottom:3px solid #317EAC;
-    box-shadow: none;
-    font-size:16px;
-    line-height: 18px;
-}
-
-.navbar .nav>.active>a:hover {
-    text-shadow:none;
-    color:#428FBD;
-    border-bottom:3px solid #428FBD;
-    background:none;
-    box-shadow:none;
-}
-
-.surname {
-    color:#444;
-}
-.navbar .brand {
-    color: #317EAC;
-    text-shadow:none;
-    font-size:24px;
-    padding: 14px 20px 0;
-    margin-left:20px;
-}
-
-@media(max-width:979px) {
-    .navbar .brand {
-    color: #317EAC;
-    text-shadow:none;
-    font-size:20px;
-    padding: 14px 20px 0 0;
-    margin-left:0px;
-    }
-
-    .navbar .nav-collapse .nav>li>a {
-        text-shadow:none;
-        color:#444;
-        padding:16px 6px 0;
-        font-size:14px;
-        line-height: 16px;
-        margin-right: 5px;
-    }
-
-    .navbar .nav-collapse .nav>li>a:hover {
-        text-shadow:none;
-        color:#428FBD;
-        border-bottom:3px solid #428FBD;
-        background:none;
-        text-shadow:none;
-    }
-
-    .navbar .nav-collapse .nav>.active>a {
-        text-shadow:none;
-        color:#317EAC;
-        background:none;
-        border-bottom:3px solid #317EAC;
-        box-shadow: none;
-        font-size:14px;
-        line-height: 16px;
-    }
-
-    .navbar .nav-collapse .nav>.active>a:hover {
-        text-shadow:none;
-        color:#428FBD;
-        border-bottom:3px solid #428FBD;
-        background:none;
-        box-shadow:none;
-    }
 }

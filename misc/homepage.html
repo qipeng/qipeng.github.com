@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="yui3-js-enabled">
 <head>
    <meta charset="utf-8">
 
@@ -17,16 +17,13 @@
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="">
-
-	<link href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/cerulean/bootstrap.min.css" rel="stylesheet"> 
-    
-     
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
   <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css">
-  <link rel="stylesheet" href="/media/js/nivo-slider/themes/light/light.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="/media/js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
-  <link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
+  <link rel="stylesheet" href="/media/css/layouts/blog.css" type="text/css">
   <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <script type="text/javascript" src="/media/js/main.js"></script>
    
   
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -40,72 +37,65 @@
       </head>
 
 <body>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span12">
-			<div class="navbar">
-				<div class="navbar-inner">
-					<div class="container-fluid" style="padding:0;border-bottom:1px solid #ccc">
-						 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">Peng <span class="surname">Qi</span></a>
-						<div class="nav-collapse collapse navbar-responsive-collapse">
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-med-1-4">
+        <div class="header">
+            <hgroup>
+                <h1 class="brand-title">Peng Qi</h1>
+                <h2 class="brand-tagline">Research, Learn, Code, and Play.</h2>
+            </hgroup>
+
+            <nav class="nav">
+                <ul class="nav-list">
                                     <ul class="nav">
-                <li >
+                <li class="nav-item ">
             <a title="Home Page"
-                class="home"
+                class="pure-button home"
                 href="/index.html">
                 Home
             </a>
-        </li>        <li >
+        </li>        <li class="nav-item ">
             <a title="Research"
-                class="research"
+                class="pure-button research"
                 href="/research">
                 Research
             </a>
-        </li>        <li >
+        </li>        <li class="nav-item ">
             <a title="Blog"
-                class="blog"
+                class="pure-button blog"
                 href="/blog">
                 Blog
             </a>
-        </li>        <li >
+        </li>        <li class="nav-item ">
             <a title="Software"
-                class="software"
+                class="pure-button software"
                 href="/software">
                 Software
             </a>
-        </li>        <li class="active">
+        </li>        <li class="nav-item active">
             <a title="Misc"
-                class="active misc"
+                class="pure-button active misc"
                 href="/misc">
                 Me &amp; My ...
             </a>
         </li>    </ul>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-            		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="span9">
-        <div id="container">
-                <section class="content">
-          <article class="post">
+                </ul>
+            </nav>
+        </div>
+    </div>
 
-<ul class="breadcrumb">
-    <li>
-        <a href="/misc">Misc</a> <span class="divider">/</span>
-    </li>
-    <li class="active">
-        Me &amp; My Homepage
-    </li>
-</ul>
-
+    <div class="content pure-u-1 pure-u-med-3-4">
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                        <section>
+            <article class="post">
 
 <div class="title"><h1 >
     Me &amp; My Homepage
 </h1></div>
+
 
 <div class="postcontent">
 <p>I am recently quite interested in <a href="http://twitter.github.io/bootstrap/" target="_blank">Twitter Bootstrap</a>, with which I designed the template of this page. Hope that this template can be used by more people, as I designed it in a quite open style for almost&nbsp;anyone.</p>
@@ -131,6 +121,14 @@
 <li>You may have noticed that some (in fact a lot) images on this site have a tiny blue top right corner like this <img src="/media/images/fancycorner.png">. I call it the &#8220;fancy corner&#8221;, which marks out all images that has a larger version for browsing. You can simply click on an image with a fancy corner and see what happens. This awesome functionality is powered by <a href="http://fancybox.net/" target="_blank">FancyBox</a> and <a href="http://jquery.com/" target="_blank">jQuery</a>, and the implementation will be introduced in <a href="/blog/tutorial-1.html">Tutorial 1: The Fancy Corner</a>. </li>
 </ul></div>
 
+<div style="float:left"><span class="lighter">Previous Post</span>&nbsp;
+<a href="/misc/design.html">Me &amp; My Design</a>
+</div>
+
+<div style="float:right"><span class="lighter">Next Post</span>&nbsp;
+None
+</div>
+<br>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -145,47 +143,41 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-</article>          </section>
-                    </div>
-		</div>
-		<div class="span3">
-        <div class="right-float">
-<span class="lighter" >Related Posts</span><br/>
-Previous:
-<a href="/misc/design.html">Me &amp; My Design</a>
-<br/>
-
-Next:
-None
+</article>            </section>
+                        <div class="footer">
+                <div id="sociallinks" class="clear" style="font-size:10px;"></div>
+                <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                    <ul>
+                        <li><a href="http://purecss.io/">Copyright &copy; Peng Qi, 2014</a></li>
+                        <li><a href="http://github.com/qipeng/">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-        <div class="right-float"><div id="sociallinks" style="font-size:10px;"></div>
-            <div id="googletranslate"></div>
-		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="span12">
-        <footer>
-      <div id="designlogo"><a href="http://qipeng.github.com/misc/homepage.html" target="_blank"><span class="lighter">Designed</span>by<br>
-    <span style="padding-left:40px">Qi<span class="lighter">Peng</span></span></a>
-    <br><span style="font-size:10px;text-align:center;">Powered by <a href="http://hyde.github.com/" target="_blank" class="hyde">hyde</a>.</span></div>
-      <p style="text-align:center">&copy; <a href="http://qipeng.github.com/">Peng Qi</a>, 2011 &ndash; 2013. Hosted by <a href="http://www.github.com">GitHub</a>.</p>
-  </footer>
-		</div>
-	</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/media/js/fancybox/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript">$(function(){loadsociallinks();loadimg();});</script>
+
+
+<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+
+
 </div>
   <!-- Javascript at the bottom for fast page loading -->
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-  <script src="/media/js/nivo-slider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
-  <script> $(window).load(function() {$('#slider').nivoSlider({effect: 'sliceDownRight', slices:15, animSpeed: 300, pauseTime: 5000});});</script>
-  <script type="text/javascript" src="/media/js/fancybox/jquery.fancybox-1.3.4.js"></script>
-  <script type="text/javascript" src="/media/js/main.js"></script>
-  <script type="text/javascript">$(function(){loadimg();loadgoogletranslate();loadsociallinks();});</script>
-  
-  
   
   <!--[if lt IE 7 ]>
     <script src="/media/js/libs/dd_belatedpng.js"></script>
