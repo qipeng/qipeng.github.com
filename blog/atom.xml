@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2014-04-29T11:09:09Z</updated>
+    <updated>2014-05-28T20:38:21Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -201,6 +201,29 @@
                         <category   scheme="/blog/tags"
                         term="computer-vision"
                         label="Computer-Vision" />
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">xcodebuild Solution for OS X Mavericks</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/xcodebuild-mavericks.html"/>
+            <updated>2014-05-27T23:00:00Z</updated>
+            <published>2014-05-27T23:00:00Z</published>
+            <id>/blog/xcodebuild-mavericks.html</id>
+                        <category   scheme="/blog/tags"
+                        term="OSX"
+                        label="Osx" />
+                        <category   scheme="/blog/tags"
+                        term="Xcode"
+                        label="Xcode" />
+                        <category   scheme="/blog/tags"
+                        term="Mavericks"
+                        label="Mavericks" />
+                        <category   scheme="/blog/tags"
+                        term="xcodebuild"
+                        label="Xcodebuild" />
             
             <content type="html">
                                             </content>
