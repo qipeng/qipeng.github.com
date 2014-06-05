@@ -31,10 +31,17 @@ h3 {
     text-align: center;
     top: auto;
     margin: 3em auto;
+    padding: .5em;
+    background-color: rgba(61, 79, 93, .8);
+    overflow: hidden;
 }
 
 .sidebar {
-    background: rgb(61, 79, 93);
+    background: rgb(61, 79, 93) url("../../images/title-wordcloud.png") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: #fff;
 }
 
@@ -169,6 +176,11 @@ h3 {
 
     .sidebar {
         position: fixed;
+        background: rgb(61, 79, 93) url("../../images/title-wordcloud-rot90.png") no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         top: 0;
         bottom: 0;
     }
