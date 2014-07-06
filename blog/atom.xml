@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2014-05-28T20:38:21Z</updated>
+    <updated>2014-07-06T16:23:11Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -224,6 +224,23 @@
                         <category   scheme="/blog/tags"
                         term="xcodebuild"
                         label="Xcodebuild" />
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Better Homeworks</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/better-homeworks.html"/>
+            <updated>2014-07-06T17:00:00Z</updated>
+            <published>2014-07-06T17:00:00Z</published>
+            <id>/blog/better-homeworks.html</id>
+                        <category   scheme="/blog/tags"
+                        term="TeachingInCS"
+                        label="Teachingincs" />
+                        <category   scheme="/blog/tags"
+                        term="UIUX"
+                        label="Uiux" />
             
             <content type="html">
                                             </content>

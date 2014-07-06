@@ -10,8 +10,8 @@
   <meta name="robots" content="all" />
   <meta name="googlebot" content="all" />
 
-  <title>xcodebuild Solution for OS X Mavericks</title>
-  <meta name="description" content="A solution to some common issues regarding xcodebuild for Mavericks users.
+  <title>Better Homeworks</title>
+  <meta name="description" content="Creating better homeworks for college students.
 ">
   <meta name="keywords" content="">
   <meta name="author" content="Peng Qi">
@@ -94,10 +94,10 @@
             <article class="post">
 
 <div class="title"><h1 itemprop="name">
-    xcodebuild Solution for OS X Mavericks
+    Better Homeworks
 </h1></div>
-<time datetime="2014-05-27">
-    Tue, 27 May 2014
+<time datetime="2014-07-06">
+    Sun, 06 Jul 2014
 </time>
 
 <div>
@@ -105,23 +105,13 @@
 <ul class="tags clear">
 <li><span class="lighter" >Tags</span></li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/OSX.html">
-        OSX
+    <a class="tag pure-button" href="/blog/tags/TeachingInCS.html">
+        TeachingInCS
     </a>
 </li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/Xcode.html">
-        Xcode
-    </a>
-</li>
-<li>
-    <a class="tag pure-button" href="/blog/tags/Mavericks.html">
-        Mavericks
-    </a>
-</li>
-<li>
-    <a class="tag pure-button" href="/blog/tags/xcodebuild.html">
-        xcodebuild
+    <a class="tag pure-button" href="/blog/tags/UIUX.html">
+        UIUX
     </a>
 </li>
 </ul>
@@ -129,42 +119,31 @@
 
 <div class="postcontent">
 <p>
-Many <span class="caps">CUDA</span> developers on Macs that migrated to Mavericks might have experienced 
-one (or as in my case, all) of the following, a) <code>clang: error: unsupported 
-option '-dumpspecs'</code>, 
-b) <code>xcodebuild</code> says it requires Xcode but you have Xcode installed already,
-and c) <span class="caps">CUDA</span> examples don&#8217;t compile or prompts <code>cudaGetDeviceCount returned 35</code>,
-maybe more. Here&#8217;s a work-around to just&nbsp;that.</p>
+No one deserves to face an creation with an out-dated look, especially if plentiful time and energy is devoted into that creation. For college students that are taking introductory courses, they might not possess the required experience or techniques to always make their deliverables look pretty (or that might), despite the amount of work they have put in to finish their homeworks or projects. In such a scenario, it is then the teaching staff&#8217;s job to make their work well paid for with carefully designed homework/project material, to maximize their sense of satisfaction and therefore encourage their engagement in the&nbsp;course.</p>
 
 <p>
-To my suprise, this problem seems deeply rooted in the installation of Xcode. I&#8217;ve 
-uninstalled and reinstalled it several times, but none seemed to work always. Different 
-<span class="caps">CUDA</span> versions didn&#8217;t help either. It turns out all could be solved by simply typing these
-lines in your&nbsp;terminal
-</p>
-
-<pre class="codebox">
-sudo mv /usr/bin/xcodebuild /usr/bin/xcodebuild~
-sudo ln -s /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild /usr/bin/xcodebuild
-</pre>
-
-<p>
-Here, we&#8217;re just backing up your original <code>xcodebuild</code> in your <code>PATH</code>
-and replacing it with a symlink to the Xcode installation. After doing these, make sure that
-in your <code>DYLD_LIBRARY_PATH</code>, <code>/usr/lib</code> comes before <code>/usr/local/lib</code>
-(Xcode seems unhappy about the&nbsp;latter).
+Recently when I was <span class="caps">TA</span>-ing for <span class="caps">CS145</span>, Introduction to Databases, we used the project from previous quarters, which asks the students to create the model of a database system, where certain constraints need to be satisfied at all time, when retrieval/modification tasks are performed. When I looked at the website starter code we were about to give out to the students, they appeared as old as the course itself to me (which apparently has been around for a while). Although in previous offerings of the class, the students are apparently encouraged to be creative about how their final project websites look like, I felt it would be quite unfair for students who have devoted about the same amount of time designing the databases (which, in my opinion, should be the whole point of the project) to have to stare at the outdated Web User Interface (<span class="caps">UI</span>) provided with the starter&nbsp;code. 
 </p>
 
 <p>
-Then? <span class="caps">CUDA</span> Samples and everything else that had these problems are all&nbsp;yours!
+So I decided I would re-design the starter code with Bootstrap <span class="caps">CSS</span>, which not only gives the template website a more mordenized appearance, but also incorporates full-fledged responsive features into the&nbsp;pages.
+</p>
+
+<p>
+Enough talking, here&#8217;s what happened for <span class="caps">CS145</span>&#8217;s Project 1 this summer&nbsp;quarter.
+</p>
+
+<p>
+<a class="fancyimg" href="/blog/better-homeworks/cs145summer2014proj1part3.png">
+<img src="/blog/better-homeworks/cs145summer2014proj1part3_thumb.png" width="200"></a>
 </p></div>
 
 <div style="float:left"><span class="lighter">Older Post</span>&nbsp;
-<a href="/blog/better-homeworks.html">Better Homeworks</a>
+None
 </div>
 
 <div style="float:right"><span class="lighter">Newer Post</span>&nbsp;
-<a href="/blog/lecture-notes-201212.html">Lecture Notes from Three Recent Lectures</a>
+<a href="/blog/xcodebuild-mavericks.html">xcodebuild Solution for OS X Mavericks</a>
 </div>
 <br>
 <div id="disqus_thread"></div>

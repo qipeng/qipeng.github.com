@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2014-05-28T20:38:22Z</updated>
+    <updated>2014-07-06T16:23:12Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
@@ -276,5 +276,23 @@ option &#39;-dumpspecs&#39;&lt;/code&gt;,
 b) &lt;code&gt;xcodebuild&lt;/code&gt; says it requires Xcode but you have Xcode installed already,
 and c) &lt;span class=&#34;caps&#34;&gt;CUDA&lt;/span&gt; examples don&amp;#8217;t compile or prompts &lt;code&gt;cudaGetDeviceCount returned 35&lt;/code&gt;,
 maybe more. Here&amp;#8217;s a work-around to just&amp;nbsp;that.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Better Homeworks</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/better-homeworks.html"/>
+            <updated>2014-07-06T17:00:00Z</updated>
+            <published>2014-07-06T17:00:00Z</published>
+            <id>/blog/better-homeworks.html</id>
+                        <category   scheme="/blog/tags"
+                        term="TeachingInCS"
+                        label="Teachingincs" />
+                        <category   scheme="/blog/tags"
+                        term="UIUX"
+                        label="Uiux" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img src=&#34;/blog/better-homeworks/cs145summer2014proj1part3_thumb.png&#34; width=&#34;200&#34;&gt;&lt;/p&gt;
+                &lt;p&gt;No one deserves to face an creation with an out-dated look, especially if plentiful time and energy is devoted into that creation. For college students that are taking introductory courses, they might not possess the required experience or techniques to always make their deliverables look pretty (or that might), despite the amount of work they have put in to finish their homeworks or projects. In such a scenario, it is then the teaching staff&amp;#8217;s job to make their work well paid for with carefully designed homework/project material, to maximize their sense of satisfaction and therefore encourage their engagement in the&amp;nbsp;course.&lt;/p&gt;            </content>
         </entry>
     </feed>
