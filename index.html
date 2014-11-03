@@ -21,7 +21,22 @@
   <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
-  <link rel="stylesheet" href="/media/css/layouts/blog.css" type="text/css">
+  <!--[if lte IE 8]>
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
+  
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
+  
+<!--<![endif]-->
+<!--[if lte IE 8]>
+      <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="/media/css/layouts/marketing.css">
+  <!--<![endif]-->
   <link rel="stylesheet" href="/media/css/site.css" type="text/css">
   <script type="text/javascript" src="/media/js/main.js"></script>
    
@@ -34,56 +49,60 @@
     <!-- Fav and touch icons -->
   <link rel="shortcut icon" href="favicon.ico">
       
-      </head>
+  <link rel="stylesheet" href="/media/js/bxslider/jquery.bxslider.css" type="text/css"></link>
+  </head>
 
 <body>
 
-<div id="layout" class="pure-g">
-    <div class="sidebar pure-u-1 pure-u-med-1-4">
-        <div class="header">
-            <hgroup>
-                <h1 class="brand-title">Peng Qi</h1>
-                <h2 class="brand-tagline">Research, Learn, Code, and Play.</h2>
-            </hgroup>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="/index.html">Peng Qi</a>
 
-            <nav class="nav">
-                <ul class="nav-list">
-                                    <ul class="nav">
-                <li class="nav-item active">
-            <a title="Home Page"
-                class="pure-button active home"
-                href="/index.html">
-                Home
-            </a>
-        </li>        <li class="nav-item ">
+                <ul class="nav">
+                <li class="nav-item ">
             <a title="Research"
-                class="pure-button research"
+                class="research"
                 href="/research">
                 Research
             </a>
         </li>        <li class="nav-item ">
             <a title="Blog"
-                class="pure-button blog"
+                class="blog"
                 href="/blog">
                 Blog
             </a>
         </li>        <li class="nav-item ">
             <a title="Software"
-                class="pure-button software"
+                class="software"
                 href="/software">
                 Software
             </a>
         </li>        <li class="nav-item ">
             <a title="Misc"
-                class="pure-button misc"
+                class="misc"
                 href="/misc">
                 Me &amp; My ...
             </a>
         </li>    </ul>
-                </ul>
-            </nav>
-        </div>
     </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash-bg">
+      <ul class="bxslider" style="min-width:100%; min-height:100%">
+	<li><img width="100%" src="/media/images/stanford-banner.jpg"/></li>
+	<li><img width="100%" src="/media/images/tsinghua-banner.png"/></li>
+</ul>
+    </div>
+    <div class="splash">
+        <div class="splash-head">Peng Qi</div>
+        <div class="splash-subhead">
+            Research, Learn, Code, and Play.        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="content">
+<div id="layout" class="pure-g">
 
     <div class="content pure-u-1 pure-u-med-3-4">
         <div>
@@ -93,38 +112,48 @@
             <section>
 <div class="title"><h2>Brief Bio</h2></div>
 <article>
+
 <p>I am currently a Master's student at the <a target="_blank" href="http://cs.stanford.edu">Computer Science Department</a>, <a target="_blank" href="http://www.stanford.edu">Stanford University</a>.</p>
+<p>My research interest covers machine learning, especially deep learning, in which I seek innovation and inspiration from the essence of human being's intelligence. I also dabble in data mining, computer graphics and data visualization. I'm also interested in psychology and their neural basis. I participated in a number of course projects, research projects and real-world projects during my undergraduate study (see <a href="/software/undergrad-proj.html">Undergraduate Projects</a>).<br clear="all" /></p>
 
-<p>My research interest covers machine learning, especially deep learning, in which I seek innovation and inspiration from the essence of human being's intelligence. I also dabble in data mining, computer graphics and data visualization. I'm also interested in psychology and their neural basis. I participated in a number of course projects, research projects and real-world projects during my undergraduate study (see <a href="/software/undergrad-proj.html">Undergraduate Projects</a>).<br clear="all" /><br /></p>
+<p><a href="Resume_Peng_Qi.pdf" target="_blank">[CV]</a> &nbsp;&nbsp; <a href="#publications">[Publications]</a></p>
 
-
-<p>The following is a selected version of my bio. (see also <a href="Resume_Peng_Qi.pdf" target="_blank">my resume</a>)</p>
-<br>
+<div class="title"><h2>Contact</h2></div>
+<p>
+<a href="javascript:sendEmail('pengqi')" target="_blank"><img src="/media/images/pengqi_email.png" border="0" align="absbottom" title="Email image created with safemail.justlikeed.net"></a>
+</p>
 
 <div class="title"><h2>Education &amp; Professional Experience</h2></div>
 <table>
-<tr><td width="130px">2013.9 - Present</td><td>Master of Science &amp; Research Assistant, Computer Science Department, Stanford University</td></tr>
+<tr><td width="130px">2013.9 - Present</td><td>Master of Science &amp; Research Assistant, Computer Science Department, Stanford University</td></tr><a name="publications"></a>
 <tr><td width="130px">2012.7 - 2013.6</td><td>Research Assistant, State Key Laboratory of Intelligent Technology &amp; Systems, Department of Computer Science and Technology, Tsinghua University</td></tr>
 <tr><td width="130px">2008.8 - 2012.7</td><td>Bachelor of Engineering, School of Software, Tsinghua University (Excellent Graduate)</td></tr>
 </table>
-<br />
 
-<div class="title"><h2>Teaching</h2></title></div>
-<ol class="news">
-<li><a href="http://cs224s.stanford.edu" target="_blank">CS 224s Spoken Language Processing</a>, Spring 2014 (<a href="http://web.stanford.edu/class/cs224s/hw/hw3.html" target="_blank">Check out Homework 3 I designed</a>)</li>
-<li><a href="http://cs145.stanford.edu" target="_blank">CS 145 Introduction to Databases</a>, Summer 2014 (<a href="/blog/better-homeworks.html">Better Homeworks</a> I created, and <a href="/media/files/CS145MidtermReview_RelationalAlgebra.pdf">midterm</a>, <a href="/media/files/CS_145_Final_Review_DatabaseSystems.pdf">final review slides</a> I made)</li>
-</ol>
-<br>
-
-<div class="title"><h2>Recent publications (<a href="/research/publications">see full list</a>)</h2>
-<ul class="news">
+<div class="title"><h2>Publications</h2>
+<!--<ul class="news">
 <li>
 	Andrew L. Maas, Awni Y. Hannun, Christopher T. Lengerich, <span style="font-weight:800">Peng Qi</span>, Daniel Jurafsky, Andrew Y. Ng. <span class="lighter-color">Increasing Deep Neural Network Acoustic Model Size for Large Vocabulary Continuous Speech Recognition</span>. In arXiv, 2014. <a href="http://arxiv.org/abs/1406.7806" target="_blank">[HTML]</a>
 </li>
 
 <li> Xiaolin Hu, Jianwei Zhang, <span style="font-weight:800">Peng Qi</span>, and  Bo Zhang. <span class="lighter-color"> Modeling Response Properties of V2 Neurons with a Modified K-Means</span>. In <span style="font-style:italic"> Neurocomputing</span>, 2014. <br><a href="http://www.sciencedirect.com/science/article/pii/S0925231214000861" target="_blank">[HTML]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/HuZhangQiZhang14.pdf" target="blank">[PDF]</a></li></ul>
+-->
+<ul class="news">
+<li>
+	Andrew L. Maas, Awni Y. Hannun, Christopher T. Lengerich, <span style="font-weight:800">Peng Qi</span>, Daniel Jurafsky, Andrew Y. Ng. <span class="lighter-color">Increasing Deep Neural Network Acoustic Model Size for Large Vocabulary Continuous Speech Recognition</span>. In arXiv, 2014. <a href="http://arxiv.org/abs/1406.7806" target="_blank">[HTML]</a>
+</li>
 
-<br />
+<li> Xiaolin Hu, Jianwei Zhang, <span style="font-weight:800">Peng Qi</span>, and  Bo Zhang. <span class="lighter-color"> Modeling Response Properties of V2 Neurons with a Modified K-Means</span>. In <span style="font-style:italic"> Neurocomputing</span>, 2014. <br><a href="http://www.sciencedirect.com/science/article/pii/S0925231214000861" target="_blank">[HTML]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/HuZhangQiZhang14.pdf" target="blank">[PDF]</a></li>
+
+<li> <span style="font-weight:800">Peng Qi</span> and Xiaolin Hu. <span class="lighter-color">Learning Nonlinear Regularities in Natural Images by Modeling the Outer Product of Image Intensities.</span> <span style="font-style:italic">Neural Computation</span>, 2013. <a href="http://www.mitpressjournals.org/doi/abs/10.1162/NECO_a_00567" target="_blank">[HTML]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/QiHu13_outer_prod.zip" target="_blank">[Code]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/QiHu13.pdf" target="_blank">[PDF]</a></li>
+
+<li> <span style="font-weight:800">Peng Qi</span>, Shuochen Su, and Xiaolin Hu. <span class="lighter-color">Modeling Data Outer Product for Image Classification.</span> <span style="font-style:italic">ICACI 2013</span>. <a href="/research/publications/QiSuHu13.pdf" target="_blank">[PDF]</a></li>
+
+<li> Xiaolin Hu,  <span style="font-weight:800">Peng Qi</span>, and  Bo Zhang. <span class="lighter-color"> Hierarchical K-Means Algorithm for Modeling Visual Area V2 Neurons</span>. In  Tingwen Huang,  Zhigang Zeng,  Chuandong Li, and  Chi Leung, editors, <span style="font-style:italic"> Neural Information Processing</span>,  Lecture Notes in Computer Science, pp. 373&ndash;381,  Springer Berlin / Heidelberg, 2012.  10.1007/978-3-642-34487-9_46. <span class="award-winner">Best Paper Award</span><br><a href="/research/publications/hu12KMeans.bib" target="_blank">
+    [BibTeX]
+   </a>&nbsp;&nbsp;&nbsp;<a href="http://dx.doi.org/10.1007/978-3-642-34487-9_46" target="_blank">[HTML]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/HuQiZhang12.pdf" target="_blank">[PDF]</a></li>
+</ul>
+
 <div class="title"><h2>Honors and Awards</h2></div>
 <ol class="news">
 <li>2012 Outstanding Graduate of Tsinghua University</li>
@@ -133,14 +162,20 @@
 <li>2009 Ge-Ru Zheng's Scholarship (for study excellence)</li>
 <li>2008-2011 Freshman Scholarship (Ranked 3rd of Guizhou Province in National College Entrance Exam)</li>
 </ol>
-<br>
+
+<div class="title"><h2>Teaching</h2></title></div>
+<ol class="news">
+<li><a href="http://cs224s.stanford.edu" target="_blank">CS 224s Spoken Language Processing</a>, Spring 2014 (<a href="http://web.stanford.edu/class/cs224s/hw/hw3.html" target="_blank">Check out Homework 3 I designed</a>)</li>
+<li><a href="http://cs145.stanford.edu" target="_blank">CS 145 Introduction to Databases</a>, Summer 2014 (<a href="/blog/better-homeworks.html">Better Homeworks</a> I created, and <a href="/media/files/CS145MidtermReview_RelationalAlgebra.pdf">midterm</a>, <a href="/media/files/CS_145_Final_Review_DatabaseSystems.pdf">final review slides</a> I made)</li>
+</ol>
+
 <div class="title"><h2>Work Experience and Social Service</h2></title></div>
 <ol class="news">
 <li>2013-2014 Backend Engineer &amp; Machine Learning consultant (Part-Time), Soulgame.com, Beijing</li>
 <li>2010-2011 Vice President of Students' Union, School of Software, Tsinghua University</li>
 </ol>
 <br>
-
+<!--
 <h2>Latest News</h2>
 <ul class="news">
 <li>Oct. 30, 2013 - Outer-product letter accepted by <a href="http://www.mitpressjournals.org/loi/neco" target="_blank">Neural Computation</a>.
@@ -149,14 +184,11 @@
 <p style="text-align:right">
 <a href="/news.html">More...</a>
 </p>
+-->
 
-<div class="title"><h2>Contact</h2></div>
-<p>
-<a href="javascript:sendEmail('qipeng')"><img src="/media/images/contact/gmail.png"></a>
-</p>
 </article>
 
-Last Updated: Mar. 27, 2014
+Last Updated: Nov. 2, 2014
 </section>
             </section>
                         <div class="footer">
@@ -165,6 +197,7 @@ Last Updated: Mar. 27, 2014
                     <ul>
                         <li><a href="http://purecss.io/">Copyright &copy; Peng Qi, 2014</a></li>
                         <li><a href="http://github.com/qipeng/">GitHub</a></li>
+                        <li><a href="http://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -174,6 +207,9 @@ Last Updated: Mar. 27, 2014
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+window.jQuery || document.write("<script src=\"/media/js/jquery.min.js\"><\/script>")
+</script>
 <script type="text/javascript" src="/media/js/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">$(function(){loadsociallinks();loadimg();});</script>
 
@@ -190,9 +226,23 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
 
 
 </div>
+</div>
+</div>
   <!-- Javascript at the bottom for fast page loading -->
 
-  
+  <script src="/media/js/bxslider/jquery.bxslider.min.js"></script>
+<script>$(document).ready(function(){
+  $('.bxslider').bxSlider({
+  	mode:'fade',
+  	easing: 'ease',
+  	pager: false,
+  	controls: false,
+  	auto: true,
+  	pause: 8000,
+  });
+});
+</script>
+
   <!--[if lt IE 7 ]>
     <script src="/media/js/libs/dd_belatedpng.js"></script>
     <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>

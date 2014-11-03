@@ -22,7 +22,22 @@
   <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
-  <link rel="stylesheet" href="/media/css/layouts/blog.css" type="text/css">
+  <!--[if lte IE 8]>
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
+  
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
+  
+<!--<![endif]-->
+<!--[if lte IE 8]>
+      <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="/media/css/layouts/marketing.css">
+  <!--<![endif]-->
   <link rel="stylesheet" href="/media/css/site.css" type="text/css">
   <script type="text/javascript" src="/media/js/main.js"></script>
    
@@ -39,52 +54,40 @@
 
 <body>
 
-<div id="layout" class="pure-g">
-    <div class="sidebar pure-u-1 pure-u-med-1-4">
-        <div class="header">
-            <hgroup>
-                <h1 class="brand-title">Peng Qi</h1>
-                <h2 class="brand-tagline">Research, Learn, Code, and Play.</h2>
-            </hgroup>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="/index.html">Peng Qi</a>
 
-            <nav class="nav">
-                <ul class="nav-list">
-                                    <ul class="nav">
+                <ul class="nav">
                 <li class="nav-item ">
-            <a title="Home Page"
-                class="pure-button home"
-                href="/index.html">
-                Home
-            </a>
-        </li>        <li class="nav-item ">
             <a title="Research"
-                class="pure-button research"
+                class="research"
                 href="/research">
                 Research
             </a>
-        </li>        <li class="nav-item active">
+        </li>        <li class="nav-item pure-menu-selected">
             <a title="Blog"
-                class="pure-button active blog"
+                class="active blog"
                 href="/blog">
                 Blog
             </a>
         </li>        <li class="nav-item ">
             <a title="Software"
-                class="pure-button software"
+                class="software"
                 href="/software">
                 Software
             </a>
         </li>        <li class="nav-item ">
             <a title="Misc"
-                class="pure-button misc"
+                class="misc"
                 href="/misc">
                 Me &amp; My ...
             </a>
         </li>    </ul>
-                </ul>
-            </nav>
-        </div>
     </div>
+</div>
+
+<div id="layout" class="pure-g">
 
     <div class="content pure-u-1 pure-u-med-3-4">
         <div>
@@ -154,6 +157,7 @@ None
                     <ul>
                         <li><a href="http://purecss.io/">Copyright &copy; Peng Qi, 2014</a></li>
                         <li><a href="http://github.com/qipeng/">GitHub</a></li>
+                        <li><a href="http://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -163,6 +167,9 @@ None
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+window.jQuery || document.write("<script src=\"/media/js/jquery.min.js\"><\/script>")
+</script>
 <script type="text/javascript" src="/media/js/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">$(function(){loadsociallinks();loadimg();});</script>
 
@@ -179,6 +186,7 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
 
 
 </div>
+
   <!-- Javascript at the bottom for fast page loading -->
 
   
