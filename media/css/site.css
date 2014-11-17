@@ -259,6 +259,11 @@ strong{
     color:rgb(111, 129, 163);
 }
 
+.award-winner {
+    font-weight: 600;
+    color:rgb(203, 50, 31);
+}
+
 .news{
 padding-left:10px;
 list-style:square url("../images/list-square.png");
