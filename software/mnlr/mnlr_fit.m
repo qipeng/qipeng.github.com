@@ -45,7 +45,7 @@ function [f, g] = target_fun(model_, X, y, reg)
         end
         g = g / n;
         g(2:end,:) = g(2:end,:) + reg * w(2:end,1:end-1);
-        g = reshape(g,[p*(k-1) 1]);
+        g = g(:);
     end
 
 end
