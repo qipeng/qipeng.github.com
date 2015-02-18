@@ -213,11 +213,6 @@ a.pure-button-primary {
     color: #aaa;
 }
 
-/* This is the class used for the footer */
-.footer {
-    background: #111;
-}
-
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
