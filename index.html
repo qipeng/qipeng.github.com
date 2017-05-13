@@ -37,7 +37,6 @@
   <!--[if gt IE 8]><!-->
       <link rel="stylesheet" href="/media/css/layouts/marketing.css">
   <!--<![endif]-->
-  <link rel="stylesheet" href="/media/css/site.css" type="text/css">
   <script type="text/javascript" src="/media/js/main.js"></script>
    
   
@@ -50,7 +49,8 @@
   <link rel="shortcut icon" href="favicon.ico">
       
   <link rel="stylesheet" href="/media/js/bxslider/jquery.bxslider.css" type="text/css"></link>
-  </head>
+    <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+</head>
 
 <body>
 
@@ -90,8 +90,8 @@
 <div class="splash-container">
     <div class="splash-bg">
       <ul class="bxslider" style="min-width:100%; min-height:100%">
-	<li><img width="100%" src="/media/images/stanford-banner.jpg"/></li>
-	<li><img width="100%" src="/media/images/tsinghua-banner.png"/></li>
+	<li><img height="100%" src="/media/images/stanford-banner.jpg"/></li>
+	<li><img height="100%" src="/media/images/tsinghua-banner.png"/></li>
 </ul>
     </div>
     <div class="splash">
@@ -241,6 +241,7 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   	controls: false,
   	auto: true,
   	pause: 8000,
+    adaptiveHeight: true,
   });
 });
 </script>
