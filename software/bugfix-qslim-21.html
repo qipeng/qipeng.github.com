@@ -23,14 +23,14 @@
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
   <!--[if lte IE 8]>
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
-  
+
 <![endif]-->
 <!--[if gt IE 8]><!-->
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
-  
+
 <!--<![endif]-->
 <!--[if lte IE 8]>
       <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
@@ -39,7 +39,7 @@
       <link rel="stylesheet" href="/media/css/layouts/marketing.css">
   <!--<![endif]-->
   <script type="text/javascript" src="/media/js/main.js"></script>
-   
+
   <link rel="stylesheet" href="/media/css/syntaxhighlighter/shCoreEclipse.css" type="text/css">
 <link rel="stylesheet" href="/media/css/syntaxhighlighter/shThemeEclipse.css" type="text/css">
 
@@ -50,9 +50,12 @@
   <![endif]-->
 
     <!-- Fav and touch icons -->
-  <link rel="shortcut icon" href="favicon.ico">
-      
+  <link rel="shortcut icon" href="/favicon.ico">
+  
         <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -80,12 +83,6 @@
                 href="/software">
                 Software
             </a>
-        </li>        <li class="nav-item ">
-            <a title="Misc"
-                class="misc"
-                href="/misc">
-                Me &amp; My ...
-            </a>
         </li>    </ul>
     </div>
 </div>
@@ -100,7 +97,7 @@
             <article class="post">
 
 <div class="title"><h1 itemprop="name">
-    An Unofficial "Bugfix" for QSlim 2.1
+    An Unofficial &#8220;Bugfix&#8221; for QSlim&nbsp;2.1
 </h1></div>
 
 
@@ -120,7 +117,7 @@ applications. So please think twice before applying it to yours.</span><br>
 <a href="http://mgarland.org/software/qslim21.html" target="_blank">QSlim</a> is a 
 light-weight software developed by <a href="http://mgarland.org" target="_blank">M. Garland</a>, 
 which can simplify mesh models swiftly, maximally preserving their geodesic properties. 
-However, in my recent use of it I discovered a &#8220;bug&#8221; regarding redundant&nbsp;faces.</p>
+However, in my recent use of it I discovered a &#8220;bug&#8221; regarding&nbsp;redundant&nbsp;faces.</p>
 
 <p>
 <a class="fancyimg" href="/media/images/software/bugfix-qslim-21/qslim.jpg">
@@ -129,7 +126,7 @@ I generated a L shape whose faces consist of redundant triangle mesh (figure lef
 after QSlim, the result is as the middle picture shows. The shape is damaged and faces 
 are &#8220;out&#8221; of the original shape. I fixed the problem and my result is as the right 
 picture shows. There exists known problems (it seems that some faces are facing the 
-inside), but the major problem is resolved for redundant&nbsp;models.
+inside), but the major problem is resolved for&nbsp;redundant&nbsp;models.
 </p>
 
 <p>
@@ -143,7 +140,7 @@ the area factor of quadrics still works. For details and compiled version, see
 
 <p>
 I may update this bugfix later when I have time, to fix the known problem 
-of face&nbsp;direction.
+of&nbsp;face&nbsp;direction.
 </p>
 
 <div class="title"><a name="resources"></a><h2>Resources</h2></div>
@@ -156,7 +153,7 @@ For windows users, please feel free to download the compiled &#8220;bugfixed&#82
 <p>
 For people using other platforms or people wanting to compile on their own, I added 
 these code to the MxQSlim.cxx file, at about Line 374, in function <code class="brush: cpp">void 
-MxEdgeQSlim::compute_target_placement(MxQSlimEdge *info)</code>, just after the big&nbsp;if-else:
+MxEdgeQSlim::compute_target_placement(MxQSlimEdge *info)</code>, just after the&nbsp;big&nbsp;if-else:
 </p>
 
 <pre class="brush: cpp">
@@ -249,7 +246,6 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
-
   
 </body>
 </html>

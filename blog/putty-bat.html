@@ -23,14 +23,14 @@
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
   <!--[if lte IE 8]>
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
-  
+
 <![endif]-->
 <!--[if gt IE 8]><!-->
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
-  
+
 <!--<![endif]-->
 <!--[if lte IE 8]>
       <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
@@ -39,7 +39,7 @@
       <link rel="stylesheet" href="/media/css/layouts/marketing.css">
   <!--<![endif]-->
   <script type="text/javascript" src="/media/js/main.js"></script>
-   
+
   
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -47,9 +47,12 @@
   <![endif]-->
 
     <!-- Fav and touch icons -->
-  <link rel="shortcut icon" href="favicon.ico">
-      
+  <link rel="shortcut icon" href="/favicon.ico">
+  
         <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -77,12 +80,6 @@
                 href="/software">
                 Software
             </a>
-        </li>        <li class="nav-item ">
-            <a title="Misc"
-                class="misc"
-                href="/misc">
-                Me &amp; My ...
-            </a>
         </li>    </ul>
     </div>
 </div>
@@ -97,7 +94,7 @@
             <article class="post">
 
 <div class="title"><h1 itemprop="name">
-    Shortcut batch files that works with Putty
+    Shortcut batch files that works with&nbsp;Putty
 </h1></div>
 <time datetime="2012-08-28">
     Tue, 28 Aug 2012
@@ -108,13 +105,11 @@
 <ul class="tags clear">
 <li><span class="lighter" >Tags</span></li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/putty.html">
-        putty
+    <a class="tag pure-button" href="/blog/tags/putty.html">&nbsp;putty
     </a>
 </li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/remote.html">
-        remote
+    <a class="tag pure-button" href="/blog/tags/remote.html">&nbsp;remote
     </a>
 </li>
 </ul>
@@ -124,26 +119,26 @@
 <p>
 <a href="http://portableapps.com/apps/internet/putty_portable" target="_blank">Putty</a>
  is one of the most common software with which people work on remote
-machines, which typically has a <span class="caps">UNIX</span>/Linux system for stability or efficiency&nbsp;reasons.</p>
+machines, which typically has a <span class="caps"><span class="caps">UNIX</span></span>/Linux system for stability or&nbsp;efficiency&nbsp;reasons.</p>
 
 <p>
 To operate on the remote machine, I think the reader should be familiar with the
-pageant program. Type in your remote host <span class="caps">IP</span> (e.g. &#8220;192.168.x.x&#8221;) 
+pageant program. Type in your remote host <span class="caps"><span class="caps">IP</span></span> (e.g. &#8220;192.168.x.x&#8221;) 
 or host name (e.g. &#8220;super-computer-1&#8221;) at the proper blank, and clicking
 the &#8220;Open&#8221; button will get you there. Next just enter your user-name and password
-on that computer and you&#8217;ll get a bash interface to work&nbsp;on.
+on that computer and you&#8217;ll get a bash interface to&nbsp;work&nbsp;on.
 </p>
 
 <p>
-But transferring files between the remote computer and your local <span class="caps">PC</span> is a bit 
+But transferring files between the remote computer and your local <span class="caps"><span class="caps">PC</span></span> is a bit 
 complicated. You&#8217;ll need to use the command-line program <span class='code'>pscp</span>
 to communicate with the remote computer, which probably is short for &#8220;Putty Secure Copy&#8221;.
-This post is mainly about using this&nbsp;program.
+This post is mainly about using&nbsp;this&nbsp;program.
 </p>
 
 <p>
 I have two batch files in my putty directory, called &#8220;get.bat&#8221; and &#8220;send.bat&#8221;, respectively.
-They look something&nbsp;like:
+They look&nbsp;something&nbsp;like:
 </p>
 
 <p>
@@ -165,12 +160,12 @@ pscp -v LOCAL_FOLDER\%1 USERNAME@REMOTE_SERVER:/home/USERNAME/%2 &lt; PASSWORD
 <p>
 These are nothing difficult to understand. LOCAL_FOLDER is the local folder you
 often work with (my personal habit is to put all my programs in sub-directories
-of such a folder). <span class="caps">USERNAME</span> is your user-name on the remote computer REMOTE_SERVER.
-As with pageant, REMOTE_SERVER can both be remote <span class="caps">IP</span> or remote machine name.
-<span class="caps">PASSWORD</span>, acturally, is a file containing the first line your remote server password
+of such a folder). <span class="caps"><span class="caps">USERNAME</span></span> is your user-name on the remote computer REMOTE_SERVER.
+As with pageant, REMOTE_SERVER can both be remote <span class="caps"><span class="caps">IP</span></span> or remote machine name.
+<span class="caps"><span class="caps">PASSWORD</span></span>, acturally, is a file containing the first line your remote server password
 and the second line nothing (in fact what matters is the return at the end of the 
-first line). using <span class='code'>&lt; <span class="caps">PASSWORD</span></span> allows you to use the file
-<span class="caps">PASSWORD</span> as the input to the console whenever your password (followed by a return)
+first line). using <span class='code'>&lt; <span class="caps"><span class="caps">PASSWORD</span></span></span> allows you to use the file
+<span class="caps"><span class="caps">PASSWORD</span></span> as the input to the console whenever your password (followed by a return)
 is needed by <span class='code'>pscp</span>.
 </p>
 
@@ -179,12 +174,12 @@ By the way, the switch <span class='code'>-v</span> stands for verbose, which al
 pscp to print the detailed progress of connection, file transfer, etc. I prefer it&#8217;s on.
 Another switch that may come handy is the <span class='code'>-r</span> switch, which
 allows pscp to recursively copy all sub-directories and all files in them of the 
-given directory, from one computer to&nbsp;another.
+given directory, from one computer&nbsp;to&nbsp;another.
 </p>
 
 <p>
 Now with these preparations done, all you need to do is <span class='code'>cd</span> 
-to your Putty directory, and&nbsp;type
+to your Putty directory,&nbsp;and&nbsp;type
 </p>
 
 <pre class='codebox'>
@@ -273,7 +268,6 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
-
   
 </body>
 </html>

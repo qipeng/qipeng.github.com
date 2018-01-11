@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2017-05-13T15:18:45Z</updated>
+    <updated>2018-01-11T14:53:02Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -215,6 +215,9 @@
                         <category   scheme="/blog/tags"
                         term="OSX"
                         label="Osx" />
+                        <category   scheme="/blog/tags"
+                        term="macOS"
+                        label="Macos" />
                         <category   scheme="/blog/tags"
                         term="Xcode"
                         label="Xcode" />

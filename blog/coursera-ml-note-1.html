@@ -23,14 +23,14 @@
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
   <!--[if lte IE 8]>
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
-  
+
 <![endif]-->
 <!--[if gt IE 8]><!-->
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
-  
+
 <!--<![endif]-->
 <!--[if lte IE 8]>
       <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
@@ -39,7 +39,7 @@
       <link rel="stylesheet" href="/media/css/layouts/marketing.css">
   <!--<![endif]-->
   <script type="text/javascript" src="/media/js/main.js"></script>
-   
+
   
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -47,9 +47,12 @@
   <![endif]-->
 
     <!-- Fav and touch icons -->
-  <link rel="shortcut icon" href="favicon.ico">
-      
+  <link rel="shortcut icon" href="/favicon.ico">
+  
         <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -77,12 +80,6 @@
                 href="/software">
                 Software
             </a>
-        </li>        <li class="nav-item ">
-            <a title="Misc"
-                class="misc"
-                href="/misc">
-                Me &amp; My ...
-            </a>
         </li>    </ul>
     </div>
 </div>
@@ -97,7 +94,7 @@
             <article class="post">
 
 <div class="title"><h1 itemprop="name">
-    [Coursera] Machine Learning Notes - Week 1-3
+    [Coursera] Machine Learning Notes - Week&nbsp;1-3
 </h1></div>
 <time datetime="2012-09-01">
     Sat, 01 Sep 2012
@@ -108,18 +105,15 @@
 <ul class="tags clear">
 <li><span class="lighter" >Tags</span></li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/coursera.html">
-        coursera
+    <a class="tag pure-button" href="/blog/tags/coursera.html">&nbsp;coursera
     </a>
 </li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/machine_learning.html">
-        machine_learning
+    <a class="tag pure-button" href="/blog/tags/machine_learning.html">&nbsp;machine_learning
     </a>
 </li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/note.html">
-        note
+    <a class="tag pure-button" href="/blog/tags/note.html">&nbsp;note
     </a>
 </li>
 </ul>
@@ -134,91 +128,91 @@ I&#8217;ll take some notes that are important to me (and probably many machine l
 rookies), and hope this would help in later studies. (Disclosure of homework, 
 homework solutions, and other materials are somehow a bad thing to do, 
 for copyright problems or unfairness of prospective students of that course,
-but I guess notes would be&nbsp;fine.)</p>
+but I guess notes would&nbsp;be&nbsp;fine.)</p>
 
 <p>
-By the way, the <span class="caps">UI</span> of coursera.org is quite simple and informative, but I guess
+By the way, the <span class="caps"><span class="caps">UI</span></span> of coursera.org is quite simple and informative, but I guess
 somehow they should try to unify the appearance of homepage and inside-course pages,
-and use more reliable, preferably official,&nbsp;subtitles.
+and use more reliable, preferably&nbsp;official,&nbsp;subtitles.
 </p>
 
 <p>
-So here are the notes from Week&nbsp;1-3.
+So here are the notes from&nbsp;Week&nbsp;1-3.
 </p>
 
 <p>
-<div class='title'><h3>Week 1: Introduction and Linear&nbsp;Regression</h3></div>
+<div class='title'><h3>Week 1: Introduction and&nbsp;Linear&nbsp;Regression</h3></div>
 <ul class='news'>
 <li><span class='lighter'>Machine learning</span> is some method or algorithm, that improves given experience
 <img alt="E" src="http://www.texify.com/img/%5Cnormalsize%5C%21E.gif" align=center border=0> 
 with regard to some performance measure
 <img alt="P" src="http://www.texify.com/img/%5Cnormalsize%5C%21P.gif" align=center border=0> 
 on a task <img alt="T" src="http://www.texify.com/img/%5Cnormalsize%5C%21T.gif" align=center border=0>.
-(Paraphrased from Tom Mitchell, 1998. I cannot agree&nbsp;more!)</li>
+(Paraphrased from Tom Mitchell, 1998. I cannot&nbsp;agree&nbsp;more!)</li>
 <li><span class='lighter'>Supervised learning</span> is learning problems where we are given the &#8220;right answers&#8221;,
 and asked to give the &#8220;map&#8221; from input values to prediction. Supervised learning
 mainly consist of regression problems (where the output is continuous) and classification
-problems (where the output takes only a few discrete&nbsp;values).</li>
+problems (where the output takes only a few&nbsp;discrete&nbsp;values).</li>
 <li><span class='lighter'>Unsupervised learning</span>, on the other hand, has no predefined output value for each input
 datum. In such tasks, we usually need to tell the structure of the input data (which is called
 &#8220;clustering problem&#8221;), or separate meaningful information from somewhat mixed input (e.g.
 the cocktail party problem, where sound recorded by two speakers are used to recover
-the sole music and human voice from the scene where they were&nbsp;recorded).</li>
+the sole music and human voice from the scene where they&nbsp;were&nbsp;recorded).</li>
 <li>Usually, in supervised learning, our knowledge of the map from input to output
 is given as a parametric <span class='lighter'>hypothesis</span>, with a <span class='lighter'>
-cost function</span> evaluating how good the hypothesis is (given certain choice of&nbsp;parameters).</li>
+cost function</span> evaluating how good the hypothesis is (given certain choice&nbsp;of&nbsp;parameters).</li>
 <li><span class='lighter'>Gradient descent</span> updates the parameters with update rule 
-<img alt="-\alpha {\partial J(\theta)\over \partial \theta}" src="http://www.texify.com/img/%5Cnormalsize%5C%21-%5Calpha%20%7B%5Cpartial%20J%28%5Ctheta%29%5Cover%20%5Cpartial%20%5Ctheta%7D.gif" align=center border=0>, with <img alt="J" src="http://www.texify.com/img/%5Cnormalsize%5C%21J.gif" align=center border=0> being the cost function, <img alt="\theta" src="http://www.texify.com/img/%5Cnormalsize%5C%21%5Ctheta.gif" align=center border=0> the parameter(s), and <img alt="\alpha" src="http://www.texify.com/img/%5Cnormalsize%5C%21%5Calpha.gif" align=center border=0> the <span class='lighter'>learning rate</span>. Gradient descent can find local minima (maxima) for all functions, but global optima is guaranteed for convex&nbsp;functions.</li>
+<img alt="-\alpha {\partial J(\theta)\over \partial \theta}" src="http://www.texify.com/img/%5Cnormalsize%5C%21-%5Calpha%20%7B%5Cpartial%20J%28%5Ctheta%29%5Cover%20%5Cpartial%20%5Ctheta%7D.gif" align=center border=0>, with <img alt="J" src="http://www.texify.com/img/%5Cnormalsize%5C%21J.gif" align=center border=0> being the cost function, <img alt="\theta" src="http://www.texify.com/img/%5Cnormalsize%5C%21%5Ctheta.gif" align=center border=0> the parameter(s), and <img alt="\alpha" src="http://www.texify.com/img/%5Cnormalsize%5C%21%5Calpha.gif" align=center border=0> the <span class='lighter'>learning rate</span>. Gradient descent can find local minima (maxima) for all functions, but global optima is guaranteed for&nbsp;convex&nbsp;functions.</li>
 </ul>
 </p>
 
 <p>
 I skipped the review of linear algebra there. For that part, the
-best help you can find would be a textbook on linear&nbsp;algebra.
+best help you can find would be a textbook on&nbsp;linear&nbsp;algebra.
 </p>
 
 <p>
-<div class='title'><h3>Week 2: Multivariate Linear&nbsp;Regression</h3></div>
+<div class='title'><h3>Week 2: Multivariate&nbsp;Linear&nbsp;Regression</h3></div>
 <ul class='news'>
 <li>Most <span class='lighter'>multivariate gradient descent</span> problems involve
 multivariate calculus, so to put this into practice, a textbook is still the best
-suggestion I can&nbsp;offer.</li>
+suggestion I&nbsp;can&nbsp;offer.</li>
 <li>Linear regression model can do much more than linear regression. <span class='lighter'>
 Polynomial regression</span>, for example, can be done with linear regression model
 by adding additional features that are powers of certain original features.
-<span class='lighter'>Nonlinear regression</span> like square roots works well,&nbsp;too.</li>
+<span class='lighter'>Nonlinear regression</span> like square roots works&nbsp;well,&nbsp;too.</li>
 <li><span class='lighter'>Normal equation</span> offers the possibility of solving linear
 regression analytically. This solution is essentially obtained by setting the derivative 
 linear regression&#8217;s cost function to zero (since the cost function is strictly convex,
 such solution is guaranteed global optimal). However, since matrix inverse (pseudo inverse 
 for non-invertible / singular matrices) operation is costly, this method cannot scale
-well to high dimensional&nbsp;problems.</li>
-<li>When your gradient descent doesn&#8217;t work well, try shrinking your <span class='lighter'>learning rate</span>. When it converges too slowly, try amplifying your learning rate. A good way to do that is using a factor of about 3x instead of 10x, that is, use &#8220;0.001 0.003 0.01 0.03 0.1 0.3 1&#8221; instead of &#8220;0.001 0.01 0.1 1&#8221;. I recently benefited from this softer approach in my research&nbsp;myself.</li>
+well to high&nbsp;dimensional&nbsp;problems.</li>
+<li>When your gradient descent doesn&#8217;t work well, try shrinking your <span class='lighter'>learning rate</span>. When it converges too slowly, try amplifying your learning rate. A good way to do that is using a factor of about 3x instead of 10x, that is, use &#8220;0.001 0.003 0.01 0.03 0.1 0.3 1&#8221; instead of &#8220;0.001 0.01 0.1 1&#8221;. I recently benefited from this softer approach in my&nbsp;research&nbsp;myself.</li>
 <li>Gradient descent methods can benefit from <span class='lighter'>feature scaling</span> (stretch all features to approximately [-1, 1]), 
 and <span class='lighter'>mean normalization</span> (subtracting mean from the feature values). These techniques make
-gradient descent converge faster, without affecting the solution&nbsp;obtained.
+gradient descent converge faster, without affecting the&nbsp;solution&nbsp;obtained.
 </li>
 </ul>
 </p>
 
 <p>
-I also skipped the Octave part as I use Matlab, which is almost the same&nbsp;language.
+I also skipped the Octave part as I use Matlab, which is almost the&nbsp;same&nbsp;language.
 </p>
 
 <p>
-<div class='title'><h3>Week 3: Logistic Regression and&nbsp;Regularization</h3></div>
+<div class='title'><h3>Week 3: Logistic Regression&nbsp;and&nbsp;Regularization</h3></div>
 <ul class='news'>
 <li><span class='lighter'>Logistic regression</span> uses the logistic function (also
 called sigmoid function) <img alt="\sigma(\theta^Tx) = {1\over 1+e^{-\theta^T x}}" src="http://www.texify.com/img/%5Cnormalsize%5C%21%5Csigma%28%5Ctheta%5ETx%29%20%3D%20%7B1%5Cover%201%2Be%5E%7B-%5Ctheta%5ET%20x%7D%7D.gif" align=center border=0> as the hypothesis function. To avoid non-convexity of cost function,
 instead of the squared difference function linear regression used, logistic regression
 used a cross-entropy style cost function <img alt="f(x) = -y\log(\sigma(\theta^Tx)) - (1-y)\log(1-\sigma(\theta^Tx))" src="http://www.texify.com/img/%5Cnormalsize%5C%21f%28x%29%20%3D%20-y%5Clog%28%5Csigma%28%5Ctheta%5ETx%29%29%20-%20%281-y%29%5Clog%281-%5Csigma%28%5Ctheta%5ETx%29%29.gif" align=center border=0>. This cost function
 is convex, and thus friendly to gradient descent, for gradient descent methods are
-guaranteed to obtain the global&nbsp;optima.</li>
+guaranteed to obtain the&nbsp;global&nbsp;optima.</li>
 <li>To generalize binary logistic regression to multiple class, the common 
 option is the <span class='lighter'>&#8220;one-vs-all&#8221; algorithm</span>. For each class,
 treat it as the positive class and all others as the negative class, we can train
 a binary logistic classifier. All these classifiers together consists of a 
-multi-class logistic regression&nbsp;classifier.</li>
+multi-class logistic&nbsp;regression&nbsp;classifier.</li>
 <li><span class='lighter'>Regularization</span> can be used to avoid <span class='lighter'>
 over-fitting</span>, where the parameters fits the hypothesis too well to the training
 set that it cannot generalize well to new inputs. Regularization does this by
@@ -226,14 +220,14 @@ minimizing the impact of unnecessary features on the cost function with regard t
 the regularization constant. However, when this constant is set too large,
 necessary features could get suppressed, too, causing the model to <span class='lighter'>
 under-fit</span> the data, in other words, introducing high bias towards
-how the data should be&nbsp;interpreted.</li>
+how the data should&nbsp;be&nbsp;interpreted.</li>
 </ul>
 </p>
 
 <p>
 <div class='title'><h3>See&nbsp;Also&#8230;</h3></div>
 <a href="coursera-ml-note-2.html">[Coursera] Machine Learning Notes - Week 4-6</a><br>
-<a href="coursera-ml-note-3.html">[Coursera] Machine Learning Notes - Week&nbsp;7-10</a>
+<a href="coursera-ml-note-3.html">[Coursera] Machine Learning Notes -&nbsp;Week&nbsp;7-10</a>
 </p></div>
 
 <div style="float:left"><span class="lighter">Older Post</span>&nbsp;
@@ -311,7 +305,6 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
-
   
 </body>
 </html>

@@ -22,14 +22,14 @@
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
   <!--[if lte IE 8]>
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
-  
+
 <![endif]-->
 <!--[if gt IE 8]><!-->
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
-  
+
 <!--<![endif]-->
 <!--[if lte IE 8]>
       <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
@@ -38,7 +38,7 @@
       <link rel="stylesheet" href="/media/css/layouts/marketing.css">
   <!--<![endif]-->
   <script type="text/javascript" src="/media/js/main.js"></script>
-   
+
   
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -46,10 +46,13 @@
   <![endif]-->
 
     <!-- Fav and touch icons -->
-  <link rel="shortcut icon" href="favicon.ico">
-      
+  <link rel="shortcut icon" href="/favicon.ico">
+  
   <link rel="stylesheet" href="/media/js/bxslider/jquery.bxslider.css" type="text/css"></link>
     <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -77,12 +80,6 @@
                 href="/software">
                 Software
             </a>
-        </li>        <li class="nav-item ">
-            <a title="Misc"
-                class="misc"
-                href="/misc">
-                Me &amp; My ...
-            </a>
         </li>    </ul>
     </div>
 </div>
@@ -109,103 +106,51 @@
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
                         <section>
-            <section>
-<div class="title"><h2>Brief Bio</h2></div>
-<article>
-
-<p>I am currently a Ph.D. student at the <a target="_blank" href="http://cs.stanford.edu">Computer Science Department</a> of <a target="_blank" href="http://www.stanford.edu">Stanford University</a>. I work in the <a target="_blank" href="http://nlp.stanford.edu">NLP group</a>, and I am advised by <a href="https://nlp.stanford.edu/manning/" target="_blank">Prof. Chris Manning</a>.</p>
-<p>I am interested in building machine learning models that understand natural languages in a similar fashion as humans do. Outside of NLP research, I am broadly interested in presenting data in a more understandable manner, making technology appear less boring (<a href="/blog/better-homeworks.html">to students, for example</a>), and processing data with more efficient computation. I have also worked on speech recognition and computer vision previously.</p>
-
-<p><a href="CV_Peng_Qi.pdf" target="_blank">[CV (slightly outdated)]</a> &nbsp;&nbsp; <a href="#publications">[Publications]</a></p>
-
-<div class="title"><h2>Contact</h2></div>
-<p>
-<a href="javascript:sendEmail('pengqi')" target="_blank"><img src="/media/images/pengqi_email.png" border="0" align="absbottom" title="Email image created with safemail.justlikeed.net"></a>
-</p>
-
-<div class="title"><h2>Education &amp; Professional Experience</h2></div>
-<table>
-<tr><td width="130px">2015.9 - Present</td><td>Ph.D. Student &amp; Research Assistant, Computer Science Department, Stanford University</td></tr>
+            <h2 id="brief-bio">Brief&nbsp;Bio</h2>
+<p>I am currently a Ph.D. student at the <a href="http://cs.stanford.edu">Computer Science Department</a> of <a href="http://www.stanford.edu">Stanford University</a>. I work in the <a href="http://nlp.stanford.edu"><span class="caps">NLP</span> group</a>, and I am advised by <a href="https://nlp.stanford.edu/manning">Prof. Chris Manning</a>.</p>
+<p>I am interested in building machine learning models that understand natural languages in a similar fashion as humans do. Outside of <span class="caps">NLP</span> research, I am broadly interested in presenting data in a more understandable manner, making technology appear less boring (<a href="/blog/better-homeworks.html">to students, for example</a>), and processing data with more efficient computation. I have also worked on speech recognition and computer vision&nbsp;previously.</p>
+<p><a href="CV_Peng_Qi.pdf">[<span class="caps">CV</span> (slightly outdated)]</a> &nbsp;&nbsp; <a href="#publications">[Publications]</a></p>
+<h2 id="contact">Contact</h2>
+<p><a href="javascript:sendEmail('pengqi')"><img src="/media/images/pengqi_email.png" border="0" align="absbottom" title="Email image created with safemail.justlikeed.net"></a></p>
+<h2 id="education-wzxhzdk3-professional-experience">Education <span class="amp">&amp;</span> Professional&nbsp;Experience</h2>
+<p><table>
+<tr><td width="130px">2015.9 - Present</td><td>Ph.D. Student <span class="amp">&amp;</span> Research Assistant, Computer Science Department, Stanford University</td></tr>
 <tr><td width="130px">2016.4 - 2017.3</td><td>Master of Science, Department of Statistics, Stanford University</td></tr>
-<tr><td width="130px">2013.9 - 2015.6</td><td>Master of Science &amp; Research Assistant, Computer Science Department, Stanford University</td></tr><a name="publications"></a>
-<tr><td width="130px">2012.7 - 2013.6</td><td>Research Assistant, State Key Laboratory of Intelligent Technology &amp; Systems, Department of Computer Science and Technology, Tsinghua University</td></tr>
-<tr><td width="130px">2008.8 - 2012.7</td><td>Bachelor of Engineering, School of Software, Tsinghua University (Excellent Graduate)</td></tr>
-</table>
-
-<div class="title"><h2>Selected Publications</h2> <a href='research/index.html'>(See all)</a>
-<ul class="news">
-<li>
-  <span style="font-weight:800">Peng Qi</span>, Christopher D. Manning. <span class="lighter-color">Arc-swift: A Novel Transition System for Dependency Parsing</span>. ACL 2017. <a href="https://nlp.stanford.edu/pubs/qi2017arcswift.pdf" target="_blank">[PDF]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/qi2017arcswift.bib" target="_blank">
-    [BibTeX]
-	</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/qipeng/arc-swift" target="_blank">[Code]</a>
-</li>
-
-<li>
-  Timothy Dozat, <span style="font-weight:800">Peng Qi</span>, Christopher D. Manning. <span class="lighter-color">Stanford's Graph-based Neural Dependency Parser at the CoNLL 2017 Shared Task</span>. CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies. <span class="award-winner">1st place.</span>
-  <a href="http://universaldependencies.org/conll17/proceedings/pdf/K17-3002.pdf" target="_blank">[PDF]</a>&nbsp;&nbsp;&nbsp;
-  <a href="/research/publications/K17-3002.bib" target="_blank">
-    [BibTeX]
-   </a>
-</li>
-
-<li>Yuhao Zhang*, Arun Chaganty*, Ashwin Paranjape*, Danqi Chen*, Jason Bolton*, <span style="font-weight:800">Peng Qi</span>, and Christopher D. Manning. <span class="lighter-color">Stanford at TAC KBP 2016: Sealing Pipeline Leaks and Understanding Chinese</span>. In <span style="font-style:italic">Text Analysis Conference (TAC) Proceedings</span>, 2016.
-    <a href="https://nlp.stanford.edu/pubs/zhang2016stanford.pdf">[PDF]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/zhang2016stanford.bib">[BibTeX]</a>
-</li>
-
-<li>
-  Andrew L. Maas, <span style="font-weight:800">Peng Qi</span>, Ziang Xie, Awni Y. Hannun, Christopher T. Lengerich, Daniel Jurafsky, Andrew Y. Ng. <span class="lighter-color">Building DNN Acoustic Models for Large Vocabulary Speech Recognition</span>. Computer Speech &amp; Language, 2016. <a href="http://arxiv.org/abs/1406.7806" target="_blank">[HTML]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/maas16DNNAM.bib" target="_blank">
-    [BibTeX]
-   </a>
-</li>
-
-<li> <span style="font-weight:800">Peng Qi</span> and Xiaolin Hu. <span class="lighter-color">Learning Nonlinear Regularities in Natural Images by Modeling the Outer Product of Image Intensities.</span> <span style="font-style:italic">Neural Computation</span>, 2013. <a href="/research/publications/QiHu13.pdf" target="_blank">[PDF]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/QiHu13_outer_prod.zip" target="_blank">[Code]</a>&nbsp;&nbsp;&nbsp;<a href="http://www.mitpressjournals.org/doi/abs/10.1162/NECO_a_00567" target="_blank">[HTML]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/qi13OuterProd.bib" target="_blank">
-    [BibTeX]
-   </a></li>
-
-<li> Xiaolin Hu,  <span style="font-weight:800">Peng Qi</span>, and  Bo Zhang. <span class="lighter-color"> Hierarchical K-Means Algorithm for Modeling Visual Area V2 Neurons</span>. In  <span style="font-style:italic"> Neural Information Processing</span>,  Lecture Notes in Computer Science, pp. 373&ndash;381,  Springer Berlin / Heidelberg, 2012.  10.1007/978-3-642-34487-9_46. <span class="award-winner">Best Paper Award</span><br><a href="/research/publications/HuQiZhang12.pdf" target="_blank">[PDF]</a>&nbsp;&nbsp;&nbsp;<a href="http://dx.doi.org/10.1007/978-3-642-34487-9_46" target="_blank">[HTML]</a>&nbsp;&nbsp;&nbsp;<a href="/research/publications/hu12KMeans.bib" target="_blank">
-    [BibTeX]
-   </a></li>
+<tr><td width="130px">2013.9 - 2015.6</td><td>Master of Science <span class="amp">&amp;</span> Research Assistant, Computer Science Department, Stanford University</td></tr>
+<tr><td width="130px">2012.7 - 2013.6</td><td>Research Assistant, State Key Laboratory of Intelligent Technology <span class="amp">&amp;</span> Systems, Department of Computer Science and Technology, Tsinghua University</td></tr>
+<tr><td width="130px">2008.8 - 2012.7</td><td>Bachelor of Engineering, School of Software, Tsinghua University (Excellent Graduate)</td><a name="publications"></a></tr>
+</table></p>
+<h2 id="selected-publications">Selected&nbsp;Publications</h2>
+<p><a href="/research/index.html">(See&nbsp;all)</a></p>
+<ul>
+<li><strong>Peng Qi</strong> and Christopher D. Manning.&ensp;<span class="lighter-color">Arc-swift: A Novel Transition System for Dependency Parsing</span>. <span class="caps">ACL</span> 2017.&ensp;<a href="https://nlp.stanford.edu/pubs/qi2017arcswift.pdf">[<span class="caps">PDF</span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/qi2017arcswift.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="https://github.com/qipeng/arc-swift">[Code]</a>&ensp;&ensp;</li>
+<li>Timothy Dozat, <strong>Peng Qi</strong>, and Christopher D. Manning.&ensp;<span class="lighter-color">Stanford&#8217;s Graph-based Neural Dependency Parser at the CoNLL 2017 Shared Task</span>. CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies.&ensp;<span class="award-winner">1st place</span>.&ensp;<a href="http://universaldependencies.org/conll17/proceedings/pdf/K17-3002.pdf">[<span class="caps">PDF</span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/K17-3002.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="https://github.com/tdozat/UnstableParser">[Code]</a>&ensp;&ensp;</li>
+<li>Yuhao Zhang*, Arun Chaganty*, Ashwin Paranjape*, Danqi Chen*, Jason Bolton*, <strong>Peng Qi</strong>, and Christopher D. Manning.&ensp;<span class="lighter-color">Stanford at <span class="caps">TAC</span> <span class="caps">KBP</span> 2016: Sealing Pipeline Leaks and Understanding Chinese</span>. In <em>Text Analysis Conference (<span class="caps">TAC</span>) Proceedings</em>, 2016.&ensp;<a href="https://nlp.stanford.edu/pubs/zhang2016stanford.pdf">[<span class="caps">PDF</span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/zhang2016stanford.bib">[BibTeX]</a>&ensp;&ensp;</li>
+<li>Andrew L. Maas, <strong>Peng Qi</strong>, Ziang Xie, Awni Y. Hannun, Christopher T. Lengerich, Daniel Jurafsky, and Andrew Y. Ng.&ensp;<span class="lighter-color">Building <span class="caps">DNN</span> Acoustic Models for Large Vocabulary Speech Recognition</span>. Computer Speech <span class="amp">&amp;</span> Language, 2016.&ensp;<a href="http://arxiv.org/abs/1406.7806">[<span class="caps">PDF</span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/maas16DNNAM.bib">[BibTeX]</a>&ensp;&ensp;</li>
+<li><strong>Peng Qi</strong> and Xiaolin Hu.&ensp;<span class="lighter-color">Learning Nonlinear Regularities in Natural Images by Modeling the Outer Product of Image Intensities</span>. Neural Computation, 2013.&ensp;<a href="/research/publications/QiHu13.pdf">[<span class="caps">PDF</span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/qi13OuterProd.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="/research/publications/QiHu13_outer_prod.zip">[Code]</a>&ensp;&ensp;</li>
+<li>Xiaolin Hu, <strong>Peng Qi</strong>, and Bo Zhang.&ensp;<span class="lighter-color">Hierarchical K-Means Algorithm for Modeling Visual Area V2 Neurons</span>. In <em>Neural Information Processing</em>, pp. 373&ndash;381, 2012.&ensp;<span class="award-winner">Best Paper Award</span>.&ensp;<a href="/research/publications/HuQiZhang12.pdf">[<span class="caps">PDF</span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/hu12KMeans.bib">[BibTeX]</a>&ensp;&ensp;</li>
 </ul>
-
-<div class="title"><h2>Honors and Awards</h2></div>
-<ol class="news">
-<li>2012 Outstanding Graduate of Tsinghua University</li>
-<li>2011 National Scholarship (top 3% students)</li>
-<li>2010 Citibank Scholarship (for overall excellence)</li>
-<li>2009 Ge-Ru Zheng's Scholarship (for study excellence)</li>
-<li>2008-2011 Freshman Scholarship (Ranked 3rd of Guizhou Province in National College Entrance Exam)</li>
-</ol>
-
-<div class="title"><h2>Teaching</h2></title></div>
-<ol class="news">
-<li><a href="http://cs224s.stanford.edu" target="_blank">CS 224s Spoken Language Processing</a>, Spring 2014 (<a href="http://web.stanford.edu/class/cs224s/hw/hw3.html" target="_blank">Check out Homework 3 I designed</a>)</li>
-<li><a href="http://cs145.stanford.edu" target="_blank">CS 145 Introduction to Databases</a>, Summer 2014 (<a href="/blog/better-homeworks.html">Better Homeworks</a> I created, and <a href="/media/files/CS145MidtermReview_RelationalAlgebra.pdf">midterm</a>, <a href="/media/files/CS_145_Final_Review_DatabaseSystems.pdf">final review slides</a> I made)</li>
-<li><a href="http://cs124.stanford.edu" target="_blank">CS 124 From Languages to Information</a>, Winter 2015</li>
-<li><a href="http://cs224d.stanford.edu" target="_blank">CS224d: Deep Learning for Natural Language Processing</a>, Spring 2015 (Now part of CS 224n. I designed the first iteration of <a href="http://cs224d.stanford.edu/assignment1/index.html" target="_blank">Homework 1</a>)</li>
-</ol>
-
-<div class="title"><h2>Work Experience and Social Service</h2></title></div>
-<ol class="news">
-<li>2013-2014 Backend Engineer &amp; Machine Learning consultant (Part-Time), Soulgame.com, Beijing</li>
-<li>2010-2011 Vice President of Students' Union, School of Software, Tsinghua University</li>
-</ol>
-<br>
-<!--
-<h2>Latest News</h2>
-<ul class="news">
-<li>Oct. 30, 2013 - "Outer-product" paper accepted by <a href="http://www.mitpressjournals.org/loi/neco" target="_blank">Neural Computation</a>.
-<li>Dec. 6, 2012 - Hierarchical K-Means paper won Best Paper Award in <a href="http://www.iconip2012.org/" target="_blank">ICONIP 2012</a>. See <a href="/research/publications/">publications</a> for details.</ul>
-
-<p style="text-align:right">
-<a href="/news.html">More...</a>
-</p>
--->
-
-</article>
-
-Last Updated: Jan. 21, 2015
-</section>
-            </section>
+<h2 id="honors-and-awards">Honors and&nbsp;Awards</h2>
+<ul>
+<li>2012 Outstanding Graduate of Tsinghua&nbsp;University</li>
+<li>2011 National Scholarship (top 3%&nbsp;students)</li>
+<li>2010 Citibank Scholarship (for overall&nbsp;excellence)</li>
+<li>2009 Ge-Ru Zheng&#8217;s Scholarship (for study&nbsp;excellence)</li>
+<li>2008-2011 Freshman Scholarship (Ranked 3rd of Guizhou Province in National College Entrance&nbsp;Exam)</li>
+</ul>
+<h2 id="teaching">Teaching</h2>
+<ul>
+<li><a href="http://cs224s.stanford.edu"><span class="caps">CS</span> 224s Spoken Language Processing</a>, Spring 2014 (I designed the first version of <a href="http://web.stanford.edu/class/cs224s/hw/hw3.html">Homework 3</a>, speech recognition with&nbsp;Kaldi)</li>
+<li><a href="http://cs145.stanford.edu"><span class="caps">CS</span> 145 Introduction to Databases</a>, Summer 2014 (<a href="/blog/better-homeworks.html">Better Homeworks</a> I created, and <a href="/media/files/CS145MidtermReview_RelationalAlgebra.pdf">midterm</a>, <a href="/media/files/CS_145_Final_Review_DatabaseSystems.pdf">final review slides</a> I&nbsp;made)</li>
+<li><a href="http://cs124.stanford.edu"><span class="caps">CS</span> 124 From Languages to Information</a>, Winter 2015 (I helped develop the first machine learning-based option of the translation&nbsp;assignment)</li>
+<li><a href="http://cs224d.stanford.edu">CS224d: Deep Learning for Natural Language Processing</a>, Spring 2015 (Now part of <span class="caps">CS</span> 224n. I designed the first iteration of <a href="http://cs224d.stanford.edu/assignment1/index.html">Homework 1</a>)</li>
+</ul>
+<h2 id="work-experience-and-social-service">Work Experience and Social&nbsp;Service</h2>
+<ul>
+<li>2013-2014 Backend Engineer <span class="amp">&amp;</span> Machine Learning consultant (Part-Time), Soulgame.com,&nbsp;Beijing</li>
+<li>2010-2011 Vice President of Students&#8217; Union, School of Software, Tsinghua&nbsp;University</li>
+</ul>
+<p>Last Updated: Jan. 21,&nbsp;2015</p>            </section>
                         <div class="footer">
                 <div id="sociallinks" class="clear" style="font-size:10px;"></div>
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
@@ -272,7 +217,6 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
-
   
 </body>
 </html>

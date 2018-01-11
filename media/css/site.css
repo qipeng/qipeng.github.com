@@ -7,6 +7,10 @@
     padding: 0;
     border: 0;
     margin: 0;
+    font-size: inherit;
+}
+
+body {
     font-size: 14px;
 }
 
@@ -24,7 +28,7 @@ table {
     font-size: 100%;
     line-height: 1.1em;
     border-collapse: collapse;
-    overflow:hidden; 
+    overflow:hidden;
 }
 
 section {
@@ -37,7 +41,7 @@ section {
 
 ::-moz-focus-inner {
     border: 0;
-} 
+}
 
 /* clearfix */
 .clear:after {
@@ -132,6 +136,10 @@ section.content{
     padding:10px 20px;
 }
 
+ul.listing {
+    list-style: none !important;
+}
+
 .listing li{
     list-style-type: none;
     width: 100%;
@@ -151,8 +159,8 @@ section.content{
     margin: .5em 0;
 }
 
-.listing h3 {
-    margin: .67em 0;
+.listing h2 {
+    margin: .5em 0;
 }
 
 /* Content */
@@ -173,12 +181,13 @@ ul.tags li{
     list-style-type: none;
     display: inline;
     float:left;
+    padding: 0 2;
 }
 
 .tag {
     margin-left: 5px;
-    padding:2px;
-    background: rgb(211, 229, 255);
+    padding:2px 6px 2px 2px;
+    background: rgb(141, 159, 175);
 }
 
 .tag:hover {
@@ -203,6 +212,16 @@ ul.tags li{
     clear: both;
 }
 
+li.post h3 {
+    margin: 0;
+}
+li.post ul {
+    margin: 0;
+}
+li.post {
+    margin-bottom: 5px;
+}
+
 .archives li.post a{
     float: left;
 }
@@ -216,6 +235,12 @@ ul.tags li{
   font-family:"Courier New",Courier,serif;
   position: relative;
 }
+code {
+  background: #eee;
+  border: #ccc solid 1px;
+  border-radius: 3px;
+  padding: 1px 3px;
+}
 .highlight pre {
   font-size: 12px;
   padding: 16px 12px 12px;
@@ -223,9 +248,6 @@ ul.tags li{
   margin-bottom: 8px;
 }
 
-strong{
-    color:red;
-}
 .postnav{
   width:100%
 }
@@ -264,12 +286,12 @@ strong{
     color:rgb(203, 50, 31);
 }
 
-.news{
+.content ul{
 padding-left:10px;
 list-style:square url("../images/list-square.png");
 }
 
-.news li {
+.content ul li {
     padding-bottom: 5px;
 }
 

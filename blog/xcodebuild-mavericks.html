@@ -23,14 +23,14 @@
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
   <!--[if lte IE 8]>
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
-  
+
 <![endif]-->
 <!--[if gt IE 8]><!-->
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
-  
+
 <!--<![endif]-->
 <!--[if lte IE 8]>
       <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
@@ -39,7 +39,7 @@
       <link rel="stylesheet" href="/media/css/layouts/marketing.css">
   <!--<![endif]-->
   <script type="text/javascript" src="/media/js/main.js"></script>
-   
+
   
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -47,9 +47,12 @@
   <![endif]-->
 
     <!-- Fav and touch icons -->
-  <link rel="shortcut icon" href="favicon.ico">
-      
+  <link rel="shortcut icon" href="/favicon.ico">
+  
         <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -77,12 +80,6 @@
                 href="/software">
                 Software
             </a>
-        </li>        <li class="nav-item ">
-            <a title="Misc"
-                class="misc"
-                href="/misc">
-                Me &amp; My ...
-            </a>
         </li>    </ul>
     </div>
 </div>
@@ -97,7 +94,7 @@
             <article class="post">
 
 <div class="title"><h1 itemprop="name">
-    xcodebuild Solution for OS X Mavericks
+    xcodebuild Solution for <span class="caps">OS</span> X&nbsp;Mavericks
 </h1></div>
 <time datetime="2014-05-27">
     Tue, 27 May 2014
@@ -108,59 +105,48 @@
 <ul class="tags clear">
 <li><span class="lighter" >Tags</span></li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/OSX.html">
-        OSX
+    <a class="tag pure-button" href="/blog/tags/OSX.html">&nbsp;<span class="caps">OSX</span>
     </a>
 </li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/Xcode.html">
-        Xcode
+    <a class="tag pure-button" href="/blog/tags/macOS.html">&nbsp;macOS
     </a>
 </li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/Mavericks.html">
-        Mavericks
+    <a class="tag pure-button" href="/blog/tags/Xcode.html">&nbsp;Xcode
     </a>
 </li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/xcodebuild.html">
-        xcodebuild
+    <a class="tag pure-button" href="/blog/tags/Mavericks.html">&nbsp;Mavericks
+    </a>
+</li>
+<li>
+    <a class="tag pure-button" href="/blog/tags/xcodebuild.html">&nbsp;xcodebuild
     </a>
 </li>
 </ul>
 </div>
 
 <div class="postcontent">
-<p>
-Many <span class="caps">CUDA</span> developers on Macs that migrated to Mavericks might have experienced 
-one (or as in my case, all) of the following, a) <code>clang: error: unsupported 
-option '-dumpspecs'</code>, 
+<p>Many <span class="caps"><span class="caps">CUDA</span></span> developers on Macs that migrated to Mavericks might have experienced
+one (or as in my case, all) of the following, a) <code>clang: error: unsupported
+option '-dumpspecs'</code>,
 b) <code>xcodebuild</code> says it requires Xcode but you have Xcode installed already,
-and c) <span class="caps">CUDA</span> examples don&#8217;t compile or prompts <code>cudaGetDeviceCount returned 35</code>,
-maybe more. Here&#8217;s a work-around to just&nbsp;that.</p>
-
-<p>
-To my suprise, this problem seems deeply rooted in the installation of Xcode. I&#8217;ve 
-uninstalled and reinstalled it several times, but none seemed to work always. Different 
-<span class="caps">CUDA</span> versions didn&#8217;t help either. It turns out all could be solved by simply typing these
-lines in your&nbsp;terminal
-</p>
-
-<pre class="codebox">
-sudo mv /usr/bin/xcodebuild /usr/bin/xcodebuild~
+and c) <span class="caps"><span class="caps">CUDA</span></span> examples don&#8217;t compile or prompts <code>cudaGetDeviceCount returned 35</code>,
+maybe more. Here&#8217;s a work-around to&nbsp;just&nbsp;that.</p>
+<p>To my suprise, this problem seems deeply rooted in the installation of Xcode. I&#8217;ve
+uninstalled and reinstalled it several times, but none seemed to work always. Different
+<span class="caps"><span class="caps">CUDA</span></span> versions didn&#8217;t help either. It turns out all could be solved by simply typing these
+lines in&nbsp;your&nbsp;terminal</p>
+<pre><code class="shell">sudo mv /usr/bin/xcodebuild /usr/bin/xcodebuild~
 sudo ln -s /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild /usr/bin/xcodebuild
-</pre>
+</code></pre>
 
-<p>
-Here, we&#8217;re just backing up your original <code>xcodebuild</code> in your <code>PATH</code>
+<p>Here, we&#8217;re just backing up your original <code>xcodebuild</code> in your <code>PATH</code>
 and replacing it with a symlink to the Xcode installation. After doing these, make sure that
 in your <code>DYLD_LIBRARY_PATH</code>, <code>/usr/lib</code> comes before <code>/usr/local/lib</code>
-(Xcode seems unhappy about the&nbsp;latter).
-</p>
-
-<p>
-Then? <span class="caps">CUDA</span> Samples and everything else that had these problems are all&nbsp;yours!
-</p></div>
+(Xcode seems unhappy about&nbsp;the&nbsp;latter).</p>
+<p>Then? <span class="caps"><span class="caps">CUDA</span></span> Samples and everything else that had these problems are&nbsp;all&nbsp;yours!</p></div>
 
 <div style="float:left"><span class="lighter">Older Post</span>&nbsp;
 <a href="/blog/better-homeworks.html">Better Homeworks</a>
@@ -237,7 +223,6 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
-
   
 </body>
 </html>

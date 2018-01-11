@@ -23,14 +23,14 @@
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
   <!--[if lte IE 8]>
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
-  
+
 <![endif]-->
 <!--[if gt IE 8]><!-->
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
-  
+
 <!--<![endif]-->
 <!--[if lte IE 8]>
       <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
@@ -39,7 +39,7 @@
       <link rel="stylesheet" href="/media/css/layouts/marketing.css">
   <!--<![endif]-->
   <script type="text/javascript" src="/media/js/main.js"></script>
-   
+
   
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -47,9 +47,12 @@
   <![endif]-->
 
     <!-- Fav and touch icons -->
-  <link rel="shortcut icon" href="favicon.ico">
-      
+  <link rel="shortcut icon" href="/favicon.ico">
+  
         <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -77,12 +80,6 @@
                 href="/software">
                 Software
             </a>
-        </li>        <li class="nav-item ">
-            <a title="Misc"
-                class="misc"
-                href="/misc">
-                Me &amp; My ...
-            </a>
         </li>    </ul>
     </div>
 </div>
@@ -97,7 +94,7 @@
             <article class="post">
 
 <div class="title"><h1 itemprop="name">
-    Notes on Matlab Parallel Programming
+    Notes on Matlab Parallel&nbsp;Programming
 </h1></div>
 <time datetime="2012-08-22">
     Wed, 22 Aug 2012
@@ -108,18 +105,15 @@
 <ul class="tags clear">
 <li><span class="lighter" >Tags</span></li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/Matlab.html">
-        Matlab
+    <a class="tag pure-button" href="/blog/tags/Matlab.html">&nbsp;Matlab
     </a>
 </li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/parallel.html">
-        parallel
+    <a class="tag pure-button" href="/blog/tags/parallel.html">&nbsp;parallel
     </a>
 </li>
 <li>
-    <a class="tag pure-button" href="/blog/tags/programming.html">
-        programming
+    <a class="tag pure-button" href="/blog/tags/programming.html">&nbsp;programming
     </a>
 </li>
 </ul>
@@ -130,14 +124,14 @@
 Recently, I am doing research which involve extensive computation with Matlab. 
 Luckily, most of this computation can be done in a parallel fashion, and this can
 be instantly accomplished with the Matlab parallel toolbox. During using this
-toolbox, I summarized some notes that need to be remembered, to accelerate future&nbsp;work.</p>
+toolbox, I summarized some notes that need to be remembered, to accelerate&nbsp;future&nbsp;work.</p>
 
 <p class='lighter'>
 This post will be constantly updated during my use of Matlab parallel programming.
 Update log:
 <ul class='news'>
 <li>
-Aug. 22, 2012 - matlabpool,&nbsp;parfor
+Aug. 22, 2012 -&nbsp;matlabpool,&nbsp;parfor
 </li>
 </ul>
 </p>
@@ -156,7 +150,7 @@ where the current process is the &#8220;supervisor&#8221; of the workers it mana
 To use the command, simply typing <span class='code'>matlabpool</span> or 
 <span class='code'>matlabpool open</span> will do the job. This uses the default
 configuration named &#8220;local&#8221;, which deploys <i>n</i> workers on the local
-computer, where <i>n</i> is the number of cores of your&nbsp;<span class="caps">CPU</span>.
+computer, where <i>n</i> is the number of cores of your&nbsp;<span class="caps"><span class="caps">CPU</span></span>.
 </p>
 
 <p>
@@ -166,7 +160,7 @@ the Matlab pool, type <span class='code'>matlabpool close</span> or <span class=
 matlabpool close force</span>. The latter is *strongly recommended* in case of
 accidentally unfinished or user-breaked tasks. If you do not free previous tasks in the 
 Matlab pool, the performance of the current task will be affected, even if you&#8217;ve 
-already exited Matlab once without closing the&nbsp;pool.
+already exited Matlab once without closing&nbsp;the&nbsp;pool.
 </p>
 
 <p>
@@ -175,21 +169,21 @@ So, in my experience, it is recommended to always use:
 matlabpool close force;
 matlabpool open;
 </pre>
-if you want to work with Matlab paralell programming efficiently (and&nbsp;locally).
+if you want to work with Matlab paralell programming efficiently&nbsp;(and&nbsp;locally).
 </p>
 
 <p>
 The implementation of <span class='node'>matlabpool</span> involves network communication, serialization and
 deserialization, offering the possibility of using configurations other than &#8220;local&#8221;
 to work on remote or even multiple remote computers. I&#8217;ll cover that when it&#8217;s time for 
-me to use one,&nbsp;perhaps.
+me to use&nbsp;one,&nbsp;perhaps.
 </p>
 
 <div class='title'><h3>parfor</h3></div>
 
 <p>
 
-The Matlab paralell <span class="caps">FOR</span>-loop is perhaps its most common and easy-to-use paralell feature.
+The Matlab paralell <span class="caps"><span class="caps">FOR</span></span>-loop is perhaps its most common and easy-to-use paralell feature.
 To write a <span class='code'>parfor</span> loop, simply rewrite a <span class='code'>for</span>
 loop which has a loop variable that is a *integral and consecutive row vector*. More hint
 can be found in Matlab&#8217;s help documents <a href="#ref2">[2]</a> and <a href="#ref3">[3]</a>.
@@ -197,8 +191,8 @@ can be found in Matlab&#8217;s help documents <a href="#ref2">[2]</a> and <a hre
 </p>
 
 <p>
-One hint that I think important is: always keep your I/O variables <span class="caps">SLICED</span> where possible,
-or the communication overhead may be efficiency&nbsp;killer.
+One hint that I think important is: always keep your I/O variables <span class="caps"><span class="caps">SLICED</span></span> where possible,
+or the communication overhead may be&nbsp;efficiency&nbsp;killer.
 </p>
 
 <div class='title'><h3>References</h3></div>
@@ -287,7 +281,6 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
-
   
 </body>
 </html>

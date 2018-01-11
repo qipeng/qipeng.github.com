@@ -23,14 +23,14 @@
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
   <!--[if lte IE 8]>
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
-  
+
 <![endif]-->
 <!--[if gt IE 8]><!-->
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
-  
+
 <!--<![endif]-->
 <!--[if lte IE 8]>
       <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
@@ -39,7 +39,7 @@
       <link rel="stylesheet" href="/media/css/layouts/marketing.css">
   <!--<![endif]-->
   <script type="text/javascript" src="/media/js/main.js"></script>
-   
+
   
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -47,9 +47,12 @@
   <![endif]-->
 
     <!-- Fav and touch icons -->
-  <link rel="shortcut icon" href="favicon.ico">
-      
+  <link rel="shortcut icon" href="/favicon.ico">
+  
         <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -77,12 +80,6 @@
                 href="/software">
                 Software
             </a>
-        </li>        <li class="nav-item ">
-            <a title="Misc"
-                class="misc"
-                href="/misc">
-                Me &amp; My ...
-            </a>
         </li>    </ul>
     </div>
 </div>
@@ -97,17 +94,17 @@
             <article class="post">
 
 <div class="title"><h1 itemprop="name">
-    Limited-Memory Multinomial Logistic Regression Classifier for Matlab
+    Limited-Memory Multinomial Logistic Regression Classifier for&nbsp;Matlab
 </h1></div>
 
 
 <div class="postcontent">
 <p>
-When using Matlab&#8217;s <code>mnrfit</code> to train a multinomial logistic regression classifier recently, I found it rather memory-consuming.&nbsp;Specifically, when training a classifier with thousands of samples and tens of thousands of samples, it used up the <span class="caps">32GB</span> of <span class="caps">RAM</span> on a workstation and forced it to maintain considerable virtual memory. What should&#8217;ve been a <span class="caps">CPU</span>-bound problem then became a <span class="caps">HDD</span>-bound problem, and I never received my result (it just took tooooo&nbsp;long).
+When using Matlab&#8217;s <code>mnrfit</code> to train a multinomial logistic regression classifier recently, I found it rather memory-consuming.&nbsp;Specifically, when training a classifier with thousands of samples and tens of thousands of samples, it used up the <span class="caps"><span class="caps">32GB</span></span> of <span class="caps"><span class="caps">RAM</span></span> on a workstation and forced it to maintain considerable virtual memory. What should&#8217;ve been a <span class="caps"><span class="caps">CPU</span></span>-bound problem then became a <span class="caps"><span class="caps">HDD</span></span>-bound problem, and I never received my result (it just took&nbsp;tooooo&nbsp;long).
 </p>
 
 <p>
-After reading about the awesome optimization code <a href="http://www.di.ens.fr/~mschmidt/Software/minFunc.html" target="_blank">minFunc</a>, I decided to implement a classifier on my own. Thanks to minFunc and its examples, I can finish this little piece of code and publish it&nbsp;here.
+After reading about the awesome optimization code <a href="http://www.di.ens.fr/~mschmidt/Software/minFunc.html" target="_blank">minFunc</a>, I decided to implement a classifier on my own. Thanks to minFunc and its examples, I can finish this little piece of code and publish&nbsp;it&nbsp;here.
 </p>
 
 <p>
@@ -126,7 +123,7 @@ ans =
      1
 
 </pre>
-That is, we just trained our 3-way classifier on a small dataset of 30 samples and achieved 100% training&nbsp;accuracy.
+That is, we just trained our 3-way classifier on a small dataset of 30 samples and achieved 100%&nbsp;training&nbsp;accuracy.
 </p>
 
 <p>
@@ -213,7 +210,6 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
-
   
 </body>
 </html>

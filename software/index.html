@@ -22,14 +22,14 @@
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
   <!--[if lte IE 8]>
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
-  
+
 <![endif]-->
 <!--[if gt IE 8]><!-->
-  
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
-  
+
 <!--<![endif]-->
 <!--[if lte IE 8]>
       <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
@@ -38,7 +38,7 @@
       <link rel="stylesheet" href="/media/css/layouts/marketing.css">
   <!--<![endif]-->
   <script type="text/javascript" src="/media/js/main.js"></script>
-   
+
   
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -46,9 +46,12 @@
   <![endif]-->
 
     <!-- Fav and touch icons -->
-  <link rel="shortcut icon" href="favicon.ico">
-      
+  <link rel="shortcut icon" href="/favicon.ico">
+  
         <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -76,12 +79,6 @@
                 href="/software">
                 Software
             </a>
-        </li>        <li class="nav-item ">
-            <a title="Misc"
-                class="misc"
-                href="/misc">
-                Me &amp; My ...
-            </a>
         </li>    </ul>
     </div>
 </div>
@@ -93,71 +90,64 @@
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
                         <section>
-            <div class="title"><h2 itemprop="name">Software</h2></div>
-<ul class="listing clear">
+            <h1 id="software">Software</h1>
+<p><ul class="listing clear">
 <li>
     <article >
-<div class="title"><h3><a href="/software/mnlr.html">Limited-Memory Multinomial Logistic Regression Classifier for Matlab</a></h3></div>
+<h2><a href="/software/mnlr.html">Limited-Memory Multinomial Logistic Regression Classifier for&nbsp;Matlab</a></h2></p>
+<p>When using Matlab&#8217;s <code>mnrfit</code> to train a multinomial logistic regression classifier recently, I found it&nbsp;rather&nbsp;memory-consuming.</p>
 
-<p>When using Matlab&#8217;s <code>mnrfit</code> to train a multinomial logistic regression classifier recently, I found it rather&nbsp;memory-consuming.</p>
-<a href="/software/mnlr.html" style="float:right">&gt;&gt;&nbsp;Detail...</a>
-</article>
-
-</li>
+<p><a href="/software/mnlr.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
+</article></p>
+<p></li>
 <li>
     <article >
-<div class="title"><h3><a href="/software/misc.html">Miscellaneous</a></h3></div>
+<h2><a href="/software/misc.html">Miscellaneous</a></h2></p>
+<p>Here&#8217;s a (incomplete) list of code, applets, and small software I wrote for ease of research or life. I&#8217;ll publish more from time to time when I have time to arrange things to&nbsp;publicize.&nbsp;:)</p>
 
-<p>Here&#8217;s a (incomplete) list of code, applets, and small software I wrote for ease of research or life. I&#8217;ll publish more from time to time when I have time to arrange things to publicize.&nbsp;:)</p>
-<a href="/software/misc.html" style="float:right">&gt;&gt;&nbsp;Detail...</a>
-</article>
-
-</li>
+<p><a href="/software/misc.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
+</article></p>
+<p></li>
 <li>
     <article >
-<div class="title"><h3><a href="/software/convolutional-rbm.html">ConvolutionalRBM.m</a></h3></div>
+<h2><a href="/software/convolutional-rbm.html">ConvolutionalRBM.m</a></h2></p>
+<p>When I was doing research on deep learning structures, I was amazed by convolutional <span class="caps"><span class="caps">RBM</span></span> when I read about it because it possess the amazing capability of learning object parts and &#8220;recovering&#8221; missing parts (see <a href="#reference">Reference</a>). Although <a href="http://www.cs.utoronto.ca/~kriz/" target="_blank">Alex Krizhevsky</a> has an implementation of such network in pure <span class="caps"><span class="caps">CUDA</span></span>, I think some (like myself) might want to use a more friendly Matlab version to process smaller amount of data with a bit more time-consumption &#8211; so here&nbsp;we&nbsp;are.</p>
 
-<p>When I was doing research on deep learning structures, I was amazed by convolutional <span class="caps">RBM</span> when I read about it because it possess the amazing capability of learning object parts and &#8220;recovering&#8221; missing parts (see <a href="#reference">Reference</a>). Although <a href="http://www.cs.utoronto.ca/~kriz/" target="_blank">Alex Krizhevsky</a> has an implementation of such network in pure <span class="caps">CUDA</span>, I think some (like myself) might want to use a more friendly Matlab version to process smaller amount of data with a bit more time-consumption &#8211; so here we&nbsp;are.</p>
-<a href="/software/convolutional-rbm.html" style="float:right">&gt;&gt;&nbsp;Detail...</a>
-</article>
-
-</li>
+<p><a href="/software/convolutional-rbm.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
+</article></p>
+<p></li>
 <li>
     <article >
-<div class="title"><h3><a href="/software/tsinghua-classroom.html">Tsinghua Classroom</a></h3></div>
-
+<h2><a href="/software/tsinghua-classroom.html">Tsinghua&nbsp;Classroom</a></h2></p>
 <p>The <a href="http://myhome.tsinghua.edu.cn/" target="_blank">Myhome.tsinghua</a> site provides
 a table where one can access the service condition of classroom across the campus. However, 
-this is somehow not&nbsp;practical.</p>
-<a href="/software/tsinghua-classroom.html" style="float:right">&gt;&gt;&nbsp;Detail...</a>
-</article>
+this is somehow&nbsp;not&nbsp;practical.</p>
 
-</li>
+<p><a href="/software/tsinghua-classroom.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
+</article></p>
+<p></li>
 <li>
     <article >
-<div class="title"><h3><a href="/software/bugfix-qslim-21.html">An Unofficial "Bugfix" for QSlim 2.1</a></h3></div>
+<h2><a href="/software/bugfix-qslim-21.html">An Unofficial &#8220;Bugfix&#8221; for QSlim&nbsp;2.1</a></h2>
 <p><img src="/media/images/software/bugfix-qslim-21/qslim.jpg" width="400"></p>
 <p><span style="color:#f00">Note: The method of this post is too naive to be applied in sophisticated
 applications. So please think twice before applying it to yours.</span><br></p>
 <p><a href="http://mgarland.org/software/qslim21.html" target="_blank">QSlim</a> is a 
 light-weight software developed by <a href="http://mgarland.org" target="_blank">M. Garland</a>, 
 which can simplify mesh models swiftly, maximally preserving their geodesic properties. 
-However, in my recent use of it I discovered a &#8220;bug&#8221; regarding redundant&nbsp;faces.</p>
-<a href="/software/bugfix-qslim-21.html" style="float:right">&gt;&gt;&nbsp;Detail...</a>
-</article>
-
-</li>
+However, in my recent use of it I discovered a &#8220;bug&#8221; regarding&nbsp;redundant&nbsp;faces.</p>
+<a href="/software/bugfix-qslim-21.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
+</article></p>
+<p></li>
 <li>
     <article >
-<div class="title"><h3><a href="/software/undergrad-proj.html">Undergraduate Projects</a></h3></div>
+<h2><a href="/software/undergrad-proj.html">Undergraduate&nbsp;Projects</a></h2></p>
+<p>This post contains a list of selected undergraduate projects of me, some of which are hosted&nbsp;at&nbsp;GitHub.</p>
 
-<p>This post contains a list of selected undergraduate projects of me, some of which are hosted at&nbsp;GitHub.</p>
-<a href="/software/undergrad-proj.html" style="float:right">&gt;&gt;&nbsp;Detail...</a>
-</article>
-
-</li>
-</ul>
-            </section>
+<p><a href="/software/undergrad-proj.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
+</article></p>
+<p></li>
+</ul></p>            </section>
                         <div class="footer">
                 <div id="sociallinks" class="clear" style="font-size:10px;"></div>
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
@@ -210,7 +200,6 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
-
   
 </body>
 </html>
