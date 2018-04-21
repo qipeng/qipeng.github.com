@@ -11,7 +11,7 @@
   <meta name="googlebot" content="all" />
 
   <title>Better Homeworks</title>
-  <meta name="description" content="Creating better homeworks for college students.
+  <meta name="description" content="Talking to a Less-Technical Audience
 ">
   <meta name="keywords" content="">
   <meta name="author" content="Peng Qi">
@@ -96,8 +96,8 @@
 <div class="title"><h1 itemprop="name">
     Better&nbsp;Homeworks
 </h1></div>
-<time datetime="2014-07-06">
-    Sun, 06 Jul 2014
+<time datetime="2018-03-01">
+    Thu, 01 Mar 2018
 </time>
 
 <div>
@@ -108,27 +108,69 @@
     <a class="tag pure-button" href="/blog/tags/TeachingInCS.html">&nbsp;TeachingInCS
     </a>
 </li>
-<li>
-    <a class="tag pure-button" href="/blog/tags/UIUX.html">&nbsp;<span class="caps">UIUX</span>
-    </a>
-</li>
 </ul>
 </div>
 
 <div class="postcontent">
-<p>No one deserves to face their creation with an out-dated look, especially if plentiful time and energy is devoted into that creation. For college students that are taking introductory courses, they might not possess the required experience or techniques to always make their deliverables look pretty (or that might), despite the amount of work they have put in to finish their homeworks or projects. In such a scenario, it is then the teaching staff&#8217;s job to make their work well paid for with carefully designed homework/project material, to maximize their sense of satisfaction and therefore encourage their engagement in&nbsp;the&nbsp;course.</p>
-<p>Recently when I was <span class="caps"><span class="caps">TA</span></span>-ing for <span class="caps"><span class="caps">CS145</span></span>, Introduction to Databases, we used the project from previous quarters, which asks the students to create the model of a database system, where certain constraints need to be satisfied at all time, when retrieval/modification tasks are performed. When I looked at the website starter code we were about to give out to the students, they appeared as old as the course itself to me (which apparently has been around for a while). Although in previous offerings of the class, the students are apparently encouraged to be creative about how their final project websites look like, I felt it would be quite unfair for students who have devoted about the same amount of time designing the databases (which, in my opinion, should be the whole point of the project) to have to stare at the outdated Web User Interface (<span class="caps"><span class="caps">UI</span></span>) provided with the&nbsp;starter&nbsp;code.</p>
-<p>So I decided I would re-design the starter code with Bootstrap <span class="caps"><span class="caps">CSS</span></span>, which not only gives the template website a more mordenized appearance, but also incorporates full-fledged responsive features into&nbsp;the&nbsp;pages.</p>
-<p>Enough talking, here&#8217;s what happened for <span class="caps"><span class="caps">CS145</span></span>&#8217;s Project 1 this&nbsp;summer&nbsp;quarter.</p>
-<p><a class="fancyimg" href="/blog/better-homeworks/cs145summer2014proj1part3.png">
-<img src="/blog/better-homeworks/cs145summer2014proj1part3_thumb.png" width="200"></a></p></div>
+<p>A while ago, I was invited to give an introduction to deep learning to high schoolers participating in a hackathon called <a href="http://linghacks.weebly.com/">LingHacks</a>. Here are some of the things I have learned from preparing for this presentation, as well as watching the presentation of some of the other&nbsp;tutorial&nbsp;speakers.</p>
+<h2 id="background">Background</h2>
+<p>LingHacks is a new hackathon focused on computational linguistics (a.k.a. natural language processing in most contexts) for high school students, where students spend one day in training (which is where I was at), and two days to flesh out their brilliant ideas about applying language technology to solving&nbsp;real-world&nbsp;problems.</p>
+<p>Before I started preparing for <a href="#my-slides">my slides</a>, I asked the organizer about what mathematical background I should be expecting my audience to have. Here is a brief list of things I got from them that would hopefully be useful for others preparing for&nbsp;similar&nbsp;events:</p>
+<ul>
+<li>Linear algebra<ul>
+<li>vectors and their representation in&nbsp;Cartesian&nbsp;coordinates</li>
+<li>matrices</li>
+<li>vector&nbsp;(inner)&nbsp;product</li>
+<li>matrix-vector&nbsp;product</li>
+<li>matrix-matrix&nbsp;product</li>
+</ul>
+</li>
+<li>Basic algebra and calculus<ul>
+<li>logarithmic and&nbsp;exponential&nbsp;functions</li>
+<li>derivatives&nbsp;of&nbsp;functions</li>
+</ul>
+</li>
+<li>(Slightly more) Advanced calculus<ul>
+<li><del>multivariate functions and their derivatives</del></li>
+</ul>
+</li>
+<li>Basic probability<ul>
+<li>probability mass functions and probability&nbsp;density&nbsp;functions</li>
+<li>conditional probability and&nbsp;marginal&nbsp;probability</li>
+</ul>
+</li>
+</ul>
+<p>Items crossed out are ones I was notified highschoolers are not supposed to know of by default. I didn&#8217;t end up using most of these anyway &#8212; I&#8217;ll mention why in&nbsp;a&nbsp;bit.</p>
+<h2 id="initial-plan">Initial&nbsp;Plan</h2>
+<p><strong>Skip if you just want to know what I ended up including in my slides! This section is not a prerequisite in&nbsp;any&nbsp;way.</strong></p>
+<p>As you might have inferred from the list of mathematical prerequesites I asked the organizers for, I was going for a pedantic introduction leading up from &#8220;shallow learning&#8221; (linear classifiers) to deep learning (neural networks). I was planning to do this following some of the <a href="https://nlp.stanford.edu/courses/NAACL2013/NAACL2013-Socher-Manning-DeepLearning.pdf">great tutorials out there</a>, and tailoring it to my audience&#8217;s technical level by introducing the following things (in&nbsp;this&nbsp;order):</p>
+<ul>
+<li>Linear classifiers<ul>
+<li>Connecting it to linear algebra and its&nbsp;geometric&nbsp;interpretations</li>
+<li>Loss&nbsp;functions&nbsp;(intuitively)</li>
+<li>Optimization of parameters (by waving my hands throughout, to avoid mentioning exactly how multivariate functions work or how to&nbsp;take&nbsp;derivatives)</li>
+<li>Limitations of linear classifiers (hand-designing features, model&nbsp;capacity,&nbsp;etc.)</li>
+</ul>
+</li>
+<li>Deep learning!<ul>
+<li>Stacking&nbsp;linear&nbsp;classifiers!</li>
+<li>Well, we also need nonlinearities to make it more powerful (sigmoid, tanh,&nbsp;ReLU,&nbsp;etc.)</li>
+<li>So many different kinds of networks (<span class="caps"><span class="caps">CNN</span></span>, <span class="caps"><span class="caps">RNN</span></span>,&nbsp;etc.)</li>
+</ul>
+</li>
+<li>By the way, there are such things called word vectors you&#8217;d need to use as your input to&nbsp;these&nbsp;networks</li>
+</ul>
+<p>Fortunately, my labmates heard about my plan and stopped me about 20 slides down&nbsp;this&nbsp;path.</p>
+<h2 id="wzxhzdk0wzxhzdk1-my-slides-fwiw"><a name="my-slides"></a> My Slides&nbsp;(<span class="caps"><span class="caps">FWIW</span></span>)</h2>
+<p>I put my slides on <a href="https://docs.google.com/presentation/d/1ZhAwRlyMkOClLY-6An4h211i0-EgecwGAir671Shh_c/edit?usp=sharing">Google Drive</a>, and hereby make them available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License (<span class="caps"><span class="caps">CC</span></span> <span class="caps"><span class="caps">BY</span></span>-<span class="caps"><span class="caps">SA</span></span> 4.0)</a>.</p>
+<h2 id="acknowledgements">Acknowledgements</h2></div>
 
 <div style="float:left"><span class="lighter">Newer Post</span>&nbsp;
 None
 </div>
 
 <div style="float:right"><span class="lighter">Older Post</span>&nbsp;
-<a href="/blog/xcodebuild-mavericks.html">xcodebuild Solution for <span class="caps">OS</span> X Mavericks</a>
+None
 </div>
 <br>
 <div id="disqus_thread"></div>
