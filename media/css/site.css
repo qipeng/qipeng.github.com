@@ -2,7 +2,6 @@
     vertical-align: baseline;
     font-weight: inherit;
     font-family: inherit;
-    font-style: inherit;
     text-decoration:inherit;
     padding: 0;
     border: 0;
@@ -77,7 +76,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, nav a:hover {
 }
 
 body{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, KaiTi, "楷体", KaiTi_GB2312, "楷体_GB2312", STKaiTi, "华文楷体",  sans-serif;
     padding: 0;
     margin: 0;
     color: #777;
@@ -367,9 +366,49 @@ border: 1px solid #ddd;
     left: 0 !important;
     height:100%;
 }
+
+#name #name-en {
+    display:block;
+}
+
+#name #name-zh {
+    display:none;
+}
+
+#name:hover #name-en {
+    display:none;
+}
+
+#name:hover #name-zh {
+    display:block;
+}
+
 .pure-menu li a{
     text-decoration: none;
     padding: 5px 8px !important;
+}
+
+.pubtype {
+  display: inline-block;
+  border-radius: 3px;
+  color: white;
+  font-variant: small-caps;
+  margin-right: 3px;
+  padding: 0 2px;
+  line-height: 11px;
+}
+
+.pubtype.conf {
+    background: #1f78b4;
+}
+.pubtype.preprint {
+    background: #a6cee3;
+}
+.pubtype.journal {
+    background: #33a02c;
+}
+.pubtype.sysdesc {
+    background: #b2df8a;
 }
 
 @media (min-height: 725px) {
