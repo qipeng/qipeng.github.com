@@ -192,7 +192,7 @@ None
                 <div id="sociallinks" class="clear" style="font-size:10px;"></div>
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
                     <ul>
-                        <li><a href="http://purecss.io/">Copyright &copy; Peng Qi, 2017</a></li>
+                        <li><a href="http://purecss.io/">Copyright &copy; Peng Qi, 2018</a></li>
                         <li><a href="http://github.com/qipeng/">GitHub</a></li>
                         <li><a href="http://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
                     </ul>
