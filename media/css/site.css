@@ -2,7 +2,6 @@
     vertical-align: baseline;
     font-weight: inherit;
     font-family: inherit;
-    text-decoration:inherit;
     padding: 0;
     border: 0;
     margin: 0;
@@ -162,6 +161,14 @@ ul.listing {
     margin: .5em 0;
 }
 
+ul ul {
+    margin: 0;
+}
+
+li p {
+    margin: 0;
+}
+
 /* Content */
 
 .post time{
@@ -286,7 +293,7 @@ code {
 }
 
 .content ul{
-padding-left:10px;
+padding-left:15px;
 list-style:square url("../images/list-square.png");
 }
 
@@ -386,6 +393,25 @@ border: 1px solid #ddd;
 .pure-menu li a{
     text-decoration: none;
     padding: 5px 8px !important;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 65px; /* fixed header height*/
+  margin: -65px 0 0; /* negative fixed header height */
+}
+
+sup:target::before {
+  display: inline-block;
+}
+
+.footnote hr {
+  display: none;
+}
+
+.footnote li:target::before {
+  display:none;
 }
 
 .pubtype {

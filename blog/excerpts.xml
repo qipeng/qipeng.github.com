@@ -7,30 +7,12 @@
         <link href="/"/>
     
         
-    <updated>2018-07-20T12:04:26Z</updated>
+    <updated>2018-08-14T09:11:19Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
             <entry>
-            <title type="html">Hello, World!</title>
-            <author><name>Peng Qi</name></author>
-            <link href="/blog/hello-world.html"/>
-            <updated>2012-03-29T14:24:00Z</updated>
-            <published>2012-03-29T14:24:00Z</published>
-            <id>/blog/hello-world.html</id>
-                        <category   scheme="/blog/tags"
-                        term="hello_world"
-                        label="Hello_world" />
-            
-            <content type="html">
-                
-                &lt;p&gt;Seems that the first post of every programmer&amp;#8217;s blog is &amp;#8220;hello, world&amp;#8221; 
-&amp;#8212; I&amp;#8217;m just following the fashion here. Thanks to &lt;a href=&#39;//www.github.com&#39;&gt;
-GitHub&lt;/a&gt; and &lt;a href=&#39;//hyde.github.com&#39;&gt;hyde&lt;/a&gt;, I now have this awesome
-multi-page static homepage with a personal blog in&amp;nbsp;it.&lt;/p&gt;            </content>
-        </entry>
-            <entry>
-            <title type="html">Tutorial 1&#58; The Fancy Corner</title>
+            <title type="html">Hyde Tutorial 1&#58; The Fancy Corner</title>
             <author><name>Peng Qi</name></author>
             <link href="/blog/tutorial-1.html"/>
             <updated>2012-03-31T18:00:00Z</updated>
@@ -81,7 +63,7 @@ as well as relatively accurate geodesic properties to overcome the difficulties 
 non-rigid&amp;nbsp;transform.&lt;/p&gt;            </content>
         </entry>
             <entry>
-            <title type="html">Tutorial 2&#58; The hyde Template Files</title>
+            <title type="html">Hyde Tutorial 2&#58; The hyde Template Files</title>
             <author><name>Peng Qi</name></author>
             <link href="/blog/tutorial-2.html"/>
             <updated>2012-04-10T17:00:00Z</updated>
@@ -297,5 +279,20 @@ maybe more. Here&amp;#8217;s a work-around to just&amp;nbsp;that.&lt;/p&gt;     
             <content type="html">
                 &lt;p&gt;&lt;img src=&#34;/blog/better-homeworks/cs145summer2014proj1part3_thumb.png&#34; width=&#34;200&#34;&gt;&lt;/p&gt;
                 &lt;p&gt;No one deserves to face their creation with an out-dated look, especially if plentiful time and energy is devoted into that creation. For college students that are taking introductory courses, they might not possess the required experience or techniques to always make their deliverables look pretty (or that might), despite the amount of work they have put in to finish their homeworks or projects. In such a scenario, it is then the teaching staff&amp;#8217;s job to make their work well paid for with carefully designed homework/project material, to maximize their sense of satisfaction and therefore encourage their engagement in the&amp;nbsp;course.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">(Towards) Teaching Tech Without A Dreary Deck</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/teaching-tech-without-dreary-deck.html"/>
+            <updated>2018-08-10T14:00:00Z</updated>
+            <published>2018-08-10T14:00:00Z</published>
+            <id>/blog/teaching-tech-without-dreary-deck.html</id>
+                        <category   scheme="/blog/tags"
+                        term="TeachingInCS"
+                        label="Teachingincs" />
+            
+            <content type="html">
+                
+                &lt;p&gt;We can probably all agree that outreach is an integral albeit oft-neglected part of our teaching and research lives, because not only does it generate interest in the broader community around us, but also it is great for promoting diversity in our research environments down the line. However, as I have come to realize, this is not as exactly easy as it seems to be, especially when you are talking to a young and less technical&amp;nbsp;audience.&lt;/p&gt;            </content>
         </entry>
     </feed>

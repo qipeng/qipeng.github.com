@@ -7,26 +7,12 @@
         <link href="/"/>
     
         
-    <updated>2018-07-20T12:04:27Z</updated>
+    <updated>2018-08-14T09:11:19Z</updated>
 
     <id>/blog/atom.xml/</id>
 
             <entry>
-            <title type="html">Hello, World!</title>
-            <author><name>Peng Qi</name></author>
-            <link href="/blog/hello-world.html"/>
-            <updated>2012-03-29T14:24:00Z</updated>
-            <published>2012-03-29T14:24:00Z</published>
-            <id>/blog/hello-world.html</id>
-                        <category   scheme="/blog/tags"
-                        term="hello_world"
-                        label="Hello_world" />
-            
-            <content type="html">
-                                            </content>
-        </entry>
-            <entry>
-            <title type="html">Tutorial 1&#58; The Fancy Corner</title>
+            <title type="html">Hyde Tutorial 1&#58; The Fancy Corner</title>
             <author><name>Peng Qi</name></author>
             <link href="/blog/tutorial-1.html"/>
             <updated>2012-03-31T18:00:00Z</updated>
@@ -66,7 +52,7 @@
                                             </content>
         </entry>
             <entry>
-            <title type="html">Tutorial 2&#58; The hyde Template Files</title>
+            <title type="html">Hyde Tutorial 2&#58; The hyde Template Files</title>
             <author><name>Peng Qi</name></author>
             <link href="/blog/tutorial-2.html"/>
             <updated>2012-04-10T17:00:00Z</updated>
@@ -244,6 +230,20 @@
                         <category   scheme="/blog/tags"
                         term="UIUX"
                         label="Uiux" />
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">(Towards) Teaching Tech Without A Dreary Deck</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/teaching-tech-without-dreary-deck.html"/>
+            <updated>2018-08-10T14:00:00Z</updated>
+            <published>2018-08-10T14:00:00Z</published>
+            <id>/blog/teaching-tech-without-dreary-deck.html</id>
+                        <category   scheme="/blog/tags"
+                        term="TeachingInCS"
+                        label="Teachingincs" />
             
             <content type="html">
                                             </content>
