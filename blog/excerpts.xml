@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2019-04-10T13:29:30Z</updated>
+    <updated>2019-07-26T08:55:06Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
@@ -294,5 +294,20 @@ maybe more. Here&amp;#8217;s a work-around to just&amp;nbsp;that.&lt;/p&gt;     
             <content type="html">
                 
                 &lt;p&gt;We can probably all agree that outreach is an integral albeit oft-neglected part of our teaching and research lives, because not only does it generate interest in the broader community around us, but also it is great for promoting diversity in our research environments down the line. However, as I have come to realize, this is not as exactly easy as it seems to be, especially when you are talking to a young and less technical&amp;nbsp;audience.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Pinyin Cheatsheet for (Mostly American) English Speakers</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/pinyin-cheatsheet.html"/>
+            <updated>2019-07-26T17:00:00Z</updated>
+            <published>2019-07-26T17:00:00Z</published>
+            <id>/blog/pinyin-cheatsheet.html</id>
+                        <category   scheme="/blog/tags"
+                        term="Languages"
+                        label="Languages" />
+            
+            <content type="html">
+                
+                &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Pinyin&#34;&gt;Pinyin&lt;/a&gt; is one of the most commonly used method for romanizing Chinese characters from Mandarin Chinese, and is used for names for the majority of the Chinese community.[^1] As many find difficulty pronouncing Chinese names written in Pinyin (esp in academic conferences), I put together this cheatsheet in hope of helping (Mostly American) English speakers pronounce them correctly with as little effort as possible.[^2] No training in the &lt;a href=&#34;https://en.wikipedia.org/wiki/International_Phonetic_Alphabet&#34;&gt;International Phonetic Alphabet (&lt;span class=&#34;caps&#34;&gt;IPA&lt;/span&gt;)&lt;/a&gt; is&amp;nbsp;required.&lt;/p&gt;            </content>
         </entry>
     </feed>
