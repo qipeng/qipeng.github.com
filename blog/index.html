@@ -10,14 +10,15 @@
   <meta name="robots" content="all" />
   <meta name="googlebot" content="all" />
 
-  <title>My Scratch Book</title>
+  <title>Blog</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Peng Qi">
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
@@ -57,7 +58,7 @@
 <body>
 
 <div class="header">
-    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed" id='header-menu'>
         <a class="pure-menu-heading" href="/index.html">Peng Qi</a>
 
                 <ul class="nav">
@@ -90,15 +91,26 @@
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
                         <section>
-            <h1 id="my-scratch-book">My Scratch&nbsp;Book</h1>
+            <h1 id="blog">Blog</h1>
 <p><ul class="listing clear">
+<li>
+    <article >
+<h2><a href="/blog/answering-complex-open-domain-questions-at-scale.html">Answering Complex Open-domain Questions at&nbsp;Scale</a></h2>
+<time datetime="2019-10-16">
+    Wed, 16 Oct 2019
+</time></p>
+<p>The <span class="caps"><span class="caps">NLP</span></span> community has made great progress on open-domain question answering, but our systems still struggle to answer complex questions over a large collection of text. We present an efficient and explainable method for enabling multi-step reasoning in&nbsp;these&nbsp;systems.</p>
+
+<p><a href="/blog/answering-complex-open-domain-questions-at-scale.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
+</article></p>
+<p></li>
 <li>
     <article >
 <h2><a href="/blog/pinyin-cheatsheet.html">Pinyin Cheatsheet for (Mostly American) English&nbsp;Speakers</a></h2>
 <time datetime="2019-07-26">
     Fri, 26 Jul 2019
 </time></p>
-<p><a href="https://en.wikipedia.org/wiki/Pinyin">Pinyin</a> is one of the most commonly used method for romanizing Chinese characters from Mandarin Chinese, and is used for names for the majority of the Chinese community.[^1] As many find difficulty pronouncing Chinese names written in Pinyin (esp in academic conferences), I put together this cheatsheet in hope of helping (Mostly American) English speakers pronounce them correctly with as little effort as possible.[^2] No training in the <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet">International Phonetic Alphabet (<span class="caps"><span class="caps">IPA</span></span>)</a>&nbsp;is&nbsp;required.</p>
+<p><a href="https://en.wikipedia.org/wiki/Pinyin">Pinyin</a> (Chinese: 拼音, <em>lit.</em> &#8220;spelling sounds&#8221;) is one of the most commonly used method for romanizing Chinese characters from Mandarin Chinese, and is used for names for the majority of the Chinese community.[^1] As many find difficulty pronouncing Chinese names written in Pinyin (esp in academic conferences), I put together this cheatsheet in hope of helping (mostly American) English speakers pronounce them correctly with as little effort as possible.[^2] No training in the <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet">International Phonetic Alphabet (<span class="caps"><span class="caps">IPA</span></span>)</a>&nbsp;is&nbsp;required.</p>
 
 <p><a href="/blog/pinyin-cheatsheet.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
 </article></p>
@@ -108,10 +120,10 @@
 <h2><a href="/blog/teaching-tech-without-dreary-deck.html">(Towards) Teaching Tech Without A Dreary&nbsp;Deck</a></h2>
 <time datetime="2018-08-10">
     Fri, 10 Aug 2018
-</time></p>
+</time>
+<p><img src="/blog/teaching-tech-without-dreary-deck/cpu-gpu.png" title="My attempt at explaining the difference between CPUs and GPUs with Despicable Me characters." style="max-width:80%" alt="A figure displaying Gru and the Minions from the animation film Despicable Me. Here, Gru is likened to a CPU, who is versatile but limited in number; the Minions are likened to a GPU, who are not terribly powerful individually, but can achieve a lot in parallel."/></p>
 <p>We can probably all agree that outreach is an integral albeit oft-neglected part of our teaching and research lives, because not only does it generate interest in the broader community around us, but also it is great for promoting diversity in our research environments down the line. However, as I have come to realize, this is not as exactly easy as it seems to be, especially when you are talking to a young and less&nbsp;technical&nbsp;audience.</p>
-
-<p><a href="/blog/teaching-tech-without-dreary-deck.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
+<a href="/blog/teaching-tech-without-dreary-deck.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
 </article></p>
 <p></li>
 <li>
@@ -143,104 +155,6 @@ maybe more. Here&#8217;s a work-around to&nbsp;just&nbsp;that.</p>
 <p></li>
 <li>
     <article >
-<h2><a href="/blog/lecture-notes-201212.html">Lecture Notes from Three Recent&nbsp;Lectures</a></h2>
-<time datetime="2012-12-18">
-    Tue, 18 Dec 2012
-</time></p>
-<p>Recently, I was fortunate enough to attend three lectures delivered by <a href="http://research.microsoft.com/en-us/people/deng/" target="_blank">Li Deng</a>, <a href="http://www.vision.caltech.edu/Perona.html" target="_blank">Pietro Perona</a>, and <a href="http://vision.stanford.edu/~feifeili/" target="_blank">Fei-Fei Li</a>, respectively. Here&#8217;s some summary from these lectures for&nbsp;record&nbsp;purpose.</p>
-
-<p><a href="/blog/lecture-notes-201212.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
-</article></p>
-<p></li>
-<li>
-    <article >
-<h2><a href="/blog/coursera-ml-note-3.html">[Coursera] Machine Learning Notes - Week&nbsp;7-10</a></h2>
-<time datetime="2012-10-21">
-    Sun, 21 Oct 2012
-</time></p>
-<p>This post are the fresh notes of the current offering of Machine Learning course
-on <a href="https://coursera.org" target="_blank">coursera.org</a>, which covers the
-courses offered in Week 7 (Support Vector Machines) 
-through Week 10 (Large-scale&nbsp;Machine&nbsp;Learning).</p>
-
-<p><a href="/blog/coursera-ml-note-3.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
-</article></p>
-<p></li>
-<li>
-    <article >
-<h2><a href="/blog/coursera-ml-note-2.html">[Coursera] Machine Learning Notes - Week&nbsp;4-6</a></h2>
-<time datetime="2012-09-24">
-    Mon, 24 Sep 2012
-</time></p>
-<p>This post are the fresh notes of the current offering of Machine Learning course
-on <a href="https://coursera.org" target="_blank">coursera.org</a>, which covers the
-courses offered in Week 4 (Neural Networks: Representation) 
-through Week 6 (Machine Learning&nbsp;System&nbsp;Design).</p>
-
-<p><a href="/blog/coursera-ml-note-2.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
-</article></p>
-<p></li>
-<li>
-    <article >
-<h2><a href="/blog/coursera-ml-note-1.html">[Coursera] Machine Learning Notes - Week&nbsp;1-3</a></h2>
-<time datetime="2012-09-01">
-    Sat, 01 Sep 2012
-</time></p>
-<p>I recently enrolled in Stanford University&#8217;s Machine Learning open course on
-<a href="http://coursera.org/" target="_blank">coursera.org</a>, which is taught
-by esteemed <a href="http://ai.stanford.edu/~ang/" target="_blank">Prof Andrew Ng</a>.
-I&#8217;ll take some notes that are important to me (and probably many machine learning
-rookies), and hope this would help in later studies. (Disclosure of homework, 
-homework solutions, and other materials are somehow a bad thing to do, 
-for copyright problems or unfairness of prospective students of that course,
-but I guess notes would&nbsp;be&nbsp;fine.)</p>
-
-<p><a href="/blog/coursera-ml-note-1.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
-</article></p>
-<p></li>
-<li>
-    <article >
-<h2><a href="/blog/putty-bat.html">Shortcut batch files that works with&nbsp;Putty</a></h2>
-<time datetime="2012-08-28">
-    Tue, 28 Aug 2012
-</time></p>
-<p><a href="http://portableapps.com/apps/internet/putty_portable" target="_blank">Putty</a>
- is one of the most common software with which people work on remote
-machines, which typically has a <span class="caps"><span class="caps">UNIX</span></span>/Linux system for stability or&nbsp;efficiency&nbsp;reasons.</p>
-
-<p><a href="/blog/putty-bat.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
-</article></p>
-<p></li>
-<li>
-    <article >
-<h2><a href="/blog/matlab-parallel.html">Notes on Matlab Parallel&nbsp;Programming</a></h2>
-<time datetime="2012-08-22">
-    Wed, 22 Aug 2012
-</time></p>
-<p>Recently, I am doing research which involve extensive computation with Matlab. 
-Luckily, most of this computation can be done in a parallel fashion, and this can
-be instantly accomplished with the Matlab parallel toolbox. During using this
-toolbox, I summarized some notes that need to be remembered, to accelerate&nbsp;future&nbsp;work.</p>
-
-<p><a href="/blog/matlab-parallel.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
-</article></p>
-<p></li>
-<li>
-    <article >
-<h2><a href="/blog/tutorial-2.html">Hyde Tutorial 2&#58; The hyde Template&nbsp;Files</a></h2>
-<time datetime="2012-04-10">
-    Tue, 10 Apr 2012
-</time></p>
-<p>This post, I think, is important for those who want to re-develop this template on their
-own site, and especially who has little background of hyde/Django/Python as myself.
-In this post, I&#8217;ll summarize all hacks that I did to the basic hyde template that
-made this homepage what it looks&nbsp;like&nbsp;now.</p>
-
-<p><a href="/blog/tutorial-2.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
-</article></p>
-<p></li>
-<li>
-    <article >
 <h2><a href="/blog/compiling-qslim-21.html">Compiling QSlim 2.1 under Windows / Visual&nbsp;Studio</a></h2>
 <time datetime="2012-04-03">
     Tue, 03 Apr 2012
@@ -254,29 +168,15 @@ as well as relatively accurate geodesic properties to overcome the difficulties 
 <p><a href="/blog/compiling-qslim-21.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
 </article></p>
 <p></li>
-<li>
-    <article >
-<h2><a href="/blog/tutorial-1.html">Hyde Tutorial 1&#58; The Fancy&nbsp;Corner</a></h2>
-<time datetime="2012-03-31">
-    Sat, 31 Mar 2012
-</time></p>
-<p>The &#8220;<img src="/media/images/fancycorner.png">&#8220;, or as I call it &#8212; the &#8220;fancy corner&#8221;,
-is a special mark used on this site to mark out images that can be viewed in a larger
-version with a pop-up window. This blog will explain how this functionality is made possible
-with <a href="http://fancybox.net/" target="_blank">FancyBox</a> and
-<a href="http://jquery.com/" target="_blank">jQuery</a>.</p>
-
-<p><a href="/blog/tutorial-1.html" style="float:right;padding:5px" class="tag pure-button">Read more&#8230;</a>
-</article></p>
-<p></li>
 </ul></p>            </section>
                         <div class="footer">
                 <div id="sociallinks" class="clear" style="font-size:10px;"></div>
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
                     <ul>
-                        <li><a href="http://purecss.io/">Copyright &copy; Peng Qi, 2018</a></li>
-                        <li><a href="http://github.com/qipeng/">GitHub</a></li>
-                        <li><a href="http://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
+                        <li><a href="https://purecss.io/">Copyright &copy; Peng Qi, 2019</a></li>
+                        <li><a href="https://github.com/qipeng/">GitHub</a></li>
+                        <li><a href="https://twitter.com/qi2peng2">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -284,8 +184,10 @@ with <a href="http://fancybox.net/" target="_blank">FancyBox</a> and
     </div>
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
 window.jQuery || document.write("<script src=\"/media/js/jquery.min.js\"><\/script>")
 </script>
@@ -301,6 +203,21 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
         e.preventDefault();
     }, 'a[href="#"]');
 });
+
+$(document).ready(function(){
+$('#bibtex-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var url = button.data('url') // Extract info from data-* attributes
+  var modal = $(this)
+  $.ajax({
+    'url': url,
+    'success': function(data) {
+      modal.find('#bibtex-content').text(data)
+    }
+  })
+});
+})
+
 </script>
 
 
@@ -323,5 +240,37 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('send', 'pageview');
 </script>
   
+    <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos < currentScrollPos && prevScrollpos > 250) {
+    document.getElementById("header-menu").style.top = "-50px";
+  } else {
+    document.getElementById("header-menu").style.top = "0px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+window.onbeforeprint = function() {
+  document.getElementById("header-menu").style.top = "0px";
+}
+    </script>
+
+<div class="modal" id="bibtex-modal" tabindex="-1" role="dialog" aria-labelledby="bibtex-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bibtex-modal-title">BibTeX</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre id='bibtex-content'></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

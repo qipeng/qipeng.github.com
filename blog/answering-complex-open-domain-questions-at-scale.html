@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" class="yui3-js-enabled" itemscope itemtype="http://schema.org/Thing">
+<head>
+  <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:site" content="@qi2peng2"> <meta name="twitter:creator" content="@qi2peng2"> <meta name="twitter:title" content="Answering Complex Open-domain Questions at Scale"> <meta name="twitter:description" content="The NLP community has made great progress on open-domain QA, but our systems still struggle to answer complex open-domain questions in an large collection of text. We present an efficient and explainable method for enabling multi-step reasoning in these systems."> <meta name="twitter:image" content="http://qipeng.me/blog/answering-complex-open-domain-questions-at-scale/needle-haystack.png"> <meta property="og:image" content="http://qipeng.me/blog/answering-complex-open-domain-questions-at-scale/needle-haystack.png"> <style> th { font-weight: bold; min-width: 120px; padding: 10px 5px; border-bottom: 1px solid rgb(102,123,144);} td { padding: 10px 5px; } table { border-top: 2px solid rgb(52,73,94); border-bottom: 2px solid rgb(52,73,94); margin: 0px 30px;} .green-italic { font-style: italic; color: #44aa33; } </style> <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+  <meta name="robots" content="all" />
+  <meta name="googlebot" content="all" />
+
+  <title>Answering Complex Open-domain Questions at Scale</title>
+  <meta name="description" content="The NLP community has made great progress on open-domain QA, but our systems still struggle to answer complex open-domain questions in an large collection of text. We present an efficient and explainable method for enabling multi-step reasoning in these systems.
+">
+  <meta name="keywords" content="">
+  <meta name="author" content="Peng Qi">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
+  <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
+  <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
+  <!--[if lte IE 8]>
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
+
+<![endif]-->
+<!--[if gt IE 8]><!-->
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
+
+<!--<![endif]-->
+<!--[if lte IE 8]>
+      <link rel="stylesheet" href="/media/css/layouts/marketing-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="/media/css/layouts/marketing.css">
+  <!--<![endif]-->
+  <script type="text/javascript" src="/media/js/main.js"></script>
+
+  
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="media/js/html5shiv.js"></script>
+  <![endif]-->
+
+    <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+        <link rel="stylesheet" href="/media/css/site.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed" id='header-menu'>
+        <a class="pure-menu-heading" href="/index.html">Peng Qi</a>
+
+                <ul class="nav">
+                <li class="nav-item ">
+            <a title="Research"
+                class="research"
+                href="/research">
+                Research
+            </a>
+        </li>        <li class="nav-item pure-menu-selected">
+            <a title="Blog"
+                class="active blog"
+                href="/blog">
+                Blog
+            </a>
+        </li>        <li class="nav-item ">
+            <a title="Software"
+                class="software"
+                href="/software">
+                Software
+            </a>
+        </li>    </ul>
+    </div>
+</div>
+
+<div id="layout" class="pure-g">
+
+    <div class="content pure-u-1 pure-u-med-3-4">
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                        <section>
+            <article class="post">
+
+<div class="title"><h1 itemprop="name">
+    Answering Complex Open-domain Questions at&nbsp;Scale
+</h1></div>
+<time datetime="2019-10-16">
+    Wed, 16 Oct 2019
+</time>
+
+<div>
+
+<ul class="tags clear">
+<li><span class="lighter" >Tags</span></li>
+<li>
+    <a class="tag pure-button" href="/blog/tags/QuestionAnswering.html">&nbsp;QuestionAnswering
+    </a>
+</li>
+</ul>
+</div>
+
+
+<div class="postcontent">
+<blockquote>
+<p><strong><span class="caps"><span class="caps">TL</span></span>;<span class="caps"><span class="caps">DR</span></span>:</strong> The <span class="caps"><span class="caps">NLP</span></span> community has made great progress on open-domain question answering, but our systems still struggle to answer complex questions over a large collection of text. We present an efficient and explainable method for enabling multi-step reasoning in&nbsp;these&nbsp;systems.</p>
+</blockquote>
+<p>From search engines to automatic question answering systems, natural language processing (<span class="caps"><span class="caps">NLP</span></span>) systems have drastically improved our ability to access knowledge stored in text, saving us countless hours spent memorizing facts and looking&nbsp;things&nbsp;up.</p>
+<figure>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/reedinglessons/2239767394/" title="Card Catalog"><img src="https://live.staticflickr.com/2129/2239767394_bbd6cab970_z.jpg" width="640" height="425" alt="Card Catalog"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<figcaption>
+    Who&#8217;s old enough to remember these indexes and not just the search engine ones?
+</figcaption>
+</figure>
+
+<p>Today, whenever we have a question in mind, the answer is usually one Google/Bing search away. For instance, <em>&#8220;Which <span class="caps"><span class="caps">U.S.</span></span> state is the largest&nbsp;by&nbsp;area?&#8221;</em></p>
+<figure>
+    <img src='/blog/answering-complex-open-domain-questions-at-scale/google-alaska.png' width='90%'>
+<figcaption>
+Alaska! But also, great job, Google!
+</figcaption>
+</figure>
+
+<p>Other questions, however, are less straightforward. For example, <em>&#8220;Who was the first to demonstrate that <span class="caps"><span class="caps">GPS</span></span> could be used to detect seismic waves?&#8221;</em> Google isn&#8217;t of much help if we were to directly type this question as a search query. On the other hand, the Internet’s encyclopedia, Wikipedia, does have an answer&nbsp;for&nbsp;us:</p>
+<figure>
+    <img src='/blog/answering-complex-open-domain-questions-at-scale/dr-larson.png' width='90%'>
+<figcaption>
+Thank you, Dr. Larson!
+</figcaption>
+</figure>
+
+<p>Wouldn’t it be nice if an <span class="caps"><span class="caps">NLP</span></span> system could answer this question for us, without us having to find the article ourselves? This problem, called <em>open-domain question answering (open-domain <span class="caps"><span class="caps">QA</span></span>)</em>, is an active area of <span class="caps"><span class="caps">NLP</span></span>&nbsp;research.</p>
+<h3 id="background-open-domain-qa">Background: Open-domain <span class="caps"><span class="caps">QA</span></span></h3>
+<p>Before diving into our new method for open-domain <span class="caps"><span class="caps">QA</span></span>, let us first take a moment to understand the problem setup, challenges, and why existing solutions are not quite enough to answer&nbsp;complex&nbsp;questions.</p>
+<h4 id="open-domain-vs-closed-domain-restricted-context">Open-domain vs Closed-domain&nbsp;/&nbsp;Restricted-context</h4>
+<p>The first question answering systems built by <span class="caps"><span class="caps">NLP</span></span> researchers, such as <a href="https://web.stanford.edu/class/linguist289/p219-green.pdf"><span class="caps"><span class="caps">BASEBALL</span></span></a> and <a href="https://www.semanticscholar.org/paper/Lunar-rocks-in-natural-english%3A-explorations-in-Woods/6390e2772c3359e4f3b5430423ac996473449ebb"><span class="caps"><span class="caps">LUNAR</span></span></a>, were highly domain-specific. They were adept at answering questions about <span class="caps"><span class="caps">US</span></span> baseball players over the period of one specific year and about lunar rocks brought back to Earth, but not terribly helpful beyond the domains they were built for. In other words, they are <em>closed-domain</em>.</p>
+<p>Since then, researchers have moved towards tackling open-domain <span class="caps"><span class="caps">QA</span></span>. In open-domain <span class="caps"><span class="caps">QA</span></span>, the questions are not limited to predefined domains and domain knowledge; ideally, the system should be able to sift through a very large amount of text documents to find the answer&nbsp;for&nbsp;us.</p>
+<p>Single-document open-domain <span class="caps"><span class="caps">QA</span></span> (also known as <em>reading comprehension</em>) is one of the research areas seeing recent breakthroughs in natural language processing, where an <span class="caps"><span class="caps">NLP</span></span> system is given a single document (or just a paragraph) that might contain the answer to a question, and is asked to answer the question based on this context. Take our Dr. Larson question for an example (<em>&#8220;Who was the first to demonstrate that <span class="caps"><span class="caps">GPS</span></span> could be used to detect seismic waves?&#8221;</em>). A single-document <span class="caps"><span class="caps">QA</span></span> system might be trained to answer this question given only the Wikipedia page <em>&#8220;Kristine M. Larson&#8221;</em>. This is the format of many popular question answering datasets used in the <span class="caps"><span class="caps">NLP</span></span> community today, e.g., <a href="https://rajpurkar.github.io/SQuAD-explorer/">SQuAD</a>.</p>
+<p>Question answering systems trained on SQuAD are able to generalize to answering questions about&nbsp;personal&nbsp;biographies.</p>
+<figure>
+    <img src='/blog/answering-complex-open-domain-questions-at-scale/bio-peng.png' width='90%'>
+<figcaption>
+Recent reading comprehension systems can answer our question, given appropriate context. Demo credit: <a href="https://demo.allennlp.org/reading-comprehension/OTk1OTky">AllenNLP</a>.
+</figcaption>
+</figure>
+
+<p>However, such systems cannot help us answer our question about Dr. Larson if we didn’t already know to look at her biography, which is&nbsp;quite&nbsp;limiting.</p>
+<p>To solve this, researchers are developing question answering systems over large text collections. Instead of provided with the exact context necessary to answer the question, the system is required to sift through a collection of documents to arrive at the answer, much like how we search for answers on the web. This setting, called <em>open-context open-domain <span class="caps"><span class="caps">QA</span></span></em>, is much more challenging than reading comprehension. But, it is also a lot more useful when we have a question in mind but don’t really have a good idea where the answer might be from. The main challenge, besides those of restricted-context <span class="caps"><span class="caps">QA</span></span>, is to narrow down the large collection of texts to a manageable amount with scalable approaches, such that we can run reading comprehension models to arrive at&nbsp;the&nbsp;answer.</p>
+<h4 id="open-domain-qa-systems">Open-domain <span class="caps"><span class="caps">QA</span></span>&nbsp;Systems</h4>
+<p>Inspired by the <a href="https://trec.nist.gov/data/qamain.html">series of question answering competitions at the Text REtrieval Conference</a> (<span class="caps"><span class="caps">TREC</span></span>), researchers in recent years have started to look into adapting powerful neural-network-based <span class="caps"><span class="caps">QA</span></span> models to the&nbsp;open-domain&nbsp;task.</p>
+<p><a href="https://www.cs.princeton.edu/~danqic/">Danqi Chen</a> and collaborators first combined traditional search engines with modern, neural question answering systems to attack this problem. Their approach to open-domain <span class="caps"><span class="caps">QA</span></span>, named <a href="https://arxiv.org/pdf/1704.00051.pdf">DrQA</a>, is simple and powerful: given a question, the system uses it to search a collection of documents for context documents that may contain the answer. Then, this reduced context is the input to a reading comprehension system, which predicts the&nbsp;final&nbsp;answer.</p>
+<figure>
+    <img src='/blog/answering-complex-open-domain-questions-at-scale/drqa.png' width='90%'>
+<figcaption>
+    Illustration of Chen et al.&#8217;s &#8220;DrQA&#8221; model, which was presented at <span class="caps"><span class="caps">ACL</span></span> 2017. Figure from the official <a href="https://github.com/facebookresearch/DrQA">Github repo</a>.
+</figcaption>
+</figure>
+
+<p>Most of the recent research in open-domain <span class="caps"><span class="caps">QA</span></span> has largely followed this two-stage approach of retrieving and reading, with added features such as reranking (see, for example, <a href="https://arxiv.org/abs/1709.00023">(Wang et al., 2018)</a>) and neural retrieval systems and better joint training (see, for example, <a href="https://openreview.net/pdf?id=HkfPSh05K7">(Das et al., 2019)</a> and <a href="https://arxiv.org/pdf/1906.00300.pdf">(Lee et al., 2019)</a>).</p>
+<h4 id="the-challenge-of-complex-open-domain-questions">The Challenge of Complex&nbsp;Open-domain&nbsp;Questions</h4>
+<p>All systems that follow this retrieve-and-read paradigm are ill-equipped to handle complex questions. Let’s walk through an illustrative example of why that&nbsp;is&nbsp;together.</p>
+<p>We all forget the names of celebrities from time to time. Suppose, one day, you are curious: <em>&#8220;What is the Aquaman actor&#8217;s next movie?&#8221;</em> To answer this question, you would probably first search for <em>&#8220;Aquaman&#8221;</em> or <em>&#8220;the Aquaman actor&#8221;</em> to find out who he/she is. Hopefully after scrolling through a few top search results, you will realize the answer is <em>&#8220;Jason Momoa&#8221;</em>, and then move on to finding out what his next&nbsp;movie&nbsp;is.</p>
+<p>In this simple example, not all of the supporting evidence needed to answer the question can be readily retrieved from the question alone, i.e., there&#8217;s a knowledge discovery problem to solve.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">1</a></sup> This makes these questions difficult for retrieve-and-read open-domain <span class="caps"><span class="caps">QA</span></span> systems, because there is usually some evidence that lack a strong semantic overlap with the question itself. Below is a sketch of the relations between the real-world entities that illustrate the multiple steps of reasoning required to answer&nbsp;this&nbsp;question.</p>
+<figure>
+    <img src='/blog/answering-complex-open-domain-questions-at-scale/jason-momoa.png' width='90%'>
+<figcaption>
+Reasoning required to answer the question &#8220;What is the Aquaman actor&#8217;s next movie?&#8221;. In this case, &#8220;Jason Momoa&#8221; is the missing link that connects the question to its answer, but cannot be easily retrieved based on the question.
+</figcaption>
+</figure>
+
+<p>One solution to this problem might be to train neural retrieval and reading comprehension models jointly to update queries to find more evidence (Das et al. (2019) set out to do just that). While this might also work in our setting, pretraining the neural retriever with distant supervision to promote documents that contain the answer string will likely fail  because of the missing semantic overlap between the question and all necessary documents. End-to-end training will also be prohibitively expensive, because the search space for queries beyond the first step of reasoning is enormous. Even if one manages to train a neural system to accomplish this task, the resulting system is probably very computationally inefficient and not&nbsp;very&nbsp;explainable.</p>
+<p>So, can we build an open-domain <span class="caps"><span class="caps">QA</span></span> system that is capable of handling complex, multi-step reasoning questions, and doing so in an efficient and explainable manner? We present such a system in our new <span class="caps"><span class="caps">EMNLP</span></span>-<span class="caps"><span class="caps">IJCNLP</span></span> paper &#8212; <a href="https://nlp.stanford.edu/pubs/qi2019answering.pdf">Answering Complex Open-domain Questions Through Iterative Query Generation</a>.</p>
+<h3 id="answering-complex-open-domain-questions">Answering Complex&nbsp;Open-domain&nbsp;Questions</h3>
+<p>To introduce our system, we start with the overall strategy we use to address the problem of mutli-step reasoning in open-domain <span class="caps"><span class="caps">QA</span></span>, before moving on to the dataset we evaluate our system on and&nbsp;experimental&nbsp;results.</p>
+<h4 id="overall-strategy">Overall&nbsp;Strategy</h4>
+<p>As we have seen, retrieve-and-read systems can&#8217;t efficiently handle complex open-domain questions that require multiple steps of reasoning, because (a) these questions require multiple supporting facts to answer, and (b) it is usually difficult to find all supporting facts necessary with only the question. Ideally, we want a system to be able to iterate between &#8220;reading&#8221; the information retrieved and finding further supporting evidence if necessary, just like&nbsp;a&nbsp;human.</p>
+<p>That is exactly where the &#8220;iterative query generation&#8221; part of the paper title comes into play. We propose an open-domain <span class="caps"><span class="caps">QA</span></span> system that iteratively generates natural language queries based on the currently retrieved context and retrieves more information if needed before finally answering the question. This allows us to (a) retrieve multiple supporting facts with different queries, and (b) make use of documents retrieved in previous iterations to generate queries that wouldn’t have been possible from the question alone. Moreover, because our system generates natural language queries, we can still leverage off-the-shelf information retrieval systems for efficient retrieval. Furthermore, the steps our model follows are more explainable to a human, and allow for human intervention at any time to correct&nbsp;its&nbsp;course.</p>
+<p>Given the English Wikipedia as our source of textual knowledge, the full system operates as follows to answer the question <em>&#8220;Which novel by the author of &#8216;Armada&#8217; will be adapted as a feature film by Steven Spielberg?&#8221;</em>:</p>
+<figure>
+    <img src='/blog/answering-complex-open-domain-questions-at-scale/golden-retriever.png' width='90%'>
+<figcaption>
+The proposed model answers the question &#8220;Which novel by the author of &#8216;Armada&#8217; will be adapted as a feature film by Steven Spielberg?&#8221;. The system first iterates between reading and retrieving to gather supporting facts, then concatenates all the top retrieval results and feeds them into a restricted-context <span class="caps"><span class="caps">QA</span></span> model with the question to generate the final answer.
+</figcaption>
+</figure>
+
+<p>To answer this question, the model starts by generating a query to search Wikipedia to find information about the novel <em>Armada</em>. After &#8220;reading&#8221; the retrieved articles, it then attempts to search for <em>Ernest Cline</em> (the name of the author) for more information. Finally, when we have retrieved all the context necessary to answer the question, we concatenate the top retrieved articles from these retrieval steps, and feed them into a restricted-context <span class="caps"><span class="caps">QA</span></span> system to predict the&nbsp;final&nbsp;answer.</p>
+<p>The main challenge in building this model lies in training the query generators collaboratively to generate useful queries for retrieving all the necessary information. Our main contribution is an efficient method for training these query generators with very limited supervision about which documents to retrieve, yielding a competitive system for answering complex and open-domain questions. Our method is based on the crucial observation that, if the question can be answered with knowledge from the corpus, then there exists a progressive chain (or graph) of reasoning we can follow. In other words, we note that at any given time in the process of finding all supporting facts, there is some strong semantic overlap between <em>what we already know</em> (the question text, plus what we have found so far), and <em>what we are trying to find</em> (the remaining&nbsp;supporting&nbsp;facts).</p>
+<figure>
+    <img src='/blog/answering-complex-open-domain-questions-at-scale/needle-haystack.png' width='90%'>
+<figcaption>
+Finding the multiple supporting facts necessary to answer complex questions is much like finding multiple needles in a haystack. Instead of looking for them independently, we make use of the thread connecting these needles, which is the strong semantic overlap between what we know and what we are trying to find.
+</figcaption>
+</figure>
+
+<p>In the beginning, the question the system is asked is all the information <em>we already know</em>. We are <em>trying to find</em> any document part of reasoning chain needed to answer this question. Based on our observation, at least one of the gold documents<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">3</a></sup> would have strong semantic overlap with the question, and our goal is to find one such document to bootstrap our chain of reasoning. In our Armada example, this document would be the Wikipedia page of Armada the novel, where the overlap is the name <em>&#8220;Armada&#8221;</em>, and the fact that it’s a novel. To find this document with the help of a text-based information retrieval (<span class="caps"><span class="caps">IR</span></span>) system, we just need to identify this overlap and use it as the&nbsp;search&nbsp;query.</p>
+<p>After one step of retrieval, we have hopefully retrieved the <em>&#8220;Armada (novel)&#8221;</em> page from Wikipedia, among others. If, at training time, we also know that the <em>&#8220;Ernest Cline&#8221;</em> page is the next missing link in our chain of reasoning, we can apply the same technique. Now, the semantic overlap between <em>what we know</em> (the question, the <em>&#8220;Armada (novel)&#8221;</em> page, plus some other Wikipedia pages), and <em>what we are trying to find</em> (<em>&#8220;Ernest Cline&#8221;</em>) to generate the desired query, <em>&#8220;Ernest Cline&#8221;</em>. To find this semantic overlap, we simply employ  longest common substring or longest common subsequence algorithms between <em>the knowns</em> and <em>the wanted</em>.</p>
+<p>With the desired queries at each step of reasoning, we can then train a model to predict them from the retrieval context (question + already retrieved documents) at each step. We then use these query generators to complete the task of open-domain multi-step reasoning. We cast the query generation problem as one of restricted-context <span class="caps"><span class="caps">QA</span></span>, since the goal is to map the given question and (retrieved) context to some target derived from&nbsp;the&nbsp;context.</p>
+<p>We name the full system GoldEn (Gold Entity) Retriever, because the model-retrieved Wikipedia pages are mostly entities, and it&#8217;s a fun name for a retrieval-oriented model! Below are some example questions and the desired queries we train the query&nbsp;generators&nbsp;with:</p>
+<figure>
+    <table>
+        <tr>
+            <th>Question</th>
+            <th>Step 1 Query</th>
+            <th>Step 2 Query</th>
+        </tr>
+        <tr>
+            <td>What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?</td>
+            <td>Corliss Archer in the film Kiss and Tell</td>
+            <td>Shirley Temple</td>
+        </tr>
+        <tr>
+            <td>Are Giuseppe Verdi and Ambroise Thomas both Opera composers?</td>
+            <td>Giuseppe Verdi</td>
+            <td>Ambroise Thomas</td>
+        </tr>
+    </table>
+<figcaption>
+Example queries generated from our overlap-finding process to train the query generators in GoldEn Retriever. As you can see in the first example, the query at Step 2 reveals information we can only find through iterative retrieval, and is not contained in the original question.
+</figcaption>
+</figure>
+
+<p>Two practical notes should be mentioned here. First, it is not difficult to see that our observation that supervision signal for query generation can be derived from this semantic overlap generalizes to any number of supporting documents. It also requires no additional knowledge about how the question can or should be decomposed into sub-questions to answer (which previous work has studied, e.g., <a href="https://www.aclweb.org/anthology/N18-1059">(Talmor and Berant, 2018)</a> and <a href="https://www.aclweb.org/anthology/P19-1613">(Min et al., 2019)</a>). As long as the gold supporting documents are known at training time, we can use this technique to construct the chain of reasoning in an open-domain setting very efficiently at scale. Second, we further make no assumption about knowledge of the order in which documents should be retrieved. At any given step of open-domain reasoning, one can enumerate all of the documents that have yet to be retrieved, find its semantic overlap with the retrieval context, and launch searches with these generated queries. Documents that are in the immediate next step of reasoning will naturally be more discoverable, and we can choose the desired queries accordingly. In our Armada example, for instance, the overlap between the question and the Ernest Cline article is <em>&#8220;Steven Spielberg&#8221;</em>, <em>&#8220;film&#8221;</em>, etc, which lead us nowhere close to the <em>&#8220;Ernest Cline&#8221;</em> page, thus these are not chosen as the first-step query at&nbsp;training&nbsp;time.</p>
+<h4 id="dataset-hotpotqa">Dataset:&nbsp;HotpotQA</h4>
+<p>To test the performance of GoldEn Retriever, we evaluate it on <a href="https://hotpotqa.github.io/">HotpotQA</a>, a recent multi-hop question answering dataset presented at <span class="caps"><span class="caps">EMNLP</span></span> 2018 (by me <span class="amp">&amp;</span> collaborators). HotpotQA is a crowd-sourced <span class="caps"><span class="caps">QA</span></span> dataset on English Wikipedia articles, in which crowd-workers are presented the introductory paragraphs from two related Wikipedia articles and asked to generate questions that require reasoning with both paragraphs to answer. Our example question about the Armada novel is one such question from this dataset. To encourage the development of explainable <span class="caps"><span class="caps">QA</span></span> systems, we also asked crowd workers to highlight the sentences from these paragraphs that support their answer (we call these &#8220;supporting facts&#8221;), and ask <span class="caps"><span class="caps">QA</span></span> systems to predict them at&nbsp;test&nbsp;time.</p>
+<p>HotpotQA features two evaluation settings: a few-document distractor setting, and an open-domain fullwiki setting, which we focus on, where the system is only given the question and the entire Wikipedia to predict the answer from. HotpotQA also features a diverse range of reasoning strategies, including questions involving missing entities (our Armada example, where Ernest Cline is not in the question), intersection questions (<em>What satisfies property A and property B?</em>), and comparison questions, where two entities are compared by a common attribute, among others.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">2</a></sup></p>
+<p><span class="caps"><span class="caps">QA</span></span> systems on this dataset are evaluated on two aspects, answer accuracy and explainability. Answer accuracy is evaluated with answer exact matches (<span class="caps"><span class="caps">EM</span></span>) and unigram F1, and explainability is similarly evaluated with <span class="caps"><span class="caps">EM</span></span> and F1 by calculating the supporting fact overlap between predictions and annotations. These two aspects are unified by joint <span class="caps"><span class="caps">EM</span></span> and F1 metrics, which encourage <span class="caps"><span class="caps">QA</span></span> systems to work well&nbsp;on&nbsp;both.</p>
+<p>We make two simplifications to the GoldEn Retriever system on this dataset. First, we limit the number of retrieval steps to two to match the number of gold supporting documents for all questions in HotpotQA, and avoid having to learn an extra stopping criterion. Second, we assume that all queries are contiguous spans of text in the retrieval context, and use the document reader in DrQA, an extractive question answering system, to predict them during test time. To derive the desired search queries, we employ longest common substring and longest common subsequence algorithms to find the semantic overlap between the retrieval context and the desired documents, and choose the one that results in the <span class="caps"><span class="caps">IR</span></span> performance. For the <span class="caps"><span class="caps">IR</span></span> engine, we use <a href="https://elastic.co/">Elasticsearch</a> with a unigram-bigram index over the same Wikipedia dump HotpotQA was&nbsp;constructed&nbsp;on.</p>
+<p>For the final restricted-context <span class="caps"><span class="caps">QA</span></span> component, we use a modified BiDAF++ model in this work. For more technical details, please refer to <a href="https://nlp.stanford.edu/pubs/qi2019answering.pdf">our paper</a>.</p>
+<h4 id="results">Results</h4>
+<p>We evaluate the effectiveness of our GoldEn Retriever model on two aspects: its performance on retrieving the gold supporting documents, and it’s end-to-end performance in&nbsp;question&nbsp;answering.</p>
+<p>For retrieval performance, we compare GoldEn Retriever to a retrieve-and-read <span class="caps"><span class="caps">QA</span></span> system that just retrieves once with the question. We evaluate these approaches on the recall of the two gold paragraphs when a total of 10 paragraphs are retrieved by each system, because this metric reflects the ceiling performance of the entire <span class="caps"><span class="caps">QA</span></span> system if the restricted-context <span class="caps"><span class="caps">QA</span></span> component&nbsp;were&nbsp;perfect.</p>
+<figure>
+    <img src='/blog/answering-complex-open-domain-questions-at-scale/ir-recall.png' width='90%'>
+<figcaption>
+Retrieval performance of a retrieve-and-read system vs GoldEn Retriever on the gold paragraphs.
+</figcaption>
+</figure>
+
+<p>As can be seen from the figure, while both systems achieve decent recall on the paragraph that is usually more connected to the question (&#8220;Paragraph 1&#8221; in the figure), GoldEn Retriever obtains significant improvement through iterative retrieval with query generation on the other paragraph (~24% improvement). This means for about 24% of the questions, GoldEn Retriever is able to find both gold supporting documents while the retrieve-and-read system can&#8217;t. Further analysis shows that this is mainly from the improved recall for non-comparison questions (for which recall improved by about 25%), where the retrieval problem is&nbsp;less&nbsp;trivial.</p>
+<p>For end-to-end <span class="caps"><span class="caps">QA</span></span> performance, we compare GoldEn Retriever against various retrieve-and-read baselines on the development set, as well as systems submitted to the public leaderboard on the hidden&nbsp;test&nbsp;set. </p>
+<figure>
+    <img src='/blog/answering-complex-open-domain-questions-at-scale/fullwiki-joint-f1.png' width='90%'>
+<figcaption>
+Comparing GoldEn Retriever against various other systems on HotpotQA&#8217;s fullwiki setting.
+</figcaption>
+</figure>
+
+<p>We first contrast the performance of the <span class="caps"><span class="caps">QA</span></span> component when using the <span class="caps"><span class="caps">IR</span></span> system originally used in HotpotQA (as reflected by the released fullwiki dev set) and Elasticsearch in an retrieve-and-read setting. As can be seen by the leftmost two bars in the figure, a better search engine does improve end-to-end performance (from 22.75% F1 to 27.11%). However, this is still far from the best previously published system (34.92% F1 on the test set, which is empirically &plusmn;2% from the model’s dev set performance). With GoldEn Retriever, we improve this state of the art to 39.13% F1, which is significant especially if one considers that the previous state-of-the-art model uses <span class="caps"><span class="caps">BERT</span></span> and we don’t. Although this doesn’t match the contemporaneous work which achieves 47.6% F1 with another <span class="caps"><span class="caps">BERT</span></span>-based model, we see that if our query generators were able to faithfully reproduce the desired queries on the dev set, the performance of our system wouldn’t have been far off (&#8220;Oracle <span class="caps"><span class="caps">IR</span></span>&#8221;).</p>
+<p>For explainability, aside from reporting supporting fact metrics that are part of HotpotQA&#8217;s evaluation, we can also look at the search queries GoldEn Retriever generates on the dev set. As can be seen in the example below, the natural language queries generated by the model are very understandable. Furthermore, one can see where the model is making mistakes and correct it in the system&nbsp;if&nbsp;needed. </p>
+<figure>
+    <table>
+        <tr>
+            <th>Question</th>
+            <th>Step 1 Predicted</th>
+            <th>Step 2 Predicted</th>
+        </tr>
+        <tr>
+            <td>What video game character did the voice actress in the animated film Alpha and Omega voice?</td>
+            <td>voice actress in the animated film Alpha and Omega <span class="green-italic">(animated film Alpha and Omega voice)</span></td>
+            <td>Hayden Panettiere</td>
+        </tr>
+        <tr>
+            <td>Yau Ma Tei North is a district of a city with how many citizens?</td>
+            <td>Yau Ma Tei North</td>
+            <td>Yau Tsim Mong District of Hong Kong <span class="green-italic">(Hong Kong)</span></td>
+        </tr>
+    </table>
+<figcaption>
+Examples of queries generated by GoldEn Retriever on dev set examples. The model-generated queries are shown in black, and the heuristic-generated &#8220;desired queries&#8221; are shown in parenthesis in <span class="green-italic">green italic font</span> when they differ from the model-generated ones. In the first example, we see that the model actually generates a constituent whereas the heuristics largely ignores constituency structure; in the second example, however, the model generated a Step 2 query that is overly specific.
+</figcaption>
+</figure>
+
+<h3 id="resources">Resources</h3>
+<p>To help facilitate future research in open-domain multi-step reasoning, we make the following resources&nbsp;publicly&nbsp;available:</p>
+<ul>
+<li>The code to reproduce our results and our&nbsp;pretrained&nbsp;models</li>
+<li>Generated “desired” query files and modified HotpotQA training and development files generated from the heuristics to train GoldEn&nbsp;Retriever&nbsp;models</li>
+<li>Predicted search queries and dev/test set input for our restricted-context <span class="caps"><span class="caps">QA</span></span>&nbsp;model</li>
+</ul>
+<p>All of these can be found in our <a href="https://github.com/qipeng/golden-retriever">code repository on GitHub</a>.</p>
+<p><strong>Language Note:</strong> All datasets and most of the research mentioned in this post are collected/tested for the English language only, but our principle of semantic overlap is applicable to answering open-domain complex questions in other languages than English if suitably augmented with lemmatization for highly&nbsp;inflected&nbsp;languages.</p>
+<h4 id="acknowledgements">Acknowledgements</h4>
+<p>I would like to thank my collaborators Xiaowen (Vera) Lin, Leo Mehr, Zijian Wang, and Chris Manning for their help to make this work possible. I would also like to thank Nelson Liu and Andrey Kurenkov, who provided helpful editing suggestions for earlier drafts of this&nbsp;blog&nbsp;post.</p>
+<h4 id="footnotes">Footnotes</h4>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:2">
+<p>This is of course contingent on the fact that very few highly ranked articles on the Web mention Jason Momoa in his next movie in close proximity to stating that he’s the “Aquaman” star who played Aquaman in that movie. This is just an example to demonstrate that as simple as this question seems, it’s not too difficult to construct questions that require information from more than one document to answer.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Comparison questions make up about 25% of the HotpotQA dataset. For more details please see <a href="https://arxiv.org/pdf/1809.09600.pdf">our HotpotQA paper</a>.&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>By &#8220;gold documents&#8221; we mean the documents needed in the chain of reasoning to answer the question.&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+
+<div style="float:left"><span class="lighter">Newer Post</span>&nbsp;
+None
+</div>
+
+<div style="float:right"><span class="lighter">Older Post</span>&nbsp;
+<a href="/blog/pinyin-cheatsheet.html">Pinyin Cheatsheet for (Mostly American) English Speakers</a>
+</div>
+<br>
+<br>
+<i><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /> Unless otherwise mentioned, you are free to share my posts under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License (<span class="caps">CC</span> <span class="caps">BY</span>-<span class="caps">SA</span> 4.0)</a>.</i>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'pengqishomepage'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</article>            </section>
+                        <div class="footer">
+                <div id="sociallinks" class="clear" style="font-size:10px;"></div>
+                <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                    <ul>
+                        <li><a href="https://purecss.io/">Copyright &copy; Peng Qi, 2019</a></li>
+                        <li><a href="https://github.com/qipeng/">GitHub</a></li>
+                        <li><a href="https://twitter.com/qi2peng2">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+window.jQuery || document.write("<script src=\"/media/js/jquery.min.js\"><\/script>")
+</script>
+<script type="text/javascript" src="/media/js/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">$(function(){loadsociallinks();loadimg();});</script>
+
+<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+
+$(document).ready(function(){
+$('#bibtex-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var url = button.data('url') // Extract info from data-* attributes
+  var modal = $(this)
+  $.ajax({
+    'url': url,
+    'success': function(data) {
+      modal.find('#bibtex-content').text(data)
+    }
+  })
+});
+})
+
+</script>
+
+
+</div>
+
+  <!-- Javascript at the bottom for fast page loading -->
+
+  
+  <!--[if lt IE 7 ]>
+    <script src="/media/js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+  <![endif]--><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26770326-1', 'qipeng.me');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+  
+    <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos < currentScrollPos && prevScrollpos > 250) {
+    document.getElementById("header-menu").style.top = "-50px";
+  } else {
+    document.getElementById("header-menu").style.top = "0px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+window.onbeforeprint = function() {
+  document.getElementById("header-menu").style.top = "0px";
+}
+    </script>
+
+<div class="modal" id="bibtex-modal" tabindex="-1" role="dialog" aria-labelledby="bibtex-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bibtex-modal-title">BibTeX</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre id='bibtex-content'></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

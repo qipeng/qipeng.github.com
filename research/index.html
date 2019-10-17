@@ -16,8 +16,9 @@
   <meta name="author" content="Peng Qi">
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
@@ -57,7 +58,7 @@
 <body>
 
 <div class="header">
-    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed" id='header-menu'>
         <a class="pure-menu-heading" href="/index.html">Peng Qi</a>
 
                 <ul class="nav">
@@ -99,43 +100,48 @@
 
 <div class="postcontent">
 <p>Here&#8217;s a list of my publications.&nbsp;(*=Equal&nbsp;contribution)</p>
-<p>Year: <a href="#2018">2018</a> <a href="#2017">2017</a> <a href="#2016">2016</a> <a href="#2014">2014</a> <a href="#2013">2013</a> <a href="#2012">2012</a></p>
+<p>Year: <a href="#2019">2019</a> <a href="#2018">2018</a> <a href="#2017">2017</a> <a href="#2016">2016</a> <a href="#2014">2014</a> <a href="#2013">2013</a> <a href="#2012">2012</a></p>
+<h3><a name="2019"></a>2019</h3>
+
+<ul>
+<li><div class="pubtype conf">conf</div><strong>Peng Qi</strong>, Xiaowen Lin*, Leo Mehr*, Zijian Wang*, and <a href='https://nlp.stanford.edu/manning/' class='coauthor'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Answering Complex Open-Domain Questions Through Iterative Query Generation</strong></span>. In <em>2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing (<span class="caps"><span class="caps">EMNLP</span></span>-<span class="caps"><span class="caps">IJCNLP</span></span>)</em>,&nbsp;2019.</li>
+</ul>
 <h3><a name="2018"></a>2018</h3>
 
 <ul>
-<li><div class="pubtype conf">conf</div><a href='https://kimiyoung.github.io/'>Zhilin Yang</a>*, <strong>Peng Qi</strong>*, Saizheng Zhang*, Yoshua Bengio, William W. Cohen, Ruslan Salakutdinov, and <a href='https://nlp.stanford.edu/manning/'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering</strong></span>. In <em>Proceedings of the Conference on Empirical Methods in Natural Language Processing (<span class="caps"><span class="caps">EMNLP</span></span>)</em>, 2018.&ensp;<a href="https://arxiv.org/pdf/1809.09600.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="https://nlp.stanford.edu/pubs/yang2018hotpotqa.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="https://github.com/hotpotqa/hotpot">[Code]</a>&ensp;&ensp;&ensp;<a href="https://hotpotqa.github.io/">[Homepage]</a>&ensp;&ensp;&ensp;<a href="/research/slides_posters/hotpotqa.pdf">[Slides]</a>&ensp;&ensp;</li>
-<li><div class="pubtype conf">conf</div><a href='http://yuhao.im/'>Yuhao Zhang</a>*, <strong>Peng Qi</strong>*, and <a href='https://nlp.stanford.edu/manning/'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Graph Convolution over Pruned Dependency Trees Improves Relation Extraction</strong></span>. In <em>Proceedings of the Conference on Empirical Methods in Natural Language Processing (<span class="caps"><span class="caps">EMNLP</span></span>)</em>, 2018.&ensp;<a href="https://nlp.stanford.edu/pubs/zhang2018graph.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="https://nlp.stanford.edu/pubs/zhang2018graph.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="https://github.com/qipeng/gcn-over-pruned-trees">[Code]</a>&ensp;&ensp;&ensp;<a href="http://yuhao.im/files/zhang2018graph-poster.pdf">[Poster]</a>&ensp;&ensp;</li>
-<li><div class="pubtype sysdesc">sysdesc</div><strong>Peng Qi</strong>*, <a href='https://web.stanford.edu/~tdozat/'>Timothy Dozat</a>*, <a href='http://yuhao.im/'>Yuhao Zhang</a>*, and <a href='https://nlp.stanford.edu/manning/'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Universal Dependency Parsing from Scratch</strong></span>. In <em>Proceedings of the CoNLL 2018 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies</em>, 2018.&ensp;<a href="https://nlp.stanford.edu/pubs/qi2018universal.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="https://nlp.stanford.edu/pubs/qi2018universal.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="https://github.com/stanfordnlp/stanfordnlp">[Code]</a>&ensp;&ensp;&ensp;<a href="https://stanfordnlp.github.io/stanfordnlp/">[Homepage]</a>&ensp;&ensp;&ensp;<a href="/research/slides_posters/ud_from_scratch.pdf">[Poster]</a>&ensp;&ensp;</li>
-<li><div class="pubtype conf">conf</div><a href='https://nlp.stanford.edu/~urvashik/'>Urvashi Khandelwal</a>, <a href='https://hhexiy.github.io/'>He He</a>, <strong>Peng Qi</strong>, and <a href='https://web.stanford.edu/~jurafsky/'>Dan Jurafsky</a>.&ensp;<span class="lighter-color"><strong>Sharp Nearby, Fuzzy Far Away: How Neural Language Models Use Context</strong></span>. In <em>Proceedings of the 56<sup>th</sup> Annual Meeting of the Association for Computational Linguistics (<span class="caps"><span class="caps">ACL</span></span>)</em>, 2018.&ensp;<a href="https://arxiv.org/pdf/1805.04623.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/khandelwal2018lm.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="https://github.com/urvashik/lm-context-analysis">[Code]</a>&ensp;&ensp;</li>
+<li><div class="pubtype conf">conf</div><a href='https://kimiyoung.github.io/' class='coauthor'>Zhilin Yang</a>*, <strong>Peng Qi</strong>*, <a href='http://www-etud.iro.umontreal.ca/~zhangsa/' class='coauthor'>Saizheng Zhang</a>*, Yoshua Bengio, William W. Cohen, Ruslan Salakutdinov, and <a href='https://nlp.stanford.edu/manning/' class='coauthor'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering</strong></span>. In <em>Conference on Empirical Methods in Natural Language Processing (<span class="caps"><span class="caps">EMNLP</span></span>)</em>, 2018.&ensp;<a href="https://arxiv.org/pdf/1809.09600.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="https://nlp.stanford.edu/pubs/yang2018hotpotqa.bib">[BibTeX]</button>&ensp;&ensp;&ensp;<a href="https://github.com/hotpotqa/hotpot">[Code]</a>&ensp;&ensp;&ensp;<a href="https://hotpotqa.github.io/">[Homepage]</a>&ensp;&ensp;&ensp;<a href="/research/slides_posters/hotpotqa.pdf">[Slides]</a>&ensp;&ensp;</li>
+<li><div class="pubtype conf">conf</div><a href='http://yuhao.im/' class='coauthor'>Yuhao Zhang</a>*, <strong>Peng Qi</strong>*, and <a href='https://nlp.stanford.edu/manning/' class='coauthor'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Graph Convolution over Pruned Dependency Trees Improves Relation Extraction</strong></span>. In <em>Conference on Empirical Methods in Natural Language Processing (<span class="caps"><span class="caps">EMNLP</span></span>)</em>, 2018.&ensp;<a href="https://nlp.stanford.edu/pubs/zhang2018graph.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="https://nlp.stanford.edu/pubs/zhang2018graph.bib">[BibTeX]</button>&ensp;&ensp;&ensp;<a href="https://github.com/qipeng/gcn-over-pruned-trees">[Code]</a>&ensp;&ensp;&ensp;<a href="http://yuhao.im/files/zhang2018graph-poster.pdf">[Poster]</a>&ensp;&ensp;</li>
+<li><div class="pubtype sysdesc">sysdesc</div><strong>Peng Qi</strong>*, <a href='https://web.stanford.edu/~tdozat/' class='coauthor'>Timothy Dozat</a>*, <a href='http://yuhao.im/' class='coauthor'>Yuhao Zhang</a>*, and <a href='https://nlp.stanford.edu/manning/' class='coauthor'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Universal Dependency Parsing from Scratch</strong></span>. In <em>CoNLL 2018 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies</em>, 2018.&ensp;<a href="https://nlp.stanford.edu/pubs/qi2018universal.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="https://nlp.stanford.edu/pubs/qi2018universal.bib">[BibTeX]</button>&ensp;&ensp;&ensp;<a href="https://github.com/stanfordnlp/stanfordnlp">[Code]</a>&ensp;&ensp;&ensp;<a href="https://stanfordnlp.github.io/stanfordnlp/">[Homepage]</a>&ensp;&ensp;&ensp;<a href="/research/slides_posters/ud_from_scratch.pdf">[Poster]</a>&ensp;&ensp;</li>
+<li><div class="pubtype conf">conf</div><a href='https://nlp.stanford.edu/~urvashik/' class='coauthor'>Urvashi Khandelwal</a>, <a href='https://hhexiy.github.io/' class='coauthor'>He He</a>, <strong>Peng Qi</strong>, and <a href='https://web.stanford.edu/~jurafsky/' class='coauthor'>Dan Jurafsky</a>.&ensp;<span class="lighter-color"><strong>Sharp Nearby, Fuzzy Far Away: How Neural Language Models Use Context</strong></span>. In <em>56<sup>th</sup> Annual Meeting of the Association for Computational Linguistics (<span class="caps"><span class="caps">ACL</span></span>)</em>, 2018.&ensp;<a href="https://arxiv.org/pdf/1805.04623.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/khandelwal2018lm.bib">[BibTeX]</button>&ensp;&ensp;&ensp;<a href="https://github.com/urvashik/lm-context-analysis">[Code]</a>&ensp;&ensp;</li>
 </ul>
 <h3><a name="2017"></a>2017</h3>
 
 <ul>
-<li><div class="pubtype conf">conf</div><strong>Peng Qi</strong> and <a href='https://nlp.stanford.edu/manning/'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Arc-swift: A Novel Transition System for Dependency Parsing</strong></span>. In <em>Proceedings of the 55<sup>th</sup> Annual Meeting of the Association for Computational Linguistics (<span class="caps"><span class="caps">ACL</span></span>)</em>, 2017.&ensp;<a href="https://nlp.stanford.edu/pubs/qi2017arcswift.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/qi2017arcswift.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="https://github.com/qipeng/arc-swift">[Code]</a>&ensp;&ensp;&ensp;<a href="/research/slides_posters/arcswift.pdf">[Slides]</a>&ensp;&ensp;</li>
-<li><div class="pubtype sysdesc">sysdesc</div><a href='https://web.stanford.edu/~tdozat/'>Timothy Dozat</a>, <strong>Peng Qi</strong>, and <a href='https://nlp.stanford.edu/manning/'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Stanford&#8217;s Graph-based Neural Dependency Parser at the CoNLL 2017 Shared Task</strong></span>. In <em>Proceedings of the CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies</em>, 2017.&ensp;<span class="award-winner">1st place</span>.&ensp;<a href="http://universaldependencies.org/conll17/proceedings/pdf/K17-3002.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/K17-3002.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="https://github.com/tdozat/UnstableParser">[Code]</a>&ensp;&ensp;</li>
-<li><div class="pubtype sysdesc">sysdesc</div><a href='http://arun.chagantys.org/'>Arun Chaganty</a>*, Ashwin Paranjape*, Jason Bolton*, Matthew Lamm*, Jinhao Lei*, Abigail See*, Kevin Clark, <a href='http://yuhao.im/'>Yuhao Zhang</a>, <strong>Peng Qi</strong>, and <a href='https://nlp.stanford.edu/manning/'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Stanford at <span class="caps"><span class="caps">TAC</span></span> <span class="caps"><span class="caps">KBP</span></span> 2017: Building a Trilingual Relational Knowledge Graph</strong></span>. In <em>Text Analysis Conference (<span class="caps"><span class="caps">TAC</span></span>) Proceedings</em>, 2017.&ensp;<a href="https://tac.nist.gov/publications/2017/participant.papers/TAC2017.STANFORD.proceedings.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/chaganty2017stanford.bib">[BibTeX]</a>&ensp;&ensp;</li>
+<li><div class="pubtype conf">conf</div><strong>Peng Qi</strong> and <a href='https://nlp.stanford.edu/manning/' class='coauthor'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Arc-swift: A Novel Transition System for Dependency Parsing</strong></span>. In <em>55<sup>th</sup> Annual Meeting of the Association for Computational Linguistics (<span class="caps"><span class="caps">ACL</span></span>)</em>, 2017.&ensp;<a href="https://nlp.stanford.edu/pubs/qi2017arcswift.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/qi2017arcswift.bib">[BibTeX]</button>&ensp;&ensp;&ensp;<a href="https://github.com/qipeng/arc-swift">[Code]</a>&ensp;&ensp;&ensp;<a href="/research/slides_posters/arcswift.pdf">[Slides]</a>&ensp;&ensp;</li>
+<li><div class="pubtype sysdesc">sysdesc</div><a href='https://web.stanford.edu/~tdozat/' class='coauthor'>Timothy Dozat</a>, <strong>Peng Qi</strong>, and <a href='https://nlp.stanford.edu/manning/' class='coauthor'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Stanford&#8217;s Graph-based Neural Dependency Parser at the CoNLL 2017 Shared Task</strong></span>. In <em>CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies</em>, 2017.&ensp;<span class="award-winner">1st place</span>.&ensp;<a href="http://universaldependencies.org/conll17/proceedings/pdf/K17-3002.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/K17-3002.bib">[BibTeX]</button>&ensp;&ensp;&ensp;<a href="https://github.com/tdozat/UnstableParser">[Code]</a>&ensp;&ensp;</li>
+<li><div class="pubtype sysdesc">sysdesc</div><a href='http://arun.chagantys.org/' class='coauthor'>Arun Chaganty</a>*, Ashwin Paranjape*, Jason Bolton*, Matthew Lamm*, Jinhao Lei*, Abigail See*, Kevin Clark, <a href='http://yuhao.im/' class='coauthor'>Yuhao Zhang</a>, <strong>Peng Qi</strong>, and <a href='https://nlp.stanford.edu/manning/' class='coauthor'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Stanford at <span class="caps"><span class="caps">TAC</span></span> <span class="caps"><span class="caps">KBP</span></span> 2017: Building a Trilingual Relational Knowledge Graph</strong></span>. In <em>Text Analysis Conference (<span class="caps"><span class="caps">TAC</span></span>) Proceedings</em>, 2017.&ensp;<a href="https://tac.nist.gov/publications/2017/participant.papers/TAC2017.STANFORD.proceedings.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/chaganty2017stanford.bib">[BibTeX]</button>&ensp;&ensp;</li>
 </ul>
 <h3><a name="2016"></a>2016</h3>
 
 <ul>
-<li><div class="pubtype sysdesc">sysdesc</div><a href='http://yuhao.im/'>Yuhao Zhang</a>*, <a href='http://arun.chagantys.org/'>Arun Chaganty</a>*, Ashwin Paranjape*, Danqi Chen*, Jason Bolton*, <strong>Peng Qi</strong>, and <a href='https://nlp.stanford.edu/manning/'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Stanford at <span class="caps"><span class="caps">TAC</span></span> <span class="caps"><span class="caps">KBP</span></span> 2016: Sealing Pipeline Leaks and Understanding Chinese</strong></span>. In <em>Text Analysis Conference (<span class="caps"><span class="caps">TAC</span></span>) Proceedings</em>, 2016.&ensp;<a href="https://nlp.stanford.edu/pubs/zhang2016stanford.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/zhang2016stanford.bib">[BibTeX]</a>&ensp;&ensp;</li>
-<li><div class="pubtype journal">journal</div><a href='http://ai.stanford.edu/~amaas/'>Andrew L. Maas</a>, <strong>Peng Qi</strong>, Ziang Xie, Awni Y. Hannun, Christopher T. Lengerich, <a href='https://web.stanford.edu/~jurafsky/'>Dan Jurafsky</a>, and Andrew Y. Ng.&ensp;<span class="lighter-color"><strong>Building <span class="caps"><span class="caps">DNN</span></span> Acoustic Models for Large Vocabulary Speech Recognition</strong></span>. <em>Computer Speech <span class="amp">&amp;</span> Language</em>, 2016.&ensp;<a href="http://arxiv.org/abs/1406.7806">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/maas16DNNAM.bib">[BibTeX]</a>&ensp;&ensp;</li>
+<li><div class="pubtype sysdesc">sysdesc</div><a href='http://yuhao.im/' class='coauthor'>Yuhao Zhang</a>*, <a href='http://arun.chagantys.org/' class='coauthor'>Arun Chaganty</a>*, Ashwin Paranjape*, Danqi Chen*, Jason Bolton*, <strong>Peng Qi</strong>, and <a href='https://nlp.stanford.edu/manning/' class='coauthor'>Christopher D. Manning</a>.&ensp;<span class="lighter-color"><strong>Stanford at <span class="caps"><span class="caps">TAC</span></span> <span class="caps"><span class="caps">KBP</span></span> 2016: Sealing Pipeline Leaks and Understanding Chinese</strong></span>. In <em>Text Analysis Conference (<span class="caps"><span class="caps">TAC</span></span>) Proceedings</em>, 2016.&ensp;<a href="https://nlp.stanford.edu/pubs/zhang2016stanford.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/zhang2016stanford.bib">[BibTeX]</button>&ensp;&ensp;</li>
+<li><div class="pubtype journal">journal</div><a href='http://ai.stanford.edu/~amaas/' class='coauthor'>Andrew L. Maas</a>, <strong>Peng Qi</strong>, Ziang Xie, Awni Y. Hannun, Christopher T. Lengerich, <a href='https://web.stanford.edu/~jurafsky/' class='coauthor'>Dan Jurafsky</a>, and Andrew Y. Ng.&ensp;<span class="lighter-color"><strong>Building <span class="caps"><span class="caps">DNN</span></span> Acoustic Models for Large Vocabulary Speech Recognition</strong></span>. <em>Computer Speech <span class="amp">&amp;</span> Language</em>, 2016.&ensp;<a href="http://arxiv.org/abs/1406.7806">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/maas16DNNAM.bib">[BibTeX]</button>&ensp;&ensp;</li>
 </ul>
 <h3><a name="2014"></a>2014</h3>
 
 <ul>
-<li><div class="pubtype journal">journal</div><a href='http://www.xlhu.cn/'>Xiaolin Hu</a>, Jianwei Zhang, <strong>Peng Qi</strong>, and Bo Zhang.&ensp;<span class="lighter-color"><strong>Modeling Response Properties of V2 Neurons with a Modified K-Means</strong></span>. <em>Neurocomputing</em>, 2014.&ensp;<a href="/research/publications/HuZhangQiZhang14.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/hu14KMeans.bib">[BibTeX]</a>&ensp;&ensp;</li>
+<li><div class="pubtype journal">journal</div><a href='http://www.xlhu.cn/' class='coauthor'>Xiaolin Hu</a>, Jianwei Zhang, <strong>Peng Qi</strong>, and Bo Zhang.&ensp;<span class="lighter-color"><strong>Modeling Response Properties of V2 Neurons with a Modified K-Means</strong></span>. <em>Neurocomputing</em>, 2014.&ensp;<a href="/research/publications/HuZhangQiZhang14.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/hu14KMeans.bib">[BibTeX]</button>&ensp;&ensp;</li>
 </ul>
 <h3><a name="2013"></a>2013</h3>
 
 <ul>
-<li><div class="pubtype journal">journal</div><strong>Peng Qi</strong> and <a href='http://www.xlhu.cn/'>Xiaolin Hu</a>.&ensp;<span class="lighter-color"><strong>Learning Nonlinear Regularities in Natural Images by Modeling the Outer Product of Image Intensities</strong></span>. <em>Neural Computation</em>, 2013.&ensp;<a href="/research/publications/QiHu13.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/qi13OuterProd.bib">[BibTeX]</a>&ensp;&ensp;&ensp;<a href="/research/publications/QiHu13_outer_prod.zip">[Code]</a>&ensp;&ensp;</li>
-<li><div class="pubtype conf">conf</div><strong>Peng Qi</strong>, Shuochen Su, and <a href='http://www.xlhu.cn/'>Xiaolin Hu</a>.&ensp;<span class="lighter-color"><strong>Modeling Outer Product of Features for Image Classification</strong></span>. In <em>Proceedings of <span class="caps"><span class="caps">ICACI</span></span></em>, 2013.&ensp;<a href="/research/publications/QiSuHu13.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/qi13OuterProdSPM.bib">[BibTeX]</a>&ensp;&ensp;</li>
+<li><div class="pubtype journal">journal</div><strong>Peng Qi</strong> and <a href='http://www.xlhu.cn/' class='coauthor'>Xiaolin Hu</a>.&ensp;<span class="lighter-color"><strong>Learning Nonlinear Regularities in Natural Images by Modeling the Outer Product of Image Intensities</strong></span>. <em>Neural Computation</em>, 2013.&ensp;<a href="/research/publications/QiHu13.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/qi13OuterProd.bib">[BibTeX]</button>&ensp;&ensp;&ensp;<a href="/research/publications/QiHu13_outer_prod.zip">[Code]</a>&ensp;&ensp;</li>
+<li><div class="pubtype conf">conf</div><strong>Peng Qi</strong>, Shuochen Su, and <a href='http://www.xlhu.cn/' class='coauthor'>Xiaolin Hu</a>.&ensp;<span class="lighter-color"><strong>Modeling Outer Product of Features for Image Classification</strong></span>. In <em><span class="caps"><span class="caps">ICACI</span></span></em>, 2013.&ensp;<a href="/research/publications/QiSuHu13.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/qi13OuterProdSPM.bib">[BibTeX]</button>&ensp;&ensp;</li>
 </ul>
 <h3><a name="2012"></a>2012</h3>
 
 <ul>
-<li><div class="pubtype conf">conf</div><a href='http://www.xlhu.cn/'>Xiaolin Hu</a>, <strong>Peng Qi</strong>, and Bo Zhang.&ensp;<span class="lighter-color"><strong>Hierarchical K-Means Algorithm for Modeling Visual Area V2 Neurons</strong></span>. In <em>Neural Information Processing</em>, pp. 373&ndash;381, 2012.&ensp;<span class="award-winner">Best Paper Award</span>.&ensp;<a href="/research/publications/HuQiZhang12.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<a href="/research/publications/hu12KMeans.bib">[BibTeX]</a>&ensp;&ensp;</li>
+<li><div class="pubtype conf">conf</div><a href='http://www.xlhu.cn/' class='coauthor'>Xiaolin Hu</a>, <strong>Peng Qi</strong>, and Bo Zhang.&ensp;<span class="lighter-color"><strong>Hierarchical K-Means Algorithm for Modeling Visual Area V2 Neurons</strong></span>. In <em>Neural Information Processing</em>, pp. 373&ndash;381, 2012.&ensp;<span class="award-winner">Best Paper Award</span>.&ensp;<a href="/research/publications/HuQiZhang12.pdf">[<span class="caps"><span class="caps">PDF</span></span>]</a>&ensp;&ensp;&ensp;<button type="button" style="color:rgb(111, 129, 183);" data-toggle="modal" data-target="#bibtex-modal", data-url="/research/publications/hu12KMeans.bib">[BibTeX]</button>&ensp;&ensp;</li>
 </ul></div>
 
 
@@ -144,9 +150,10 @@
                 <div id="sociallinks" class="clear" style="font-size:10px;"></div>
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
                     <ul>
-                        <li><a href="http://purecss.io/">Copyright &copy; Peng Qi, 2018</a></li>
-                        <li><a href="http://github.com/qipeng/">GitHub</a></li>
-                        <li><a href="http://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
+                        <li><a href="https://purecss.io/">Copyright &copy; Peng Qi, 2019</a></li>
+                        <li><a href="https://github.com/qipeng/">GitHub</a></li>
+                        <li><a href="https://twitter.com/qi2peng2">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -154,8 +161,10 @@
     </div>
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
 window.jQuery || document.write("<script src=\"/media/js/jquery.min.js\"><\/script>")
 </script>
@@ -171,6 +180,21 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
         e.preventDefault();
     }, 'a[href="#"]');
 });
+
+$(document).ready(function(){
+$('#bibtex-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var url = button.data('url') // Extract info from data-* attributes
+  var modal = $(this)
+  $.ajax({
+    'url': url,
+    'success': function(data) {
+      modal.find('#bibtex-content').text(data)
+    }
+  })
+});
+})
+
 </script>
 
 
@@ -193,5 +217,37 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('send', 'pageview');
 </script>
   
+    <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos < currentScrollPos && prevScrollpos > 250) {
+    document.getElementById("header-menu").style.top = "-50px";
+  } else {
+    document.getElementById("header-menu").style.top = "0px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+window.onbeforeprint = function() {
+  document.getElementById("header-menu").style.top = "0px";
+}
+    </script>
+
+<div class="modal" id="bibtex-modal" tabindex="-1" role="dialog" aria-labelledby="bibtex-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bibtex-modal-title">BibTeX</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre id='bibtex-content'></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

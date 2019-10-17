@@ -17,8 +17,9 @@
   <meta name="author" content="Peng Qi">
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="/media/css/syntax.css" type="text/css">
   <link rel="stylesheet" href="/media/js/fancybox/jquery.fancybox.css" type="text/css">
   <link rel="stylesheet" href="/media/css/main-grid.css" type="text/css">
@@ -58,7 +59,7 @@
 <body>
 
 <div class="header">
-    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed" id='header-menu'>
         <a class="pure-menu-heading" href="/index.html">Peng Qi</a>
 
                 <ul class="nav">
@@ -114,6 +115,10 @@
 </li>
 <li>
     <a class="tag pure-button" href="/blog/tags/note.html">&nbsp;note
+    </a>
+</li>
+<li>
+    <a class="tag pure-button" href="/blog/tags/archived.html">&nbsp;archived
     </a>
 </li>
 </ul>
@@ -210,9 +215,10 @@ So here are the notes from&nbsp;Week&nbsp;7-10.
                 <div id="sociallinks" class="clear" style="font-size:10px;"></div>
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
                     <ul>
-                        <li><a href="http://purecss.io/">Copyright &copy; Peng Qi, 2018</a></li>
-                        <li><a href="http://github.com/qipeng/">GitHub</a></li>
-                        <li><a href="http://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
+                        <li><a href="https://purecss.io/">Copyright &copy; Peng Qi, 2019</a></li>
+                        <li><a href="https://github.com/qipeng/">GitHub</a></li>
+                        <li><a href="https://twitter.com/qi2peng2">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/pub/peng-qi/90/800/395/">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -220,8 +226,10 @@ So here are the notes from&nbsp;Week&nbsp;7-10.
     </div>
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
 window.jQuery || document.write("<script src=\"/media/js/jquery.min.js\"><\/script>")
 </script>
@@ -237,6 +245,21 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
         e.preventDefault();
     }, 'a[href="#"]');
 });
+
+$(document).ready(function(){
+$('#bibtex-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var url = button.data('url') // Extract info from data-* attributes
+  var modal = $(this)
+  $.ajax({
+    'url': url,
+    'success': function(data) {
+      modal.find('#bibtex-content').text(data)
+    }
+  })
+});
+})
+
 </script>
 
 
@@ -259,5 +282,37 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
   ga('send', 'pageview');
 </script>
   
+    <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos < currentScrollPos && prevScrollpos > 250) {
+    document.getElementById("header-menu").style.top = "-50px";
+  } else {
+    document.getElementById("header-menu").style.top = "0px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+window.onbeforeprint = function() {
+  document.getElementById("header-menu").style.top = "0px";
+}
+    </script>
+
+<div class="modal" id="bibtex-modal" tabindex="-1" role="dialog" aria-labelledby="bibtex-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bibtex-modal-title">BibTeX</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre id='bibtex-content'></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2019-07-26T08:55:05Z</updated>
+    <updated>2019-10-17T06:32:55Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -24,6 +24,9 @@
                         <category   scheme="/blog/tags"
                         term="html_css"
                         label="Html_css" />
+                        <category   scheme="/blog/tags"
+                        term="archived"
+                        label="Archived" />
             
             <content type="html">
                                             </content>
@@ -67,6 +70,9 @@
                         <category   scheme="/blog/tags"
                         term="html_css"
                         label="Html_css" />
+                        <category   scheme="/blog/tags"
+                        term="archived"
+                        label="Archived" />
             
             <content type="html">
                                             </content>
@@ -87,6 +93,9 @@
                         <category   scheme="/blog/tags"
                         term="programming"
                         label="Programming" />
+                        <category   scheme="/blog/tags"
+                        term="archived"
+                        label="Archived" />
             
             <content type="html">
                                             </content>
@@ -104,6 +113,9 @@
                         <category   scheme="/blog/tags"
                         term="remote"
                         label="Remote" />
+                        <category   scheme="/blog/tags"
+                        term="archived"
+                        label="Archived" />
             
             <content type="html">
                                             </content>
@@ -124,6 +136,9 @@
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
+                        <category   scheme="/blog/tags"
+                        term="archived"
+                        label="Archived" />
             
             <content type="html">
                                             </content>
@@ -144,6 +159,9 @@
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
+                        <category   scheme="/blog/tags"
+                        term="archived"
+                        label="Archived" />
             
             <content type="html">
                                             </content>
@@ -164,6 +182,9 @@
                         <category   scheme="/blog/tags"
                         term="note"
                         label="Note" />
+                        <category   scheme="/blog/tags"
+                        term="archived"
+                        label="Archived" />
             
             <content type="html">
                                             </content>
@@ -187,6 +208,9 @@
                         <category   scheme="/blog/tags"
                         term="computer-vision"
                         label="Computer-Vision" />
+                        <category   scheme="/blog/tags"
+                        term="archived"
+                        label="Archived" />
             
             <content type="html">
                                             </content>
@@ -258,6 +282,20 @@
                         <category   scheme="/blog/tags"
                         term="Languages"
                         label="Languages" />
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Answering Complex Open-domain Questions at Scale</title>
+            <author><name>Peng Qi</name></author>
+            <link href="/blog/answering-complex-open-domain-questions-at-scale.html"/>
+            <updated>2019-10-16T14:00:00Z</updated>
+            <published>2019-10-16T14:00:00Z</published>
+            <id>/blog/answering-complex-open-domain-questions-at-scale.html</id>
+                        <category   scheme="/blog/tags"
+                        term="QuestionAnswering"
+                        label="Questionanswering" />
             
             <content type="html">
                                             </content>
