@@ -499,6 +499,9 @@ sup:target::before {
 .pubtype.sysdesc {
     background: #b2df8a;
 }
+.pubtype.preprint {
+    background: #dd1c77;
+}
 
 @media (min-height: 725px) {
 .content-wrapper {
