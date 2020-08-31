@@ -308,7 +308,7 @@ code {
 }
 .modal pre{
   padding: 5px;
-  font-size: 12px;
+  font-size: 14px;
   background: #eee;
 }
 
@@ -523,7 +523,7 @@ sup:target::before {
     padding: 5px 20px !important;
 }
 .splash { top: 20%; }
-.nav {padding-top: 10px;}
+.nav {padding-top: 8px;}
 }
 
 @media print{
