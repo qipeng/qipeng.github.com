@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://qipeng.me/</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/index.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/software/</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/better-homeworks.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/teaching-tech-without-dreary-deck.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/CV_Peng_Qi.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research_statement.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/teaching_statement.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/index.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/slides_posters/golden-retriever-poster.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/slides_posters/hotpotqa.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/slides_posters/ud_from_scratch.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/slides_posters/arcswift.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/media/files/CS145MidtermReview_RelationalAlgebra.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/media/files/CS_145_Final_Review_DatabaseSystems.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/publications/HuZhangQiZhang14.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/publications/QiHu13.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/publications/QiSuHu13.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/research/publications/HuQiZhang12.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/answering-complex-open-domain-questions-at-scale.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/pinyin-cheatsheet.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/xcodebuild-mavericks.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/compiling-qslim-21.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/software/mnlr.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/software/convolutional-rbm.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/software/bugfix-qslim-21.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/TeachingInCS.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/UIUX.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/media/files/CS224d_midterm_review.pdf</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/QuestionAnswering.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/Languages.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/OSX.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/macOS.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/Xcode.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/Mavericks.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/xcodebuild.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/lecture-notes-201212.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/qslim.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/compile.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/windows.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/visual_studio.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tutorial-2.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tutorial-1.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/software/tsinghua-classroom.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/software/undergrad-proj.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/lecture.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/note.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/deep-learning.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/computer-vision.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/archived.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/coursera-ml-note-3.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/tutorial.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/hyde.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/html_css.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/matlab-parallel.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/software/tsinghua-classroom/</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/coursera.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/machine_learning.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/coursera-ml-note-2.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/coursera-ml-note-1.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/putty-bat.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/putty.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/remote.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/Matlab.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/parallel.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://qipeng.me/blog/tags/programming.html</loc>
+  <lastmod>2020-04-05T00:42:24+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>
