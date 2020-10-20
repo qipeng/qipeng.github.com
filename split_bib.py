@@ -1,6 +1,6 @@
 import os
 
-os.makedirs('assets/bibliography', exists_ok=True)
+os.makedirs('assets/bibliography', exist_ok=True)
 with open('_bibliography/papers.bib') as f:
     lines = []
     for line in f:
