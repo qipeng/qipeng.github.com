@@ -1,7 +1,5 @@
 # Run this script to deploy the app to Github Pages
 
-python split_bib.py
-
 # Parse cmd arguments
 
 SRC_BRANCH="master"
@@ -78,6 +76,7 @@ fi
 git checkout -b $DEPLOY_BRANCH
 
 # Build site
+python split_bib.py
 bundle exec jekyll build
 
 # Delete and move files
