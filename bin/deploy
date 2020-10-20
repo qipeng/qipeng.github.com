@@ -83,6 +83,7 @@ bundle exec jekyll build
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' ! -name 'sitemap.xml' ! -name 'favicon.ico' -exec rm -rf {} \;
 mv _site/* .
 rm -R _site/
+rm split_bib.py
 
 # Push to DEPLOY_BRANCH
 git add -fA
