@@ -22,7 +22,7 @@ head: >
 
 <figure>
 <center>
-<img src="{{ '/blog/asking-informative-questions/louis-renaudineau-z61wzvMqM0U-unsplash.jpg' | relative_url }}" width="90%">
+<img src="{{ '/blog/learning-to-ask/louis-renaudineau-z61wzvMqM0U-unsplash.jpg' | relative_url }}" width="90%">
 </center>
 </figure>
 
@@ -98,7 +98,7 @@ To provide our question-asking system (the student) the informativeness and spec
 
 <figure>
 <center>
-<img src="{{ '/blog/asking-informative-questions/quac-example.png' | relative_url }}" width="55%">
+<img src="{{ '/blog/learning-to-ask/quac-example.png' | relative_url }}" width="55%">
 </center>
 <figcaption>An example conversation between human annotators from the QuAC dataset. Figure taken from the [QuAC paper](https://arxiv.org/pdf/1808.07036.pdf).</figcaption>
 </figure>
