@@ -1,7 +1,7 @@
 ---
-title: Teaching Conversational NLP Systems to Ask Informative and Specific Questions 
+title: Teaching Conversational NLP Systems to Ask Informative and Specific Questions
 description: >
-    Asking good questions in a conversation requires understanding of what the other speaker might know. Can we train NLP systems to do this?
+    Asking good inquisitive questions in a conversation requires inferring about others' knowledge. Can we train NLP systems to do this?
 tags:
     - Conversations
     - QuestionAnswering
@@ -28,7 +28,7 @@ head: >
 
 "Why is the sky blue?"
 
-Asking questions is an essential part of our process to learn about the world from those with more experience roaming the earth, like our parents, mentors, senior colleagues, etc. 
+Asking questions is an essential part of our process to learn about the world from those with more experience roaming the earth, like our parents, mentors, senior colleagues, etc.
 Asking the right questions in a conversation could mean the difference between a focused, in-depth, and meaningful exchange of information and an inefficient, shallow, and pointless discussion.
 
 How do we ask questions in a conversation to gather information effectively on a topic that we have limited knowledge?
@@ -50,7 +50,7 @@ On the other hand, sharp shifts in topic like *"Where do fava beans originate fr
 | Question | Answer | Informative? | Specific? |
 |:---------|:-------|:-------------|:----------|
 | Do they sometimes contain fava beans? | Yes |  <span style="color:red">No</span> | <span style="color:green">Yes</span> |
-| Does hummus contain ingredients other than chickpeas? | Yes, they are made from cooked, mashed chickpeas blended with tahini, lemon juice, and garlic.[^2] | <span style="color:green">Yes</span> | <span style="color:red"> No</span> (off-topic) | 
+| Does hummus contain ingredients other than chickpeas? | Yes, they are made from cooked, mashed chickpeas blended with tahini, lemon juice, and garlic.[^2] | <span style="color:green">Yes</span> | <span style="color:red"> No</span> (off-topic) |
 | What is interesting about the origin of fava beans? | They are of uncertain origin.[^3] | <span style="color:green">Yes</span> | <span style="color:orange">Somewhat</span> (too generic) |
 | How are they cooked? | They are deep-fried. | <span style="color:green">Yes</span> | <span style="color:green">Yes</span> |
 
@@ -74,13 +74,13 @@ Given a shared topic the student has limited knowledge of (e.g., falafels), the 
 
 This setting has some unique challenges that make it interesting:
 
-* *The correspondence between the input and output is very weak.* 
-Specifically, the input (the conversation history and the shared topic) often bears very little resemblance to the desired output (the question), because, by definition, our goal is to gather new information that is not yet known. 
+* *The correspondence between the input and output is very weak.*
+Specifically, the input (the conversation history and the shared topic) often bears very little resemblance to the desired output (the question), because, by definition, our goal is to gather new information that is not yet known.
 In contrast, NLP applications that have seen more success in recent years typically enjoy a much stronger input-output association (e.g., machine translation, text summarization, and generating questions from answer statements).
-* *The knowledge desired cannot be easily categorized exhaustively.* 
+* *The knowledge desired cannot be easily categorized exhaustively.*
 Compared to more closed-domain goal-driven conversations, the open-domain nature of our setting makes it much more difficult to rely on tabulating a few things to inquire about given each topic.
 As a result, the student must reason about what the teacher could potentially answer on the shared topic.
-* *There is typically more than one right question to ask, but the data cannot exhaust all valid options.* 
+* *There is typically more than one right question to ask, but the data cannot exhaust all valid options.*
 At any point in a curiosity-driven dialogue, there are usually many angles to ask questions that would reveal previously unknown information to the student.
 However, since dialogue datasets are collected with bounded human effort, it is impractical, if not impossible, to provide all potential questions that could have been asked naturally at any point in a conversation.
 
@@ -100,7 +100,7 @@ To provide our question-asking system (the student) the informativeness and spec
 <center>
 <img src="{{ '/blog/learning-to-ask/quac-example.png' | relative_url }}" width="55%">
 </center>
-<figcaption>An example conversation between human annotators from the QuAC dataset. Figure taken from the [QuAC paper](https://arxiv.org/pdf/1808.07036.pdf).</figcaption>
+<figcaption>An example conversation between human annotators from the QuAC dataset. Figure taken from the <a href="https://arxiv.org/pdf/1808.07036.pdf">QuAC paper</a>.</figcaption>
 </figure>
 
 
@@ -128,7 +128,7 @@ To give you a more concrete idea of how these systems behave, here is an example
 | Candidate 1.3: What was the first indication of Spandau Ballet’s success at the international level? |
 | **Answer 1**<br> The follow-up album, Parade, was released in June 1984, and its singles were again big successes in the charts in Europe, Oceania and Canada.|
 | **Question 2** |
-| Candidate 2.1: What was the most popular single from the album? | 
+| Candidate 2.1: What was the most popular single from the album? |
 | Candidate 2.2: What were the notable songs from the album Parade? |
 | Candidate 2.3: What was the name of the album? |
 | **Answer 2**<br> The album’s opening song, “Only When You Leave”. |
@@ -139,7 +139,7 @@ To give you a more concrete idea of how these systems behave, here is an example
 | **Answer 3**<br> Became the band’s last American hit. |
 | **Question 4** |
 | Candidate 4.1: Are there any other interesting aspects about this article? |
-| Candidate 4.2: What was the last album that they released? | 
+| Candidate 4.2: What was the last album that they released? |
 | Candidate 4.3: What other songs were on the album? |
 
 
