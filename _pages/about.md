@@ -8,17 +8,17 @@ profile:
   align: right
   image: portrait.jpeg
   address: >
-    (Photo credit: Xue Chen)
+ 
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-<h3 style='font-family:KaiTi, "楷体", KaiTi_GB2312, "楷体_GB2312", STKaiTi, "华文楷体", sans-serif;'>齐鹏</h3>
+<h3 style='font-family: "Ma Shan Zheng", KaiTi, "楷体", KaiTi_GB2312, "楷体_GB2312", STKaiTi, "华文楷体", sans-serif;'>齐鹏</h3>
 <span style="font-size:12px;text-transform:none;font-weight:400;line-height:12px">(<a href="https://en.wikipedia.org/wiki/Pinyin"><span style="font-variant:small-caps">pinyin:</span></a> /qí péng/; <a href="https://en.wikipedia.org/wiki/Help:IPA/Mandarin"><span style="font-variant:small-caps">ipa</span></a>: /tɕʰǐ pʰə̌ŋ/)</span>
 
-**I recently graduated from Stanford!**
+**I recently graduated from Stanford!** I have joined JD AI as a research scientist to continue working on NLP/ML-related research. If you are interested in exploring opportunities with us (internship or full-time), don't hesitate to reach out!
 
 I obtained my Ph.D. in [Computer Science](http://cs.stanford.edu) at [Stanford University](http://www.stanford.edu) advised by [Prof. Chris Manning](https://nlp.stanford.edu/manning), where I was a member of the [natural language processing group](http://nlp.stanford.edu).
 
@@ -35,6 +35,21 @@ When I procrastinate in my research life, I write code for [Stanza][stanza], a n
 <div class="container">
 <div class="row">
   <div class="col-sm-3" style="text-align:center;padding-bottom:5px;padding-top:5px">
+    <img src="{{ '/assets/img/jdai_logo.png' | relative_url }}" width="120px" style="border-radius:50%;border:1px solid #eee">
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-sm-3" style="font-style:italic">
+	   2020.10 -
+      </div>
+      <div class="col">
+      Research Scientist, JD AI Research Silicon Valley Lab
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3" style="text-align:center;padding-bottom:5px;padding-top:5px">
     <img src="{{ '/assets/img/stanford_logo.png' | relative_url }}" width="120px">
   </div>
   <div class="col-sm-9">
@@ -43,7 +58,7 @@ When I procrastinate in my research life, I write code for [Stanza][stanza], a n
       2015.9 - 2020.9
       </div>
       <div class="col">
-      Ph.D. Student &amp; Research Assistant, Computer Science Department, Stanford University
+      Ph.D. &amp; Research Assistant, Computer Science Department, Stanford University
       </div>
     </div>
     <div class="row">
