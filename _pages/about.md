@@ -8,7 +8,7 @@ profile:
   align: right
   image: portrait.jpeg
   address: >
- 
+
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -18,7 +18,7 @@ social: true  # includes social icons at the bottom of the page
 <h3 style='font-family: "Ma Shan Zheng", KaiTi, "楷体", KaiTi_GB2312, "楷体_GB2312", STKaiTi, "华文楷体", sans-serif;'>齐鹏</h3>
 <span style="font-size:12px;text-transform:none;font-weight:400;line-height:12px">(<a href="https://en.wikipedia.org/wiki/Pinyin"><span style="font-variant:small-caps">pinyin:</span></a> /qí péng/; <a href="https://en.wikipedia.org/wiki/Help:IPA/Mandarin"><span style="font-variant:small-caps">ipa</span></a>: /tɕʰǐ pʰə̌ŋ/)</span>
 
-**I recently graduated from Stanford!** I have joined JD AI as a research scientist to continue working on NLP/ML-related research. If you are interested in exploring opportunities with us (internship or full-time), don't hesitate to reach out!
+**I recently graduated from Stanford!** I have joined JD AI as a research scientist to continue working on NLP/ML-related research. If you are interested in exploring research opportunities with us (internship or full-time), don't hesitate to reach out!
 
 I obtained my Ph.D. in [Computer Science](http://cs.stanford.edu) at [Stanford University](http://www.stanford.edu) advised by [Prof. Chris Manning](https://nlp.stanford.edu/manning), where I was a member of the [natural language processing group](http://nlp.stanford.edu).
 
