@@ -24,6 +24,7 @@ head: >
 <center>
 <img src="{{ '/blog/learning-to-ask/louis-renaudineau-z61wzvMqM0U-unsplash.jpg' | relative_url }}" width="90%">
 </center>
+<figcaption>Image by Louis Renaudineau (via Unsplash).</figcaption>
 </figure>
 
 "Why is the sky blue?"
