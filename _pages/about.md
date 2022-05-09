@@ -18,7 +18,7 @@ social: true  # includes social icons at the bottom of the page
 <h3 style='font-family: "Ma Shan Zheng", KaiTi, "楷体", KaiTi_GB2312, "楷体_GB2312", STKaiTi, "华文楷体", sans-serif;'>齐鹏</h3>
 <span style="font-size:12px;text-transform:none;font-weight:400;line-height:12px">(<a href="https://en.wikipedia.org/wiki/Pinyin"><span style="font-variant:small-caps">pinyin:</span></a> /qí péng/; <a href="https://en.wikipedia.org/wiki/Help:IPA/Mandarin"><span style="font-variant:small-caps">ipa</span></a>: /tɕʰǐ pʰə̌ŋ/)</span>
 
-I am a researcher at JD AI Research working on natural language processing and machine learning.
+I am an Applied Scientist at [Amazon AWS AI](https://www.amazon.science/) working on natural language processing and machine learning.
 
 My research is driven by the goal of **bringing the world's knowledge to the user's assistance**, which manifests itself in two main directions
 
@@ -27,6 +27,6 @@ My research is driven by the goal of **bringing the world's knowledge to the use
 
 In these tasks, I am also excited to explore data-efficient models and training techniques, model explainability, and self-supervised learning techniques that enable us to address these problems.
 
-Before joining JD, I obtained my Ph.D. in [Computer Science](http://cs.stanford.edu) at [Stanford University](http://www.stanford.edu) advised by [Prof. Chris Manning](https://nlp.stanford.edu/manning), where I was a member of the [NLP group](http://nlp.stanford.edu). I also obtained two Master's at Stanford (CS & Statistics), and my Bachelor's at [Tsinghua University](https://www.tsinghua.edu.cn/en/).
+Before joining Amazon, I worked for JD.com AI Research as a research scientist. I obtained my Ph.D. in [Computer Science](http://cs.stanford.edu) at [Stanford University](http://www.stanford.edu) advised by [Prof. Chris Manning](https://nlp.stanford.edu/manning), where I was a member of the [NLP group](http://nlp.stanford.edu). I also obtained two Master's at Stanford (CS & Statistics), and my Bachelor's at [Tsinghua University](https://www.tsinghua.edu.cn/en/).
 
 [[CV (slightly outdated)]](CV_Peng_Qi.pdf)
