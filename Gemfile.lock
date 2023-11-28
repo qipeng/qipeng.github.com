@@ -1,15 +1,22 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4.3)
+    activesupport (7.1.2)
+      base64
+      bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
+      connection_pool (>= 2.2.5)
+      drb
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
+      mutex_m
       tzinfo (~> 2.0)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
+    base64 (0.2.0)
     bibtex-ruby (6.0.0)
       latex-decode (~> 0.0)
+    bigdecimal (3.1.4)
     citeproc (1.0.10)
       namae (~> 1.0)
     citeproc-ruby (1.1.14)
@@ -17,11 +24,14 @@ GEM
       csl (~> 1.6)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
+    connection_pool (2.4.1)
     csl (1.6.0)
       namae (~> 1.0)
       rexml
     csl-styles (1.0.1.11)
       csl (~> 1.0)
+    drb (2.2.0)
+      ruby2_keywords
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -37,7 +47,7 @@ GEM
       activesupport (>= 2)
       nokogiri (>= 1.4)
     http_parser.rb (0.8.0)
-    i18n (1.12.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jekyll (4.2.2)
       addressable (~> 2.4)
@@ -84,7 +94,8 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    minitest (5.18.0)
+    minitest (5.20.0)
+    mutex_m (0.2.0)
     namae (1.1.1)
     nokogiri (1.14.3-x86_64-darwin)
       racc (~> 1.4)
