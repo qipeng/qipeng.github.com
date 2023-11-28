@@ -23,7 +23,7 @@ I am an Applied Scientist at [Amazon AWS AI](https://www.amazon.science/) workin
 My research is driven by the goal of **bringing the world's knowledge to the user's assistance**, which manifests itself in two main directions
 
 * **How to effectively organize and use knowledge**. This involves tasks like question answering (where I have co-lead the development of some benchmarks for complex reasoning: [HotpotQA](https://hotpotqa.github.io/) and [BeerQA](https://beerqa.github.io/)), information extraction, syntactic analysis for many languages (check out [Stanza](https://stanfordnlp.github.io/stanza), my go-to procrastination project), etc.
-* **How to effectively communicate knowledge**. This mainly concerns interactive NLP systems such as conversational systems, where I am interested in theory-of-mind reasoning under information asymmetry, offline-to-online transfer, multi-modal interactions, etc.
+* **How to effectively communicate knowledge**. This mainly concerns interactive NLP systems such as conversational systems, where I am interested in theory-of-mind reasoning under information asymmetry (e.g., [how to ask good questions](https://arxiv.org/pdf/2004.14530.pdf) and [how to provide good answers beyond the literal answer](https://aclanthology.org/2023.findings-acl.385.pdf)), offline-to-online transfer, multi-modal interactions, etc.
 
 In these tasks, I am also excited to explore data-efficient models and training techniques, model explainability, and self-supervised learning techniques that enable us to address these problems.
 
