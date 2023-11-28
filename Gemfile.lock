@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4.1)
+    activesupport (7.0.4.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -16,7 +16,7 @@ GEM
       citeproc (~> 1.0, >= 1.0.9)
       csl (~> 1.6)
     colorator (1.1.0)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.2)
     csl (1.6.0)
       namae (~> 1.0)
       rexml
@@ -84,7 +84,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    minitest (5.17.0)
+    minitest (5.18.0)
     namae (1.1.1)
     nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
@@ -111,7 +111,7 @@ GEM
       faraday (>= 0.17.3, < 3)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (1.8.0)
     unicode_utils (1.4.0)
