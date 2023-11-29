@@ -2,8 +2,8 @@
 title: (Towards) Teaching Tech Without A Dreary Deck
 description: >
     Either you are teaching something technical to a non-expert crowd, or just giving a talk to a less technical audience, here are some things I learned from teaching highschoolers deep learning that might be of help to you.
-created: !!timestamp '2018-8-10 14:00:00'
-tags:
+date: '2018-8-10'
+meta:
     - TeachingInCS
 head: >
     <meta name="twitter:card" content="summary_large_image">
