@@ -4,7 +4,7 @@ title: What does an area chair actually do, anyway?
 description: >
     What does serving as an AC actually entail, and what can be improved in our review process?
 date: !!timestamp '2021-04-05 12:00:00'
-meta:
+tags:
     - Academic
     - AreaChair
 head: >
