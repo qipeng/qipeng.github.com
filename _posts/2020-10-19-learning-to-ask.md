@@ -1,8 +1,10 @@
 ---
+layout: post
 title: Teaching Conversational NLP Systems to Ask Informative and Specific Questions
 description: >
     Asking good inquisitive questions in a conversation requires inferring about others' knowledge. Can we train NLP systems to do this?
-tags:
+date: !!timestamp '2020-10-19 14:00:00'
+meta:
     - Conversations
     - QuestionAnswering
 head: >

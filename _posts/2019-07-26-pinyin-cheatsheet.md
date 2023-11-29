@@ -1,9 +1,10 @@
 ---
+layout: post
 title: Pinyin Cheatsheet for (Mostly American) English Speakers
 description: >
     Cheatsheet to pronounce pinyin (especially names romanized in pinyin) for English speakers (mostly applicable to the American accent).
-created: !!timestamp '2019-7-26 17:00:00'
-tags:
+date: !!timestamp '2019-7-26 17:00:00'
+meta:
     - Languages
 head: >
     <meta name="twitter:card" content="summary_large_image">
