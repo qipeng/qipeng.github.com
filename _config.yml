@@ -8,7 +8,7 @@ middle_name:
 last_name: Qi
 email: pengqi@cs.stanford.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Peng Qi is a researcher working on natural language processing and machine learning.
+  Peng Qi is an AI researcher working on natural language processing, machine learning, and multimodal agentic models.
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 
