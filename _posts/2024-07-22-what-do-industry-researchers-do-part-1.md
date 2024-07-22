@@ -2,8 +2,8 @@
 layout: post
 title: What do industry researchers do, anyway? Part 1 -- How to choose a team
 description: >
-    You are about to embark on a journey as an industry researcher. What can help you choose the most suitable team for yourself?
-date: !!timestamp '2024-07-08 12:00:00'
+    You are about to embark on a journey as an industry researcher, or are ready for your next adventure. What can help you choose the most suitable team for yourself?
+date: !!timestamp '2024-07-22 12:00:00'
 tags:
     - Research
     - Industry
@@ -12,7 +12,7 @@ head: >
     <meta name="twitter:site" content="@qi2peng2">
     <meta name="twitter:creator" content="@qi2peng2">
     <meta name="twitter:title" content="What do industry researchers do, anyway? Part 1 -- How to choose a team">
-    <meta name="twitter:description" content="You are about to embark on a journey as an industry researcher. What can help you choose the most suitable team for yourself?">
+    <meta name="twitter:description" content="You are about to embark on a journey as an industry researcher, or are ready for your next adventure. What can help you choose the most suitable team for yourself?">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1526081715791-7c538f86060e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     <meta property="og:image" content="https://images.unsplash.com/photo-1526081715791-7c538f86060e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     <style>
@@ -64,9 +64,9 @@ My momma always said, "Life was like a box of chocolates. You never know what yo
 
 The 1994 movie [Forrest Gump](https://en.wikipedia.org/wiki/Forrest_Gump) is timeless, not only because it is full of comedic gems that reflect on the real world that we live in, but also because it is littered with soundbites of wisdom that continues to mesmerize the audience even after the movie ends -- like the one quoted above.
 
-As one of the two food-related quotes I clearly remember from the movie (the other being about [a fruit company](https://www.imdb.com/title/tt0109830/quotes/?item=qt0373704&ref_=ext_shr_lnk)), Mrs. Gump's wisdom has helped me put in perspective how one makes work and life choices, and what situations they end up being in down the road. My current take of this quote is this: life is like a box of chocolates. You can pick and choose what you want, but you are only allowed to see the shape and color of the chocolate at the time of choosing. It is only when you actually put that piece of chocolate in your mouth and taste it, that you understand the full layers of flavor of the chocolate you chose, which you cannot fully predict ahead of time.
+As one of the two food-related quotes I distinctly remember from the movie (the other being about [a fruit company](https://www.imdb.com/title/tt0109830/quotes/?item=qt0373704&ref_=ext_shr_lnk)), Mrs. Gump's wisdom has helped me put in perspective how one makes work and life choices, and what situations they end up being in down the road. My current take of this quote is this: life is like a box of chocolates. You can pick and choose what you want, but you are only allowed to see the shape and color of the chocolate at the time of choosing. It is only when you actually put that piece of chocolate in your mouth and taste it, that you understand the full layers of flavor of the chocolate you chose, which you cannot fully predict ahead of time.
 
-But I do have a small problem with this view of the world, if I am allowed to geek out for a second. It is overly simplistic, in that you either assume you are choosing a chocolate only once in your lifetime, which makes it extremely consequential and high-stakes, or that you are handed a finite set of chocolates at birth that you eventually traverse through, where you only get to decide the order of traversal.
+While I appreciate the wisdom behind this analogy, I do have a small problem with this view of the world, if I am allowed to geek out for a second. This "box of chocolates" can lead to two plausible but overly simplistic interpretations about our lives. In one interpretation, you are given a once-in-a-lifetime chance to choose a chocolate from a box, and you live with the consequences thereafter without being able to do much about it. In another, you are handed a (finite?) set of chocolates at birth, and the only agency you have in the process is to choose which order you'd like to pick and enjoy them. Your choices of chocolates are largely independent from each other except for the fact that you can't get again the chocolates you have already devoured. Both of these seems to leave something to be desired.
 
 I think a more accurate description is something akin to the following, which I dub my **life is a box of (boxes of) chocolates** analogy.
 
@@ -82,9 +82,9 @@ Side note: If you are one of those (un)fortunate enough to have been inducted to
 
 This analogy has a few corollaries:
 
-1. **There is no perfect information.** You can try your best to probe your chocolate candidates, learn from your past experience or other people's chocolate-choosing experiences, or even bite off a small piece of your chocolates -- none of these will give you the full picture until you actually eat it. You only determine part of your journey by making choices, the rest is sheer luck.
+1. **There is no perfect information.** This part is consistent with the original box of chocolates wisdom. You can try your best to probe your chocolate candidates, learn from your past experience or other people's chocolate-choosing experiences, or even bite off a small piece of your chocolates -- none of these will give you the full picture until you actually eat it. You only determine part of your journey by making choices, the rest is sheer luck.
 2. **The world is not constant and your choices have effects on your future pool of choices.** It is easy to lose sight of all those chocolate boxes in the future, and be tempted to leverage all the information you have at hand to find and devour the kinds of chocolate you enjoy the most today. Either positively or negatively, significantly or slightly, this is shaping your future chocolate boxes and what flavors will be available in those when they eventually get to your hands.
-3. **But this doesn't mean you have no control, or can't make predictions.** The Mega-Chocolate Universe (not to be confused with other [MCU](https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe)) is fortunately somewhat predictable. So even if you still don't fully control your chocolates and which boxes come next, you can nevertheless try to improve the probability of getting the chocolates you truly enjoy.
+3. **But this doesn't mean you have no control, or can't make predictions.** The Mega-Chocolate Universe (not to be confused with other [MCU](https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe)) is fortunately somewhat predictable, at least in the sense of likelihoods. So even if you still don't fully control your chocolates and which boxes come next, you can nevertheless try to improve the probability of getting the chocolates you truly enjoy in the future.
 
 If you are unsure about what this box of (boxes of) chocolates, or stochastic process, looks like, the tweet quoted below has one of my favorite visualizations.
 
@@ -92,7 +92,7 @@ If you are unsure about what this box of (boxes of) chocolates, or stochastic pr
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We think a lot about those black lines, forgetting that it’s all still in our hands. <a href="https://t.co/RSZ1d3W642">pic.twitter.com/RSZ1d3W642</a></p>&mdash; Tim Urban (@waitbutwhy) <a href="https://twitter.com/waitbutwhy/status/1367871165319049221?ref_src=twsrc%5Etfw">March 5, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 
-If you have read this far, and are genuinely interested in what I have to talk about, this is a good time for an obligatory reminder for why you should or should not read on, [written in the "0th" part of this series](/blog/what-do-industry-researchers-do-part-0/#why-might-you-want-to-continuestop-reading). My experiences might not be useful or applicable to you, so take it with a grain of salt.
+If you have read this far, and are genuinely interested in what I have to talk about, this is a good time for an obligatory reminder for why you should or should not read on, [written in the "0th" part of this series](/blog/what-do-industry-researchers-do-part-0/#why-might-you-want-to-continuestop-reading). My experiences might not be useful or applicable to you, so take it with a pinch of salt.
 
 So, what should you think about when choosing a team in the industry to work on research-adjacent projects? Below are a few factors I wish someone had laid out clearly and explained the pros and cons to help me make decisions.
 
@@ -153,6 +153,8 @@ Do you find them inspiring? Are they the people you'd like to spend time with on
 
 Would you find enough support where you need it? Do you have people to guide you through challenges when needed, to put up thought-provoking challenges to your ideas, to help you navigate the corporate environment, or to assist you in finding good projects to work on?
 
+Do your prospective team members have the relevant expertise, experience, methodologies, and/or knowledge it takes to achieve the team's goals? Are they struggling on key problems they need to solve without new additions like you, or are the basics covered reasonably well, and they are looking to expand research horizons?
+
 Would you have enough room to grow? Are people helpful enough but not overwhelming, willing to give and share credit, easy to communicate with and low on ego? Is the team growing in size or hiring interns consistently, so that you can get the chance to potentially mentor others at your work?
 
 These are just some sample questions you can ask about the people on your team, and the list can go on. Not everyone will write down the same list, but you likely have a list of characteristics you find important in research teammates. If you stumble upon a team where a lot of people matches your ideal descriptions, definitely consider it very seriously -- the team is likely doing something right to keep all of these amazing (at least to you) people around, and that is not very easy to achieve in a sustainable manner.
@@ -169,6 +171,7 @@ Talking to prospective team members and learning what their experiences are like
 
 With everything mentioned in this post, it is important to keep a **growth mindset**. As Heraclitus famously put it, "There is nothing permanent except change". The environment around you can change and you cannot perfectly predict it. What's perhaps surprising to many is that your own interests (both research-wise and career-wise) can change faster than you might anticipate. Always aim to gather enough information as you need, since as companies are screening you, you are also choosing among your options. With this information, make your best guess of which chocolates you might like in the future, and which choices today would most likely lead to boxes with those chocolates. It's helpful to remember jobs don't have to be permanent -- so these decisions might not be as consequential as they seem, don't overthink it!
 
+#### Footnotes
 [^1]: Not quite as powerful as the [Golden Ticket](https://roalddahl.fandom.com/wiki/Golden_Ticket) when it comes to chocolates, thus silver.
 [^2]: The US National Bureau of Economic Research publishes [longitudinal studies on economic cycles](https://www.nber.org/research/business-cycle-dating). If history is any guidance, most people will encounter at least one of these down-periods in their career.
 [^3]: This observation mostly applies to entry- to experienced-level jobs. It's not uncommon for companies to appoint very accomplished academics at very senior research positions in the company, that's an entirely different topic.
