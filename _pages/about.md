@@ -28,6 +28,6 @@ My research is driven by the goal of **bringing the world's knowledge to the use
 
 In all of these directions, I am also excited to explore data-efficient models and training techniques, model and system explainability, and self-supervised learning techniques that enable us to address these problems.
 
-Before joining Orby, I worked for JD.com AI Research as a research scientist, and Amazon Web Services (AWS) as an applied scientist. I obtained my Ph.D. in [Computer Science](http://cs.stanford.edu) at [Stanford University](http://www.stanford.edu) advised by [Prof. Chris Manning](https://nlp.stanford.edu/manning), where I was a member of the [NLP group](http://nlp.stanford.edu) and [AI Lab](https://ai.stanford.edu/). I also obtained two Master's at Stanford (CS & Statistics), and my Bachelor's at [Tsinghua University](https://www.tsinghua.edu.cn/en/).
+Before joining Orby, I worked for Amazon Web Services (AWS) as an senior applied scientist, and JD.com AI Research as a senior research scientist before that. I obtained my Ph.D. in [Computer Science](http://cs.stanford.edu) at [Stanford University](http://www.stanford.edu) advised by [Prof. Chris Manning](https://nlp.stanford.edu/manning), where I was a member of the [NLP group](http://nlp.stanford.edu) and [AI Lab](https://ai.stanford.edu/). I also obtained two Master's at Stanford (CS & Statistics), and my Bachelor's at [Tsinghua University](https://www.tsinghua.edu.cn/en/).
 
 [[CV (slightly outdated)]](CV_Peng_Qi.pdf)
