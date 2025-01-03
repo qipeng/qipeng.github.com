@@ -3,7 +3,7 @@ layout: post
 title: What do industry researchers do, anyway? Part 2 -- What do they do when they are not publishing
 description: >
     Many people seem to "disappear" from the academic publication scene once they graduate from their PhD and join industry research labs. What are they actually doing when they are not publishing? What do they have to show for their research work if they don't publish?
-date: !!timestamp '2024-01-02 12:00:00'
+date: !!timestamp '2025-01-02 12:00:00'
 tags:
     - Research
     - Industry
