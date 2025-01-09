@@ -12,7 +12,7 @@ head: >
     <meta name="twitter:site" content="@qi2peng2">
     <meta name="twitter:creator" content="@qi2peng2">
     <meta name="twitter:title" content="What do industry researchers do, anyway? Part 2 -- What do they do when they are not publishing">
-    <meta name="twitter:description" content="Many people seem to "disappear" from the academic publication scene once they graduate from their PhD and join industry research labs. What are they actually doing when they are not publishing? What do they have to show for their research work if they don't publish?">
+    <meta name="twitter:description" content="Many people seem to &quot;disappear&quot; from the academic publication scene once they graduate from their PhD and join industry research labs. What are they actually doing when they are not publishing? What do they have to show for their research work if they don't publish?">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     <meta property="og:image" content="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     <style>
