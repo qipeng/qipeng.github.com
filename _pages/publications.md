@@ -3,15 +3,19 @@ layout: page
 permalink: /publications/
 title: publications
 description: (<span style="color:#cc1515;font-weight:bold">*</span>=equal contribution)
-years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2014, 2013, 2012]
 nav: true
 ---
 
 <div class="publications">
 
-{% for y in page.years %}
+{% capture current_year %}{{  "now" | date: '%Y' }}{% endcapture %}
+{% for y in (2012..current_year) reversed %}
+  <!-- <h2 class="year">{{y}}</h2> -->
+  {% capture bib %}{% bibliography -f papers -q @*[year={{y}}]* %}{% endcapture %}
+  {% if bib contains "<li>" %}
   <h2 class="year">{{y}}</h2>
-  {% bibliography -f papers -q @*[year={{y}}]* %}
+  {{ bib }}
+  {% endif %}
 {% endfor %}
 
 </div>
