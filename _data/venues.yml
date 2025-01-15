@@ -1,0 +1,71 @@
+"EMNLP":
+  color: "#0076df"
+
+"EMNLP-IJCNLP":
+  color: "#0076df"
+
+"CoNLL":
+  color: "#0076df"
+
+"ACL":
+  color: "#0076df"
+
+"ACL Findings":
+  color: "#0076df"
+
+"EMNLP Findings":
+  color: "#0076df"
+
+"SIGDIAL":
+  color: "#0076df"
+
+"AKBC":
+  color: "#0076df"
+
+"TextGraphs":
+  color: "#0076df"
+
+"RepL4NLP":
+  color: "#0076df"
+
+"NAACL":
+  color: "#0076df"
+
+"EACL":
+  color: "#0076df"
+
+"ICONIP":
+  color: "#0076df"
+
+"ICACI":
+  color: "#0076df"
+
+"arXiv":
+  color: "#d90060"
+
+"CSUR":
+  color: "#b509ac"
+
+"JAMIA":
+  color: "#b509ac"
+
+"CS&L":
+  color: "#b509ac"
+
+"Neurocomputing":
+  color: "#b509ac"
+
+"Neural Comp.":
+  color: "#b509ac"
+
+"PhD thesis":
+  color: "#b71c1c"
+
+"AlexaPrize":
+  color: "#00ab37"
+
+"TAC":
+  color: "#00ab37"
+
+"ACL (Demo)":
+  color: "#00ab37"

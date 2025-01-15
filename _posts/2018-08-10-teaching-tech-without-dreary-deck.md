@@ -5,7 +5,7 @@ description: >
     Either you are teaching something technical to a non-expert crowd, or just giving a talk to a less technical audience, here are some things I learned from teaching highschoolers deep learning that might be of help to you.
 date: '2018-8-10 14:00:00'
 tags:
-    - TeachingInCS
+    - Teaching
 head: >
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@qi2peng2">

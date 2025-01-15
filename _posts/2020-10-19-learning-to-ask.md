@@ -7,6 +7,7 @@ date: !!timestamp '2020-10-19 14:00:00'
 tags:
     - Conversations
     - QuestionAnswering
+thumbnail: https://images.unsplash.com/photo-1576063270807-d4cc0f0c2942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80
 head: >
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@qi2peng2">

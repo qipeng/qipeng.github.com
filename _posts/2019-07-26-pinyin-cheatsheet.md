@@ -6,6 +6,7 @@ description: >
 date: !!timestamp '2019-7-26 17:00:00'
 tags:
     - Languages
+thumbnail: https://images.unsplash.com/photo-1523903716430-8b05cc1ce968?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3134&q=80
 head: >
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@qi2peng2">
