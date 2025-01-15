@@ -83,7 +83,7 @@
         {% endif %}
 
         {% assign fullname = author.last | append: ", " | append: author.first %}
-        {% capture displayname %} {{author.first}} {{author_last_html}} {% endcapture %}
+        {% capture displayname %}{{author.first}} {{author_last_html}}{% endcapture %}
         {% if entry.equal_contrib and entry.equal_contrib contains fullname %}
           {% assign displayname = displayname | append: "<span style='color:#cc1515;font-weight:bold'>*</span>" %}
         {% endif %}
