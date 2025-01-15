@@ -7,6 +7,7 @@ date: !!timestamp '2021-04-05 12:00:00'
 tags:
     - Academic
     - AreaChair
+thumbnail: https://images.unsplash.com/photo-1555116505-38ab61800975?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3024&q=80
 head: >
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@qi2peng2">

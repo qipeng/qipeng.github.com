@@ -7,6 +7,7 @@ date: !!timestamp '2024-07-22 12:00:00'
 tags:
     - Research
     - Industry
+thumbnail: https://images.unsplash.com/photo-1526081715791-7c538f86060e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 head: >
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@qi2peng2">
