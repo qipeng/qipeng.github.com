@@ -6,6 +6,7 @@ description: >
 date: '2018-8-10 14:00:00'
 tags:
     - Teaching
+	- Academic
 head: >
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@qi2peng2">
