@@ -60,7 +60,9 @@ On the surface (pun intended), the appeal of rockets and space technology is so 
 
 On the other hand, the portrayal of AI (really mostly just robots) has largely fallen into two tropes: the bad AI deceiving humans and leading to our extinction, and the good, friendly, quirky, and often under-equipped AIs fighting these bad AIs along our side. Sometimes [a bit of both](https://en.wikipedia.org/wiki/Terminator_(franchise)). (AI) programmers on the silver screen are either staring at walls of JavaScript scrolling by when they smash their laptop keyboard randomly (which, can someone talk them into at least replacing with Python?), or are token nerds that gets killed off after offering the one critical smart comment they offer the muscular super-spy protagonist ([apparently I'm not the only one wondering](https://www.quora.com/Why-does-Hollywood-portray-hackers-so-wrongly)).
 
-Despite their
+Despite their vastly different public images, rocket science and AI science actually share a lot in common. Some are more obvious, so let us get those out of the way first. First, both are extremely capital-intensive and knowledge-intensive to build. While the proliferation of AI today might give a different impression, the AI market largely remains an oligarchy, where a few well-funded top players dominates most of the leading edge work. Second, both are applicable in a myriad of dual-use situations, which invites heavy government scrutiny if not also investment, media hype in the name of national security and pride, as well as (sometimes misguided) public interest. AI science is more and more resembling its rocket relative at its high time 70 years ago, where DeepSeek is actively compared to the "Sputnik moment" by the media.[^1] Third,
+
+
 
 ## commonalities
 * both not so much "science". clouding the amount of good systems engineering
@@ -73,3 +75,6 @@ Despite their
 * The reference is elusive and has been evolving as we tackle each "crown jewel / holy grail of AI" for that particular historical context (yes, real progress has been made towards general-purpose AI systems approaching or surpassing average human performance in many applications, not denying that)
 
 ## What can AI Practitioners Learn from the History of Rocket Science?
+
+#### Footnotes
+[^1]: https://www.npr.org/2025/01/28/g-s1-45061/deepseek-did-a-little-known-chinese-startup-cause-a-sputnik-moment-for-ai
