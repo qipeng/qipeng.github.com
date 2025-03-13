@@ -22,6 +22,12 @@ layout: default
       {% if page.author %}by {{ page.author }}{% endif %}
       {% if page.last_updated %}, last updated in {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
       {% if page.meta %}• {{ page.meta }}{% endif %}
+      {% if page.external_source == blank %}
+        {% assign read_time = page.content | number_of_words | divided_by: 180 | plus: 1 %}
+      {% else %}
+        {% assign read_time = page.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+      {% endif %}
+      • {{ read_time }} min read
     </p>
     <p class="post-tags">
       {% if url_beginning == '/blog/' %}
