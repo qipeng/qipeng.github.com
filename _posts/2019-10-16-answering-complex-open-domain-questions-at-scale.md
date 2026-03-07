@@ -6,6 +6,7 @@ description: >
 date: !!timestamp '2019-10-16 14:00:00'
 tags:
     - QuestionAnswering
+    - Research
 thumbnail: http://qipeng.me/blog/answering-complex-open-domain-questions-at-scale/needle-haystack.png
 head: >
     <meta name="twitter:card" content="summary_large_image">
