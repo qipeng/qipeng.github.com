@@ -6,7 +6,7 @@ description: Peng Qi is an AI researcher working on AI agents, natural language 
 
 profile:
   align: right
-  image: portrait.jpeg
+  image: portrait.jpg
   address: >
 
 
